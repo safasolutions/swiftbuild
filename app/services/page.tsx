@@ -146,29 +146,6 @@ export default function ServicesPage() {
                   </div>
               </div>
               {/* /section-services */}
-              {/* section-partner */}
-              <div className="section-partner">
-                  <div className="container">
-                      <div className="row">
-                          <div className="col-12">
-                              <div className="partner-wrap">
-                                  <p className="text-secondary text fw-semibold">Trusted by 100+ <br /> top-tier brands</p>
-                                  <div className="infiniteSlide_tech_main d-grid">
-                                      <div className="infiniteSlide infiniteSlide_partner" data-clone="5">
-                                          <img src="/assets/images/partner/partner-1.svg" alt="" />
-                                          <img src="/assets/images/partner/partner-2.svg" alt="" />
-                                          <img src="/assets/images/partner/partner-3.svg" alt="" />
-                                          <img src="/assets/images/partner/partner-4.svg" alt="" />
-                                          <img src="/assets/images/partner/partner-5.svg" alt="" />
-                                          <img src="/assets/images/partner/partner-6.svg" alt="" />
-                                      </div>
-                                  </div>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-              {/* /section-partner */}
               <div className="box-white">
                   {/* section-process */}
                   <div className="section-process flat-spacing">
@@ -343,14 +320,14 @@ export default function ServicesPage() {
                                               <i className="icon icon-envelope-solid"></i>
                                               <div className="content">
                                                   <div className="title fw-semibold mb-2">E-mail address</div>
-                                                  <div className="text">hello@youraiagency.com</div>
+                                                  <div className="text">info@swiftbuild.io</div>
                                               </div>
                                           </div>
                                           <div className="contact-item effectFade fadeRotateX" data-delay="0.1">
                                               <i className="icon icon-headset-solid"></i>
                                               <div className="content">
                                                   <div className="title fw-semibold mb-2">Phone number</div>
-                                                  <div className="text">+1 (647) 555 0172</div>
+                                                  <div className="text">+1 (778) 751-3157</div>
                                               </div>
                                           </div>
                                       </div>

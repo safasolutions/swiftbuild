@@ -41,13 +41,13 @@ export default function HomePage() {
                                   </linearGradient>
                                   </defs>
                               </svg>
-                              AI-Driven Agency
+                              Digital Solutions for Trades Businesses
                           </div>
                           <div className="title text-display-2 effectFade fadeRotateX">
-                              <span className="title1 fw-semibold text-gradient-1">Your AI Sprint Team</span>
+                              <span className="title1 fw-semibold text-gradient-1">Your business works hard.</span>
                               <br />
                               <div className="title2 d-flex gap-20 justify-content-center flex-wrap">
-                                  <span className="fw-semibold text-gradient-1">on Demand</span>
+                                  <span className="fw-semibold text-gradient-1">Your website should too.</span>
                                   <div className="title-icon">
                                       <div className="box"></div>
                                       <div className="title-icon-wrap">
@@ -59,14 +59,14 @@ export default function HomePage() {
                               </div>
                           </div>
                           <p className="text effectFade fadeUp">
-                              From discovery to deployment, we plug into your stack to prototype, <br /> validate, and launch AI experiences your users actually love.
+                              We help roofing, HVAC, and cleaning companies across Canada get found online, look professional, and automate the admin that's eating your time — so you can focus on the work that pays.
                           </p>
                           <div className="bot-btns effectFade fadeRotateX">
-                              <a href="/services" className="tf-btn">
-                                  Explore Services
+                              <a href="https://cal.com/swiftbuild/free-strategy-call" className="tf-btn">
+                                  Book a free strategy call
                               </a>
-                              <a href="#pricing" className="tf-btn-2">
-                                  View Pricing Plans
+                              <a href="/works" className="tf-btn-2">
+                                  See our work
                               </a>
                           </div>
                       </div>
@@ -84,7 +84,7 @@ export default function HomePage() {
                           <div className="col-12">
                               <div className="heading-section">
                                   <div className="heading-sub fw-semibold effectFade fadeUp">About Us</div>
-                                  <div className="heading-title text-gradient-2 effectFade fadeRotateX">Human-Centered AI, <br /> Built for Production</div>
+                                  <div className="heading-title text-gradient-2 effectFade fadeRotateX">Built for trades. <br /> Built for Canada.</div>
                               </div>
                           </div>
                           <div className="col-xxl-7 col-lg-6 lg-mb-24">
@@ -92,9 +92,9 @@ export default function HomePage() {
                                   <div className="position-relative z-5">
                                       <div className="sub text-white">
                                           <span className="dot"></span>
-                                          Available for worldwide project
+                                          Serving trades businesses across Canada
                                       </div>
-                                      <h5 className="title fw-semibold text-white">Based in <span className="text-brand">Montréal, Canada</span></h5>
+                                      <h5 className="title fw-semibold text-white">Serving <span className="text-brand">Canada-wide</span></h5>
                                       <a href="/contact" className="tf-btn">
                                           Start a Project
                                       </a>
@@ -104,7 +104,7 @@ export default function HomePage() {
                           </div>
                           <div className="col-xxl-5 col-lg-6">
                               <div className="review-box mb-24">
-                                  <div className="desc fw-semibold text-body-1">Trusted by 120+ clients across 4 industries - <br /> shipping AI from idea to production in 8–10 weeks</div>
+                                  <div className="desc fw-semibold text-body-1">Digital agency for trades contractors across Canada — websites, SEO, automation, and AI tools.</div>
                                   <div className="d-flex justify-content-between flex-wrap align-items-end gap-12">
                                       <div className="">
                                           <div className="d-flex gap-4 text mb-10">
@@ -137,7 +137,7 @@ export default function HomePage() {
                                           </div>
                                       </div>
                                       <div className="counter text-neutral-200">
-                                          <span className="number" data-speed="1500" data-to="120" data-inviewport="yes">10</span><span>+</span>
+                                          <span className="number" data-speed="1500" data-to="8" data-inviewport="yes">10</span><span>+</span>
                                       </div>
                                   </div>
                               </div>
@@ -151,11 +151,11 @@ export default function HomePage() {
                                               <path d="M12.9375 20V10.3597C12.9375 7.72182 13.824 5.51559 15.5969 3.74101C17.4177 1.91847 19.8854 0.671463 23 0V6.40288C21.8021 6.78657 21.0115 7.26619 20.6281 7.84173C20.2448 8.3693 20.0292 9.04077 19.9813 9.85612H23V20H12.9375ZM0 20V10.3597C0 7.72182 0.886459 5.51559 2.65938 3.74101C4.48021 1.91847 6.94792 0.671463 10.0625 0V6.40288C8.9125 6.78657 8.12187 7.26619 7.69062 7.84173C7.30729 8.3693 7.09167 9.04077 7.04375 9.85612H10.0625V20H0Z" fill="#E4E4E7"/>
                                           </svg>
                                       </div>
-                                      <div className="text-body-1 fw-semibold desc">Good AI feels obvious—because the hard work is hidden.</div>
+                                      <div className="text-body-1 fw-semibold desc">The best contractors don't lose jobs on the job. They lose them in the phone.</div>
                                       <div className="cite">
-                                          <div className="name text-body-3 fw-semibold">Ava Collins</div>
+                                          <div className="name text-body-3 fw-semibold">Junaid Amir</div>
                                           <div className="line"></div>
-                                          <div className="sub text-body-3">SwiftBuild’s Design Lead</div>
+                                          <div className="sub text-body-3">Technical Co-Founder, SwiftBuild</div>
                                       </div>
                                   </div>
                               </div>
@@ -164,29 +164,6 @@ export default function HomePage() {
                   </div>
               </div>
               {/* /section-about-us */}
-              {/* section-partner */}
-              <div className="section-partner">
-                  <div className="container">
-                      <div className="row">
-                          <div className="col-12">
-                              <div className="partner-wrap">
-                                  <p className="text-secondary text fw-semibold">Trusted by 100+ <br /> top-tier brands</p>
-                                  <div className="infiniteSlide_tech_main d-grid">
-                                      <div className="infiniteSlide infiniteSlide_partner" data-clone="5">
-                                          <img src="/assets/images/partner/partner-1.svg" alt="" />
-                                          <img src="/assets/images/partner/partner-2.svg" alt="" />
-                                          <img src="/assets/images/partner/partner-3.svg" alt="" />
-                                          <img src="/assets/images/partner/partner-4.svg" alt="" />
-                                          <img src="/assets/images/partner/partner-5.svg" alt="" />
-                                          <img src="/assets/images/partner/partner-6.svg" alt="" />
-                                      </div>
-                                  </div>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-              {/* /section-partner */}
 
               <div className="box-white">
                   {/* section-services */}
@@ -198,9 +175,9 @@ export default function HomePage() {
                                       <div className="col-left">
                                           <div className="heading-section mb-48">
                                               <div className="heading-sub fw-semibold effectFade fadeUp">Services</div>
-                                              <div className="heading-title text-gradient-3 effectFade fadeRotateX">End-to-End <br /> AI Services</div>
+                                              <div className="heading-title text-gradient-3 effectFade fadeRotateX">What we do</div>
                                           </div>
-                                          <p className="effectFade fadeUp">We turn ambiguous AI ideas into production features your users trust—combining strategy, design, engineering, and rigorous evaluation.</p>
+                                          <p className="effectFade fadeUp">Web design, local SEO, workflow automation, and AI tools — built specifically for trades businesses across Canada.</p>
                                       </div>
                                   </div>
                               </div>
@@ -210,17 +187,17 @@ export default function HomePage() {
                                           <div className="accordion-action services-image-btn active-img" data-img="/assets/images/section/service-1.jpg" data-bs-target="#faq-1" role="button"
                                               data-bs-toggle="collapse" aria-controls="faq-1" aria-expanded="true">
                                               <div className="accordion-title">
-                                                  AI Strategy <br /> & Mapping
+                                                  Website Design <br /> & Development
                                                   <div className="text-body-1 num">(01)</div>
                                               </div>
                                           </div>
                                           <div id="faq-1" className="collapse show" data-bs-parent="#accordion-services">
                                               <div className="accordion-content">
-                                                  <div className="text-body-3 text-neutral-300 text">Identify high-ROI use cases and define a realistic, measurable AI roadmap.</div>
+                                                  <div className="text-body-3 text-neutral-300 text">A fast, professional website that turns visitors into booked jobs. Built mobile-first, optimised for Google, and designed to convert — not just look good.</div>
                                                   <div className="list-tags">
-                                                      <a href="#" className="tags-item fw-semibold">Stakeholder discovery</a>
-                                                      <a href="#" className="tags-item fw-semibold">Value model & KPI definition</a>
-                                                      <a href="#" className="tags-item fw-semibold">Data readiness assessment</a>
+                                                      <a href="#" className="tags-item fw-semibold">Mobile-first & fast</a>
+                                                      <a href="#" className="tags-item fw-semibold">Booking integrations</a>
+                                                      <a href="#" className="tags-item fw-semibold">Google Search Console setup</a>
                                                   </div>
                                               </div>
                                           </div>
@@ -229,17 +206,17 @@ export default function HomePage() {
                                           <div className="accordion-action services-image-btn collapsed" data-img="/assets/images/section/service-2.jpg" data-bs-target="#faq-2" role="button"
                                               data-bs-toggle="collapse" aria-controls="faq-2" aria-expanded="false">
                                               <div className="accordion-title">
-                                                  AI UX <br /> & Product Design
+                                                  Local SEO & <br /> Search Visibility
                                                   <div className="text-body-1 num">(02)</div>
                                               </div>
                                           </div>
                                           <div id="faq-2" className="collapse" data-bs-parent="#accordion-services">
                                               <div className="accordion-content">
-                                                  <div className="text-body-3 text-neutral-300 text">Human-centered flows, prompts, and interfaces that build trust and adoption.</div>
+                                                  <div className="text-body-3 text-neutral-300 text">Get found when homeowners search 'roofer near me' or 'HVAC company in Mississauga.' We build and manage the local search presence that gets you there.</div>
                                                   <div className="list-tags">
-                                                      <a href="#" className="tags-item fw-semibold">Prototype flows</a>
-                                                      <a href="#" className="tags-item fw-semibold">Prompt UX patterns</a>
-                                                      <a href="#" className="tags-item fw-semibold">Usability testing with real users</a>
+                                                      <a href="#" className="tags-item fw-semibold">Google Business Profile</a>
+                                                      <a href="#" className="tags-item fw-semibold">Local keyword targeting</a>
+                                                      <a href="#" className="tags-item fw-semibold">Review strategy</a>
                                                   </div>
                                               </div>
                                           </div>
@@ -248,17 +225,17 @@ export default function HomePage() {
                                           <div className="accordion-action services-image-btn collapsed" data-img="/assets/images/section/service-3.jpg" data-bs-target="#faq-3" role="button"
                                               data-bs-toggle="collapse" aria-controls="faq-3" aria-expanded="false">
                                               <div className="accordion-title">
-                                                  LLM / Agent <br /> Development
+                                                  Workflow & Task <br /> Automation
                                                   <div className="text-body-1 num">(03)</div>
                                               </div>
                                           </div>
                                           <div id="faq-3" className="collapse" data-bs-parent="#accordion-services">
                                               <div className="accordion-content">
-                                                  <div className="text-body-3 text-neutral-300 text">Domain-specific copilots and agents that plan, execute, and report.</div>
+                                                  <div className="text-body-3 text-neutral-300 text">Stop doing the same things twice. We automate your quote follow-ups, booking confirmations, review requests, and scheduling — set up once, runs forever.</div>
                                                   <div className="list-tags">
-                                                      <a href="#" className="tags-item fw-semibold">Multi-step planning</a>
-                                                      <a href="#" className="tags-item fw-semibold">Function calling & toolchains</a>
-                                                      <a href="#" className="tags-item fw-semibold">Guardrails and audit trails</a>
+                                                      <a href="#" className="tags-item fw-semibold">n8n & Zapier</a>
+                                                      <a href="#" className="tags-item fw-semibold">CRM integrations</a>
+                                                      <a href="#" className="tags-item fw-semibold">Custom workflows</a>
                                                   </div>
                                               </div>
                                           </div>
@@ -267,17 +244,17 @@ export default function HomePage() {
                                           <div className="accordion-action services-image-btn collapsed" data-img="/assets/images/section/service-4.jpg" data-bs-target="#faq-4" role="button"
                                               data-bs-toggle="collapse" aria-controls="faq-4" aria-expanded="false">
                                               <div className="accordion-title">
-                                                  Data Engineering <br /> & Pipelines
+                                                  AI Voice Agent <br /> & Booking
                                                   <div className="text-body-1 num">(04)</div>
                                               </div>
                                           </div>
                                           <div id="faq-4" className="collapse" data-bs-parent="#accordion-services">
                                               <div className="accordion-content">
-                                                  <div className="text-body-3 text-neutral-300 text">Reliable data flows from ingestion to features, built for scale and cost control.</div>
+                                                  <div className="text-body-3 text-neutral-300 text">Coming soon — an AI that answers your calls 24/7, qualifies leads, and books appointments while you're on the job. Join the early access waitlist.</div>
                                                   <div className="list-tags">
-                                                      <a href="#" className="tags-item fw-semibold">Data cleaning & chunking</a>
-                                                      <a href="#" className="tags-item fw-semibold">Hybrid search</a>
-                                                      <a href="#" className="tags-item fw-semibold">Freshness, citations, and re-ranking</a>
+                                                      <a href="#" className="tags-item fw-semibold">Early access open</a>
+                                                      <a href="#" className="tags-item fw-semibold">Canadian pilot running</a>
+                                                      <a href="#" className="tags-item fw-semibold">Join the waitlist</a>
                                                   </div>
                                               </div>
                                           </div>
@@ -302,7 +279,7 @@ export default function HomePage() {
                                   <div className="featured-works-item  effectFade fadeUp no-div">
                                       <div className="image main-mouse-hover">
                                           <img src="/assets/images/section/featured-works-1.jpg" alt="" />
-                                          <a href="/works/single" className="tf-mouse view-project h6">
+                                          <a href="/works/storagemate" className="tf-mouse view-project h6">
                                               View Project
                                               <i className="icon icon-arrow-top-right"></i>
                                           </a>
@@ -312,22 +289,21 @@ export default function HomePage() {
                                               <span className="active"></span>
                                               <span></span>
                                               <span></span>
-                                              <span></span>
                                           </div>
                                           <div className="bot">
-                                              <h4 className="heading fw-semibold">Support Copilot <br /> for SaaS</h4>
+                                              <h4 className="heading fw-semibold">StorageMate</h4>
                                               <div className="grid-text">
                                                   <div className="item">
                                                       <div className="title text-secondary">DESCRIPTION</div>
-                                                      <div className="text-body-3 fw-semibold">Draft replies and pulls account context; reduced first-response time by 38%.</div>
+                                                      <div className="text-body-3 fw-semibold">Full-stack multi-brand SaaS platform replacing phone-based coordination with end-to-end digital booking, mover job management, and admin oversight — two student storage brands, one backend.</div>
                                                   </div>
                                                   <div className="item">
                                                       <div className="title text-secondary">DELIVERABLES</div>
-                                                      <div className="fw-semibold text-body-3">AI strategy, AI UX flows, <br /> LLM agent, RAG</div>
+                                                      <div className="fw-semibold text-body-3">Custom Development, Workflow Automation, CRM Integration</div>
                                                   </div>
                                                   <div className="item">
                                                       <div className="title text-secondary">INDUSTRY</div>
-                                                      <div className="fw-semibold text-body-3">SaaS</div>
+                                                      <div className="fw-semibold text-body-3">Student Logistics</div>
                                                   </div>
                                               </div>
                                           </div>
@@ -338,7 +314,7 @@ export default function HomePage() {
                                   <div className="featured-works-item ">
                                       <div className="image main-mouse-hover">
                                           <img src="/assets/images/section/featured-works-2.jpg" alt="" />
-                                          <a href="/works/single" className="tf-mouse view-project h6">
+                                          <a href="/works/showroom" className="tf-mouse view-project h6">
                                               View Project
                                               <i className="icon icon-arrow-top-right"></i>
                                           </a>
@@ -348,22 +324,21 @@ export default function HomePage() {
                                               <span></span>
                                               <span className="active"></span>
                                               <span></span>
-                                              <span></span>
                                           </div>
                                           <div className="bot">
-                                              <h4 className="heading fw-semibold">Underwriting <br /> Risk Copilot</h4>
+                                              <h4 className="heading fw-semibold">Showroom</h4>
                                               <div className="grid-text">
                                                   <div className="item">
                                                       <div className="title text-secondary">DESCRIPTION</div>
-                                                      <div className="text-body-3 fw-semibold">Built a triage assistant to summarize claims; cut manual review time by 42%.</div>
+                                                      <div className="text-body-3 fw-semibold">Content curation platform that pulls Instagram posts, lets admins organise branded showrooms via drag-and-drop, and auto-syncs to a mobile consumer app — eliminating manual content management for a fashion brand.</div>
                                                   </div>
                                                   <div className="item">
                                                       <div className="title text-secondary">DELIVERABLES</div>
-                                                      <div className="fw-semibold">Use-case mapping, Prompt & UI patterns</div>
+                                                      <div className="fw-semibold">Custom Development, Workflow Automation</div>
                                                   </div>
                                                   <div className="item">
                                                       <div className="title text-secondary">INDUSTRY</div>
-                                                      <div className="fw-semibold">Fintech</div>
+                                                      <div className="fw-semibold">Fashion E-Commerce</div>
                                                   </div>
                                               </div>
                                           </div>
@@ -374,7 +349,7 @@ export default function HomePage() {
                                   <div className="featured-works-item ">
                                       <div className="image main-mouse-hover">
                                           <img src="/assets/images/section/featured-works-3.jpg" alt="" />
-                                          <a href="/works/single" className="tf-mouse view-project h6">
+                                          <a href="/works/invoicelink" className="tf-mouse view-project h6">
                                               View Project
                                               <i className="icon icon-arrow-top-right"></i>
                                           </a>
@@ -384,58 +359,21 @@ export default function HomePage() {
                                               <span></span>
                                               <span></span>
                                               <span className="active"></span>
-                                              <span></span>
                                           </div>
                                           <div className="bot">
-                                              <h4 className="heading fw-semibold">Clinical Note <br /> Summarizer</h4>
+                                              <h4 className="heading fw-semibold">InvoiceLink</h4>
                                               <div className="grid-text">
                                                   <div className="item">
                                                       <div className="title text-secondary">DESCRIPTION</div>
-                                                      <div className="text-body-3 fw-semibold">Clinic-lobby assistant answering pre-visit questions; decreased front-desk calls by 28%.</div>
+                                                      <div className="text-body-3 fw-semibold">AI automation server for a Swiss accounting firm — monitors Box cloud storage for PDF invoices, extracts structured data with Box AI, and auto-links each invoice to its matching transaction. Zero manual data entry.</div>
                                                   </div>
                                                   <div className="item">
                                                       <div className="title text-secondary">DELIVERABLES</div>
-                                                      <div className="fw-semibold">PHI-safe RAG, HIPAA-aligned workflows</div>
+                                                      <div className="fw-semibold">AI Integration, Workflow Automation, Custom Development</div>
                                                   </div>
                                                   <div className="item">
                                                       <div className="title text-secondary">INDUSTRY</div>
-                                                      <div className="fw-semibold">Healthcare</div>
-                                                  </div>
-                                              </div>
-                                          </div>
-                                      </div>
-                                  </div>
-                              </div>
-                              <div className="">
-                                  <div className="featured-works-item ">
-                                      <div className="image main-mouse-hover">
-                                          <img src="/assets/images/section/featured-works-4.jpg" alt="" />
-                                          <a href="/works/single" className="tf-mouse view-project h6">
-                                              View Project
-                                              <i className="icon icon-arrow-top-right"></i>
-                                          </a>
-                                      </div>
-                                      <div className="content">
-                                          <div className="pagi-dot">
-                                              <span></span>
-                                              <span></span>
-                                              <span></span>
-                                              <span className="active"></span>
-                                          </div>
-                                          <div className="bot">
-                                              <h4 className="heading fw-semibold">Catalog Intelligence <br /> Engine</h4>
-                                              <div className="grid-text">
-                                                  <div className="item">
-                                                      <div className="title text-secondary">DESCRIPTION</div>
-                                                      <div className="text-body-3 fw-semibold">Launched a shopping copilot that understands attributes; raised add-to-cart by 12%.</div>
-                                                  </div>
-                                                  <div className="item">
-                                                      <div className="title text-secondary">DELIVERABLES</div>
-                                                      <div className="fw-semibold">Data cleaning & embeddings</div>
-                                                  </div>
-                                                  <div className="item">
-                                                      <div className="title text-secondary">INDUSTRY</div>
-                                                      <div className="fw-semibold">Ecommerce/Retail</div>
+                                                      <div className="fw-semibold">Accounting & Finance</div>
                                                   </div>
                                               </div>
                                           </div>
@@ -454,7 +392,7 @@ export default function HomePage() {
                                   <div className="process-heading h-100">
                                       <div className="heading-section mb-80">
                                           <div className="heading-sub fw-semibold effectFade fadeUp">Process</div>
-                                          <div className="heading-title text-gradient-3 effectFade fadeRotateX">From Idea <br /> to Production</div>
+                                          <div className="heading-title text-gradient-3 effectFade fadeRotateX">Simple process. <br /> No fluff.</div>
                                       </div>
                                       <div className="group-btn-slider">
                                           <div className="nav-prev-swiper">
@@ -475,11 +413,11 @@ export default function HomePage() {
                                                   <div className="process-card">
                                                       <i className="icon icon-search-solid"></i>
                                                       <div className="content">
-                                                          <h4 className="title fw-semibold">Discover & Scope</h4>
-                                                          <p className="text text-secondary">Align on problems, data reality, and success metrics. Opportunity brief, KPI model, phased roadmap, effort/cost ranges.</p>
+                                                          <h4 className="title fw-semibold">Free strategy call</h4>
+                                                          <p className="text text-secondary">15 minutes. We learn your business and what's not working. No pitch, no obligation.</p>
                                                       </div>
                                                       <div className="bot">
-                                                          <div className="time fw-semibold">3-7 DAYS</div>
+                                                          <div className="time fw-semibold">15 MIN CALL</div>
                                                           <div className="number">
                                                               <span className="text-neutral-400">01</span>
                                                               <span className="text-neutral-200">/03</span>
@@ -491,11 +429,11 @@ export default function HomePage() {
                                                   <div className="process-card">
                                                       <i className="icon icon-bolt-solid"></i>
                                                       <div className="content">
-                                                          <h4 className="title fw-semibold">Prototype</h4>
-                                                          <p className="text text-secondary">De-risk unknowns and validate value quickly. Clickable UX, tech spike repo, initial eval rubric, demo.</p>
+                                                          <h4 className="title fw-semibold">We build a clear plan</h4>
+                                                          <p className="text text-secondary">Specific scope, fixed price, realistic timeline. No vague estimates or hidden costs.</p>
                                                       </div>
                                                       <div className="bot">
-                                                          <div className="time fw-semibold">1-2 WEEKS</div>
+                                                          <div className="time fw-semibold">48 HRS</div>
                                                           <div className="number">
                                                               <span className="text-neutral-400">02</span>
                                                               <span className="text-neutral-200">/03</span>
@@ -507,11 +445,11 @@ export default function HomePage() {
                                                   <div className="process-card">
                                                       <i className="icon icon-user-check-solid-1"></i>
                                                       <div className="content">
-                                                          <h4 className="title fw-semibold">Validate & Evals</h4>
-                                                          <p className="text text-secondary">Prove accuracy, usability, safety, and cost. Eval dashboard, acceptance thresholds, decision to iterate/ship.</p>
+                                                          <h4 className="title fw-semibold">We deliver and support</h4>
+                                                          <p className="text text-secondary">Fast turnaround with regular updates. We stick around after launch.</p>
                                                       </div>
                                                       <div className="bot">
-                                                          <div className="time fw-semibold">1 WEEKS</div>
+                                                          <div className="time fw-semibold">ONGOING</div>
                                                           <div className="number">
                                                               <span className="text-neutral-400">03</span>
                                                               <span className="text-neutral-200">/03</span>
@@ -531,7 +469,7 @@ export default function HomePage() {
                   <div className="section-benefits flat-spacing pt-0">
                       <div className="container">
                           <div className="heading-section center mb-70">
-                              <div className="heading-sub fw-semibold effectFade fadeUp">Benefits</div>
+                              <div className="heading-sub fw-semibold effectFade fadeUp">Why SwiftBuild</div>
                               <div className="heading-title text-gradient-3 effectFade fadeRotateX">Why Choose Us</div>
                           </div>
                           <div className="row mb-24">
@@ -542,34 +480,34 @@ export default function HomePage() {
                                               <div className="progress-line" data-progress="60"></div>
                                               <div className="progress-text fw-semibold">
                                                   <i className="icon icon-bullseye-solid"></i>
-                                                  Accuracy
+                                                  Rankings
                                               </div>
                                           </div>
                                           <div className="benefits-progress-item">
                                               <div className="progress-line" data-progress="100"></div>
                                               <div className="progress-text fw-semibold">
                                                   <i className="icon icon-tachometer-alt-solid"></i>
-                                                  Latency
+                                                  Inbound calls
                                               </div>
                                           </div>
                                           <div className="benefits-progress-item">
                                               <div className="progress-line" data-progress="40"></div>
                                               <div className="progress-text fw-semibold">
                                                   <i className="icon icon-shield-alt-solid"></i>
-                                                  Safety
+                                                  Response time
                                               </div>
                                           </div>
                                           <div className="benefits-progress-item">
                                               <div className="progress-line" data-progress="80"></div>
                                               <div className="progress-text fw-semibold">
                                                   <i className="icon icon-coins-solid"></i>
-                                                  Cost
+                                                  Client retention
                                               </div>
                                           </div>
                                       </div>
                                       <div className="content">
-                                          <h6 className="fw-semibold title">Outcome over Output</h6>
-                                          <p className="text text-secondary">We measure what matters - accuracy, latency, safety, and <br /> cost - so every sprint ships business value, not just features.</p>
+                                          <h6 className="fw-semibold title">Results you can measure</h6>
+                                          <p className="text text-secondary">We track rankings, inbound calls, and time saved — so you always know what's working and what's next.</p>
                                       </div>
                                   </div>
                               </div>
@@ -588,8 +526,8 @@ export default function HomePage() {
                                           </div>
                                       </div>
                                       <div className="content">
-                                          <h6 className="fw-semibold title">Eval-First Reliability</h6>
-                                          <p className="text text-secondary">From day one, we run offline/online evals, canary tests, and tracing. You see how models perform - and why.</p>
+                                          <h6 className="fw-semibold title">We stick around</h6>
+                                          <p className="text text-secondary">We're not a one-and-done agency. After launch, we monitor, report, and keep improving.</p>
                                       </div>
                                   </div>
                               </div>
@@ -601,8 +539,8 @@ export default function HomePage() {
                                           <img src="/assets/images/item/benefits-1.svg" alt="" />
                                       </div>
                                       <div className="content">
-                                          <h6 className="fw-semibold title">Secure by Design</h6>
-                                          <p className="text text-secondary">PII handling, SSO/SAML, RBAC, encryption, and audit trails -built in, not bolted on. Enterprise-ready from the start.</p>
+                                          <h6 className="fw-semibold title">Fixed pricing</h6>
+                                          <p className="text text-secondary">We scope before we start and we stick to it. No surprise invoices, no scope creep charges.</p>
                                       </div>
                                   </div>
                               </div>
@@ -614,8 +552,8 @@ export default function HomePage() {
                                           <img className="item-img-3 updown" src="/assets/images/item/benefits-4.png" alt="" />
                                       </div>
                                       <div className="content">
-                                          <h6 className="fw-semibold title">Design-Led AI Experiences</h6>
-                                          <p className="text text-secondary">We craft prompts, interfaces, and guardrails that feel intuitive - so adoption rises and support tickets fall.</p>
+                                          <h6 className="fw-semibold title">Canada-based clients, world-class execution</h6>
+                                          <p className="text text-secondary">Canadian market knowledge, combined with expert technical delivery. Fast turnaround, real communication.</p>
                                       </div>
                                   </div>
                               </div>
@@ -627,8 +565,8 @@ export default function HomePage() {
                   <div className="section-features flat-spacing pt-0">
                       <div className="container">
                           <div className="heading-section center mb-64">
-                              <div className="heading-sub fw-semibold effectFade fadeUp">Features</div>
-                              <div className="heading-title text-gradient-3 effectFade fadeRotateX">All Features in One</div>
+                              <div className="heading-sub fw-semibold effectFade fadeUp">What's included</div>
+                              <div className="heading-title text-gradient-3 effectFade fadeRotateX">Everything your trades business needs</div>
                           </div>
                       </div>
                       <div className="position-relative">
@@ -637,23 +575,23 @@ export default function HomePage() {
                                   <div className="features-col col-left lg-mb-24">
                                       <div className="features-item effectFade fadeUp">
                                           <i className="icon icon-robot-solid"></i>
-                                          <h6 className="title fw-semibold">Agent-Powered Workflows</h6>
+                                          <h6 className="title fw-semibold">Professional website</h6>
                                           <p className="text-secondary">
-                                              Turn repetitive tasks into autonomous flows—agents plan, execute, and report with guardrails, audit trails, and clear handoff to humans.
+                                              Fast, mobile-first sites built to convert visitors into booked jobs — not just look good.
                                           </p>
                                       </div>
                                       <div className="features-item effectFade fadeUp">
                                           <i className="icon icon-clipboard-check-solid"></i>
-                                          <h6 className="title fw-semibold">Eval-First Quality</h6>
+                                          <h6 className="title fw-semibold">Local SEO & Google rankings</h6>
                                           <p className="text-secondary">
-                                              Measure accuracy, latency, safety, and cost from day one. Our evals and dashboards keep models reliable and budgets predictable.
+                                              We get you ranking in Google Maps and local search where your customers actually look.
                                           </p>
                                       </div>
                                       <div className="features-item effectFade fadeUp">
                                           <i className="icon icon-book-solid"></i>
-                                          <h6 className="title fw-semibold">Private Knowledge RAG</h6>
+                                          <h6 className="title fw-semibold">Workflow automation</h6>
                                           <p className="text-secondary">
-                                              Make your docs, tickets, and wikis instantly useful with retrieval augmented generation—freshness, citations, and explainability built in.
+                                              Quote follow-ups, booking confirmations, review requests — automated and running 24/7.
                                           </p>
                                       </div>
                                   </div>
@@ -663,23 +601,23 @@ export default function HomePage() {
                                   <div className="features-col col-right">
                                       <div className="features-item effectFade fadeUp" data-delay="0.1">
                                           <i className="icon icon-user-check-solid"></i>
-                                          <h6 className="title fw-semibold">Human-Centered AI UX</h6>
+                                          <h6 className="title fw-semibold">AI voice agent</h6>
                                           <p className="text-secondary">
-                                              Interfaces, prompts, and error states designed for trust and adoption—so the smart thing is also the obvious thing to do.
+                                              Coming soon: an AI that answers your calls, qualifies callers, and books appointments while you're on the job.
                                           </p>
                                       </div>
                                       <div className="features-item effectFade fadeUp" data-delay="0.1">
                                           <i className="icon icon-shield-alt-solid"></i>
-                                          <h6 className="title fw-semibold">Secure by Design</h6>
+                                          <h6 className="title fw-semibold">Fixed prices, real timelines</h6>
                                           <p className="text-secondary">
-                                              PII handling, SSO/SAML, RBAC, secrets management, and compliance workflows—ship AI that’s safe, auditable, and enterprise-ready.
+                                              We scope the project, agree a price, and deliver on time. No surprises, no excuses.
                                           </p>
                                       </div>
                                       <div className="features-item effectFade fadeUp" data-delay="0.1">
                                           <i className="icon icon-plug-solid"></i>
-                                          <h6 className="title fw-semibold">Seamless Integrations</h6>
+                                          <h6 className="title fw-semibold">Ongoing support</h6>
                                           <p className="text-secondary">
-                                              Plug into your stack (CRM, helpdesk, ERP, data warehouse) with webhooks and APIs to turn insights into action—fast.
+                                              We don't disappear after launch. Monthly reporting, updates, and support included.
                                           </p>
                                       </div>
                                   </div>
@@ -750,21 +688,18 @@ export default function HomePage() {
                   <div className="section-team flat-spacing">
                       <div className="container">
                           <div className="heading-section center mb-64">
-                              <div className="heading-sub fw-semibold style-1 effectFade fadeUp">Team Members</div>
-                              <div className="heading-title text-white effectFade fadeRotateX">The Squad Shipping <br /> Your AI</div>
+                              <div className="heading-sub fw-semibold style-1 effectFade fadeUp">The Team</div>
+                              <div className="heading-title text-white effectFade fadeRotateX">Two people. <br /> Full commitment.</div>
                           </div>
                           <div className="row justify-content-center">
-                              <div className="col-lg-4 col-md-8 lg-mb-24">
+                              <div className="col-lg-5 col-md-8 lg-mb-24">
                                   <div className="team-item h-100 effectFade fadeUp">
                                       <div className="image">
                                           <img src="/assets/images/team/team-1.jpg" alt="" />
                                       </div>
-                                      <a href="#" className="name h6 fw-semibold">Ava Collins</a>
-                                      <div className="sub text-body-1">SwiftBuild’s Design Lead</div>
+                                      <a href="#" className="name h6 fw-semibold">Junaid Amir</a>
+                                      <div className="sub text-body-1">Technical Co-Founder</div>
                                       <div className="tf-social justify-content-center">
-                                          <a href="#" className="social-item">
-                                              <i className="icon icon-twitter-x"></i>
-                                          </a>
                                           <a href="#" className="social-item">
                                               <i className="icon icon-linkedin-in"></i>
                                           </a>
@@ -774,76 +709,18 @@ export default function HomePage() {
                                       </div>
                                   </div>
                               </div>
-                              <div className="col-lg-4 col-md-6 lg-mb-24">
-                                  <div className="team-item style-1 mb-24 effectFade fadeUp">
-                                      <div className="top">
-                                          <div className="image">
-                                              <img src="/assets/images/team/team-2.jpg" alt="" />
-                                          </div>
-                                          <div className="tf-social justify-content-center">
-                                              <a href="#" className="social-item">
-                                                  <i className="icon icon-github"></i>
-                                              </a>
-                                              <a href="#" className="social-item">
-                                                  <i className="icon icon-linkedin-in"></i>
-                                              </a>
-                                          </div>
+                              <div className="col-lg-5 col-md-8 lg-mb-24">
+                                  <div className="team-item h-100 effectFade fadeUp">
+                                      <div className="image">
+                                          <img src="/assets/images/team/team-2.jpg" alt="" />
                                       </div>
-                                      <a href="#" className="name text-body-1 fw-semibold">Noah Reed</a>
-                                      <div className="sub">ML/Agent Lead. Builds domain agents</div>
-                                  </div>
-                                  <div className="team-item style-1 effectFade fadeUp">
-                                      <div className="top">
-                                          <div className="image">
-                                              <img src="/assets/images/team/team-3.jpg" alt="" />
-                                          </div>
-                                          <div className="tf-social justify-content-center">
-                                              <a href="#" className="social-item">
-                                                  <i className="icon icon-github"></i>
-                                              </a>
-                                              <a href="#" className="social-item">
-                                                  <i className="icon icon-linkedin-in"></i>
-                                              </a>
-                                          </div>
+                                      <a href="#" className="name h6 fw-semibold">Ahmed Masood</a>
+                                      <div className="sub text-body-1">Growth & Client Success</div>
+                                      <div className="tf-social justify-content-center">
+                                          <a href="#" className="social-item">
+                                              <i className="icon icon-linkedin-in"></i>
+                                          </a>
                                       </div>
-                                      <a href="#" className="name text-body-1 fw-semibold">Lucas Hayes</a>
-                                      <div className="sub">Solutions Architect. Connects AI to your stack</div>
-                                  </div>
-                              </div>
-                              <div className="col-lg-4 col-md-6">
-                                  <div className="team-item style-1 mb-24 effectFade fadeUp" data-delay="0.1">
-                                      <div className="top">
-                                          <div className="image">
-                                              <img src="/assets/images/team/team-4.jpg" alt="" />
-                                          </div>
-                                          <div className="tf-social justify-content-center">
-                                              <a href="#" className="social-item">
-                                                  <i className="icon icon-github"></i>
-                                              </a>
-                                              <a href="#" className="social-item">
-                                                  <i className="icon icon-linkedin-in"></i>
-                                              </a>
-                                          </div>
-                                      </div>
-                                      <a href="#" className="name text-body-1 fw-semibold">Jordan Brooks</a>
-                                      <div className="sub">Data Engineer. Secure access policies</div>
-                                  </div>
-                                  <div className="team-item style-1 effectFade fadeUp" data-delay="0.1">
-                                      <div className="top">
-                                          <div className="image">
-                                              <img src="/assets/images/team/team-5.jpg" alt="" />
-                                          </div>
-                                          <div className="tf-social justify-content-center">
-                                              <a href="#" className="social-item">
-                                                  <i className="icon icon-github"></i>
-                                              </a>
-                                              <a href="#" className="social-item">
-                                                  <i className="icon icon-linkedin-in"></i>
-                                              </a>
-                                          </div>
-                                      </div>
-                                      <a href="#" className="name text-body-1 fw-semibold">Erin Park</a>
-                                      <div className="sub">MLOps Engineer. Productionizes with CI/CD</div>
                                   </div>
                               </div>
                           </div>
@@ -1080,52 +957,65 @@ export default function HomePage() {
                                   <div className="accordion-asked-item effectFade fadeRotateX">
                                       <div className="accordion-asked-title" id="asked1">
                                           <button className="accordion-button text-body-1 fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="true" aria-controls="collapse1">
-                                              What’s the typical timeline from idea to v1?
+                                              What types of businesses do you work with?
                                               <span className="right-icon"></span>
                                           </button>
                                       </div>
                                       <div id="collapse1" role="region" className="accordion-collapse collapse show" aria-labelledby="asked1" data-bs-parent="#accordion-asked">
                                           <div className="accordion-body">
-                                              A clear problem statement, success metrics, access to sample data, and a stakeholder who can make decisions. We’ll run a kickoff workshop to align scope.
+                                              We focus on trades businesses — roofing, HVAC, cleaning, plumbing, and similar service contractors across Canada. Every service we offer is designed around the reality of running a trades business.
                                           </div>
                                       </div>
                                   </div>
                                   <div className="accordion-asked-item effectFade fadeRotateX" data-delay="0.1">
                                       <div className="accordion-asked-title" id="asked2">
                                           <button className="accordion-button text-body-1 fw-semibold collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
-                                              What do we need to start?
+                                              How long does a project take?
                                               <span className="right-icon"></span>
                                           </button>
                                       </div>
                                       <div id="collapse2" role="region" className="accordion-collapse collapse" aria-labelledby="asked2" data-bs-parent="#accordion-asked">
                                           <div className="accordion-body">
-                                              A clear problem statement, success metrics, access to sample data, and a stakeholder who can make decisions. We’ll run a kickoff workshop to align scope.
+                                              A standard website takes 2–4 weeks from kickoff. SEO campaigns show measurable movement in 60–90 days. Automation workflows typically go live within a week of scoping. We give you a specific timeline in the proposal — no vague estimates.
                                           </div>
                                       </div>
                                   </div>
                                   <div className="accordion-asked-item effectFade fadeRotateX" data-delay="0.2">
                                       <div className="accordion-asked-title" id="asked3">
                                           <button className="accordion-button text-body-1 fw-semibold collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
-                                              Which models/stack do you use?
+                                              What does it cost?
                                               <span className="right-icon"></span>
                                           </button>
                                       </div>
                                       <div id="collapse3" role="region" className="accordion-collapse collapse" aria-labelledby="asked3" data-bs-parent="#accordion-asked">
                                           <div className="accordion-body">
-                                              A clear problem statement, success metrics, access to sample data, and a stakeholder who can make decisions. We’ll run a kickoff workshop to align scope.
+                                              Website projects start from $1,200. SEO retainers from $400/month. Automation projects from $600. We give you a clear number after the strategy call — no surprises.
                                           </div>
                                       </div>
                                   </div>
                                   <div className="accordion-asked-item effectFade fadeRotateX" data-delay="0.3">
                                       <div className="accordion-asked-title" id="asked4">
                                           <button className="accordion-button text-body-1 fw-semibold collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
-                                              Are model/API costs included in pricing?
+                                              Do you work with businesses that already have a website?
                                               <span className="right-icon"></span>
                                           </button>
                                       </div>
                                       <div id="collapse4" role="region" className="accordion-collapse collapse" aria-labelledby="asked4" data-bs-parent="#accordion-asked">
                                           <div className="accordion-body">
-                                              A clear problem statement, success metrics, access to sample data, and a stakeholder who can make decisions. We’ll run a kickoff workshop to align scope.
+                                              Yes — a lot of our work is improving existing sites. We can speed it up, fix the SEO, add a booking system, or connect it to automation. You don’t need to start from scratch.
+                                          </div>
+                                      </div>
+                                  </div>
+                                  <div className="accordion-asked-item effectFade fadeRotateX" data-delay="0.4">
+                                      <div className="accordion-asked-title" id="asked5">
+                                          <button className="accordion-button text-body-1 fw-semibold collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse5" aria-expanded="false" aria-controls="collapse5">
+                                              What’s the AI voice agent you mentioned?
+                                              <span className="right-icon"></span>
+                                          </button>
+                                      </div>
+                                      <div id="collapse5" role="region" className="accordion-collapse collapse" aria-labelledby="asked5" data-bs-parent="#accordion-asked">
+                                          <div className="accordion-body">
+                                              An AI that answers your business line, qualifies callers, and books appointments — 24/7. We’re piloting it now with Canadian contractors. Join the waitlist and you’ll be in the first group we onboard.
                                           </div>
                                       </div>
                                   </div>
@@ -1156,14 +1046,14 @@ export default function HomePage() {
                                               <i className="icon icon-envelope-solid"></i>
                                               <div className="content">
                                                   <div className="title fw-semibold mb-2">E-mail address</div>
-                                                  <div className="text">hello@youraiagency.com</div>
+                                                  <div className="text">info@swiftbuild.io</div>
                                               </div>
                                           </div>
                                           <div className="contact-item effectFade fadeRotateX" data-delay="0.1">
                                               <i className="icon icon-headset-solid"></i>
                                               <div className="content">
                                                   <div className="title fw-semibold mb-2">Phone number</div>
-                                                  <div className="text">+1 (647) 555 0172</div>
+                                                  <div className="text">+1 (778) 751-3157</div>
                                               </div>
                                           </div>
                                       </div>

@@ -39,8 +39,8 @@ export default function ContactPage() {
                                   <div className="box-contact-item text-center effectFade fadeUp">
                                       <i className="icon icon-envelope-solid"></i>
                                       <h6 className="title fw-semibold">E-mail address</h6>
-                                      <a className="text" href="mail:hello@youraiagency.com">
-                                          hello@youraiagency.com
+                                      <a className="text" href="mail:info@swiftbuild.io">
+                                          info@swiftbuild.io
                                       </a>
                                   </div>
                               </div>
@@ -48,8 +48,8 @@ export default function ContactPage() {
                                   <div className="box-contact-item text-center effectFade fadeUp" data-delay="0.1">
                                       <i className="icon icon-headset-solid"></i>
                                       <h6 className="title fw-semibold">Phone number</h6>
-                                      <a href="tel: +1 (647) 555 0172" className="text">
-                                          +1 (647) 555 0172
+                                      <a href="tel: +1 (778) 751-3157" className="text">
+                                          +1 (778) 751-3157
                                       </a>
                                   </div>
                               </div>

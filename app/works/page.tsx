@@ -26,6 +26,9 @@ export default function WorksPage() {
                           <p className="text effectFade fadeUp">
                               Where innovation meets intelligence. Discover data-driven solutions, smart automation, and <br /> transformative projects shaping the future of businesses worldwide.
                           </p>
+                          <p className="text effectFade fadeUp">
+                              We've built production systems across industries. Now we're focused on bringing that same execution to trades businesses across Canada — at a price point that makes sense.
+                          </p>
                       </div>
                   </div>
               </div>
@@ -41,7 +44,7 @@ export default function WorksPage() {
                               <div className="featured-works-item  effectFade fadeUp no-div">
                                   <div className="image main-mouse-hover">
                                       <img src="/assets/images/section/featured-works-1.jpg" alt="" />
-                                      <a href="/works/support-copilot" className="tf-mouse view-project h6">
+                                      <a href="/works/storagemate" className="tf-mouse view-project h6">
                                           View Project
                                           <i className="icon icon-arrow-top-right"></i>
                                       </a>
@@ -51,22 +54,21 @@ export default function WorksPage() {
                                           <span className="active"></span>
                                           <span></span>
                                           <span></span>
-                                          <span></span>
                                       </div>
                                       <div className="bot">
-                                          <h4 className="heading fw-semibold">Support Copilot <br /> for SaaS</h4>
+                                          <h4 className="heading fw-semibold">StorageMate</h4>
                                           <div className="grid-text">
                                               <div className="item">
                                                   <div className="title text-secondary">DESCRIPTION</div>
-                                                  <div className="text-body-3 fw-semibold">Draft replies and pulls account context; reduced first-response time by 38%.</div>
+                                                  <div className="text-body-3 fw-semibold">Full-stack multi-brand SaaS platform replacing phone-based coordination with end-to-end digital booking, mover job management, and admin oversight — two student storage brands, one backend.</div>
                                               </div>
                                               <div className="item">
                                                   <div className="title text-secondary">DELIVERABLES</div>
-                                                  <div className="fw-semibold text-body-3">AI strategy, AI UX flows, <br /> LLM agent, RAG</div>
+                                                  <div className="fw-semibold text-body-3">Custom Development, Workflow Automation, CRM Integration</div>
                                               </div>
                                               <div className="item">
                                                   <div className="title text-secondary">INDUSTRY</div>
-                                                  <div className="fw-semibold text-body-3">SaaS</div>
+                                                  <div className="fw-semibold text-body-3">Student Logistics</div>
                                               </div>
                                           </div>
                                       </div>
@@ -77,7 +79,7 @@ export default function WorksPage() {
                               <div className="featured-works-item ">
                                   <div className="image main-mouse-hover">
                                       <img src="/assets/images/section/featured-works-2.jpg" alt="" />
-                                      <a href="/works/underwriting-risk-copilot" className="tf-mouse view-project h6">
+                                      <a href="/works/showroom" className="tf-mouse view-project h6">
                                           View Project
                                           <i className="icon icon-arrow-top-right"></i>
                                       </a>
@@ -87,22 +89,21 @@ export default function WorksPage() {
                                           <span></span>
                                           <span className="active"></span>
                                           <span></span>
-                                          <span></span>
                                       </div>
                                       <div className="bot">
-                                          <h4 className="heading fw-semibold">Underwriting <br /> Risk Copilot</h4>
+                                          <h4 className="heading fw-semibold">Showroom</h4>
                                           <div className="grid-text">
                                               <div className="item">
                                                   <div className="title text-secondary">DESCRIPTION</div>
-                                                  <div className="text-body-3 fw-semibold">Built a triage assistant to summarize claims; cut manual review time by 42%.</div>
+                                                  <div className="text-body-3 fw-semibold">Content curation platform that pulls Instagram posts, lets admins organise branded showrooms via drag-and-drop, and auto-syncs to a mobile consumer app — eliminating manual content management for a fashion brand.</div>
                                               </div>
                                               <div className="item">
                                                   <div className="title text-secondary">DELIVERABLES</div>
-                                                  <div className="fw-semibold">Use-case mapping, Prompt & UI patterns</div>
+                                                  <div className="fw-semibold">Custom Development, Workflow Automation</div>
                                               </div>
                                               <div className="item">
                                                   <div className="title text-secondary">INDUSTRY</div>
-                                                  <div className="fw-semibold">Fintech</div>
+                                                  <div className="fw-semibold">Fashion E-Commerce</div>
                                               </div>
                                           </div>
                                       </div>
@@ -113,7 +114,7 @@ export default function WorksPage() {
                               <div className="featured-works-item ">
                                   <div className="image main-mouse-hover">
                                       <img src="/assets/images/section/featured-works-3.jpg" alt="" />
-                                      <a href="/works/clinical-note-summarizer" className="tf-mouse view-project h6">
+                                      <a href="/works/invoicelink" className="tf-mouse view-project h6">
                                           View Project
                                           <i className="icon icon-arrow-top-right"></i>
                                       </a>
@@ -123,58 +124,21 @@ export default function WorksPage() {
                                           <span></span>
                                           <span></span>
                                           <span className="active"></span>
-                                          <span></span>
                                       </div>
                                       <div className="bot">
-                                          <h4 className="heading fw-semibold">Clinical Note <br /> Summarizer</h4>
+                                          <h4 className="heading fw-semibold">InvoiceLink</h4>
                                           <div className="grid-text">
                                               <div className="item">
                                                   <div className="title text-secondary">DESCRIPTION</div>
-                                                  <div className="text-body-3 fw-semibold">Clinic-lobby assistant answering pre-visit questions; decreased front-desk calls by 28%.</div>
+                                                  <div className="text-body-3 fw-semibold">AI automation server for a Swiss accounting firm — monitors Box cloud storage for PDF invoices, extracts structured data with Box AI, and auto-links each invoice to its matching transaction. Zero manual data entry.</div>
                                               </div>
                                               <div className="item">
                                                   <div className="title text-secondary">DELIVERABLES</div>
-                                                  <div className="fw-semibold">PHI-safe RAG, HIPAA-aligned workflows</div>
+                                                  <div className="fw-semibold">AI Integration, Workflow Automation, Custom Development</div>
                                               </div>
                                               <div className="item">
                                                   <div className="title text-secondary">INDUSTRY</div>
-                                                  <div className="fw-semibold">Healthcare</div>
-                                              </div>
-                                          </div>
-                                      </div>
-                                  </div>
-                              </div>
-                          </div>
-                          <div className="">
-                              <div className="featured-works-item ">
-                                  <div className="image main-mouse-hover">
-                                      <img src="/assets/images/section/featured-works-4.jpg" alt="" />
-                                      <a href="/works/catalog-intelligence-engine" className="tf-mouse view-project h6">
-                                          View Project
-                                          <i className="icon icon-arrow-top-right"></i>
-                                      </a>
-                                  </div>
-                                  <div className="content">
-                                      <div className="pagi-dot">
-                                          <span></span>
-                                          <span></span>
-                                          <span></span>
-                                          <span className="active"></span>
-                                      </div>
-                                      <div className="bot">
-                                          <h4 className="heading fw-semibold">Catalog Intelligence <br /> Engine</h4>
-                                          <div className="grid-text">
-                                              <div className="item">
-                                                  <div className="title text-secondary">DESCRIPTION</div>
-                                                  <div className="text-body-3 fw-semibold">Launched a shopping copilot that understands attributes; raised add-to-cart by 12%.</div>
-                                              </div>
-                                              <div className="item">
-                                                  <div className="title text-secondary">DELIVERABLES</div>
-                                                  <div className="fw-semibold">Data cleaning & embeddings</div>
-                                              </div>
-                                              <div className="item">
-                                                  <div className="title text-secondary">INDUSTRY</div>
-                                                  <div className="fw-semibold">Ecommerce/Retail</div>
+                                                  <div className="fw-semibold">Accounting & Finance</div>
                                               </div>
                                           </div>
                                       </div>
@@ -342,14 +306,14 @@ export default function WorksPage() {
                                               <i className="icon icon-envelope-solid"></i>
                                               <div className="content">
                                                   <div className="title fw-semibold mb-2">E-mail address</div>
-                                                  <div className="text">hello@youraiagency.com</div>
+                                                  <div className="text">info@swiftbuild.io</div>
                                               </div>
                                           </div>
                                           <div className="contact-item effectFade fadeRotateX" data-delay="0.1">
                                               <i className="icon icon-headset-solid"></i>
                                               <div className="content">
                                                   <div className="title fw-semibold mb-2">Phone number</div>
-                                                  <div className="text">+1 (647) 555 0172</div>
+                                                  <div className="text">+1 (778) 751-3157</div>
                                               </div>
                                           </div>
                                       </div>
