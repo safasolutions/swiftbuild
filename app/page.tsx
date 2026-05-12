@@ -2,6 +2,7 @@
 'use client'
 
 import { useEffect } from 'react'
+import SelectedWorkSection from '@/components/SelectedWorkSection'
 
 export default function HomePage() {
   useEffect(() => {
@@ -269,120 +270,7 @@ export default function HomePage() {
                   </div>
                   {/* /section-services */}
                   {/* section-featured-works */}
-                  <div id="works" className="section-featured-works flat-spacing pt-0">
-                      <div className="container">
-                          <div className="heading-section mb-0">
-                              <div className="heading-sub fw-semibold mx-auto effectFade fadeUp">Featured Works</div>
-                          </div>
-                          <div className="featured-works-list position-relative">
-                              <div className="">
-                                  <div className="featured-works-item  effectFade fadeUp no-div">
-                                      <div className="image main-mouse-hover">
-                                          <img src="/assets/images/section/featured-works-1.jpg" alt="" />
-                                          <a href="/works/storagemate" className="tf-mouse view-project h6">
-                                              View Project
-                                              <i className="icon icon-arrow-top-right"></i>
-                                          </a>
-                                      </div>
-                                      <div className="content">
-                                          <div className="pagi-dot">
-                                              <span className="active"></span>
-                                              <span></span>
-                                              <span></span>
-                                          </div>
-                                          <div className="bot">
-                                              <h4 className="heading fw-semibold">StorageMate</h4>
-                                              <div className="grid-text">
-                                                  <div className="item">
-                                                      <div className="title text-secondary">DESCRIPTION</div>
-                                                      <div className="text-body-3 fw-semibold">Full-stack multi-brand SaaS platform replacing phone-based coordination with end-to-end digital booking, mover job management, and admin oversight — two student storage brands, one backend.</div>
-                                                  </div>
-                                                  <div className="item">
-                                                      <div className="title text-secondary">DELIVERABLES</div>
-                                                      <div className="fw-semibold text-body-3">Custom Development, Workflow Automation, CRM Integration</div>
-                                                  </div>
-                                                  <div className="item">
-                                                      <div className="title text-secondary">INDUSTRY</div>
-                                                      <div className="fw-semibold text-body-3">Student Logistics</div>
-                                                  </div>
-                                              </div>
-                                          </div>
-                                      </div>
-                                  </div>
-                              </div>
-                              <div className="">
-                                  <div className="featured-works-item ">
-                                      <div className="image main-mouse-hover">
-                                          <img src="/assets/images/section/featured-works-2.jpg" alt="" />
-                                          <a href="/works/showroom" className="tf-mouse view-project h6">
-                                              View Project
-                                              <i className="icon icon-arrow-top-right"></i>
-                                          </a>
-                                      </div>
-                                      <div className="content">
-                                          <div className="pagi-dot">
-                                              <span></span>
-                                              <span className="active"></span>
-                                              <span></span>
-                                          </div>
-                                          <div className="bot">
-                                              <h4 className="heading fw-semibold">Showroom</h4>
-                                              <div className="grid-text">
-                                                  <div className="item">
-                                                      <div className="title text-secondary">DESCRIPTION</div>
-                                                      <div className="text-body-3 fw-semibold">Content curation platform that pulls Instagram posts, lets admins organise branded showrooms via drag-and-drop, and auto-syncs to a mobile consumer app — eliminating manual content management for a fashion brand.</div>
-                                                  </div>
-                                                  <div className="item">
-                                                      <div className="title text-secondary">DELIVERABLES</div>
-                                                      <div className="fw-semibold">Custom Development, Workflow Automation</div>
-                                                  </div>
-                                                  <div className="item">
-                                                      <div className="title text-secondary">INDUSTRY</div>
-                                                      <div className="fw-semibold">Fashion E-Commerce</div>
-                                                  </div>
-                                              </div>
-                                          </div>
-                                      </div>
-                                  </div>
-                              </div>
-                              <div className="">
-                                  <div className="featured-works-item ">
-                                      <div className="image main-mouse-hover">
-                                          <img src="/assets/images/section/featured-works-3.jpg" alt="" />
-                                          <a href="/works/invoicelink" className="tf-mouse view-project h6">
-                                              View Project
-                                              <i className="icon icon-arrow-top-right"></i>
-                                          </a>
-                                      </div>
-                                      <div className="content">
-                                          <div className="pagi-dot">
-                                              <span></span>
-                                              <span></span>
-                                              <span className="active"></span>
-                                          </div>
-                                          <div className="bot">
-                                              <h4 className="heading fw-semibold">InvoiceLink</h4>
-                                              <div className="grid-text">
-                                                  <div className="item">
-                                                      <div className="title text-secondary">DESCRIPTION</div>
-                                                      <div className="text-body-3 fw-semibold">AI automation server for a Swiss accounting firm — monitors Box cloud storage for PDF invoices, extracts structured data with Box AI, and auto-links each invoice to its matching transaction. Zero manual data entry.</div>
-                                                  </div>
-                                                  <div className="item">
-                                                      <div className="title text-secondary">DELIVERABLES</div>
-                                                      <div className="fw-semibold">AI Integration, Workflow Automation, Custom Development</div>
-                                                  </div>
-                                                  <div className="item">
-                                                      <div className="title text-secondary">INDUSTRY</div>
-                                                      <div className="fw-semibold">Accounting & Finance</div>
-                                                  </div>
-                                              </div>
-                                          </div>
-                                      </div>
-                                  </div>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
+                  <SelectedWorkSection noPaddingTop />
                   {/* /section-featured-works */}
                   {/* section-process */}
                   <div className="section-process flat-spacing pt-0">

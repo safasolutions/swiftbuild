@@ -1,0 +1,159 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 540" width="1280" height="540" role="img" preserveAspectRatio="xMidYMid meet">
+<title>Zero-touch invoice processing — 12-layer architecture</title>
+<desc>Wide hero cover for a website. The 12-layer architecture of an automated invoice processing pipeline is shown with a hero title and tagline on the left, a small horizontal flow with all 12 layer names (staggered above and below the line) indicating the pipeline, and a refined two-column layer index on the right. The final marker, Banana DocLinker, is highlighted as the destination.</desc>
+<defs>
+<linearGradient id="bgGrad" x1="0" y1="0" x2="1" y2="1">
+<stop offset="0%" stop-color="#1F3A5C"/>
+<stop offset="100%" stop-color="#0A1A30"/>
+</linearGradient>
+<radialGradient id="leftGlow" cx="0.18" cy="0.5" r="0.5">
+<stop offset="0%" stop-color="#F8F4EA" stop-opacity="0.05"/>
+<stop offset="100%" stop-color="#F8F4EA" stop-opacity="0"/>
+</radialGradient>
+<pattern id="dg" x="0" y="0" width="22" height="22" patternUnits="userSpaceOnUse">
+<circle cx="0" cy="0" r="0.5" fill="#F8F4EA" opacity="0.05"/>
+</pattern>
+<linearGradient id="accentGrad" x1="0" y1="0" x2="1" y2="0">
+<stop offset="0%" stop-color="#F8F4EA" stop-opacity="1"/>
+<stop offset="100%" stop-color="#F8F4EA" stop-opacity="0"/>
+</linearGradient>
+<linearGradient id="bigNumGrad" x1="0" y1="0" x2="0" y2="1">
+<stop offset="0%" stop-color="#F8F4EA" stop-opacity="0.10"/>
+<stop offset="100%" stop-color="#F8F4EA" stop-opacity="0.02"/>
+</linearGradient>
+<style>
+.eyebrow{font-family:Poppins,Inter,system-ui,Arial,sans-serif;font-size:11px;font-weight:500;letter-spacing:3px;fill:#A0B5CC;text-transform:uppercase}
+.hero1{font-family:Poppins,Inter,system-ui,Arial,sans-serif;font-size:54px;font-weight:500;fill:#F8F4EA;letter-spacing:-1.4px}
+.hero2{font-family:Poppins,Inter,system-ui,Arial,sans-serif;font-size:54px;font-weight:300;fill:#F8F4EA;letter-spacing:-1.4px;font-style:italic}
+.sub{font-family:Inter,system-ui,Arial,sans-serif;font-size:14.5px;font-weight:400;fill:#A0B5CC}
+.bignum{font-family:Poppins,Inter,system-ui,Arial,sans-serif;font-size:340px;font-weight:500;letter-spacing:-14px}
+.flowhead{font-family:Inter,system-ui,Arial,sans-serif;font-size:10.5px;font-weight:500;letter-spacing:2.4px;fill:#A0B5CC;text-transform:uppercase}
+.flowname{font-family:Inter,system-ui,Arial,sans-serif;font-size:9px;font-weight:500;letter-spacing:0.4px;fill:#A0B5CC}
+.flownameOn{font-family:Inter,system-ui,Arial,sans-serif;font-size:9.5px;font-weight:600;letter-spacing:0.4px;fill:#F8F4EA}
+.flownum{font-family:Inter,system-ui,Arial,sans-serif;font-size:8px;font-weight:500;letter-spacing:0.6px;fill:#A0B5CC;fill-opacity:0.65}
+.idxhead{font-family:Inter,system-ui,Arial,sans-serif;font-size:10.5px;font-weight:500;letter-spacing:2.4px;fill:#A0B5CC}
+.idx{font-family:Inter,system-ui,Arial,sans-serif;font-size:11px;font-weight:500;letter-spacing:0.4px;fill:#A0B5CC}
+.lname{font-family:Inter,system-ui,Arial,sans-serif;font-size:13.5px;font-weight:500;fill:#F8F4EA}
+.lnameAccent{font-family:Inter,system-ui,Arial,sans-serif;font-size:13.5px;font-weight:600;fill:#F8F4EA}
+.foot{font-family:Inter,system-ui,Arial,sans-serif;font-size:10px;font-weight:400;letter-spacing:1.6px;fill:#A0B5CC}
+</style>
+</defs>
+
+<rect width="1280" height="540" fill="url(#bgGrad)"/>
+<rect width="1280" height="540" fill="url(#dg)"/>
+<rect width="1280" height="540" fill="url(#leftGlow)"/>
+
+<text class="bignum" x="700" y="395" fill="url(#bigNumGrad)">12</text>
+
+<text class="eyebrow" x="80" y="92">Architecture overview</text>
+
+<text class="hero1" x="80" y="170">Zero-touch invoice</text>
+<text class="hero2" x="80" y="226">processing.</text>
+
+<text class="sub" x="80" y="262">Box.com upload  →  Box AI extraction  →  metadata sync  →  ledger reconciliation</text>
+
+<rect x="80" y="288" width="120" height="2" fill="url(#accentGrad)"/>
+
+<g transform="translate(80, 322)">
+<text class="flowhead" x="0" y="14">12 layers · pipeline flow</text>
+
+<text class="flownum" x="0" y="38" text-anchor="middle">00</text>
+<text class="flowname" x="0" y="50" text-anchor="middle">Bootstrap</text>
+
+<text class="flownum" x="100" y="38" text-anchor="middle">02</text>
+<text class="flowname" x="100" y="50" text-anchor="middle">Upload</text>
+
+<text class="flownum" x="200" y="38" text-anchor="middle">04</text>
+<text class="flowname" x="200" y="50" text-anchor="middle">Guards</text>
+
+<text class="flownum" x="300" y="38" text-anchor="middle">06</text>
+<text class="flowname" x="300" y="50" text-anchor="middle">JWT</text>
+
+<text class="flownum" x="400" y="38" text-anchor="middle">08</text>
+<text class="flowname" x="400" y="50" text-anchor="middle">Metadata</text>
+
+<text class="flownum" x="500" y="38" text-anchor="middle">10</text>
+<text class="flowname" x="500" y="50" text-anchor="middle">Backlog</text>
+
+<line x1="0" y1="68" x2="500" y2="68" stroke="#F8F4EA" stroke-opacity="0.25" stroke-width="1"/>
+<line x1="500" y1="68" x2="580" y2="68" stroke="#F8F4EA" stroke-opacity="0.18" stroke-width="1" stroke-dasharray="2 3"/>
+
+<circle cx="0" cy="68" r="4" fill="#1F3A5C" stroke="#F8F4EA" stroke-width="1"/>
+<circle cx="50" cy="68" r="4" fill="#1F3A5C" stroke="#F8F4EA" stroke-width="1"/>
+<circle cx="100" cy="68" r="4" fill="#1F3A5C" stroke="#F8F4EA" stroke-width="1"/>
+<circle cx="150" cy="68" r="4" fill="#1F3A5C" stroke="#F8F4EA" stroke-width="1"/>
+<circle cx="200" cy="68" r="4" fill="#1F3A5C" stroke="#F8F4EA" stroke-width="1"/>
+<circle cx="250" cy="68" r="4" fill="#1F3A5C" stroke="#F8F4EA" stroke-width="1"/>
+<circle cx="300" cy="68" r="4" fill="#1F3A5C" stroke="#F8F4EA" stroke-width="1"/>
+<circle cx="350" cy="68" r="4" fill="#1F3A5C" stroke="#F8F4EA" stroke-width="1"/>
+<circle cx="400" cy="68" r="4" fill="#1F3A5C" stroke="#F8F4EA" stroke-width="1"/>
+<circle cx="450" cy="68" r="4" fill="#1F3A5C" stroke="#F8F4EA" stroke-width="1"/>
+<circle cx="500" cy="68" r="4" fill="#1F3A5C" stroke="#F8F4EA" stroke-width="1"/>
+
+<circle cx="580" cy="68" r="7" fill="#F8F4EA"/>
+
+<text class="flownum" x="50" y="86" text-anchor="middle">01</text>
+<text class="flowname" x="50" y="98" text-anchor="middle">Folder</text>
+
+<text class="flownum" x="150" y="86" text-anchor="middle">03</text>
+<text class="flowname" x="150" y="98" text-anchor="middle">Webhook</text>
+
+<text class="flownum" x="250" y="86" text-anchor="middle">05</text>
+<text class="flowname" x="250" y="98" text-anchor="middle">Resolve</text>
+
+<text class="flownum" x="350" y="86" text-anchor="middle">07</text>
+<text class="flowname" x="350" y="98" text-anchor="middle">Box AI</text>
+
+<text class="flownum" x="450" y="86" text-anchor="middle">09</text>
+<text class="flowname" x="450" y="98" text-anchor="middle">CSV</text>
+
+<text class="flownum" x="580" y="86" text-anchor="middle">11</text>
+<text class="flownameOn" x="580" y="98" text-anchor="middle">DocLinker</text>
+</g>
+
+<g>
+<text class="idxhead" x="780" y="92">The 12 layers</text>
+<line x1="780" y1="106" x2="1200" y2="106" stroke="#F8F4EA" stroke-opacity="0.18" stroke-width="0.5"/>
+
+<text class="idx" x="780" y="138">00</text>
+<text class="lname" x="820" y="138">Service bootstrap</text>
+
+<text class="idx" x="780" y="166">01</text>
+<text class="lname" x="820" y="166">Folder registration</text>
+
+<text class="idx" x="780" y="194">02</text>
+<text class="lname" x="820" y="194">Upload trigger</text>
+
+<text class="idx" x="780" y="222">03</text>
+<text class="lname" x="820" y="222">Webhook verification</text>
+
+<text class="idx" x="780" y="250">04</text>
+<text class="lname" x="820" y="250">Pre-processing guards</text>
+
+<text class="idx" x="780" y="278">05</text>
+<text class="lname" x="820" y="278">Folder resolution</text>
+
+<text class="idx" x="990" y="138">06</text>
+<text class="lname" x="1030" y="138">JWT authentication</text>
+
+<text class="idx" x="990" y="166">07</text>
+<text class="lname" x="1030" y="166">Box AI extraction</text>
+
+<text class="idx" x="990" y="194">08</text>
+<text class="lname" x="1030" y="194">Metadata write-back</text>
+
+<text class="idx" x="990" y="222">09</text>
+<text class="lname" x="1030" y="222">CSV export</text>
+
+<text class="idx" x="990" y="250">10</text>
+<text class="lname" x="1030" y="250">Bulk backlog</text>
+
+<circle cx="996" cy="274" r="4.5" fill="#F8F4EA"/>
+<text class="lnameAccent" x="1030" y="278">Banana DocLinker</text>
+<text class="idx" x="1200" y="278" text-anchor="end" font-style="italic" fill="#F8F4EA" fill-opacity="0.7">destination</text>
+</g>
+
+<line x1="80" y1="486" x2="1200" y2="486" stroke="#F8F4EA" stroke-opacity="0.15" stroke-width="0.5"/>
+<text class="foot" x="80" y="510">Box → Banana</text>
+<text class="foot" x="1200" y="510" text-anchor="end">Architecture overview</text>
+</svg>

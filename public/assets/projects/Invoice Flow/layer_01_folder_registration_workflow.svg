@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 440" width="800" height="440" role="img">
+<title>Layer 01: Folder registration — workflow</title>
+<desc>Horizontal workflow showing the 7 steps of folder registration in the invoice automation pipeline. The final step is highlighted as the layer outcome.</desc>
+<defs>
+<linearGradient id="bgGrad" x1="0" y1="0" x2="0" y2="1">
+<stop offset="0%" stop-color="#F8F4EA"/>
+<stop offset="100%" stop-color="#C5D2E0"/>
+</linearGradient>
+<pattern id="dg" x="0" y="0" width="22" height="22" patternUnits="userSpaceOnUse">
+<circle cx="0" cy="0" r="0.5" fill="#1F3A5C" opacity="0.10"/>
+</pattern>
+<linearGradient id="accentGrad" x1="0" y1="0" x2="1" y2="0">
+<stop offset="0%" stop-color="#1F3A5C" stop-opacity="1"/>
+<stop offset="100%" stop-color="#1F3A5C" stop-opacity="0"/>
+</linearGradient>
+<marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto" markerUnits="strokeWidth">
+<path d="M 0 1 L 10 5 L 0 9 Z" fill="#1F3A5C"/>
+</marker>
+<filter id="cardShadow" x="-20%" y="-20%" width="140%" height="160%">
+<feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#1F3A5C" flood-opacity="0.12"/>
+</filter>
+<style>
+.label{font-family:Poppins,Inter,system-ui,Arial,sans-serif;font-size:10px;font-weight:500;letter-spacing:2.4px;fill:#5A6580}
+.hero{font-family:Poppins,Inter,system-ui,Arial,sans-serif;font-size:26px;font-weight:500;fill:#1A1F2C;letter-spacing:-0.6px}
+.sub{font-family:Inter,system-ui,Arial,sans-serif;font-size:11.5px;font-weight:400;fill:#5A6580}
+.layernum{font-family:Poppins,Inter,system-ui,Arial,sans-serif;font-size:64px;font-weight:500;fill:#1F3A5C;fill-opacity:0.09;letter-spacing:-2px}
+.ntitle{font-family:Inter,system-ui,Arial,sans-serif;font-size:11.5px;font-weight:500;fill:#1A1F2C}
+.nnum{font-family:Inter,system-ui,Arial,sans-serif;font-size:9.5px;font-weight:500;fill:#F8F4EA}
+.ntitle-on{font-family:Inter,system-ui,Arial,sans-serif;font-size:11.5px;font-weight:500;fill:#F8F4EA}
+.nnum-on{font-family:Inter,system-ui,Arial,sans-serif;font-size:9.5px;font-weight:500;fill:#1F3A5C}
+.foot{font-family:Inter,system-ui,Arial,sans-serif;font-size:9.5px;font-weight:400;letter-spacing:1.5px;fill:#2C3548}
+</style>
+</defs>
+<rect width="800" height="440" fill="url(#bgGrad)"/>
+<rect width="800" height="440" fill="url(#dg)"/>
+<text class="label" x="40" y="32">Layer 01 · Invoice automation pipeline</text>
+<text class="label" x="760" y="32" text-anchor="end">7 steps · 01 of 11</text>
+<text class="layernum" x="760" y="100" text-anchor="end">01</text>
+<text class="hero" x="40" y="74">Folder registration</text>
+<text class="sub" x="40" y="94">Admin selects Box folders to monitor — webhooks auto-create on save</text>
+<rect x="40" y="106" width="100" height="2.5" fill="url(#accentGrad)"/>
+<g transform="translate(75, 130)"><rect x="0" y="0" width="140" height="90" rx="8" fill="#FFFFFF" stroke="#1F3A5C" stroke-opacity="0.20" stroke-width="0.8" filter="url(#cardShadow)"/><circle cx="14" cy="14" r="9" fill="#1F3A5C"/><text class="nnum" x="14" y="14" text-anchor="middle" dominant-baseline="central">08</text><g transform="translate(54, 8) scale(2.0)" stroke="#1F3A5C" stroke-width="1" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3 L3 12 L6 9 L8 13 L10 12 L8 8 L12 8 Z"/></g><text class="ntitle" x="70" y="68" text-anchor="middle">Admin opens picker</text></g>
+<line x1="215" y1="175" x2="245" y2="175" stroke="#1F3A5C" stroke-width="1.5" marker-end="url(#arrow)"/>
+<g transform="translate(245, 130)"><rect x="0" y="0" width="140" height="90" rx="8" fill="#FFFFFF" stroke="#1F3A5C" stroke-opacity="0.20" stroke-width="0.8" filter="url(#cardShadow)"/><circle cx="14" cy="14" r="9" fill="#1F3A5C"/><text class="nnum" x="14" y="14" text-anchor="middle" dominant-baseline="central">09</text><g transform="translate(54, 8) scale(2.0)" stroke="#1F3A5C" stroke-width="1" fill="none" stroke-linecap="round" stroke-linejoin="round"><circle cx="4" cy="4" r="1.2"/><circle cx="4" cy="12" r="1.2"/><circle cx="12" cy="8" r="1.2"/><path d="M5 4 H9 V8 M9 8 H11 M5 12 H9 V8"/></g><text class="ntitle" x="70" y="68" text-anchor="middle">Browse folder tree</text></g>
+<line x1="385" y1="175" x2="415" y2="175" stroke="#1F3A5C" stroke-width="1.5" marker-end="url(#arrow)"/>
+<g transform="translate(415, 130)"><rect x="0" y="0" width="140" height="90" rx="8" fill="#FFFFFF" stroke="#1F3A5C" stroke-opacity="0.20" stroke-width="0.8" filter="url(#cardShadow)"/><circle cx="14" cy="14" r="9" fill="#1F3A5C"/><text class="nnum" x="14" y="14" text-anchor="middle" dominant-baseline="central">10</text><g transform="translate(54, 8) scale(2.0)" stroke="#1F3A5C" stroke-width="1" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M2 5 H6 L8 3 H14 V13 H2 Z"/></g><text class="ntitle" x="70" y="68" text-anchor="middle">Admin selects folder</text></g>
+<line x1="555" y1="175" x2="585" y2="175" stroke="#1F3A5C" stroke-width="1.5" marker-end="url(#arrow)"/>
+<g transform="translate(585, 130)"><rect x="0" y="0" width="140" height="90" rx="8" fill="#FFFFFF" stroke="#1F3A5C" stroke-opacity="0.20" stroke-width="0.8" filter="url(#cardShadow)"/><circle cx="14" cy="14" r="9" fill="#1F3A5C"/><text class="nnum" x="14" y="14" text-anchor="middle" dominant-baseline="central">11</text><g transform="translate(54, 8) scale(2.0)" stroke="#1F3A5C" stroke-width="1" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8 L7 12 L13 4"/></g><text class="ntitle" x="70" y="68" text-anchor="middle">Validate template</text></g>
+<path d="M 725 175 L 755 175 L 755 250 L 45 250 L 45 325 L 72 325" fill="none" stroke="#1F3A5C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<g transform="translate(75, 280)"><rect x="0" y="0" width="140" height="90" rx="8" fill="#FFFFFF" stroke="#1F3A5C" stroke-opacity="0.20" stroke-width="0.8" filter="url(#cardShadow)"/><circle cx="14" cy="14" r="9" fill="#1F3A5C"/><text class="nnum" x="14" y="14" text-anchor="middle" dominant-baseline="central">12</text><g transform="translate(54, 8) scale(2.0)" stroke="#1F3A5C" stroke-width="1" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2 V5 M10 2 V5"/><rect x="4" y="5" width="8" height="4"/><path d="M8 9 V14"/></g><text class="ntitle" x="70" y="68" text-anchor="middle">Auto-create webhook</text></g>
+<line x1="215" y1="325" x2="245" y2="325" stroke="#1F3A5C" stroke-width="1.5" marker-end="url(#arrow)"/>
+<g transform="translate(245, 280)"><rect x="0" y="0" width="140" height="90" rx="8" fill="#FFFFFF" stroke="#1F3A5C" stroke-opacity="0.20" stroke-width="0.8" filter="url(#cardShadow)"/><circle cx="14" cy="14" r="9" fill="#1F3A5C"/><text class="nnum" x="14" y="14" text-anchor="middle" dominant-baseline="central">13</text><g transform="translate(54, 8) scale(2.0)" stroke="#1F3A5C" stroke-width="1" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3 H11 L13 5 V13 H3 Z"/><path d="M5 3 V7 H10 V3"/><path d="M5 13 V9 H11 V13"/></g><text class="ntitle" x="70" y="68" text-anchor="middle">Persist registration</text></g>
+<line x1="385" y1="325" x2="415" y2="325" stroke="#1F3A5C" stroke-width="1.5" marker-end="url(#arrow)"/>
+<g transform="translate(415, 280)"><rect x="0" y="0" width="140" height="90" rx="8" fill="#1F3A5C" stroke="#1F3A5C" stroke-opacity="1" stroke-width="0.8" filter="url(#cardShadow)"/><circle cx="14" cy="14" r="9" fill="#F8F4EA"/><text class="nnum-on" x="14" y="14" text-anchor="middle" dominant-baseline="central">14</text><g transform="translate(54, 8) scale(2.0)" stroke="#F8F4EA" stroke-width="1" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8 L7 12 L13 4"/></g><text class="ntitle-on" x="70" y="68" text-anchor="middle">Confirmation</text></g>
+<line x1="40" y1="395" x2="760" y2="395" stroke="#1F3A5C" stroke-width="0.5" opacity="0.30"/>
+<text class="foot" x="760" y="416" text-anchor="end">Folder registration · Layer 01 of 11</text>
+</svg>
