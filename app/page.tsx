@@ -1,171 +1,112 @@
 // @ts-nocheck
 'use client'
 
-import { useEffect } from 'react'
-
 export default function HomePage() {
-  useEffect(() => {
-    document.body.classList.add('counter-scroll')
-    return () => { document.body.classList.remove('counter-scroll') }
-  }, [])
-
   return (
     <>
       {/* Hero Banner */}
               <div className="section-hero">
-                  <div className="hero-image"></div>
+                  <div className="hero-image" style={{ opacity: 0.7 }}></div>
                   <div className="container">
                       <div className="content-wrap text-center">
                           <div className="sub fw-semibold effectFade fadeUp">
-                              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                  <path d="M3.53252 12.0966C3.75106 11.5025 4.59108 11.5025 4.81645 12.0966L5.54037 14.0567C5.60866 14.2411 5.75891 14.3913 5.9433 14.4596L7.90335 15.1835C8.49751 15.4021 8.49751 16.2421 7.90335 16.4674L5.9433 17.1914C5.75891 17.2597 5.60866 17.4099 5.54037 17.5943L4.81645 19.5543C4.59791 20.1485 3.75789 20.1485 3.53252 19.5543L2.8086 17.5943C2.74031 17.4099 2.59006 17.2597 2.40566 17.1914L0.44562 16.4674C-0.14854 16.2489 -0.14854 15.4089 0.44562 15.1835L2.40566 14.4596C2.59006 14.3913 2.74031 14.2411 2.8086 14.0567L3.53252 12.0966Z" fill="url(#paint0_linear_580_105)"/>
-                                  <path d="M3.53252 12.0966C3.75106 11.5025 4.59108 11.5025 4.81645 12.0966L5.54037 14.0567C5.60866 14.2411 5.75891 14.3913 5.9433 14.4596L7.90335 15.1835C8.49751 15.4021 8.49751 16.2421 7.90335 16.4674L5.9433 17.1914C5.75891 17.2597 5.60866 17.4099 5.54037 17.5943L4.81645 19.5543C4.59791 20.1485 3.75789 20.1485 3.53252 19.5543L2.8086 17.5943C2.74031 17.4099 2.59006 17.2597 2.40566 17.1914L0.44562 16.4674C-0.14854 16.2489 -0.14854 15.4089 0.44562 15.1835L2.40566 14.4596C2.59006 14.3913 2.74031 14.2411 2.8086 14.0567L3.53252 12.0966Z" fill="url(#paint1_linear_580_105)"/>
-                                  <path d="M11.4068 0.670991C11.7346 -0.223664 12.9981 -0.223664 13.3259 0.670991L14.7874 4.61157C14.8898 4.89157 15.1152 5.11011 15.3952 5.21938L19.3358 6.68088C20.2304 7.00869 20.2304 8.27214 19.3358 8.59995L15.3952 10.0614C15.1152 10.1639 14.8967 10.3893 14.7874 10.6693L13.3259 14.6098C12.9981 15.5045 11.7346 15.5045 11.4068 14.6098L9.94534 10.6693C9.8429 10.3893 9.61753 10.1707 9.33752 10.0614L5.39694 8.59995C4.50229 8.27214 4.50229 7.00869 5.39694 6.68088L9.33752 5.21938C9.61753 5.11694 9.83607 4.89157 9.94534 4.61157L11.4068 0.670991Z" fill="url(#paint2_linear_580_105)"/>
-                                  <path d="M11.4068 0.670991C11.7346 -0.223664 12.9981 -0.223664 13.3259 0.670991L14.7874 4.61157C14.8898 4.89157 15.1152 5.11011 15.3952 5.21938L19.3358 6.68088C20.2304 7.00869 20.2304 8.27214 19.3358 8.59995L15.3952 10.0614C15.1152 10.1639 14.8967 10.3893 14.7874 10.6693L13.3259 14.6098C12.9981 15.5045 11.7346 15.5045 11.4068 14.6098L9.94534 10.6693C9.8429 10.3893 9.61753 10.1707 9.33752 10.0614L5.39694 8.59995C4.50229 8.27214 4.50229 7.00869 5.39694 6.68088L9.33752 5.21938C9.61753 5.11694 9.83607 4.89157 9.94534 4.61157L11.4068 0.670991Z" fill="url(#paint3_linear_580_105)"/>
-                                  <defs>
-                                  <linearGradient id="paint0_linear_580_105" x1="10.2993" y1="-1.30435" x2="21.6031" y2="11.1057" gradientUnits="userSpaceOnUse">
-                                  <stop offset="1" stopColor="#555D64"/>
-                                  <stop offset="1" stopColor="#292C2E"/>
-                                  </linearGradient>
-                                  <linearGradient id="paint1_linear_580_105" x1="10.0034" y1="0" x2="10.0034" y2="20" gradientUnits="userSpaceOnUse">
-                                  <stop offset="1" stopColor="#EA2B16"/>
-                                  <stop offset="1" stopColor="#FF3B26"/>
-                                  </linearGradient>
-                                  <linearGradient id="paint2_linear_580_105" x1="10.2993" y1="-1.30435" x2="21.6031" y2="11.1057" gradientUnits="userSpaceOnUse">
-                                  <stop offset="1" stopColor="#555D64"/>
-                                  <stop offset="1" stopColor="#292C2E"/>
-                                  </linearGradient>
-                                  <linearGradient id="paint3_linear_580_105" x1="10.0034" y1="0" x2="10.0034" y2="20" gradientUnits="userSpaceOnUse">
-                                  <stop offset="1" stopColor="#EA2B16"/>
-                                  <stop offset="1" stopColor="#FF3B26"/>
-                                  </linearGradient>
-                                  </defs>
-                              </svg>
                               Digital Solutions for Trades Businesses
                           </div>
                           <div className="title text-display-2 effectFade fadeRotateX">
-                              <span className="title1 fw-semibold text-gradient-1">Your business works hard.</span>
+                              <span className="title1 fw-semibold text-gradient-1">Stand out.</span>
                               <br />
                               <div className="title2 d-flex gap-20 justify-content-center flex-wrap">
-                                  <span className="fw-semibold text-gradient-1">Your website should too.</span>
-                                  <div className="title-icon">
-                                      <div className="box"></div>
-                                      <div className="title-icon-wrap">
-                                          <img className="img-1 img-transform-3" src="/assets/images/item/hero-1.svg" alt="" />
-                                          <img className="img-2 img-transform-3" src="/assets/images/item/hero-2.svg" alt="" />
-                                          <img className="img-3 img-transform-3" src="/assets/images/item/hero-3.svg" alt="" />
-                                      </div>
-                                  </div>
+                                  <span className="fw-semibold text-gradient-1">Stay booked.</span>
                               </div>
                           </div>
-                          <p className="text effectFade fadeUp">
-                              We help roofing, HVAC, and cleaning companies across Canada get found online, look professional, and automate the admin that's eating your time — so you can focus on the work that pays.
+                          <p className="text effectFade fadeUp" style={{ maxWidth: 640, marginLeft: 'auto', marginRight: 'auto' }}>
+                              We help roofing, HVAC, and cleaning companies across Canada get found online, look professional, and automate the admin that&apos;s eating your time — so you can focus on the work that pays.
                           </p>
                           <div className="bot-btns effectFade fadeRotateX">
-                              <a href="https://cal.com/swiftbuild/free-strategy-call" className="tf-btn">
-                                  Book a free strategy call
-                              </a>
-                              <a href="/works" className="tf-btn-2">
-                                  See our work
+                              <a
+                                  href="https://cal.com/swiftbuild/free-strategy-call"
+                                  className="tf-btn"
+                                  style={{ background: 'var(--brand)' }}
+                              >
+                                  Book Your Automation Audit
                               </a>
                           </div>
                       </div>
                   </div>
-                  <a href="#about" className="scroll-more">
+                  <a href="#services" className="scroll-more">
                       <span className="fw-semibold link1">Scroll for more</span>
                       <i className="icon icon-long-arrow-alt-down-solid"></i>
                   </a>
               </div>
               {/* /Hero Banner */}
-              {/* section-about-us */}
-              <div className="section-about-us flat-spacing" id="about">
-                  <div className="container">
-                      <div className="row">
-                          <div className="col-12">
-                              <div className="heading-section">
-                                  <div className="heading-sub fw-semibold effectFade fadeUp">About Us</div>
-                                  <div className="heading-title text-gradient-2 effectFade fadeRotateX">Built for trades. <br /> Built for Canada.</div>
-                              </div>
-                          </div>
-                          <div className="col-xxl-7 col-lg-6 lg-mb-24">
-                              <div className="col-left">
-                                  <div className="position-relative z-5">
-                                      <div className="sub text-white">
-                                          <span className="dot"></span>
-                                          Serving trades businesses across Canada
-                                      </div>
-                                      <h5 className="title fw-semibold text-white">Serving <span className="text-brand">Canada-wide</span></h5>
-                                      <a href="/contact" className="tf-btn">
-                                          Start a Project
-                                      </a>
+              <div className="box-white">
+                  {/* section-who-we-are */}
+                  <div className="section-who-we-are" style={{ paddingTop: 80, paddingBottom: 40 }}>
+                      <div className="container">
+                          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, minmax(0, 1fr))', gap: 64, alignItems: 'start' }}>
+                              {/* LEFT */}
+                              <div>
+                                  <div className="heading-section mb-24">
+                                      <div className="heading-sub fw-semibold effectFade fadeUp">Who We Are</div>
                                   </div>
-                                  <img className="effectFade fadeRotateX" src="/assets/images/item/earth.png" alt="" />
+                                  <h2 className="effectFade fadeRotateX fw-semibold mb-24" style={{ fontSize: 44, lineHeight: '52px', letterSpacing: '-0.02em' }}>
+                                      Your <span className="text-brand">Strategic Partner</span><br />for Digital Growth
+                                  </h2>
+                                  <p className="effectFade fadeUp mb-0 text-secondary" style={{ maxWidth: 520, fontSize: 15, lineHeight: '24px' }}>
+                                      We combine technical expertise with strategic vision to transform your digital presence into a high-performance engine. As your reliable strategic partner, we are committed to building long-term value through engineering excellence and consistent delivery.
+                                  </p>
                               </div>
-                          </div>
-                          <div className="col-xxl-5 col-lg-6">
-                              <div className="review-box mb-24">
-                                  <div className="desc fw-semibold text-body-1">Digital agency for trades contractors across Canada — websites, SEO, automation, and AI tools.</div>
-                                  <div className="d-flex justify-content-between flex-wrap align-items-end gap-12">
-                                      <div className="">
-                                          <div className="d-flex gap-4 text mb-10">
-                                              <svg width="26" height="24" viewBox="0 0 26 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                  <path d="M12.6792 18.3019L18.1887 16.9057L20.4906 24L12.6792 18.3019ZM25.3585 9.13208H15.6604L12.6792 0L9.69811 9.13208H0L7.84906 14.7925L4.86792 23.9245L12.717 18.2641L17.5472 14.7925L25.3585 9.13208Z" fill="#219653"/>
-                                              </svg>
-                                              Trustpilot
-                                          </div>
-                                          <div className="d-flex gap-2">
-                                              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                  <rect width="24" height="24" fill="#3F3F46"/>
-                                                  <path d="M11.9996 16.4114L15.6496 15.4341L17.1746 20.4001L11.9996 16.4114ZM20.3996 9.99255H13.9746L11.9996 3.6001L10.0246 9.99255H3.59961L8.79961 13.9548L6.82461 20.3473L12.0246 16.385L15.2246 13.9548L20.3996 9.99255Z" fill="white"/>
-                                              </svg>
-                                              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                  <rect width="24" height="24" fill="#3F3F46"/>
-                                                  <path d="M11.9996 16.4114L15.6496 15.4341L17.1746 20.4001L11.9996 16.4114ZM20.3996 9.99255H13.9746L11.9996 3.6001L10.0246 9.99255H3.59961L8.79961 13.9548L6.82461 20.3473L12.0246 16.385L15.2246 13.9548L20.3996 9.99255Z" fill="white"/>
-                                              </svg>
-                                              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                  <rect width="24" height="24" fill="#3F3F46"/>
-                                                  <path d="M11.9996 16.4114L15.6496 15.4341L17.1746 20.4001L11.9996 16.4114ZM20.3996 9.99255H13.9746L11.9996 3.6001L10.0246 9.99255H3.59961L8.79961 13.9548L6.82461 20.3473L12.0246 16.385L15.2246 13.9548L20.3996 9.99255Z" fill="white"/>
-                                              </svg>
-                                              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                  <rect width="24" height="24" fill="#3F3F46"/>
-                                                  <path d="M11.9996 16.4114L15.6496 15.4341L17.1746 20.4001L11.9996 16.4114ZM20.3996 9.99255H13.9746L11.9996 3.6001L10.0246 9.99255H3.59961L8.79961 13.9548L6.82461 20.3473L12.0246 16.385L15.2246 13.9548L20.3996 9.99255Z" fill="white"/>
-                                              </svg>
-                                              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                  <rect width="24" height="24" fill="#3F3F46"/>
-                                                  <path d="M11.9996 16.4114L15.6496 15.4341L17.1746 20.4001L11.9996 16.4114ZM20.3996 9.99255H13.9746L11.9996 3.6001L10.0246 9.99255H3.59961L8.79961 13.9548L6.82461 20.3473L12.0246 16.385L15.2246 13.9548L20.3996 9.99255Z" fill="white"/>
-                                              </svg>
-                                          </div>
+                              {/* RIGHT */}
+                              <div>
+                                  <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, minmax(0, 1fr))', columnGap: 32, rowGap: 24, marginBottom: 32 }}>
+                                      <div className="effectFade fadeUp">
+                                          <div className="fw-semibold text-brand" style={{ fontSize: 44, lineHeight: 1.1, letterSpacing: '-0.02em' }}>35+</div>
+                                          <div className="fw-semibold text-secondary" style={{ fontSize: 11, letterSpacing: '0.12em' }}>HAPPY CLIENTS</div>
                                       </div>
-                                      <div className="counter text-neutral-200">
-                                          <span className="number" data-speed="1500" data-to="8" data-inviewport="yes">10</span><span>+</span>
+                                      <div className="effectFade fadeUp" data-delay="0.1">
+                                          <div className="fw-semibold text-brand" style={{ fontSize: 44, lineHeight: 1.1, letterSpacing: '-0.02em' }}>180%</div>
+                                          <div className="fw-semibold text-secondary" style={{ fontSize: 11, letterSpacing: '0.12em' }}>AVG ROI</div>
+                                      </div>
+                                      <div className="effectFade fadeUp" data-delay="0.2">
+                                          <div className="fw-semibold text-brand" style={{ fontSize: 44, lineHeight: 1.1, letterSpacing: '-0.02em' }}>400+</div>
+                                          <div className="fw-semibold text-secondary" style={{ fontSize: 11, letterSpacing: '0.12em' }}>SOLUTIONS BUILT</div>
+                                      </div>
+                                      <div className="effectFade fadeUp" data-delay="0.3">
+                                          <div className="fw-semibold text-brand" style={{ fontSize: 44, lineHeight: 1.1, letterSpacing: '-0.02em' }}>6,000+</div>
+                                          <div className="fw-semibold text-secondary" style={{ fontSize: 11, letterSpacing: '0.12em' }}>HOURS SAVED</div>
                                       </div>
                                   </div>
-                              </div>
-                              <div className="box-quotes effectFade fadeRotateX">
-                                  <div className="image ">
-                                      <img src="/assets/images/section/quotes-1.jpg" alt="" />
-                                  </div>
-                                  <div className="content">
-                                      <div className="icon mb-8">
-                                          <svg width="23" height="20" viewBox="0 0 23 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                              <path d="M12.9375 20V10.3597C12.9375 7.72182 13.824 5.51559 15.5969 3.74101C17.4177 1.91847 19.8854 0.671463 23 0V6.40288C21.8021 6.78657 21.0115 7.26619 20.6281 7.84173C20.2448 8.3693 20.0292 9.04077 19.9813 9.85612H23V20H12.9375ZM0 20V10.3597C0 7.72182 0.886459 5.51559 2.65938 3.74101C4.48021 1.91847 6.94792 0.671463 10.0625 0V6.40288C8.9125 6.78657 8.12187 7.26619 7.69062 7.84173C7.30729 8.3693 7.09167 9.04077 7.04375 9.85612H10.0625V20H0Z" fill="#E4E4E7"/>
-                                          </svg>
+                                  <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, minmax(0, 1fr))', columnGap: 32, rowGap: 16, borderTop: '1px solid #E4E4E7', paddingTop: 24 }}>
+                                      <div className="effectFade fadeUp d-flex align-items-center gap-12">
+                                          <i className="icon icon-clipboard-check-solid text-brand" style={{ fontSize: 18 }}></i>
+                                          <span className="fw-semibold" style={{ fontSize: 14 }}>Smart Invoicing</span>
                                       </div>
-                                      <div className="text-body-1 fw-semibold desc">The best contractors don't lose jobs on the job. They lose them in the phone.</div>
-                                      <div className="cite">
-                                          <div className="name text-body-3 fw-semibold">Junaid Amir</div>
-                                          <div className="line"></div>
-                                          <div className="sub text-body-3">Technical Co-Founder, SwiftBuild</div>
+                                      <div className="effectFade fadeUp d-flex align-items-center gap-12" data-delay="0.1">
+                                          <i className="icon icon-user-check-solid text-brand" style={{ fontSize: 18 }}></i>
+                                          <span className="fw-semibold" style={{ fontSize: 14 }}>CRM Integration</span>
+                                      </div>
+                                      <div className="effectFade fadeUp d-flex align-items-center gap-12" data-delay="0.2">
+                                          <i className="icon icon-search-solid text-brand" style={{ fontSize: 18 }}></i>
+                                          <span className="fw-semibold" style={{ fontSize: 14 }}>Local SEO</span>
+                                      </div>
+                                      <div className="effectFade fadeUp d-flex align-items-center gap-12" data-delay="0.3">
+                                          <i className="icon icon-bolt-solid text-brand" style={{ fontSize: 18 }}></i>
+                                          <span className="fw-semibold" style={{ fontSize: 14 }}>Custom Websites</span>
+                                      </div>
+                                      <div className="effectFade fadeUp d-flex align-items-center gap-12" data-delay="0.4">
+                                          <i className="icon icon-robot-solid text-brand" style={{ fontSize: 18 }}></i>
+                                          <span className="fw-semibold" style={{ fontSize: 14 }}>Strategic Marketing</span>
+                                      </div>
+                                      <div className="effectFade fadeUp d-flex align-items-center gap-12" data-delay="0.5">
+                                          <i className="icon icon-plug-solid text-brand" style={{ fontSize: 18 }}></i>
+                                          <span className="fw-semibold" style={{ fontSize: 14 }}>Inbound Lead Management</span>
                                       </div>
                                   </div>
                               </div>
                           </div>
                       </div>
                   </div>
-              </div>
-              {/* /section-about-us */}
-
-              <div className="box-white">
+                  {/* /section-who-we-are */}
                   {/* section-services */}
                   <div id="services" className="section-services flat-spacing">
                       <div className="container">
@@ -177,7 +118,7 @@ export default function HomePage() {
                                               <div className="heading-sub fw-semibold effectFade fadeUp">Services</div>
                                               <div className="heading-title text-gradient-3 effectFade fadeRotateX">What we do</div>
                                           </div>
-                                          <p className="effectFade fadeUp">Web design, local SEO, workflow automation, and AI tools — built specifically for trades businesses across Canada.</p>
+                                          <p className="effectFade fadeUp">Web design, local SEO, and workflow automation — built specifically for trades businesses across Canada.</p>
                                       </div>
                                   </div>
                               </div>
@@ -244,13 +185,13 @@ export default function HomePage() {
                                           <div className="accordion-action services-image-btn collapsed" data-img="/assets/images/section/service-4.jpg" data-bs-target="#faq-4" role="button"
                                               data-bs-toggle="collapse" aria-controls="faq-4" aria-expanded="false">
                                               <div className="accordion-title">
-                                                  AI Voice Agent <br /> & Booking
+                                                  Voice Agent <br /> & Booking
                                                   <div className="text-body-1 num">(04)</div>
                                               </div>
                                           </div>
                                           <div id="faq-4" className="collapse" data-bs-parent="#accordion-services">
                                               <div className="accordion-content">
-                                                  <div className="text-body-3 text-neutral-300 text">Coming soon — an AI that answers your calls 24/7, qualifies leads, and books appointments while you're on the job. Join the early access waitlist.</div>
+                                                  <div className="text-body-3 text-neutral-300 text">Coming soon — a smart voice system that answers your calls 24/7, qualifies leads, and books appointments while you're on the job. Join the early access waitlist.</div>
                                                   <div className="list-tags">
                                                       <a href="#" className="tags-item fw-semibold">Early access open</a>
                                                       <a href="#" className="tags-item fw-semibold">Canadian pilot running</a>
@@ -277,13 +218,6 @@ export default function HomePage() {
                           <div className="featured-works-list position-relative">
                               <div className="">
                                   <div className="featured-works-item  effectFade fadeUp no-div">
-                                      <div className="image main-mouse-hover">
-                                          <img src="/assets/images/section/featured-works-1.jpg" alt="" />
-                                          <a href="/works/storagemate" className="tf-mouse view-project h6">
-                                              View Project
-                                              <i className="icon icon-arrow-top-right"></i>
-                                          </a>
-                                      </div>
                                       <div className="content">
                                           <div className="pagi-dot">
                                               <span className="active"></span>
@@ -312,13 +246,6 @@ export default function HomePage() {
                               </div>
                               <div className="">
                                   <div className="featured-works-item ">
-                                      <div className="image main-mouse-hover">
-                                          <img src="/assets/images/section/featured-works-2.jpg" alt="" />
-                                          <a href="/works/showroom" className="tf-mouse view-project h6">
-                                              View Project
-                                              <i className="icon icon-arrow-top-right"></i>
-                                          </a>
-                                      </div>
                                       <div className="content">
                                           <div className="pagi-dot">
                                               <span></span>
@@ -347,13 +274,6 @@ export default function HomePage() {
                               </div>
                               <div className="">
                                   <div className="featured-works-item ">
-                                      <div className="image main-mouse-hover">
-                                          <img src="/assets/images/section/featured-works-3.jpg" alt="" />
-                                          <a href="/works/invoicelink" className="tf-mouse view-project h6">
-                                              View Project
-                                              <i className="icon icon-arrow-top-right"></i>
-                                          </a>
-                                      </div>
                                       <div className="content">
                                           <div className="pagi-dot">
                                               <span></span>
@@ -365,11 +285,11 @@ export default function HomePage() {
                                               <div className="grid-text">
                                                   <div className="item">
                                                       <div className="title text-secondary">DESCRIPTION</div>
-                                                      <div className="text-body-3 fw-semibold">AI automation server for a Swiss accounting firm — monitors Box cloud storage for PDF invoices, extracts structured data with Box AI, and auto-links each invoice to its matching transaction. Zero manual data entry.</div>
+                                                      <div className="text-body-3 fw-semibold">Automation server for a Swiss accounting firm — monitors Box cloud storage for PDF invoices, extracts structured data, and auto-links each invoice to its matching transaction. Zero manual data entry.</div>
                                                   </div>
                                                   <div className="item">
                                                       <div className="title text-secondary">DELIVERABLES</div>
-                                                      <div className="fw-semibold">AI Integration, Workflow Automation, Custom Development</div>
+                                                      <div className="fw-semibold">Custom Integration, Workflow Automation, Custom Development</div>
                                                   </div>
                                                   <div className="item">
                                                       <div className="title text-secondary">INDUSTRY</div>
@@ -465,102 +385,6 @@ export default function HomePage() {
                       </div>
                   </div>
                   {/* /section-process */}
-                  {/* section-benefits */}
-                  <div className="section-benefits flat-spacing pt-0">
-                      <div className="container">
-                          <div className="heading-section center mb-70">
-                              <div className="heading-sub fw-semibold effectFade fadeUp">Why SwiftBuild</div>
-                              <div className="heading-title text-gradient-3 effectFade fadeRotateX">Why Choose Us</div>
-                          </div>
-                          <div className="row mb-24">
-                              <div className="col-lg-7">
-                                  <div className="benefits-box benefits-progress">
-                                      <div className="benefits-progress-inner">
-                                          <div className="benefits-progress-item">
-                                              <div className="progress-line" data-progress="60"></div>
-                                              <div className="progress-text fw-semibold">
-                                                  <i className="icon icon-bullseye-solid"></i>
-                                                  Rankings
-                                              </div>
-                                          </div>
-                                          <div className="benefits-progress-item">
-                                              <div className="progress-line" data-progress="100"></div>
-                                              <div className="progress-text fw-semibold">
-                                                  <i className="icon icon-tachometer-alt-solid"></i>
-                                                  Inbound calls
-                                              </div>
-                                          </div>
-                                          <div className="benefits-progress-item">
-                                              <div className="progress-line" data-progress="40"></div>
-                                              <div className="progress-text fw-semibold">
-                                                  <i className="icon icon-shield-alt-solid"></i>
-                                                  Response time
-                                              </div>
-                                          </div>
-                                          <div className="benefits-progress-item">
-                                              <div className="progress-line" data-progress="80"></div>
-                                              <div className="progress-text fw-semibold">
-                                                  <i className="icon icon-coins-solid"></i>
-                                                  Client retention
-                                              </div>
-                                          </div>
-                                      </div>
-                                      <div className="content">
-                                          <h6 className="fw-semibold title">Results you can measure</h6>
-                                          <p className="text text-secondary">We track rankings, inbound calls, and time saved — so you always know what's working and what's next.</p>
-                                      </div>
-                                  </div>
-                              </div>
-                              <div className="col-lg-5">
-                                  <div className="benefits-box benefits-step effectFade fadeUp">
-                                      <div className="benefits-step-inner">
-                                          <div className="line-step"></div>
-                                          <div className="step-item">
-                                              <i className="icon icon-check-solid"></i>
-                                          </div>
-                                          <div className="step-item">
-                                              <i className="icon icon-check-solid"></i>
-                                          </div>
-                                          <div className="step-item">
-                                              <i className="icon icon-check-solid"></i>
-                                          </div>
-                                      </div>
-                                      <div className="content">
-                                          <h6 className="fw-semibold title">We stick around</h6>
-                                          <p className="text text-secondary">We're not a one-and-done agency. After launch, we monitor, report, and keep improving.</p>
-                                      </div>
-                                  </div>
-                              </div>
-                          </div>
-                          <div className="row">
-                              <div className="col-lg-5">
-                                  <div className="benefits-box benefits-secure ">
-                                      <div className="benefits-secure-inner text-center">
-                                          <img src="/assets/images/item/benefits-1.svg" alt="" />
-                                      </div>
-                                      <div className="content">
-                                          <h6 className="fw-semibold title">Fixed pricing</h6>
-                                          <p className="text text-secondary">We scope before we start and we stick to it. No surprise invoices, no scope creep charges.</p>
-                                      </div>
-                                  </div>
-                              </div>
-                              <div className="col-lg-7">
-                                  <div className="benefits-box benefits-design">
-                                      <div className="benefits-design-inner">
-                                          <img className="item-img-1" src="/assets/images/item/benefits-2.svg" alt="" />
-                                          <img className="item-img-2 rightleft" src="/assets/images/item/benefits-3.png" alt="" />
-                                          <img className="item-img-3 updown" src="/assets/images/item/benefits-4.png" alt="" />
-                                      </div>
-                                      <div className="content">
-                                          <h6 className="fw-semibold title">Canada-based clients, world-class execution</h6>
-                                          <p className="text text-secondary">Canadian market knowledge, combined with expert technical delivery. Fast turnaround, real communication.</p>
-                                      </div>
-                                  </div>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-                  {/* /section-benefits */}
                   {/* section-features */}
                   <div className="section-features flat-spacing pt-0">
                       <div className="container">
@@ -595,15 +419,19 @@ export default function HomePage() {
                                           </p>
                                       </div>
                                   </div>
-                                  <div className="features-center flex-shrink">
-                                      <img src="/assets/images/logo/logo-1.svg" alt="" />
+                                  <div className="features-center flex-shrink" style={{ width: 96, height: 96, borderRadius: 20 }}>
+                                      <img
+                                          src="/assets/images/logo/favicon.svg"
+                                          alt="SwiftBuild"
+                                          style={{ width: 76, height: 76, mixBlendMode: 'multiply' }}
+                                      />
                                   </div>
                                   <div className="features-col col-right">
                                       <div className="features-item effectFade fadeUp" data-delay="0.1">
                                           <i className="icon icon-user-check-solid"></i>
-                                          <h6 className="title fw-semibold">AI voice agent</h6>
+                                          <h6 className="title fw-semibold">Voice agent</h6>
                                           <p className="text-secondary">
-                                              Coming soon: an AI that answers your calls, qualifies callers, and books appointments while you're on the job.
+                                              Coming soon: a smart voice system that answers your calls, qualifies callers, and books appointments while you're on the job.
                                           </p>
                                       </div>
                                       <div className="features-item effectFade fadeUp" data-delay="0.1">
@@ -652,81 +480,11 @@ export default function HomePage() {
                   {/* /section-features */}
               </div>
         
-              {/* section-tools */}
-              <div className="section-tools flat-spacing">
-                  <img className="img-1 img-grow-1" src="/assets/images/item/item-4.svg" alt="" />
-                  <img className="img-2 img-grow-2" src="/assets/images/item/item-5.svg" alt="" />
-                  <img className="img-3 img-grow-3" src="/assets/images/item/item-6.svg" alt="" />
-                  <img className="img-4 img-grow-4" src="/assets/images/item/item-7.svg" alt="" />
-                  <img className="img-5 img-grow-5" src="/assets/images/item/item-8.svg" alt="" />
-                  <img className="img-6 img-grow-6" src="/assets/images/item/item-9.svg" alt="" />
-                  <div className="container">
-                      <div className="row justify-content-center">
-                          <div className="col-xl-5 col-md-8 text-center">
-                              <div className="heading-section center mb-48">
-                                  <div className="heading-sub fw-semibold effectFade fadeUp">Tools</div>
-                                  <div className="heading-title text-gradient-3 effectFade fadeRotateX">We work with powerful AI tools</div>
-                              </div>
-                              <div className="text effectFade fadeUp">
-                                  We design, build, and evaluate with a modern AI stack—LLMs, vector search, orchestration, and observability—so your features are fast, reliable, and secure.
-                              </div>
-                              <a href="/contact" className="tf-btn effectFade fadeRotateX">
-                                  Get Started
-                              </a>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-              {/* /section-tools */}
-
               <div className="box-black">
                   <div className="light-box"></div>
                   <img className="light-top" src="/assets/images/item/light-top.png" alt="" />
                   <img className="light-bot" src="/assets/images/item/light-bot.png" alt="" />
             
-                  {/* section-team */}
-                  <div className="section-team flat-spacing">
-                      <div className="container">
-                          <div className="heading-section center mb-64">
-                              <div className="heading-sub fw-semibold style-1 effectFade fadeUp">The Team</div>
-                              <div className="heading-title text-white effectFade fadeRotateX">Two people. <br /> Full commitment.</div>
-                          </div>
-                          <div className="row justify-content-center">
-                              <div className="col-lg-5 col-md-8 lg-mb-24">
-                                  <div className="team-item h-100 effectFade fadeUp">
-                                      <div className="image">
-                                          <img src="/assets/images/team/team-1.jpg" alt="" />
-                                      </div>
-                                      <a href="#" className="name h6 fw-semibold">Junaid Amir</a>
-                                      <div className="sub text-body-1">Technical Co-Founder</div>
-                                      <div className="tf-social justify-content-center">
-                                          <a href="#" className="social-item">
-                                              <i className="icon icon-linkedin-in"></i>
-                                          </a>
-                                          <a href="#" className="social-item">
-                                              <i className="icon icon-github"></i>
-                                          </a>
-                                      </div>
-                                  </div>
-                              </div>
-                              <div className="col-lg-5 col-md-8 lg-mb-24">
-                                  <div className="team-item h-100 effectFade fadeUp">
-                                      <div className="image">
-                                          <img src="/assets/images/team/team-2.jpg" alt="" />
-                                      </div>
-                                      <a href="#" className="name h6 fw-semibold">Ahmed Masood</a>
-                                      <div className="sub text-body-1">Growth & Client Success</div>
-                                      <div className="tf-social justify-content-center">
-                                          <a href="#" className="social-item">
-                                              <i className="icon icon-linkedin-in"></i>
-                                          </a>
-                                      </div>
-                                  </div>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-                  {/* /section-team */}
                   {/* section-statistic */}
                   <div className="section-statistic">
                       <div className="line"></div>
@@ -735,7 +493,7 @@ export default function HomePage() {
                               <div className="col-md-6">
                                   <div className="heading-section mb-48">
                                       <div className="heading-sub fw-semibold style-1 effectFade fadeUp">Statistic</div>
-                                      <div className="heading-title text-white effectFade fadeRotateX">Human-centered <br /> AI, built for <br /> production</div>
+                                      <div className="heading-title text-white effectFade fadeRotateX">Human-centered <br /> automation, built for <br /> production</div>
                                   </div>
                               </div>
                               <div className="col-md-6">
@@ -798,7 +556,7 @@ export default function HomePage() {
                                   <div className="image">
                                       <img src="/assets/images/partner/partner-7.svg" alt="" />
                                   </div>
-                                  <div className="title text-body-1 text-white">Innovation in AI</div>
+                                  <div className="title text-body-1 text-white">Innovation Award</div>
                                   <div className="text text-body-1 text-white">Underwriting Risk Copilot (Fintech)</div>
                                   <div className="year text-body-1 text-neutral-400">/ 2025</div>
                               </div>
@@ -806,7 +564,7 @@ export default function HomePage() {
                                   <div className="image">
                                       <img src="/assets/images/partner/partner-8.svg" alt="" />
                                   </div>
-                                  <div className="title text-body-1 text-white">Best AI Product Design</div>
+                                  <div className="title text-body-1 text-white">Best Product Design</div>
                                   <div className="text text-body-1 text-white">Support Copilot (SaaS)</div>
                                   <div className="year text-body-1 text-neutral-400">/ 2025</div>
                               </div>
@@ -814,7 +572,7 @@ export default function HomePage() {
                                   <div className="image">
                                       <img src="/assets/images/partner/partner-9.svg" alt="" />
                                   </div>
-                                  <div className="title text-body-1 text-white">Data & AI Excellence</div>
+                                  <div className="title text-body-1 text-white">Data Excellence</div>
                                   <div className="text text-body-1 text-white">Clinical Note Summarizer (Healthcare)</div>
                                   <div className="year text-body-1 text-neutral-400">/ 2024</div>
                               </div>
@@ -822,7 +580,7 @@ export default function HomePage() {
                                   <div className="image">
                                       <img src="/assets/images/partner/partner-10.svg" alt="" />
                                   </div>
-                                  <div className="title text-body-1 text-white">Innovation in AI</div>
+                                  <div className="title text-body-1 text-white">Innovation Award</div>
                                   <div className="text text-body-1 text-white">Underwriting Risk Copilot (Fintech)</div>
                                   <div className="year text-body-1 text-neutral-400">/ 2024</div>
                               </div>
@@ -957,65 +715,52 @@ export default function HomePage() {
                                   <div className="accordion-asked-item effectFade fadeRotateX">
                                       <div className="accordion-asked-title" id="asked1">
                                           <button className="accordion-button text-body-1 fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="true" aria-controls="collapse1">
-                                              What types of businesses do you work with?
+                                              Do you integrate with the tools I use?
                                               <span className="right-icon"></span>
                                           </button>
                                       </div>
                                       <div id="collapse1" role="region" className="accordion-collapse collapse show" aria-labelledby="asked1" data-bs-parent="#accordion-asked">
                                           <div className="accordion-body">
-                                              We focus on trades businesses — roofing, HVAC, cleaning, plumbing, and similar service contractors across Canada. Every service we offer is designed around the reality of running a trades business.
+                                              Yes. We build around your existing stack — CRMs, ERPs, spreadsheets, databases, communication tools, and industry-specific software. We avoid forcing tool changes unless there is a clear reason to upgrade.
                                           </div>
                                       </div>
                                   </div>
                                   <div className="accordion-asked-item effectFade fadeRotateX" data-delay="0.1">
                                       <div className="accordion-asked-title" id="asked2">
                                           <button className="accordion-button text-body-1 fw-semibold collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
-                                              How long does a project take?
+                                              Why not just use an off-the-shelf tool instead?
                                               <span className="right-icon"></span>
                                           </button>
                                       </div>
                                       <div id="collapse2" role="region" className="accordion-collapse collapse" aria-labelledby="asked2" data-bs-parent="#accordion-asked">
                                           <div className="accordion-body">
-                                              A standard website takes 2–4 weeks from kickoff. SEO campaigns show measurable movement in 60–90 days. Automation workflows typically go live within a week of scoping. We give you a specific timeline in the proposal — no vague estimates.
+                                              Generic tools solve generic problems. If your workflows, data, or approval chains have any specificity to your business, a custom solution will outperform a template every time — and it won&apos;t force you to change how you operate to fit someone else&apos;s product.
                                           </div>
                                       </div>
                                   </div>
                                   <div className="accordion-asked-item effectFade fadeRotateX" data-delay="0.2">
                                       <div className="accordion-asked-title" id="asked3">
                                           <button className="accordion-button text-body-1 fw-semibold collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
-                                              What does it cost?
+                                              What happens if the solution doesn&apos;t perform as expected?
                                               <span className="right-icon"></span>
                                           </button>
                                       </div>
                                       <div id="collapse3" role="region" className="accordion-collapse collapse" aria-labelledby="asked3" data-bs-parent="#accordion-asked">
                                           <div className="accordion-body">
-                                              Website projects start from $1,200. SEO retainers from $400/month. Automation projects from $600. We give you a clear number after the strategy call — no surprises.
+                                              We define success criteria upfront, test thoroughly before handover, and include a post-launch support window. If something isn&apos;t hitting targets, we diagnose and fix it. Custom systems do need tuning as real-world data comes in, and that&apos;s part of the work we do.
                                           </div>
                                       </div>
                                   </div>
                                   <div className="accordion-asked-item effectFade fadeRotateX" data-delay="0.3">
                                       <div className="accordion-asked-title" id="asked4">
                                           <button className="accordion-button text-body-1 fw-semibold collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
-                                              Do you work with businesses that already have a website?
+                                              Do you offer ongoing support after a project is delivered?
                                               <span className="right-icon"></span>
                                           </button>
                                       </div>
                                       <div id="collapse4" role="region" className="accordion-collapse collapse" aria-labelledby="asked4" data-bs-parent="#accordion-asked">
                                           <div className="accordion-body">
-                                              Yes — a lot of our work is improving existing sites. We can speed it up, fix the SEO, add a booking system, or connect it to automation. You don’t need to start from scratch.
-                                          </div>
-                                      </div>
-                                  </div>
-                                  <div className="accordion-asked-item effectFade fadeRotateX" data-delay="0.4">
-                                      <div className="accordion-asked-title" id="asked5">
-                                          <button className="accordion-button text-body-1 fw-semibold collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse5" aria-expanded="false" aria-controls="collapse5">
-                                              What’s the AI voice agent you mentioned?
-                                              <span className="right-icon"></span>
-                                          </button>
-                                      </div>
-                                      <div id="collapse5" role="region" className="accordion-collapse collapse" aria-labelledby="asked5" data-bs-parent="#accordion-asked">
-                                          <div className="accordion-body">
-                                              An AI that answers your business line, qualifies callers, and books appointments — 24/7. We’re piloting it now with Canadian contractors. Join the waitlist and you’ll be in the first group we onboard.
+                                              Yes. Most clients choose a retainer for monitoring, updates, and iterative improvements after launch. We can also do a clean handover with full documentation if you prefer to maintain the system in-house. Both options are available.
                                           </div>
                                       </div>
                                   </div>
@@ -1026,62 +771,62 @@ export default function HomePage() {
               </div>
               {/* /section-faqs */}
               {/* section-contact */}
-              <div id="contact" className="flat-spacing pt-0">
-                  <div className="section-contact">
-                      <div className="contact-image">
-                          <img src="/assets/images/section/contact-image-bg.jpg" alt="" />
-                      </div>
-                      <div className="container">
-                          <div className="row">
-                              <div className="col-lg-6">
-                                  <div className="col-left">
-                                      <div className="heading-section mb-48">
-                                          <div className="heading-sub fw-semibold effectFade fadeUp">Contact</div>
-                                          <div className="heading-title text-gradient-3 effectFade fadeRotateX">
-                                              Let’s Build <br /> Intelligent Things
-                                          </div>
-                                      </div>
+              <div id="contact" style={{ paddingTop: 40, paddingBottom: 80, position: 'relative' }}>
+                  <div style={{ position: 'absolute', inset: '0 16px', borderRadius: 40, backgroundImage: 'url(/assets/images/section/hero-1.jpg)', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}></div>
+                  <div className="container" style={{ position: 'relative', zIndex: 1 }}>
+                      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, minmax(0, 1fr))', gap: 24, alignItems: 'stretch' }}>
+                          {/* LEFT — Info panel */}
+                          <div className="effectFade fadeUp" style={{ background: 'transparent', borderRadius: 24, padding: 40, display: 'flex', flexDirection: 'column' }}>
+                              <h3 className="fw-semibold mb-16" style={{ fontSize: 32, lineHeight: '40px', letterSpacing: '-0.02em' }}>
+                                  Let&apos;s Make Your<br />Workflows Flow
+                              </h3>
+                              <p className="text-secondary mb-32" style={{ fontSize: 15, lineHeight: '24px' }}>
+                                  Ready to save time and reduce busywork? Get in touch and let&apos;s discuss how we can help automate your business processes.
+                              </p>
+                              <div className="d-flex flex-column gap-24 mb-32">
+                                  <div className="d-flex gap-16 align-items-start">
+                                      <i className="icon icon-clipboard-check-solid text-brand" style={{ fontSize: 18, marginTop: 4 }}></i>
                                       <div>
-                                          <div className="contact-item mb-20 effectFade fadeRotateX">
-                                              <i className="icon icon-envelope-solid"></i>
-                                              <div className="content">
-                                                  <div className="title fw-semibold mb-2">E-mail address</div>
-                                                  <div className="text">info@swiftbuild.io</div>
-                                              </div>
-                                          </div>
-                                          <div className="contact-item effectFade fadeRotateX" data-delay="0.1">
-                                              <i className="icon icon-headset-solid"></i>
-                                              <div className="content">
-                                                  <div className="title fw-semibold mb-2">Phone number</div>
-                                                  <div className="text">+1 (778) 751-3157</div>
-                                              </div>
-                                          </div>
+                                          <div className="fw-semibold mb-4">Book a Discovery Call</div>
+                                          <div className="text-secondary" style={{ fontSize: 14, lineHeight: '22px' }}>Schedule a 30-minute call to discuss your needs and explore automation opportunities.</div>
+                                      </div>
+                                  </div>
+                                  <div className="d-flex gap-16 align-items-start">
+                                      <i className="icon icon-envelope-solid text-brand" style={{ fontSize: 18, marginTop: 4 }}></i>
+                                      <div>
+                                          <div className="fw-semibold mb-4">Email Us</div>
+                                          <div className="text-secondary" style={{ fontSize: 14, lineHeight: '22px' }}>Send us a message at <a href="mailto:info@swiftbuild.io" className="fw-semibold" style={{ color: 'var(--brand)' }}>info@swiftbuild.io</a></div>
                                       </div>
                                   </div>
                               </div>
-                              <div className="col-lg-6">
-                                  <form className="form-contact effectFade fadeUp">
-                                      <h4 className="heading fw-semibold">Fill this form below</h4>
-                                      <fieldset className="mb-21">
-                                          <label className="fw-semibold text-body-3 mb-20">Your Name</label>
-                                          <input className="" type="text" placeholder="Enter your full name" required />
-                                      </fieldset>
-                                      <fieldset className="mb-21">
-                                          <label className="fw-semibold text-body-3 mb-20">Your Phone</label>
-                                          <input className="" type="text" placeholder="Enter the e-mail" required />
-                                      </fieldset>
-                                      <fieldset className="mb-18">
-                                          <label className="fw-semibold text-body-3 mb-0">More About The Project</label>
-                                          <textarea name="text" className=""></textarea>
-                                      </fieldset>
-                                      <div className="attachment d-flex gap-8 align-items-center">
-                                          <i className="icon icon-paperclip-solid fs-24"></i>
-                                          <div className="fw-semibold text-body-3">Add an Attachment</div>
-                                      </div>
-                                      <button type="submit" className="tf-btn w-100">Submit Message</button>
-                                  </form>
-                              </div>
+                              <a href="https://cal.com/swiftbuild/free-strategy-call" className="tf-btn" style={{ background: 'var(--brand)', alignSelf: 'flex-start', marginTop: 'auto' }}>
+                                  Book a Call
+                              </a>
                           </div>
+                          {/* RIGHT — Form */}
+                          <form className="effectFade fadeUp" style={{ background: '#ffffff', border: '1px solid #E4E4E7', borderRadius: 24, padding: 40 }}>
+                              <h3 className="fw-semibold mb-24" style={{ fontSize: 24, lineHeight: '32px', letterSpacing: '-0.01em' }}>Send Us a Message</h3>
+                              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, minmax(0, 1fr))', gap: 16, marginBottom: 16 }}>
+                                  <fieldset className="m-0">
+                                      <label className="fw-semibold text-body-3 mb-8 d-block">Name</label>
+                                      <input type="text" placeholder="Your name" required style={{ width: '100%', padding: '12px 14px', border: '1px solid #E4E4E7', borderRadius: 8, background: '#ffffff' }} />
+                                  </fieldset>
+                                  <fieldset className="m-0">
+                                      <label className="fw-semibold text-body-3 mb-8 d-block">Email</label>
+                                      <input type="email" placeholder="Your email" required style={{ width: '100%', padding: '12px 14px', border: '1px solid #E4E4E7', borderRadius: 8, background: '#ffffff' }} />
+                                  </fieldset>
+                              </div>
+                              <fieldset className="m-0 mb-16">
+                                  <label className="fw-semibold text-body-3 mb-8 d-block">Company</label>
+                                  <input type="text" placeholder="Your company" style={{ width: '100%', padding: '12px 14px', border: '1px solid #E4E4E7', borderRadius: 8, background: '#ffffff' }} />
+                              </fieldset>
+                              <fieldset className="m-0 mb-20">
+                                  <label className="fw-semibold text-body-3 mb-8 d-block">Message</label>
+                                  <textarea placeholder="Tell us about your automation needs" style={{ width: '100%', padding: '12px 14px', border: '1px solid #E4E4E7', borderRadius: 8, background: '#ffffff', minHeight: 120, resize: 'vertical' }}></textarea>
+                              </fieldset>
+                              <button type="submit" className="tf-btn w-100" style={{ background: 'var(--brand)' }}>Send Message</button>
+                              <div className="text-center text-secondary mt-12" style={{ fontSize: 13 }}>We&apos;ll get back to you within 1-2 business days.</div>
+                          </form>
                       </div>
                   </div>
               </div>

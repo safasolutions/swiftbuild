@@ -12,15 +12,7 @@ export default function WorksPage() {
                               <span className="title1 fw-semibold text-gradient-1">Explore Our Finest</span>
                               <br />
                               <div className="title2 d-flex gap-20 justify-content-center flex-wrap">
-                                  <span className="fw-semibold text-gradient-1">AI Work</span>
-                                  <div className="title-icon">
-                                      <div className="box"></div>
-                                      <div className="title-icon-wrap">
-                                          <img src="/assets/images/item/item-13.svg" alt="" className="img-1 img-transform-3" />
-                                          <img src="/assets/images/item/item-14.svg" alt="" className="img-2 img-transform-3" />
-                                          <img src="/assets/images/item/item-15.svg" alt="" className="img-3 img-transform-3" />
-                                      </div>
-                                  </div>
+                                  <span className="fw-semibold text-gradient-1">Work</span>
                               </div>
                           </div>
                           <p className="text effectFade fadeUp">
@@ -130,11 +122,11 @@ export default function WorksPage() {
                                           <div className="grid-text">
                                               <div className="item">
                                                   <div className="title text-secondary">DESCRIPTION</div>
-                                                  <div className="text-body-3 fw-semibold">AI automation server for a Swiss accounting firm — monitors Box cloud storage for PDF invoices, extracts structured data with Box AI, and auto-links each invoice to its matching transaction. Zero manual data entry.</div>
+                                                  <div className="text-body-3 fw-semibold">Automation server for a Swiss accounting firm — monitors Box cloud storage for PDF invoices, extracts structured data, and auto-links each invoice to its matching transaction. Zero manual data entry.</div>
                                               </div>
                                               <div className="item">
                                                   <div className="title text-secondary">DELIVERABLES</div>
-                                                  <div className="fw-semibold">AI Integration, Workflow Automation, Custom Development</div>
+                                                  <div className="fw-semibold">Custom Integration, Workflow Automation, Custom Development</div>
                                               </div>
                                               <div className="item">
                                                   <div className="title text-secondary">INDUSTRY</div>
@@ -230,52 +222,52 @@ export default function WorksPage() {
                                   <div className="accordion-asked-item effectFade fadeRotateX">
                                       <div className="accordion-asked-title" id="asked1">
                                           <button className="accordion-button text-body-1 fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="true" aria-controls="collapse1">
-                                              What’s the typical timeline from idea to v1?
+                                              Do you integrate with the tools I use?
                                               <span className="right-icon"></span>
                                           </button>
                                       </div>
                                       <div id="collapse1" role="region" className="accordion-collapse collapse show" aria-labelledby="asked1" data-bs-parent="#accordion-asked">
                                           <div className="accordion-body">
-                                              A clear problem statement, success metrics, access to sample data, and a stakeholder who can make decisions. We’ll run a kickoff workshop to align scope.
+                                              Yes. We build around your existing stack — CRMs, ERPs, spreadsheets, databases, communication tools, and industry-specific software. We avoid forcing tool changes unless there is a clear reason to upgrade.
                                           </div>
                                       </div>
                                   </div>
                                   <div className="accordion-asked-item effectFade fadeRotateX" data-delay="0.1">
                                       <div className="accordion-asked-title" id="asked2">
                                           <button className="accordion-button text-body-1 fw-semibold collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
-                                              What do we need to start?
+                                              Why not just use an off-the-shelf tool instead?
                                               <span className="right-icon"></span>
                                           </button>
                                       </div>
                                       <div id="collapse2" role="region" className="accordion-collapse collapse" aria-labelledby="asked2" data-bs-parent="#accordion-asked">
                                           <div className="accordion-body">
-                                              A clear problem statement, success metrics, access to sample data, and a stakeholder who can make decisions. We’ll run a kickoff workshop to align scope.
+                                              Generic tools solve generic problems. If your workflows, data, or approval chains have any specificity to your business, a custom solution will outperform a template every time — and it won&apos;t force you to change how you operate to fit someone else&apos;s product.
                                           </div>
                                       </div>
                                   </div>
                                   <div className="accordion-asked-item effectFade fadeRotateX" data-delay="0.2">
                                       <div className="accordion-asked-title" id="asked3">
                                           <button className="accordion-button text-body-1 fw-semibold collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
-                                              Which models/stack do you use?
+                                              What happens if the solution doesn&apos;t perform as expected?
                                               <span className="right-icon"></span>
                                           </button>
                                       </div>
                                       <div id="collapse3" role="region" className="accordion-collapse collapse" aria-labelledby="asked3" data-bs-parent="#accordion-asked">
                                           <div className="accordion-body">
-                                              A clear problem statement, success metrics, access to sample data, and a stakeholder who can make decisions. We’ll run a kickoff workshop to align scope.
+                                              We define success criteria upfront, test thoroughly before handover, and include a post-launch support window. If something isn&apos;t hitting targets, we diagnose and fix it. Custom systems do need tuning as real-world data comes in, and that&apos;s part of the work we do.
                                           </div>
                                       </div>
                                   </div>
                                   <div className="accordion-asked-item effectFade fadeRotateX" data-delay="0.3">
                                       <div className="accordion-asked-title" id="asked4">
                                           <button className="accordion-button text-body-1 fw-semibold collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
-                                              Are model/API costs included in pricing?
+                                              Do you offer ongoing support after a project is delivered?
                                               <span className="right-icon"></span>
                                           </button>
                                       </div>
                                       <div id="collapse4" role="region" className="accordion-collapse collapse" aria-labelledby="asked4" data-bs-parent="#accordion-asked">
                                           <div className="accordion-body">
-                                              A clear problem statement, success metrics, access to sample data, and a stakeholder who can make decisions. We’ll run a kickoff workshop to align scope.
+                                              Yes. Most clients choose a retainer for monitoring, updates, and iterative improvements after launch. We can also do a clean handover with full documentation if you prefer to maintain the system in-house. Both options are available.
                                           </div>
                                       </div>
                                   </div>
@@ -298,7 +290,7 @@ export default function WorksPage() {
                                       <div className="heading-section mb-48">
                                           <div className="heading-sub fw-semibold effectFade fadeUp">Contact</div>
                                           <div className="heading-title text-gradient-3 effectFade fadeRotateX">
-                                              Let’s Build <br /> Intelligent Things
+                                              Ready to stand out? <br /> Let’s talk
                                           </div>
                                       </div>
                                       <div>

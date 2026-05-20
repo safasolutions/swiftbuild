@@ -19,11 +19,11 @@ export default function Header() {
             <li className={`menu-item ${isActive(['/'])}`}>
               <a href="/" className={`item-link link1 ${isActive(['/'])}`}>Home</a>
             </li>
-            <li className={`menu-item ${isActive(['/about'])}`}>
-              <a href="/about" className={`item-link link1 ${isActive(['/about'])}`}>About</a>
-            </li>
             <li className={`menu-item ${isActive(['/services'])}`}>
               <a href="/services" className={`item-link link1 ${isActive(['/services'])}`}>Services</a>
+            </li>
+            <li className={`menu-item ${isActive(['/about'])}`}>
+              <a href="/about" className={`item-link link1 ${isActive(['/about'])}`}>About</a>
             </li>
             <li className={`menu-item ${isActive(['/works'])}`}>
               <a href="/works" className={`item-link link1 ${isActive(['/works'])}`}>Works</a>

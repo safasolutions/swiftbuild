@@ -1,0 +1,16 @@
+FAQ - 
+Who - What businesses are eligible? Who owns the tech stack?
+What - What exactly does SwiftBuild do?
+Where - 
+When - How long does the project take?
+Why/How - How can I get started? Do you integrate with the tools I use? 
+- Yes. We build around your existing stack — CRMs, ERPs, spreadsheets, databases, communication tools, and industry-specific software. We avoid forcing tool changes unless there is a clear reason to upgrade.
+
+Why not just use an off-the-shelf AI tool instead?
+Generic tools solve generic problems. If your workflows, data, or approval chains have any specificity to your business, a custom solution will outperform a template every time — and it won't force you to change how you operate to fit someone else's product.
+
+What happens if the solution doesn't perform as expected?
+We define success criteria upfront, test thoroughly before handover, and include a post-launch support window. If something isn't hitting targets, we diagnose and fix it. AI systems do need tuning as real-world data comes in, and that's part of the work we do.
+
+Do you offer ongoing support after a project is delivered?
+Yes. Most clients choose a retainer for monitoring, updates, and iterative improvements after launch. We can also do a clean handover with full documentation if you prefer to maintain the system in-house. Both options are available.

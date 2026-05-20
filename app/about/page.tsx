@@ -13,18 +13,10 @@ export default function AboutPage() {
                               <br />
                               <div className="title2 d-flex gap-20 justify-content-center flex-wrap">
                                   <span className="fw-semibold text-gradient-1">Industries</span>
-                                  <div className="title-icon">
-                                      <div className="box"></div>
-                                      <div className="title-icon-wrap">
-                                          <img src="/assets/images/item/item-10.svg" alt="" className="img-1 img-transform-3" />
-                                          <img src="/assets/images/item/item-11.svg" alt="" className="img-2 img-transform-3" />
-                                          <img src="/assets/images/item/item-12.svg" alt="" className="img-3 img-transform-3" />
-                                      </div>
-                                  </div>
                               </div>
                           </div>
                           <p className="text effectFade fadeUp">
-                              We build human-centered AI solutions that transform workflows, enhance decision-making, <br /> and accelerate innovation across diverse global industries.
+                              We build human-centered solutions that transform workflows, enhance decision-making, <br /> and accelerate innovation across diverse global industries.
                           </p>
                       </div>
                   </div>
@@ -37,7 +29,7 @@ export default function AboutPage() {
                           <div className="col-12">
                               <div className="heading-section">
                                   <div className="heading-sub fw-semibold effectFade fadeUp">About Us</div>
-                                  <div className="heading-title text-gradient-2 effectFade fadeRotateX">Human-Centered AI, <br /> Built for Production</div>
+                                  <div className="heading-title text-gradient-2 effectFade fadeRotateX">Human-centered solutions, <br /> built for production</div>
                               </div>
                           </div>
                           <div className="col-xxl-7 col-lg-6 lg-mb-24">
@@ -60,7 +52,7 @@ export default function AboutPage() {
                                   <h4 className="title fw-semibold effectFade fadeUp">Our Mission</h4>
                                   <div className="line"></div>
                                   <p className="text effectFade fadeUp">
-                                      Based in Montréal, Canada, we build human-centered AI for production. Our mission is to create intelligent systems that empower people and organizations. By uniting research, design, and engineering, we deliver scalable and reliable AI solutions—technology that’s practical, trustworthy, and designed to make a meaningful impact in the real world.
+                                      Based in Canada, we build human-centered solutions for production. Our mission is to create intelligent systems that empower people and organizations. By uniting research, design, and engineering, we deliver scalable and reliable solutions—technology that’s practical, trustworthy, and designed to make a meaningful impact in the real world.
                                   </p>
                               </div>
                               <div className="box-quotes effectFade fadeRotateX">
@@ -73,7 +65,7 @@ export default function AboutPage() {
                                               <path d="M12.9375 20V10.3597C12.9375 7.72182 13.824 5.51559 15.5969 3.74101C17.4177 1.91847 19.8854 0.671463 23 0V6.40288C21.8021 6.78657 21.0115 7.26619 20.6281 7.84173C20.2448 8.3693 20.0292 9.04077 19.9813 9.85612H23V20H12.9375ZM0 20V10.3597C0 7.72182 0.886459 5.51559 2.65938 3.74101C4.48021 1.91847 6.94792 0.671463 10.0625 0V6.40288C8.9125 6.78657 8.12187 7.26619 7.69062 7.84173C7.30729 8.3693 7.09167 9.04077 7.04375 9.85612H10.0625V20H0Z" fill="#E4E4E7"/>
                                           </svg>
                                       </div>
-                                      <div className="text-body-1 fw-semibold desc">Good AI feels obvious—because the hard work is hidden.</div>
+                                      <div className="text-body-1 fw-semibold desc">Good software feels obvious—because the hard work is hidden.</div>
                                       <div className="cite">
                                           <div className="name text-body-3 fw-semibold">Ava Collins</div>
                                           <div className="line"></div>
@@ -232,85 +224,10 @@ export default function AboutPage() {
                   <div className="tool-wrap text-center">
                       <div className="heading-section center mb-48">
                           <div className="heading-sub fw-semibold effectFade fadeUp">Tools</div>
-                          <div className="heading-title text-gradient-3 effectFade fadeRotateX">We work with <br /> powerful AI tools</div>
+                          <div className="heading-title text-gradient-3 effectFade fadeRotateX">We work with <br /> powerful automation tools</div>
                       </div>
                       <div className="text effectFade fadeUp">
-                          We design, build, and evaluate with a modern AI stack—LLMs, vector <br /> search, orchestration, and observability—so your features are fast, <br /> reliable, and secure.
-                      </div>
-                      <div className="position-relative tool-image-box">
-                          <img className="img-item img-item-1" src="/assets/images/section/tool-1.svg" alt="" />
-                          <img className="img-item img-item-2" src="/assets/images/section/tool-2.svg" alt="" />
-                          <img className="img-item img-item-3" src="/assets/images/section/tool-3.svg" alt="" />
-                          <div className="image-center flex-shrink">
-                              <img src="/assets/images/section/tool-center.svg" alt="" />
-                          </div>
-                          <img className="img-item img-item-4" src="/assets/images/section/tool-4.svg" alt="" />
-                          <img className="img-item img-item-5" src="/assets/images/section/tool-5.svg" alt="" />
-                          <img className="img-item img-item-6" src="/assets/images/section/tool-6.svg" alt="" />
-                          <div className="side-line">
-                              <svg data-viewbox-desktop="0 0 302 157" data-viewbox-mobile="0 0 300 100" className="line-1" width="300" height="157" viewBox="0 0 302 157" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                  <path id="line-path" d="M301 157V130C301 121.716 294.284 115 286 115H16C7.71572 115 0.999992 108.284 0.999992 100V0"
-                                      stroke="white" strokeWidth="2" fill="none" />
-                                  <circle r="4" fill="#FD3A25">
-                                      <animateMotion dur="2.5s" repeatCount="indefinite"
-                                          path="M301 157V130C301 121.716 294.284 115 286 115H16C7.71572 115 0.999992 108.284 0.999992 100V0" />
-                                  </circle>
-                              </svg>
-                              <svg data-viewbox-desktop="0 0 260 2" data-viewbox-mobile="0 0 250 2" className="line-2" width="260" height="2" viewBox="0 0 260 2" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                  <path d="M260 1H0" stroke="white" strokeWidth="2" fill="none" />
-                                  <circle r="4" fill="#FD3A25">
-                                      <animateMotion dur="2.5s" repeatCount="indefinite" path="M260 1H0" />
-                                  </circle>
-                              </svg>
-                              <svg data-viewbox-desktop="0 0 302 159" data-viewbox-mobile="0 0 300 100" className="line-3" width="302" height="159" viewBox="0 0 302 159" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                  <path d="M301 0V29
-                                           C301 37.2843 294.284 44 286 44
-                                           H16
-                                           C7.71572 44 0.999992 50.7157 0.999992 59
-                                           V159" stroke="white" strokeWidth="2" fill="none" />
-                                  <circle r="4" fill="#FD3A25">
-                                      <animateMotion dur="2.5s" repeatCount="indefinite" path="M301 0V29
-                                                C301 37.2843 294.284 44 286 44
-                                                H16
-                                                C7.71572 44 0.999992 50.7157 0.999992 59
-                                                V159" />
-                                  </circle>
-                              </svg>
-                              <svg data-viewbox-desktop="0 0 302 156" data-viewbox-mobile="0 0 300 100" className="line-4" width="302" height="156" viewBox="0 0 302 156" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                  <path d="M1 156V130
-                                         C1 121.716 7.71573 115 16 115
-                                         H286
-                                         C294.284 115 301 108.284 301 100
-                                         V0" stroke="white" strokeWidth="2" fill="none" />
-                                  <circle r="4" fill="#FD3A25">
-                                      <animateMotion dur="2.5s" repeatCount="indefinite" path="M1 156V130
-                                          C1 121.716 7.71573 115 16 115
-                                          H286
-                                          C294.284 115 301 108.284 301 100
-                                          V0" />
-                                  </circle>
-                              </svg>
-                              <svg data-viewbox-desktop="0 0 260 3" data-viewbox-mobile="0 0 260 3" className="line-5" width="260" height="3" viewBox="0 0 260 3" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                  <path d="M0 1.05908H260" stroke="white" strokeWidth="2.11844" fill="none" />
-                                  <circle r="3" fill="#FD3A25">
-                                      <animateMotion dur="2.5s" repeatCount="indefinite" path="M0 1.05908H260" />
-                                  </circle>
-                              </svg>
-                              <svg data-viewbox-desktop="0 0 302 155" data-viewbox-mobile="0 0 300 100" className="line-6" width="302" height="155" viewBox="0 0 302 155" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                  <path d="M1 0V25
-                                           C1 33.2843 7.71573 40 16 40
-                                           H286
-                                           C294.284 40 301 46.7157 301 55
-                                           V155" stroke="white" strokeWidth="2" fill="none" />
-                                  <circle r="4" fill="#FD3A25">
-                                      <animateMotion dur="2.5s" repeatCount="indefinite" path="M1 0V25
-                                                C1 33.2843 7.71573 40 16 40
-                                                H286
-                                                C294.284 40 301 46.7157 301 55
-                                                V155" />
-                                  </circle>
-                              </svg>
-                          </div>
+                          We design, build, and evaluate with a modern automation stack—integrations, <br /> data pipelines, orchestration, and observability—so your systems are fast, <br /> reliable, and secure.
                       </div>
                       <a href="/contact" className="tf-btn effectFade fadeRotateX">
                           Get Started
@@ -328,7 +245,7 @@ export default function AboutPage() {
                       <div className="container">
                           <div className="heading-section center mb-64">
                               <div className="heading-sub fw-semibold style-1 effectFade fadeUp">Team Members</div>
-                              <div className="heading-title text-white effectFade fadeRotateX">The Squad Shipping <br /> Your AI</div>
+                              <div className="heading-title text-white effectFade fadeRotateX">The Squad Shipping <br /> Your Product</div>
                           </div>
                           <div className="row justify-content-center">
                               <div className="col-lg-4 col-md-8 lg-mb-24">
@@ -384,7 +301,7 @@ export default function AboutPage() {
                                           </div>
                                       </div>
                                       <a href="#" className="name text-body-1 fw-semibold">Lucas Hayes</a>
-                                      <div className="sub">Solutions Architect. Connects AI to your stack</div>
+                                      <div className="sub">Solutions Architect. Connects automation to your stack</div>
                                   </div>
                               </div>
                               <div className="col-lg-4 col-md-6">
@@ -435,7 +352,7 @@ export default function AboutPage() {
                               <div className="col-md-6">
                                   <div className="heading-section mb-48">
                                       <div className="heading-sub fw-semibold style-1 effectFade fadeUp">Statistic</div>
-                                      <div className="heading-title text-white effectFade fadeRotateX">Human-centered <br /> AI, built for <br /> production</div>
+                                      <div className="heading-title text-white effectFade fadeRotateX">Human-centered <br /> automation, built for <br /> production</div>
                                   </div>
                               </div>
                               <div className="col-md-6">
@@ -498,7 +415,7 @@ export default function AboutPage() {
                                   <div className="image">
                                       <img src="/assets/images/partner/partner-7.svg" alt="" />
                                   </div>
-                                  <div className="title text-body-1 text-white">Innovation in AI</div>
+                                  <div className="title text-body-1 text-white">Innovation Award</div>
                                   <div className="text text-body-1 text-white">Underwriting Risk Copilot (Fintech)</div>
                                   <div className="year text-body-1 text-neutral-400">/ 2025</div>
                               </div>
@@ -506,7 +423,7 @@ export default function AboutPage() {
                                   <div className="image">
                                       <img src="/assets/images/partner/partner-8.svg" alt="" />
                                   </div>
-                                  <div className="title text-body-1 text-white">Best AI Product Design</div>
+                                  <div className="title text-body-1 text-white">Best Product Design</div>
                                   <div className="text text-body-1 text-white">Support Copilot (SaaS)</div>
                                   <div className="year text-body-1 text-neutral-400">/ 2025</div>
                               </div>
@@ -514,7 +431,7 @@ export default function AboutPage() {
                                   <div className="image">
                                       <img src="/assets/images/partner/partner-9.svg" alt="" />
                                   </div>
-                                  <div className="title text-body-1 text-white">Data & AI Excellence</div>
+                                  <div className="title text-body-1 text-white">Data Excellence</div>
                                   <div className="text text-body-1 text-white">Clinical Note Summarizer (Healthcare)</div>
                                   <div className="year text-body-1 text-neutral-400">/ 2024</div>
                               </div>
@@ -522,7 +439,7 @@ export default function AboutPage() {
                                   <div className="image">
                                       <img src="/assets/images/partner/partner-10.svg" alt="" />
                                   </div>
-                                  <div className="title text-body-1 text-white">Innovation in AI</div>
+                                  <div className="title text-body-1 text-white">Innovation Award</div>
                                   <div className="text text-body-1 text-white">Underwriting Risk Copilot (Fintech)</div>
                                   <div className="year text-body-1 text-neutral-400">/ 2024</div>
                               </div>
@@ -656,52 +573,52 @@ export default function AboutPage() {
                                   <div className="accordion-asked-item effectFade fadeRotateX">
                                       <div className="accordion-asked-title" id="asked1">
                                           <button className="accordion-button text-body-1 fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="true" aria-controls="collapse1">
-                                              What’s the typical timeline from idea to v1?
+                                              Do you integrate with the tools I use?
                                               <span className="right-icon"></span>
                                           </button>
                                       </div>
                                       <div id="collapse1" role="region" className="accordion-collapse collapse show" aria-labelledby="asked1" data-bs-parent="#accordion-asked">
                                           <div className="accordion-body">
-                                              A clear problem statement, success metrics, access to sample data, and a stakeholder who can make decisions. We’ll run a kickoff workshop to align scope.
+                                              Yes. We build around your existing stack — CRMs, ERPs, spreadsheets, databases, communication tools, and industry-specific software. We avoid forcing tool changes unless there is a clear reason to upgrade.
                                           </div>
                                       </div>
                                   </div>
                                   <div className="accordion-asked-item effectFade fadeRotateX" data-delay="0.1">
                                       <div className="accordion-asked-title" id="asked2">
                                           <button className="accordion-button text-body-1 fw-semibold collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
-                                              What do we need to start?
+                                              Why not just use an off-the-shelf tool instead?
                                               <span className="right-icon"></span>
                                           </button>
                                       </div>
                                       <div id="collapse2" role="region" className="accordion-collapse collapse" aria-labelledby="asked2" data-bs-parent="#accordion-asked">
                                           <div className="accordion-body">
-                                              A clear problem statement, success metrics, access to sample data, and a stakeholder who can make decisions. We’ll run a kickoff workshop to align scope.
+                                              Generic tools solve generic problems. If your workflows, data, or approval chains have any specificity to your business, a custom solution will outperform a template every time — and it won&apos;t force you to change how you operate to fit someone else&apos;s product.
                                           </div>
                                       </div>
                                   </div>
                                   <div className="accordion-asked-item effectFade fadeRotateX" data-delay="0.2">
                                       <div className="accordion-asked-title" id="asked3">
                                           <button className="accordion-button text-body-1 fw-semibold collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
-                                              Which models/stack do you use?
+                                              What happens if the solution doesn&apos;t perform as expected?
                                               <span className="right-icon"></span>
                                           </button>
                                       </div>
                                       <div id="collapse3" role="region" className="accordion-collapse collapse" aria-labelledby="asked3" data-bs-parent="#accordion-asked">
                                           <div className="accordion-body">
-                                              A clear problem statement, success metrics, access to sample data, and a stakeholder who can make decisions. We’ll run a kickoff workshop to align scope.
+                                              We define success criteria upfront, test thoroughly before handover, and include a post-launch support window. If something isn&apos;t hitting targets, we diagnose and fix it. Custom systems do need tuning as real-world data comes in, and that&apos;s part of the work we do.
                                           </div>
                                       </div>
                                   </div>
                                   <div className="accordion-asked-item effectFade fadeRotateX" data-delay="0.3">
                                       <div className="accordion-asked-title" id="asked4">
                                           <button className="accordion-button text-body-1 fw-semibold collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
-                                              Are model/API costs included in pricing?
+                                              Do you offer ongoing support after a project is delivered?
                                               <span className="right-icon"></span>
                                           </button>
                                       </div>
                                       <div id="collapse4" role="region" className="accordion-collapse collapse" aria-labelledby="asked4" data-bs-parent="#accordion-asked">
                                           <div className="accordion-body">
-                                              A clear problem statement, success metrics, access to sample data, and a stakeholder who can make decisions. We’ll run a kickoff workshop to align scope.
+                                              Yes. Most clients choose a retainer for monitoring, updates, and iterative improvements after launch. We can also do a clean handover with full documentation if you prefer to maintain the system in-house. Both options are available.
                                           </div>
                                       </div>
                                   </div>
@@ -724,7 +641,7 @@ export default function AboutPage() {
                                       <div className="heading-section mb-48">
                                           <div className="heading-sub fw-semibold effectFade fadeUp">Contact</div>
                                           <div className="heading-title text-gradient-3 effectFade fadeRotateX">
-                                              Let’s Build <br /> Intelligent Things
+                                              Ready to stand out? <br /> Let’s talk
                                           </div>
                                       </div>
                                       <div>

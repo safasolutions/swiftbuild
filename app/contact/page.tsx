@@ -9,18 +9,10 @@ export default function ContactPage() {
                   <div className="container">
                       <div className="content-wrap text-center">
                           <div className="title text-display-2 effectFade fadeRotateX">
-                              <span className="title1 fw-semibold text-gradient-1">Let’s Build Intelligent</span>
+                              <span className="title1 fw-semibold text-gradient-1">Ready to stand out?</span>
                               <br />
                               <div className="title2 d-flex gap-20 justify-content-center flex-wrap">
-                                  <span className="fw-semibold text-gradient-1">Things</span>
-                                  <div className="title-icon">
-                                      <div className="box"></div>
-                                      <div className="title-icon-wrap">
-                                          <img src="/assets/images/item/item-13.svg" alt="" className="img-1 img-transform-3" />
-                                          <img src="/assets/images/item/item-14.svg" alt="" className="img-2 img-transform-3" />
-                                          <img src="/assets/images/item/item-15.svg" alt="" className="img-3 img-transform-3" />
-                                      </div>
-                                  </div>
+                                  <span className="fw-semibold text-gradient-1">Let’s talk</span>
                               </div>
                           </div>
                           <p className="text effectFade fadeUp">
@@ -31,95 +23,61 @@ export default function ContactPage() {
               </div>
               {/* /Hero Banner */}
               {/* section-contact */}
-              <div id="contact" className="flat-spacing">
-                  <div className="section-contact p-0">
-                      <div className="container">
-                          <div className="row mb-60">
-                              <div className="col-md-4 md-mb-24">
-                                  <div className="box-contact-item text-center effectFade fadeUp">
-                                      <i className="icon icon-envelope-solid"></i>
-                                      <h6 className="title fw-semibold">E-mail address</h6>
-                                      <a className="text" href="mail:info@swiftbuild.io">
-                                          info@swiftbuild.io
-                                      </a>
+              <div id="contact" style={{ paddingTop: 80, paddingBottom: 80, background: '#ffffff' }}>
+                  <div className="container">
+                      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, minmax(0, 1fr))', gap: 24, alignItems: 'stretch' }}>
+                          {/* LEFT — Info panel */}
+                          <div className="effectFade fadeUp" style={{ background: 'transparent', borderRadius: 24, padding: 40, display: 'flex', flexDirection: 'column' }}>
+                              <h3 className="fw-semibold mb-16" style={{ fontSize: 32, lineHeight: '40px', letterSpacing: '-0.02em' }}>
+                                  Let&apos;s Make Your<br />Workflows Flow
+                              </h3>
+                              <p className="text-secondary mb-32" style={{ fontSize: 15, lineHeight: '24px' }}>
+                                  Ready to save time and reduce busywork? Get in touch and let&apos;s discuss how we can help automate your business processes.
+                              </p>
+                              <div className="d-flex flex-column gap-24 mb-32">
+                                  <div className="d-flex gap-16 align-items-start">
+                                      <i className="icon icon-clipboard-check-solid text-brand" style={{ fontSize: 18, marginTop: 4 }}></i>
+                                      <div>
+                                          <div className="fw-semibold mb-4">Book a Discovery Call</div>
+                                          <div className="text-secondary" style={{ fontSize: 14, lineHeight: '22px' }}>Schedule a 30-minute call to discuss your needs and explore automation opportunities.</div>
+                                      </div>
+                                  </div>
+                                  <div className="d-flex gap-16 align-items-start">
+                                      <i className="icon icon-envelope-solid text-brand" style={{ fontSize: 18, marginTop: 4 }}></i>
+                                      <div>
+                                          <div className="fw-semibold mb-4">Email Us</div>
+                                          <div className="text-secondary" style={{ fontSize: 14, lineHeight: '22px' }}>Send us a message at <a href="mailto:info@swiftbuild.io" className="fw-semibold" style={{ color: 'var(--brand)' }}>info@swiftbuild.io</a></div>
+                                      </div>
                                   </div>
                               </div>
-                              <div className="col-md-4 md-mb-24">
-                                  <div className="box-contact-item text-center effectFade fadeUp" data-delay="0.1">
-                                      <i className="icon icon-headset-solid"></i>
-                                      <h6 className="title fw-semibold">Phone number</h6>
-                                      <a href="tel: +1 (778) 751-3157" className="text">
-                                          +1 (778) 751-3157
-                                      </a>
-                                  </div>
-                              </div>
-                              <div className="col-md-4">
-                                  <div className="box-contact-item text-center effectFade fadeUp" data-delay="0.2">
-                                      <i className="icon icon-map-marker-solid"></i>
-                                      <h6 className="title fw-semibold">Our Location</h6>
-                                      <p className="text">
-                                          USA, New York – 1060 Str.
-                                      </p>
-                                  </div>
-                              </div>
+                              <a href="https://cal.com/swiftbuild/free-strategy-call" className="tf-btn" style={{ background: 'var(--brand)', alignSelf: 'flex-start', marginTop: 'auto' }}>
+                                  Book a Call
+                              </a>
                           </div>
-                          <div className="row">
-                              <div className="col-lg-6 lg-mb-24">
-                                  <div className="col-left p-0">
-                                      <div className="mb-24">
-                                          <div className="heading-section mb-48">
-                                              <div className="heading-sub fw-semibold effectFade fadeUp">Contact</div>
-                                              <div className="heading-title text-gradient-3 effectFade fadeRotateX">
-                                                  Let’s Build <br /> Intelligent Things
-                                              </div>
-                                          </div>
-                                          <p className="text effectFade fadeUp">combining creativity, technology, and strategy to craft solutions that think, adapt, and inspire. Connect with us to turn visionary ideas into meaningful, data-driven realities.</p>
-                                      </div>
-                                      <div className="tf-social-1 gap-24 effectFade fadeRotateX">
-                                          <a href="https://x.com/" target="_blank" className="text-body-1 fw-semibold">
-                                              Twitter / X
-                                              <div className="social-item">
-                                                  <i className="icon icon-twitter-x"></i>
-                                              </div>
-                                          </a>
-                                          <a href="https://www.facebook.com/" target="_blank" className="text-body-1 fw-semibold">
-                                              Facebook
-                                              <div className="social-item">
-                                                  <i className="icon icon-facebook-f"></i>
-                                              </div>
-                                          </a>
-                                          <a href="https://www.instagram.com/" target="_blank" className="text-body-1 fw-semibold">
-                                              Instagram
-                                              <div className="social-item">
-                                                  <i className="icon icon-instagram"></i>
-                                              </div>
-                                          </a>
-                                      </div>
-                                  </div>
+                          {/* RIGHT — Form */}
+                          <form className="effectFade fadeUp" style={{ background: '#ffffff', border: '1px solid #E4E4E7', borderRadius: 24, padding: 40 }}>
+                              <h3 className="fw-semibold mb-24" style={{ fontSize: 24, lineHeight: '32px', letterSpacing: '-0.01em' }}>Send Us a Message</h3>
+                              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, minmax(0, 1fr))', gap: 16, marginBottom: 16 }}>
+                                  <fieldset className="m-0">
+                                      <label className="fw-semibold text-body-3 mb-8 d-block">Name</label>
+                                      <input type="text" placeholder="Your name" required style={{ width: '100%', padding: '12px 14px', border: '1px solid #E4E4E7', borderRadius: 8, background: '#ffffff' }} />
+                                  </fieldset>
+                                  <fieldset className="m-0">
+                                      <label className="fw-semibold text-body-3 mb-8 d-block">Email</label>
+                                      <input type="email" placeholder="Your email" required style={{ width: '100%', padding: '12px 14px', border: '1px solid #E4E4E7', borderRadius: 8, background: '#ffffff' }} />
+                                  </fieldset>
                               </div>
-                              <div className="col-lg-6">
-                                  <form className="form-contact m-0 effectFade fadeUp">
-                                      <h4 className="heading fw-semibold">Fill this form below</h4>
-                                      <fieldset className="mb-21">
-                                          <label className="fw-semibold text-body-3 mb-20">Your Name</label>
-                                          <input className="" type="text" placeholder="Enter your full name" required />
-                                      </fieldset>
-                                      <fieldset className="mb-21">
-                                          <label className="fw-semibold text-body-3 mb-20">Your Phone</label>
-                                          <input className="" type="text" placeholder="Enter the e-mail" required />
-                                      </fieldset>
-                                      <fieldset className="mb-18">
-                                          <label className="fw-semibold text-body-3 mb-0">More About The Project</label>
-                                          <textarea name="text" className=""></textarea>
-                                      </fieldset>
-                                      <div className="attachment d-flex gap-8 align-items-center">
-                                          <i className="icon icon-paperclip-solid fs-24"></i>
-                                          <div className="fw-semibold text-body-3">Add an Attachment</div>
-                                      </div>
-                                      <button type="submit" className="tf-btn w-100">Submit Message</button>
-                                  </form>
-                              </div>
-                          </div>
+                              <fieldset className="m-0 mb-16">
+                                  <label className="fw-semibold text-body-3 mb-8 d-block">Company</label>
+                                  <input type="text" placeholder="Your company" style={{ width: '100%', padding: '12px 14px', border: '1px solid #E4E4E7', borderRadius: 8, background: '#ffffff' }} />
+                              </fieldset>
+                              <fieldset className="m-0 mb-20">
+                                  <label className="fw-semibold text-body-3 mb-8 d-block">Message</label>
+                                  <textarea placeholder="Tell us about your automation needs" style={{ width: '100%', padding: '12px 14px', border: '1px solid #E4E4E7', borderRadius: 8, background: '#ffffff', minHeight: 120, resize: 'vertical' }}></textarea>
+                              </fieldset>
+                              <button type="submit" className="tf-btn w-100" style={{ background: 'var(--brand)' }}>Send Message</button>
+                              <div className="text-center text-secondary mt-12" style={{ fontSize: 13 }}>We&apos;ll get back to you within 1-2 business days.</div>
+                          </form>
                       </div>
                   </div>
               </div>
@@ -147,52 +105,52 @@ export default function ContactPage() {
                                   <div className="accordion-asked-item effectFade fadeRotateX">
                                       <div className="accordion-asked-title" id="asked1">
                                           <button className="accordion-button text-body-1 fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="true" aria-controls="collapse1">
-                                              What’s the typical timeline from idea to v1?
+                                              Do you integrate with the tools I use?
                                               <span className="right-icon"></span>
                                           </button>
                                       </div>
                                       <div id="collapse1" role="region" className="accordion-collapse collapse show" aria-labelledby="asked1" data-bs-parent="#accordion-asked">
                                           <div className="accordion-body">
-                                              A clear problem statement, success metrics, access to sample data, and a stakeholder who can make decisions. We’ll run a kickoff workshop to align scope.
+                                              Yes. We build around your existing stack — CRMs, ERPs, spreadsheets, databases, communication tools, and industry-specific software. We avoid forcing tool changes unless there is a clear reason to upgrade.
                                           </div>
                                       </div>
                                   </div>
                                   <div className="accordion-asked-item effectFade fadeRotateX" data-delay="0.1">
                                       <div className="accordion-asked-title" id="asked2">
                                           <button className="accordion-button text-body-1 fw-semibold collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
-                                              What do we need to start?
+                                              Why not just use an off-the-shelf tool instead?
                                               <span className="right-icon"></span>
                                           </button>
                                       </div>
                                       <div id="collapse2" role="region" className="accordion-collapse collapse" aria-labelledby="asked2" data-bs-parent="#accordion-asked">
                                           <div className="accordion-body">
-                                              A clear problem statement, success metrics, access to sample data, and a stakeholder who can make decisions. We’ll run a kickoff workshop to align scope.
+                                              Generic tools solve generic problems. If your workflows, data, or approval chains have any specificity to your business, a custom solution will outperform a template every time — and it won&apos;t force you to change how you operate to fit someone else&apos;s product.
                                           </div>
                                       </div>
                                   </div>
                                   <div className="accordion-asked-item effectFade fadeRotateX" data-delay="0.2">
                                       <div className="accordion-asked-title" id="asked3">
                                           <button className="accordion-button text-body-1 fw-semibold collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
-                                              Which models/stack do you use?
+                                              What happens if the solution doesn&apos;t perform as expected?
                                               <span className="right-icon"></span>
                                           </button>
                                       </div>
                                       <div id="collapse3" role="region" className="accordion-collapse collapse" aria-labelledby="asked3" data-bs-parent="#accordion-asked">
                                           <div className="accordion-body">
-                                              A clear problem statement, success metrics, access to sample data, and a stakeholder who can make decisions. We’ll run a kickoff workshop to align scope.
+                                              We define success criteria upfront, test thoroughly before handover, and include a post-launch support window. If something isn&apos;t hitting targets, we diagnose and fix it. Custom systems do need tuning as real-world data comes in, and that&apos;s part of the work we do.
                                           </div>
                                       </div>
                                   </div>
                                   <div className="accordion-asked-item effectFade fadeRotateX" data-delay="0.3">
                                       <div className="accordion-asked-title" id="asked4">
                                           <button className="accordion-button text-body-1 fw-semibold collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
-                                              Are model/API costs included in pricing?
+                                              Do you offer ongoing support after a project is delivered?
                                               <span className="right-icon"></span>
                                           </button>
                                       </div>
                                       <div id="collapse4" role="region" className="accordion-collapse collapse" aria-labelledby="asked4" data-bs-parent="#accordion-asked">
                                           <div className="accordion-body">
-                                              A clear problem statement, success metrics, access to sample data, and a stakeholder who can make decisions. We’ll run a kickoff workshop to align scope.
+                                              Yes. Most clients choose a retainer for monitoring, updates, and iterative improvements after launch. We can also do a clean handover with full documentation if you prefer to maintain the system in-house. Both options are available.
                                           </div>
                                       </div>
                                   </div>

@@ -10,8 +10,8 @@ import RouteReinit from '@/components/RouteReinit'
 import ScriptSequencer from '@/components/ScriptSequencer'
 
 export const metadata: Metadata = {
-  title: 'SwiftBuild - AI Agency',
-  description: 'AI-Driven Agency. Your AI Sprint Team on Demand.',
+  title: 'SwiftBuild - Digital Agency for Trades',
+  description: 'Digital agency for trades contractors across Canada — websites, SEO, and automation.',
 }
 
 export default function RootLayout({

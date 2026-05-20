@@ -26,15 +26,15 @@ export default function MobileMenu() {
                 </li>
                 <li>
                   <div className="item">
-                    <a href="/about" className="mb-menu-link text-display-1">
-                      <span className="text">About</span>
+                    <a href="/services" className="mb-menu-link text-display-1">
+                      <span className="text">Services</span>
                     </a>
                   </div>
                 </li>
                 <li>
                   <div className="item">
-                    <a href="/services" className="mb-menu-link text-display-1">
-                      <span className="text">Services</span>
+                    <a href="/about" className="mb-menu-link text-display-1">
+                      <span className="text">About</span>
                     </a>
                   </div>
                 </li>
@@ -60,20 +60,6 @@ export default function MobileMenu() {
                 <p className="text-caption text-neutral-200">
                   CUP <span className="clock"></span>
                 </p>
-              </div>
-              <div className="right">
-                <a href="#" className="tf-link-icon text-caption text-neutral-200">
-                  <i className="icon icon-arrow-top-right"></i>
-                  TWITTER (X)
-                </a>
-                <a href="#" className="tf-link-icon text-caption text-neutral-200">
-                  <i className="icon icon-arrow-top-right"></i>
-                  DRIBBBLE
-                </a>
-                <a href="#" className="tf-link-icon text-caption text-neutral-200">
-                  <i className="icon icon-arrow-top-right"></i>
-                  LINKEDIN
-                </a>
               </div>
             </div>
           </div>
