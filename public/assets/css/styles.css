@@ -4351,11 +4351,11 @@ select option {
   line-height: 24px;
   padding: 14px 24px;
   background: radial-gradient(62.56% 62.56% at 28.14% -10.42%, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%), linear-gradient(0deg, #272727, #272727);
-  box-shadow: 0px -3px 0px 0px #080808 inset, 0px 1px 0px 0px rgba(255, 255, 255, 0.3019607843) inset, 0px 2.77px 2.21px 0px rgba(0, 0, 0, 0.1215686275), 0px 6.65px 5.32px 0px rgba(0, 0, 0, 0.1294117647), 0px 12.52px 10.02px 0px rgba(0, 0, 0, 0.1333333333), 0px 22.34px 17.87px 0px rgba(0, 0, 0, 0.1411764706), 0px 41.78px 33.42px 0px rgba(0, 0, 0, 0.1490196078), 0px 100px 80px 0px rgba(0, 0, 0, 0.1490196078), 0px 3px 3px 0px rgba(0, 0, 0, 0.1411764706), 0px 2.77px 2.21px 0px rgba(0, 0, 0, 0.1215686275);
+  box-shadow: 0px -2px 0px 0px rgba(0, 0, 0, 0.15) inset, 0px 1px 0px 0px rgba(255, 255, 255, 0.15) inset, 0px 2px 4px 0px rgba(0, 0, 0, 0.05), 0px 4px 12px 0px rgba(0, 0, 0, 0.04);
   overflow: hidden;
 }
 .tf-btn:hover {
-  box-shadow: 0px -3px 0px 0px rgb(8, 8, 8) inset, 0px 1px 0px 0px rgba(255, 255, 255, 0.3) inset, 0px 2.77px 2.21px 0px rgba(0, 0, 0, 0.12), 0px 6.65px 5.32px 0px rgba(0, 0, 0, 0.13), 0px 12.52px 10.02px 0px rgba(0, 0, 0, 0.14), 0px 22.34px 17.87px 0px rgba(0, 0, 0, 0.14), 0px 41.78px 33.42px 0px rgba(0, 0, 0, 0.15), 0px 100px 80px 0px rgba(0, 0, 0, 0.15), 0px 3px 3px 0px rgba(0, 0, 0, 0.14), 0px 2.77px 2.21px 0px rgba(0, 0, 0, 0.12);
+  box-shadow: 0px -2px 0px 0px rgba(0, 0, 0, 0.2) inset, 0px 1px 0px 0px rgba(255, 255, 255, 0.2) inset, 0px 4px 8px 0px rgba(0, 0, 0, 0.08), 0px 8px 24px 0px rgba(0, 0, 0, 0.06);
   background: radial-gradient(62.56% 62.56% at 50% -13%, rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0) 100%), linear-gradient(0deg, #272727, #272727);
 }
 
@@ -9722,9 +9722,18 @@ footer {
   position: relative;
   padding: 43px 0 0;
 }
+footer::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(212, 212, 216, 0) 0%, #D4D4D8 50%, rgba(212, 212, 216, 0) 100%);
+}
 footer .footer-image {
   position: absolute;
-  top: 0;
+  top: 60px;
   left: 50%;
   transform: translateX(-50%);
   max-width: calc(100vw - 24px);
@@ -9761,15 +9770,6 @@ footer .footer-bottom {
 footer .footer-bottom > * {
   width: 100%;
 }
-footer .footer-bottom::before {
-  position: absolute;
-  content: "";
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 1px;
-  background: linear-gradient(90deg, rgba(212, 212, 216, 0) 0%, #D4D4D8 50%, rgba(212, 212, 216, 0) 100%);
-}
 @media (max-width: 767px) {
   footer .footer-bottom {
     flex-wrap: wrap;
@@ -9795,6 +9795,56 @@ footer .footer-bottom::before {
     gap: 7px;
     padding: 12px 7px;
   }
+}
+
+/* Premium Contact Form Styles */
+.contact-form-card {
+  background: #ffffff;
+  border: 1px solid var(--neutral-200) !important;
+  border-radius: 24px !important;
+  padding: 40px !important;
+  box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.05), 0 1px 3px rgba(0, 0, 0, 0.02) !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.contact-form-label {
+  font-weight: 600 !important;
+  font-size: 13px !important;
+  color: var(--neutral-700) !important;
+  margin-bottom: 6px !important;
+  display: block !important;
+  letter-spacing: -0.01em !important;
+}
+
+.contact-form-input {
+  width: 100% !important;
+  padding: 14px 18px !important;
+  border: 1.5px solid var(--neutral-200) !important;
+  border-radius: 12px !important;
+  background: #ffffff !important;
+  color: var(--primary) !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  line-height: 20px !important;
+  transition: border-color 0.2s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  outline: none !important;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.01) !important;
+}
+.contact-form-input::placeholder {
+  color: var(--neutral-400) !important;
+}
+.contact-form-input:hover {
+  border-color: var(--neutral-400) !important;
+}
+.contact-form-input:focus {
+  border-color: var(--brand) !important;
+  box-shadow: 0 0 0 4px rgba(253, 58, 37, 0.12) !important;
+  background: #ffffff !important;
+}
+
+.contact-form-textarea {
+  min-height: 130px !important;
+  resize: vertical !important;
 }
 
 /*# sourceMappingURL=styles.css.map */

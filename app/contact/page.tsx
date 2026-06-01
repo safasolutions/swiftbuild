@@ -50,9 +50,7 @@ export default function ContactPage() {
                                       </div>
                                   </div>
                               </div>
-                              <a href="https://cal.com/swiftbuild/free-strategy-call" className="tf-btn" style={{ background: 'var(--brand)', alignSelf: 'flex-start', marginTop: 'auto' }}>
-                                  Book a Call
-                              </a>
+
                           </div>
                           {/* RIGHT — Form */}
                           <form className="effectFade fadeUp" style={{ background: '#ffffff', border: '1px solid #E4E4E7', borderRadius: 24, padding: 40 }}>

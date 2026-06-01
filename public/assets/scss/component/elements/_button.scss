@@ -16,29 +16,17 @@
     radial-gradient(62.56% 62.56% at 28.14% -10.42%, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%),
     linear-gradient(0deg, #272727, #272727);
     box-shadow:
-    0px -3px 0px 0px #080808 inset,
-    0px 1px 0px 0px #FFFFFF4D inset,
-    0px 2.77px 2.21px 0px #0000001F,
-    0px 6.65px 5.32px 0px #00000021,
-    0px 12.52px 10.02px 0px #00000022,
-    0px 22.34px 17.87px 0px #00000024,
-    0px 41.78px 33.42px 0px #00000026,
-    0px 100px 80px 0px #00000026,
-    0px 3px 3px 0px #00000024,
-    0px 2.77px 2.21px 0px #0000001F;
+    0px -2px 0px 0px rgba(0, 0, 0, 0.15) inset,
+    0px 1px 0px 0px rgba(255, 255, 255, 0.15) inset,
+    0px 2px 4px 0px rgba(0, 0, 0, 0.05),
+    0px 4px 12px 0px rgba(0, 0, 0, 0.04);
     overflow: hidden;
     &:hover {
         box-shadow: 
-        0px -3px 0px 0px rgba(8, 8, 8, 1) inset,
-        0px 1px 0px 0px rgba(255, 255, 255, 0.3) inset,
-        0px 2.77px 2.21px 0px rgba(0, 0, 0, 0.12),
-        0px 6.65px 5.32px 0px rgba(0, 0, 0, 0.13),
-        0px 12.52px 10.02px 0px rgba(0, 0, 0, 0.14),
-        0px 22.34px 17.87px 0px rgba(0, 0, 0, 0.14),
-        0px 41.78px 33.42px 0px rgba(0, 0, 0, 0.15),
-        0px 100px 80px 0px rgba(0, 0, 0, 0.15),
-        0px 3px 3px 0px rgba(0, 0, 0, 0.14),
-        0px 2.77px 2.21px 0px rgba(0, 0, 0, 0.12);
+        0px -2px 0px 0px rgba(0, 0, 0, 0.2) inset,
+        0px 1px 0px 0px rgba(255, 255, 255, 0.2) inset,
+        0px 4px 8px 0px rgba(0, 0, 0, 0.08),
+        0px 8px 24px 0px rgba(0, 0, 0, 0.06);
         background: 
         radial-gradient(62.56% 62.56% at 50% -13%, rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0) 100%),
         linear-gradient(0deg, #272727, #272727);

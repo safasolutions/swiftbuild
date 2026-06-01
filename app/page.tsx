@@ -713,19 +713,58 @@ export default function HomePage() {
                           <div className="col-lg-8">
                               <div className="accordion-asked" id="accordion-asked">
                                   <div className="accordion-asked-item effectFade fadeRotateX">
+                                      <div className="accordion-asked-title" id="asked_faq1">
+                                          <button className="accordion-button text-body-1 fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_faq1" aria-expanded="true" aria-controls="collapse_faq1">
+                                              What exactly does SwiftBuild do?
+                                              <span className="right-icon"></span>
+                                          </button>
+                                      </div>
+                                      <div id="collapse_faq1" role="region" className="accordion-collapse collapse show" aria-labelledby="asked_faq1" data-bs-parent="#accordion-asked">
+                                          <div className="accordion-body">
+                                              We build high-performance websites, manage local SEO to get you found by local homeowners, and automate your repetitive daily tasks (like lead follow-ups, CRM entry, and booking notifications) specifically for roofing, HVAC, and service contractors.
+                                          </div>
+                                      </div>
+                                  </div>
+                                  <div className="accordion-asked-item effectFade fadeRotateX" data-delay="0.1">
+                                      <div className="accordion-asked-title" id="asked_faq2">
+                                          <button className="accordion-button text-body-1 fw-semibold collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_faq2" aria-expanded="false" aria-controls="collapse_faq2">
+                                              What businesses are eligible? Who owns the tech stack?
+                                              <span className="right-icon"></span>
+                                          </button>
+                                      </div>
+                                      <div id="collapse_faq2" role="region" className="accordion-collapse collapse" aria-labelledby="asked_faq2" data-bs-parent="#accordion-asked">
+                                          <div className="accordion-body">
+                                              We work with roofing, HVAC, plumbing, electrical, and cleaning businesses across Canada. Once delivered, you own 100% of the website, code, and automations — no proprietary lock-ins or mandatory recurring license fees.
+                                          </div>
+                                      </div>
+                                  </div>
+                                  <div className="accordion-asked-item effectFade fadeRotateX" data-delay="0.2">
+                                      <div className="accordion-asked-title" id="asked_faq3">
+                                          <button className="accordion-button text-body-1 fw-semibold collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_faq3" aria-expanded="false" aria-controls="collapse_faq3">
+                                              How long does the project take?
+                                              <span className="right-icon"></span>
+                                          </button>
+                                      </div>
+                                      <div id="collapse_faq3" role="region" className="accordion-collapse collapse" aria-labelledby="asked_faq3" data-bs-parent="#accordion-asked">
+                                          <div className="accordion-body">
+                                              A standard custom trades website and local SEO setup takes 3 to 4 weeks. Custom workflow automation integrations typically take 2 to 3 weeks depending on the complexity of your current operations.
+                                          </div>
+                                      </div>
+                                  </div>
+                                  <div className="accordion-asked-item effectFade fadeRotateX" data-delay="0.3">
                                       <div className="accordion-asked-title" id="asked1">
-                                          <button className="accordion-button text-body-1 fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="true" aria-controls="collapse1">
+                                          <button className="accordion-button text-body-1 fw-semibold collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="false" aria-controls="collapse1">
                                               Do you integrate with the tools I use?
                                               <span className="right-icon"></span>
                                           </button>
                                       </div>
-                                      <div id="collapse1" role="region" className="accordion-collapse collapse show" aria-labelledby="asked1" data-bs-parent="#accordion-asked">
+                                      <div id="collapse1" role="region" className="accordion-collapse collapse" aria-labelledby="asked1" data-bs-parent="#accordion-asked">
                                           <div className="accordion-body">
                                               Yes. We build around your existing stack — CRMs, ERPs, spreadsheets, databases, communication tools, and industry-specific software. We avoid forcing tool changes unless there is a clear reason to upgrade.
                                           </div>
                                       </div>
                                   </div>
-                                  <div className="accordion-asked-item effectFade fadeRotateX" data-delay="0.1">
+                                  <div className="accordion-asked-item effectFade fadeRotateX" data-delay="0.4">
                                       <div className="accordion-asked-title" id="asked2">
                                           <button className="accordion-button text-body-1 fw-semibold collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
                                               Why not just use an off-the-shelf tool instead?
@@ -738,7 +777,7 @@ export default function HomePage() {
                                           </div>
                                       </div>
                                   </div>
-                                  <div className="accordion-asked-item effectFade fadeRotateX" data-delay="0.2">
+                                  <div className="accordion-asked-item effectFade fadeRotateX" data-delay="0.5">
                                       <div className="accordion-asked-title" id="asked3">
                                           <button className="accordion-button text-body-1 fw-semibold collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
                                               What happens if the solution doesn&apos;t perform as expected?
@@ -751,7 +790,7 @@ export default function HomePage() {
                                           </div>
                                       </div>
                                   </div>
-                                  <div className="accordion-asked-item effectFade fadeRotateX" data-delay="0.3">
+                                  <div className="accordion-asked-item effectFade fadeRotateX" data-delay="0.6">
                                       <div className="accordion-asked-title" id="asked4">
                                           <button className="accordion-button text-body-1 fw-semibold collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
                                               Do you offer ongoing support after a project is delivered?
@@ -777,6 +816,9 @@ export default function HomePage() {
                       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, minmax(0, 1fr))', gap: 24, alignItems: 'stretch' }}>
                           {/* LEFT — Info panel */}
                           <div className="effectFade fadeUp" style={{ background: 'transparent', borderRadius: 24, padding: 40, display: 'flex', flexDirection: 'column' }}>
+                              <div className="heading-section mb-24">
+                                  <div className="heading-sub fw-semibold effectFade fadeUp" style={{ alignSelf: 'flex-start' }}>Contact</div>
+                              </div>
                               <h3 className="fw-semibold mb-16" style={{ fontSize: 32, lineHeight: '40px', letterSpacing: '-0.02em' }}>
                                   Let&apos;s Make Your<br />Workflows Flow
                               </h3>
@@ -799,30 +841,28 @@ export default function HomePage() {
                                       </div>
                                   </div>
                               </div>
-                              <a href="https://cal.com/swiftbuild/free-strategy-call" className="tf-btn" style={{ background: 'var(--brand)', alignSelf: 'flex-start', marginTop: 'auto' }}>
-                                  Book a Call
-                              </a>
+
                           </div>
                           {/* RIGHT — Form */}
-                          <form className="effectFade fadeUp" style={{ background: '#ffffff', border: '1px solid #E4E4E7', borderRadius: 24, padding: 40 }}>
+                          <form className="contact-form-card effectFade fadeUp">
                               <h3 className="fw-semibold mb-24" style={{ fontSize: 24, lineHeight: '32px', letterSpacing: '-0.01em' }}>Send Us a Message</h3>
                               <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, minmax(0, 1fr))', gap: 16, marginBottom: 16 }}>
                                   <fieldset className="m-0">
-                                      <label className="fw-semibold text-body-3 mb-8 d-block">Name</label>
-                                      <input type="text" placeholder="Your name" required style={{ width: '100%', padding: '12px 14px', border: '1px solid #E4E4E7', borderRadius: 8, background: '#ffffff' }} />
+                                      <label className="contact-form-label">Name</label>
+                                      <input type="text" placeholder="Your name" required className="contact-form-input" />
                                   </fieldset>
                                   <fieldset className="m-0">
-                                      <label className="fw-semibold text-body-3 mb-8 d-block">Email</label>
-                                      <input type="email" placeholder="Your email" required style={{ width: '100%', padding: '12px 14px', border: '1px solid #E4E4E7', borderRadius: 8, background: '#ffffff' }} />
+                                      <label className="contact-form-label">Email</label>
+                                      <input type="email" placeholder="Your email" required className="contact-form-input" />
                                   </fieldset>
                               </div>
                               <fieldset className="m-0 mb-16">
-                                  <label className="fw-semibold text-body-3 mb-8 d-block">Company</label>
-                                  <input type="text" placeholder="Your company" style={{ width: '100%', padding: '12px 14px', border: '1px solid #E4E4E7', borderRadius: 8, background: '#ffffff' }} />
+                                  <label className="contact-form-label">Company</label>
+                                  <input type="text" placeholder="Your company" className="contact-form-input" />
                               </fieldset>
                               <fieldset className="m-0 mb-20">
-                                  <label className="fw-semibold text-body-3 mb-8 d-block">Message</label>
-                                  <textarea placeholder="Tell us about your automation needs" style={{ width: '100%', padding: '12px 14px', border: '1px solid #E4E4E7', borderRadius: 8, background: '#ffffff', minHeight: 120, resize: 'vertical' }}></textarea>
+                                  <label className="contact-form-label">Message</label>
+                                  <textarea placeholder="Tell us about your automation needs" className="contact-form-input contact-form-textarea"></textarea>
                               </fieldset>
                               <button type="submit" className="tf-btn w-100" style={{ background: 'var(--brand)' }}>Send Message</button>
                               <div className="text-center text-secondary mt-12" style={{ fontSize: 13 }}>We&apos;ll get back to you within 1-2 business days.</div>

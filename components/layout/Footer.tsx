@@ -5,11 +5,7 @@ export default function Footer() {
         <img className="effectFade fadeUp" src="/assets/images/logo/logo-footer.png" alt="" />
       </div>
       <div className="container">
-        <div className="footer-content">
-          <a href="/" className="footer-logo">
-            <img src="/assets/images/logo/logo-2.svg" alt="" />
-          </a>
-        </div>
+
         <div className="footer-bottom">
           <ul className="footer-links d-flex gap-24 align-items-center">
             <li>
