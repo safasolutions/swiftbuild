@@ -1,6 +1,9 @@
 // @ts-nocheck
 'use client'
 
+import WorkspaceTimeline from '@/components/sections/WorkspaceTimeline'
+import UnifiedOfferings from '@/components/sections/UnifiedOfferings'
+
 export default function HomePage() {
   return (
     <>
@@ -125,7 +128,7 @@ export default function HomePage() {
                               <div className="col-xxl-6 col-lg-6">
                                   <div className="accordion-faq_list" id="accordion-services">
                                       <div className="accordion-faq_item effectFade fadeUp" role="presentation">
-                                          <div className="accordion-action services-image-btn active-img" data-img="/assets/images/section/service-1.jpg" data-bs-target="#faq-1" role="button"
+                                          <div className="accordion-action services-image-btn active-img" data-img="/assets/images/section/service-1.png" data-bs-target="#faq-1" role="button"
                                               data-bs-toggle="collapse" aria-controls="faq-1" aria-expanded="true">
                                               <div className="accordion-title">
                                                   Website Design <br /> & Development
@@ -144,7 +147,7 @@ export default function HomePage() {
                                           </div>
                                       </div>
                                       <div className="accordion-faq_item effectFade fadeUp" role="presentation">
-                                          <div className="accordion-action services-image-btn collapsed" data-img="/assets/images/section/service-2.jpg" data-bs-target="#faq-2" role="button"
+                                          <div className="accordion-action services-image-btn collapsed" data-img="/assets/images/section/service-2.png" data-bs-target="#faq-2" role="button"
                                               data-bs-toggle="collapse" aria-controls="faq-2" aria-expanded="false">
                                               <div className="accordion-title">
                                                   Local SEO & <br /> Search Visibility
@@ -163,7 +166,7 @@ export default function HomePage() {
                                           </div>
                                       </div>
                                       <div className="accordion-faq_item effectFade fadeUp" role="presentation">
-                                          <div className="accordion-action services-image-btn collapsed" data-img="/assets/images/section/service-3.jpg" data-bs-target="#faq-3" role="button"
+                                          <div className="accordion-action services-image-btn collapsed" data-img="/assets/images/section/service-3.png" data-bs-target="#faq-3" role="button"
                                               data-bs-toggle="collapse" aria-controls="faq-3" aria-expanded="false">
                                               <div className="accordion-title">
                                                   Workflow & Task <br /> Automation
@@ -182,7 +185,7 @@ export default function HomePage() {
                                           </div>
                                       </div>
                                       <div className="accordion-faq_item effectFade fadeUp" role="presentation">
-                                          <div className="accordion-action services-image-btn collapsed" data-img="/assets/images/section/service-4.jpg" data-bs-target="#faq-4" role="button"
+                                          <div className="accordion-action services-image-btn collapsed" data-img="/assets/images/section/service-4.png" data-bs-target="#faq-4" role="button"
                                               data-bs-toggle="collapse" aria-controls="faq-4" aria-expanded="false">
                                               <div className="accordion-title">
                                                   Voice Agent <br /> & Booking
@@ -203,7 +206,7 @@ export default function HomePage() {
                                   </div>
                               </div>
                               <div className="services-image effectFade fadeUp">
-                                  <img src="/assets/images/section/service-1.jpg" alt="" />
+                                  <img src="/assets/images/section/service-1.png" alt="" />
                               </div>
                           </div>
                       </div>
@@ -305,178 +308,10 @@ export default function HomePage() {
                   </div>
                   {/* /section-featured-works */}
                   {/* section-process */}
-                  <div className="section-process flat-spacing pt-0">
-                      <div className="container">
-                          <div className="row">
-                              <div className="col-lg-5">
-                                  <div className="process-heading h-100">
-                                      <div className="heading-section mb-80">
-                                          <div className="heading-sub fw-semibold effectFade fadeUp">Process</div>
-                                          <div className="heading-title text-gradient-3 effectFade fadeRotateX">Simple process. <br /> No fluff.</div>
-                                      </div>
-                                      <div className="group-btn-slider">
-                                          <div className="nav-prev-swiper">
-                                              <i className="icon icon-angle-left-solid"></i>
-                                          </div>
-                                          <div className="nav-next-swiper">
-                                              <i className="icon icon-angle-right-solid"></i>
-                                          </div>
-                                      </div>
-                                  </div>
-                              </div>
-                              <div className="col-lg-7">
-                                  <div className="process-slide">
-                                      <div dir="ltr" className="swiper tf-swiper swiper-box-shadow" data-preview="1.78" data-tablet="2" data-mobile-sm="1" data-mobile="1"
-                                          data-loop="false" data-center="false" data-space-lg="24" data-space-md="24" data-space="30" >
-                                          <div className="swiper-wrapper">
-                                              <div className="swiper-slide">
-                                                  <div className="process-card">
-                                                      <i className="icon icon-search-solid"></i>
-                                                      <div className="content">
-                                                          <h4 className="title fw-semibold">Free strategy call</h4>
-                                                          <p className="text text-secondary">15 minutes. We learn your business and what's not working. No pitch, no obligation.</p>
-                                                      </div>
-                                                      <div className="bot">
-                                                          <div className="time fw-semibold">15 MIN CALL</div>
-                                                          <div className="number">
-                                                              <span className="text-neutral-400">01</span>
-                                                              <span className="text-neutral-200">/03</span>
-                                                          </div>
-                                                      </div>
-                                                  </div>
-                                              </div>
-                                              <div className="swiper-slide">
-                                                  <div className="process-card">
-                                                      <i className="icon icon-bolt-solid"></i>
-                                                      <div className="content">
-                                                          <h4 className="title fw-semibold">We build a clear plan</h4>
-                                                          <p className="text text-secondary">Specific scope, fixed price, realistic timeline. No vague estimates or hidden costs.</p>
-                                                      </div>
-                                                      <div className="bot">
-                                                          <div className="time fw-semibold">48 HRS</div>
-                                                          <div className="number">
-                                                              <span className="text-neutral-400">02</span>
-                                                              <span className="text-neutral-200">/03</span>
-                                                          </div>
-                                                      </div>
-                                                  </div>
-                                              </div>
-                                              <div className="swiper-slide">
-                                                  <div className="process-card">
-                                                      <i className="icon icon-user-check-solid-1"></i>
-                                                      <div className="content">
-                                                          <h4 className="title fw-semibold">We deliver and support</h4>
-                                                          <p className="text text-secondary">Fast turnaround with regular updates. We stick around after launch.</p>
-                                                      </div>
-                                                      <div className="bot">
-                                                          <div className="time fw-semibold">ONGOING</div>
-                                                          <div className="number">
-                                                              <span className="text-neutral-400">03</span>
-                                                              <span className="text-neutral-200">/03</span>
-                                                          </div>
-                                                      </div>
-                                                  </div>
-                                              </div>
-                                          </div>
-                                      </div>
-                                  </div>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
+                  <WorkspaceTimeline />
                   {/* /section-process */}
                   {/* section-features */}
-                  <div className="section-features flat-spacing pt-0">
-                      <div className="container">
-                          <div className="heading-section center mb-64">
-                              <div className="heading-sub fw-semibold effectFade fadeUp">What's included</div>
-                              <div className="heading-title text-gradient-3 effectFade fadeRotateX">Everything your trades business needs</div>
-                          </div>
-                      </div>
-                      <div className="position-relative">
-                          <div className="container z-5">
-                              <div className="features-wrap justify-content-between">
-                                  <div className="features-col col-left lg-mb-24">
-                                      <div className="features-item effectFade fadeUp">
-                                          <i className="icon icon-robot-solid"></i>
-                                          <h6 className="title fw-semibold">Professional website</h6>
-                                          <p className="text-secondary">
-                                              Fast, mobile-first sites built to convert visitors into booked jobs — not just look good.
-                                          </p>
-                                      </div>
-                                      <div className="features-item effectFade fadeUp">
-                                          <i className="icon icon-clipboard-check-solid"></i>
-                                          <h6 className="title fw-semibold">Local SEO & Google rankings</h6>
-                                          <p className="text-secondary">
-                                              We get you ranking in Google Maps and local search where your customers actually look.
-                                          </p>
-                                      </div>
-                                      <div className="features-item effectFade fadeUp">
-                                          <i className="icon icon-book-solid"></i>
-                                          <h6 className="title fw-semibold">Workflow automation</h6>
-                                          <p className="text-secondary">
-                                              Quote follow-ups, booking confirmations, review requests — automated and running 24/7.
-                                          </p>
-                                      </div>
-                                  </div>
-                                  <div className="features-center flex-shrink" style={{ width: 96, height: 96, borderRadius: 20 }}>
-                                      <img
-                                          src="/assets/images/logo/favicon.svg"
-                                          alt="SwiftBuild"
-                                          style={{ width: 76, height: 76, mixBlendMode: 'multiply' }}
-                                      />
-                                  </div>
-                                  <div className="features-col col-right">
-                                      <div className="features-item effectFade fadeUp" data-delay="0.1">
-                                          <i className="icon icon-user-check-solid"></i>
-                                          <h6 className="title fw-semibold">Voice agent</h6>
-                                          <p className="text-secondary">
-                                              Coming soon: a smart voice system that answers your calls, qualifies callers, and books appointments while you're on the job.
-                                          </p>
-                                      </div>
-                                      <div className="features-item effectFade fadeUp" data-delay="0.1">
-                                          <i className="icon icon-shield-alt-solid"></i>
-                                          <h6 className="title fw-semibold">Fixed prices, real timelines</h6>
-                                          <p className="text-secondary">
-                                              We scope the project, agree a price, and deliver on time. No surprises, no excuses.
-                                          </p>
-                                      </div>
-                                      <div className="features-item effectFade fadeUp" data-delay="0.1">
-                                          <i className="icon icon-plug-solid"></i>
-                                          <h6 className="title fw-semibold">Ongoing support</h6>
-                                          <p className="text-secondary">
-                                              We don't disappear after launch. Monthly reporting, updates, and support included.
-                                          </p>
-                                      </div>
-                                  </div>
-                              </div>
-                          </div>
-                          <div className="side-line-main d-none d-lg-block wow fadeIn">
-                              <div className="container">
-                                  <div className="row">
-                                      <div className="col-lg-4 mx-auto">
-                                          <div className="side-line-wrap">
-                                              <div className="link-break-line left">
-                                                  <div className="link-break-line">
-                                                      <span className="item top"></span>
-                                                      <span className="item bottom"></span>
-                                                  </div>
-                                              </div>
-                                              <div className="link-break-center">
-                                                  <span className="simu-electric left"></span>
-                                                  <span className="simu-electric right"></span>
-                                              </div>
-                                              <div className="link-break-line right">
-                                                  <span className="item top"></span>
-                                                  <span className="item bottom"></span>
-                                              </div>
-                                          </div>
-                                      </div>
-                                  </div>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
+                  <UnifiedOfferings />
                   {/* /section-features */}
               </div>
         

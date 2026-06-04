@@ -35,6 +35,8 @@ export default function RootLayout({
         <link rel="stylesheet" href="/assets/css/slick.theme.css" />
         {/* Main stylesheet */}
         <link rel="stylesheet" href="/assets/css/styles.css" />
+        {/* Custom additions */}
+        <link rel="stylesheet" href="/assets/css/custom.css" />
         {/* jQuery — must load synchronously before everything else */}
         <Script src="/assets/js/jquery.min.js" strategy="beforeInteractive" />
       </head>
