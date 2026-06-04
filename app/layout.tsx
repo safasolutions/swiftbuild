@@ -22,8 +22,8 @@ export default function RootLayout({
   return (
     <html lang="en-US">
       <head>
-        <link rel="shortcut icon" href="/assets/images/logo/favicon.svg" />
-        <link rel="apple-touch-icon-precomposed" href="/assets/images/logo/favicon.svg" />
+        <link rel="shortcut icon" href="/assets/images/logo/icon-light.svg" />
+        <link rel="apple-touch-icon-precomposed" href="/assets/images/logo/icon-light.svg" />
         {/* Fonts & Icons */}
         <link rel="stylesheet" href="/assets/fonts/fonts.css" />
         <link rel="stylesheet" href="/assets/icon/icomoon/style.css" />

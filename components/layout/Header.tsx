@@ -2,6 +2,7 @@
 
 import { usePathname } from 'next/navigation'
 import { NICHE_SLUGS, SERVICE_SLUGS, getNiche, getService } from '@/lib/landing-content'
+import Logo from '@/components/ui/Logo'
 
 const niches = NICHE_SLUGS.map(s => getNiche(s)!)
 const services = SERVICE_SLUGS.map(s => getService(s)!)
@@ -19,7 +20,7 @@ export default function Header() {
     <header className="tf-header header2">
       <div className="header-inner" style={{ maxWidth: '980px' }}>
         <a href="/" className="logo-site">
-          <img src="/assets/images/logo/logo.svg" alt="" height={40} style={{ width: 'auto' }} />
+          <Logo height={36} />
         </a>
         <div className="box-navigation">
           <ul className="nav-menu-main">

@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import { NICHE_SLUGS, SERVICE_SLUGS, getNiche, getService } from '@/lib/landing-content'
+import Logo from '@/components/ui/Logo'
 
 const niches = NICHE_SLUGS.map(s => getNiche(s)!)
 const services = SERVICE_SLUGS.map(s => getService(s)!)
@@ -19,7 +20,7 @@ export default function MobileMenu() {
           <div className="offcanvas-content_wrapin">
             <div className="canvas_head">
               <a href="/" className="logo-site">
-                <i className="icon icon-davies-logo"></i>
+                <Logo height={36} />
               </a>
               <div className="btn-mobile-menu close-mb-menu text-caption link">
                 <i className="icon icon-close"></i>

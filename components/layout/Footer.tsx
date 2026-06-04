@@ -1,3 +1,5 @@
+import Logo from '@/components/ui/Logo'
+
 export default function Footer() {
   return (
     <footer>
@@ -7,7 +9,7 @@ export default function Footer() {
       <div className="container">
         <div className="footer-content">
           <a href="/" className="footer-logo">
-            <img src="/assets/images/logo/logo-2.svg" alt="" />
+            <Logo height={36} />
           </a>
           <div className="title h6 fw-semibold">Get connected <br /> with SwiftBuild on social</div>
           <div className="text">Don&apos;t miss our new updates!</div>

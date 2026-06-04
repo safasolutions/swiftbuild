@@ -3,6 +3,7 @@
 
 import { useEffect } from 'react'
 import SelectedWorkSection from '@/components/SelectedWorkSection'
+import Logo from '@/components/ui/Logo'
 
 export default function HomePage() {
   useEffect(() => {
@@ -484,7 +485,7 @@ export default function HomePage() {
                                       </div>
                                   </div>
                                   <div className="features-center flex-shrink">
-                                      <img src="/assets/images/logo/logo-1.svg" alt="" />
+                                      <Logo height={64} />
                                   </div>
                                   <div className="features-col col-right">
                                       <div className="features-item effectFade fadeUp" data-delay="0.1">
