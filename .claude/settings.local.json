@@ -5,7 +5,12 @@
       "Bash(claude mcp *)",
       "mcp__stitch__list_projects",
       "mcp__stitch__list_screens",
-      "mcp__stitch__get_screen"
+      "mcp__stitch__get_screen",
+      "PowerShell(npm install *)",
+      "PowerShell(npm run *)",
+      "PowerShell(New-Item *)",
+      "PowerShell(node D:\\\\swiftbuild\\\\pw-responsive-check.cjs)",
+      "PowerShell(node -e \"const{chromium}=require\\('playwright'\\);\\(async\\(\\)=>{const b=await chromium.launch\\(\\);const p=await b.newPage\\(\\);await p.setViewportSize\\({width:375,height:812}\\);await p.goto\\('http://localhost:3000/',{waitUntil:'load'}\\);await p.waitForTimeout\\(2500\\);const info=await p.evaluate\\(\\(\\)=>{const el=document.querySelector\\('.timeline-item'\\);return{parentClass:el.parentElement.className,parentTag:el.parentElement.tagName,siblingCount:el.parentElement.children.length,parentHTML:el.parentElement.outerHTML.slice\\(0,300\\)};}\\);console.log\\(JSON.stringify\\(info,null,1\\)\\);await b.close\\(\\);}\\)\\(\\)\")"
     ]
   }
 }

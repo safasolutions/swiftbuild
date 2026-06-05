@@ -36,14 +36,6 @@ export default function MobileMenu() {
                     </a>
                   </div>
                 </li>
-                <li>
-                  <div className="item">
-                    <a href="/services" className="mb-menu-link text-display-1">
-                      <span className="text">Services</span>
-                    </a>
-                  </div>
-                </li>
-
                 {/* Services accordion */}
                 <li>
                   <div className="item has-sub-menu">

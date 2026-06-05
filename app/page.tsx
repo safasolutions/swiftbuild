@@ -48,14 +48,14 @@ export default function HomePage() {
                   {/* section-who-we-are */}
                   <div className="section-who-we-are" style={{ paddingTop: 80, paddingBottom: 40 }}>
                       <div className="container">
-                          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, minmax(0, 1fr))', gap: 64, alignItems: 'start' }}>
+                          <div className="grid-collapse-lg who-we-are-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(2, minmax(0, 1fr))', gap: 64, alignItems: 'start' }}>
                               {/* LEFT */}
                               <div>
                                   <div className="heading-section mb-24">
                                       <div className="heading-sub fw-semibold effectFade fadeUp">Who We Are</div>
                                   </div>
-                                  <h2 className="effectFade fadeRotateX fw-semibold mb-24" style={{ fontSize: 44, lineHeight: '52px', letterSpacing: '-0.02em' }}>
-                                      Your <span className="text-brand">Strategic Partner</span><br />for Digital Growth
+                                  <h2 className="effectFade fadeRotateX fw-semibold mb-24 who-we-are-heading" style={{ fontSize: 44, lineHeight: '52px', letterSpacing: '-0.02em' }}>
+                                      Your <span className="text-brand">Strategic Partner</span> <br />for Digital Growth
                                   </h2>
                                   <p className="effectFade fadeUp mb-0 text-secondary" style={{ maxWidth: 520, fontSize: 15, lineHeight: '24px' }}>
                                       We combine technical expertise with strategic vision to transform your digital presence into a high-performance engine. As your reliable strategic partner, we are committed to building long-term value through engineering excellence and consistent delivery.
@@ -558,14 +558,14 @@ export default function HomePage() {
               <div id="contact" style={{ paddingTop: 40, paddingBottom: 80, position: 'relative' }}>
                   <div style={{ position: 'absolute', inset: '0 16px', borderRadius: 40, backgroundImage: 'url(/assets/images/section/hero-1.jpg)', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}></div>
                   <div className="container" style={{ position: 'relative', zIndex: 1 }}>
-                      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, minmax(0, 1fr))', gap: 24, alignItems: 'stretch' }}>
+                      <div className="grid-collapse-lg" style={{ display: 'grid', gridTemplateColumns: 'repeat(2, minmax(0, 1fr))', gap: 24, alignItems: 'stretch' }}>
                           {/* LEFT — Info panel */}
-                          <div className="effectFade fadeUp" style={{ background: 'transparent', borderRadius: 24, padding: 40, display: 'flex', flexDirection: 'column' }}>
+                          <div className="effectFade fadeUp contact-info-panel" style={{ background: 'transparent', borderRadius: 24, padding: 40, display: 'flex', flexDirection: 'column' }}>
                               <div className="heading-section mb-24">
                                   <div className="heading-sub fw-semibold effectFade fadeUp" style={{ alignSelf: 'flex-start' }}>Contact</div>
                               </div>
                               <h3 className="fw-semibold mb-16" style={{ fontSize: 32, lineHeight: '40px', letterSpacing: '-0.02em' }}>
-                                  Let&apos;s Make Your<br />Workflows Flow
+                                  Let&apos;s Make Your <br />Workflows Flow
                               </h3>
                               <p className="text-secondary mb-32" style={{ fontSize: 15, lineHeight: '24px' }}>
                                   Ready to save time and reduce busywork? Get in touch and let&apos;s discuss how we can help automate your business processes.
@@ -591,7 +591,7 @@ export default function HomePage() {
                           {/* RIGHT — Form */}
                           <form className="contact-form-card effectFade fadeUp">
                               <h3 className="fw-semibold mb-24" style={{ fontSize: 24, lineHeight: '32px', letterSpacing: '-0.01em' }}>Send Us a Message</h3>
-                              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, minmax(0, 1fr))', gap: 16, marginBottom: 16 }}>
+                              <div className="grid-collapse-sm" style={{ display: 'grid', gridTemplateColumns: 'repeat(2, minmax(0, 1fr))', gap: 16, marginBottom: 16 }}>
                                   <fieldset className="m-0">
                                       <label className="contact-form-label">Name</label>
                                       <input type="text" placeholder="Your name" required className="contact-form-input" />

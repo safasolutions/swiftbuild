@@ -68,7 +68,10 @@
   padding-left: 54px;
 }
 
-.timeline-item:last-child {
+/* The fadeUp animation wraps each item in a div.overflow-hidden at runtime,
+   making every item a :last-child — only zero the margin on the true last item. */
+.timeline-wrapper > :last-child .timeline-item,
+.timeline-wrapper > .timeline-item:last-child {
   margin-bottom: 0;
 }
 
@@ -125,7 +128,8 @@
   }
 }
 
-.timeline-item:hover .timeline-node {
+.timeline-item:hover .timeline-node,
+.timeline-item.is-active .timeline-node {
   border-color: var(--brand);
   background: var(--brand);
   color: var(--white);
@@ -149,9 +153,9 @@
   text-align: left;
 }
 
-.timeline-item:hover .timeline-card {
+.timeline-item:hover .timeline-card,
+.timeline-item.is-active .timeline-card {
   transform: translateY(-6px);
-  border-color: var(--brand);
   box-shadow: 0 12px 36px rgba(0, 0, 0, 0.06);
 }
 
@@ -347,5 +351,57 @@
     width: 100% !important;
     height: auto !important;
     aspect-ratio: 4 / 3;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   4. Responsive Layout Fixes
+   -------------------------------------------------------------------------- */
+/* Collapse inline 2-column grids to a single column on tablets and below.
+   !important is required to win over the inline grid-template-columns. */
+@media (max-width: 991px) {
+  .grid-collapse-lg {
+    grid-template-columns: 1fr !important;
+  }
+  .who-we-are-grid {
+    gap: 40px !important;
+  }
+  .who-we-are-heading {
+    font-size: 34px !important;
+    line-height: 42px !important;
+  }
+  .contact-info-panel {
+    padding: 24px !important;
+  }
+  .contact-form-card,
+  .contact-form-panel {
+    padding: 24px !important;
+  }
+}
+
+/* Stack side-by-side form fields on small phones */
+@media (max-width: 575px) {
+  .grid-collapse-sm {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* Mobile menu: right-align the Services/Trades accordion toggles.
+   The .item wrapper is display:flex (row) from the template, which left-aligns
+   the toggle button and ignores its text-align. Stack and align right instead. */
+.offcanvas-menu .nav-ul-mb .item.has-sub-menu {
+  flex-direction: column;
+  align-items: flex-end;
+}
+.offcanvas-menu .nav-ul-mb .item.has-sub-menu .mb-menu-link {
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* Keep the desktop nav off the screen edges just above the mobile breakpoint */
+@media (min-width: 992px) and (max-width: 1060px) {
+  .tf-header .header-inner {
+    padding-left: 24px;
+    padding-right: 24px;
   }
 }

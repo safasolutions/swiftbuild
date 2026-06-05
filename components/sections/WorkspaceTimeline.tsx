@@ -1,6 +1,6 @@
 'use client'
 
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 
 export interface TimelinePhase {
   phaseNum: string;
@@ -63,6 +63,24 @@ const PHASES: TimelinePhase[] = [
 ]
 
 export default function WorkspaceTimeline() {
+  const wrapperRef = useRef<HTMLDivElement>(null)
+
+  // Highlight the timeline card that is currently in the middle of the viewport
+  useEffect(() => {
+    const items = wrapperRef.current?.querySelectorAll('.timeline-item')
+    if (!items?.length) return
+    const observer = new IntersectionObserver(
+      entries => {
+        entries.forEach(entry => {
+          entry.target.classList.toggle('is-active', entry.isIntersecting)
+        })
+      },
+      { rootMargin: '-35% 0px -35% 0px' }
+    )
+    items.forEach(item => observer.observe(item))
+    return () => observer.disconnect()
+  }, [])
+
   return (
     <section className="timeline-section" id="process">
       <div className="container">
@@ -73,7 +91,7 @@ export default function WorkspaceTimeline() {
           </div>
         </div>
 
-        <div className="timeline-wrapper">
+        <div className="timeline-wrapper" ref={wrapperRef}>
           {/* Main timeline line */}
           <div className="timeline-conduit-line" />
           

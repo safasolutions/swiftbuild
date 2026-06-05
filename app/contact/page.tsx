@@ -25,11 +25,11 @@ export default function ContactPage() {
               {/* section-contact */}
               <div id="contact" style={{ paddingTop: 80, paddingBottom: 80, background: '#ffffff' }}>
                   <div className="container">
-                      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, minmax(0, 1fr))', gap: 24, alignItems: 'stretch' }}>
+                      <div className="grid-collapse-lg" style={{ display: 'grid', gridTemplateColumns: 'repeat(2, minmax(0, 1fr))', gap: 24, alignItems: 'stretch' }}>
                           {/* LEFT — Info panel */}
-                          <div className="effectFade fadeUp" style={{ background: 'transparent', borderRadius: 24, padding: 40, display: 'flex', flexDirection: 'column' }}>
+                          <div className="effectFade fadeUp contact-info-panel" style={{ background: 'transparent', borderRadius: 24, padding: 40, display: 'flex', flexDirection: 'column' }}>
                               <h3 className="fw-semibold mb-16" style={{ fontSize: 32, lineHeight: '40px', letterSpacing: '-0.02em' }}>
-                                  Let&apos;s Make Your<br />Workflows Flow
+                                  Let&apos;s Make Your <br />Workflows Flow
                               </h3>
                               <p className="text-secondary mb-32" style={{ fontSize: 15, lineHeight: '24px' }}>
                                   Ready to save time and reduce busywork? Get in touch and let&apos;s discuss how we can help automate your business processes.
@@ -53,9 +53,9 @@ export default function ContactPage() {
 
                           </div>
                           {/* RIGHT — Form */}
-                          <form className="effectFade fadeUp" style={{ background: '#ffffff', border: '1px solid #E4E4E7', borderRadius: 24, padding: 40 }}>
+                          <form className="effectFade fadeUp contact-form-panel" style={{ background: '#ffffff', border: '1px solid #E4E4E7', borderRadius: 24, padding: 40 }}>
                               <h3 className="fw-semibold mb-24" style={{ fontSize: 24, lineHeight: '32px', letterSpacing: '-0.01em' }}>Send Us a Message</h3>
-                              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, minmax(0, 1fr))', gap: 16, marginBottom: 16 }}>
+                              <div className="grid-collapse-sm" style={{ display: 'grid', gridTemplateColumns: 'repeat(2, minmax(0, 1fr))', gap: 16, marginBottom: 16 }}>
                                   <fieldset className="m-0">
                                       <label className="fw-semibold text-body-3 mb-8 d-block">Name</label>
                                       <input type="text" placeholder="Your name" required style={{ width: '100%', padding: '12px 14px', border: '1px solid #E4E4E7', borderRadius: 8, background: '#ffffff' }} />

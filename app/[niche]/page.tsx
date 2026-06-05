@@ -60,7 +60,7 @@ export default async function NicheHubPage({
               {niche.heroLines.map((line, i) => (
                 <Fragment key={i}>
                   <span className="fw-semibold text-gradient-1">{line}</span>
-                  {i < niche.heroLines.length - 1 && <br />}
+                  {i < niche.heroLines.length - 1 && <>{' '}<br /></>}
                 </Fragment>
               ))}
             </div>
