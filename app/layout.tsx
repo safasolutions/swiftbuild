@@ -10,8 +10,8 @@ import RouteReinit from '@/components/RouteReinit'
 import ScriptSequencer from '@/components/ScriptSequencer'
 
 export const metadata: Metadata = {
-  title: 'SwiftBuild - AI Agency',
-  description: 'AI-Driven Agency. Your AI Sprint Team on Demand.',
+  title: 'SwiftBuild - Digital Agency for Trades',
+  description: 'Digital agency for trades contractors across Canada — websites, SEO, and automation.',
 }
 
 export default function RootLayout({
@@ -35,6 +35,8 @@ export default function RootLayout({
         <link rel="stylesheet" href="/assets/css/slick.theme.css" />
         {/* Main stylesheet */}
         <link rel="stylesheet" href="/assets/css/styles.css" />
+        {/* Custom additions */}
+        <link rel="stylesheet" href="/assets/css/custom.css" />
         {/* jQuery — must load synchronously before everything else */}
         <Script src="/assets/js/jquery.min.js" strategy="beforeInteractive" />
       </head>

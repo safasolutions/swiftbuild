@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en" style=""><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>SwiftBuild - Who We Are</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@700;800&amp;family=Inter:wght@400;600&amp;family=JetBrains+Mono:wght@600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary-fixed-variant": "#004c6b",
+                        "on-primary-fixed-variant": "#930018",
+                        "tertiary-fixed-dim": "#80cfff",
+                        "surface-alt": "#F8F9FA",
+                        "on-error": "#ffffff",
+                        "on-background": "#101c2c",
+                        "background": "#f9f9ff",
+                        "outline-variant": "#e7bcba",
+                        "on-surface-variant": "#5d3f3d",
+                        "surface-dim": "#cfdbf1",
+                        "surface-container-low": "#eff3ff",
+                        "inverse-primary": "#ffb3af",
+                        "tertiary-fixed": "#c5e7ff",
+                        "surface-container-highest": "#d7e3fa",
+                        "on-secondary-fixed": "#181a2e",
+                        "surface": "#f9f9ff",
+                        "alert-red": "#EF233C",
+                        "deep-navy": "#1B1D2E",
+                        "primary-fixed": "#ffdad7",
+                        "tertiary-container": "#0074a0",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-bright": "#f9f9ff",
+                        "on-error-container": "#93000a",
+                        "on-tertiary-container": "#e0f1ff",
+                        "secondary": "#5b5d74",
+                        "inverse-surface": "#253142",
+                        "on-surface": "#101c2c",
+                        "inverse-on-surface": "#ebf1ff",
+                        "error-container": "#ffdad6",
+                        "primary-container": "#d90429",
+                        "secondary-fixed-dim": "#c4c4df",
+                        "on-tertiary": "#ffffff",
+                        "outline": "#926e6c",
+                        "surface-variant": "#d7e3fa",
+                        "primary-fixed-dim": "#ffb3af",
+                        "on-secondary-fixed-variant": "#43455b",
+                        "surface-tint": "#bf0022",
+                        "tertiary": "#005a7d",
+                        "surface-container": "#e6eeff",
+                        "on-primary-fixed": "#410005",
+                        "on-secondary": "#ffffff",
+                        "surface-container-high": "#dde9ff",
+                        "on-tertiary-fixed": "#001e2d",
+                        "secondary-fixed": "#e0e0fc",
+                        "secondary-container": "#ddddf9",
+                        "on-primary-container": "#ffeae8",
+                        "on-secondary-container": "#5f6178",
+                        "primary": "#ac001e",
+                        "on-primary": "#ffffff",
+                        "error": "#ba1a1a"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "container-max": "1280px",
+                        "base-unit": "8px",
+                        "margin-tablet": "32px",
+                        "margin-mobile": "20px",
+                        "gutter": "24px",
+                        "margin-desktop": "64px"
+                    },
+                    "fontFamily": {
+                        "headline-lg": ["Hanken Grotesk"],
+                        "label-caps": ["JetBrains Mono"],
+                        "body-lg": ["Inter"],
+                        "headline-xl-mobile": ["Hanken Grotesk"],
+                        "headline-md": ["Hanken Grotesk"],
+                        "body-md": ["Inter"],
+                        "headline-xl": ["Hanken Grotesk"]
+                    },
+                    "fontSize": {
+                        "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                        "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "headline-xl-mobile": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.01em", "fontWeight": "800"}],
+                        "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "headline-xl": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "800"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .kinetic-border {
+            position: relative;
+        }
+        .kinetic-border::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -4px;
+            width: 40px;
+            height: 2px;
+            background-color: theme('colors.primary');
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface antialiased">
+<!-- Condensed 'Who We Are' Section -->
+<section class="w-full py-16 px-margin-mobile md:px-margin-desktop bg-surface-container-lowest">
+<div class="max-w-container-max mx-auto">
+<div class="flex flex-col gap-16"><!-- Reorganized Layout: Left Narrative, Right Metrics & Systems -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-margin-desktop items-start">
+<!-- Left Column: Narrative Intro -->
+<div class="space-y-8">
+<div class="inline-flex items-center gap-2 px-3 py-1 bg-primary/10 border-l-4 border-primary">
+<span class="font-label-caps text-label-caps text-primary tracking-widest">WHO WE ARE</span>
+</div>
+<div class="space-y-6">
+<h2 class="font-headline-lg text-headline-lg text-deep-navy leading-tight">Your <span class="text-primary">Strategic Partner</span> for Digital Growth</h2>
+<p class="font-body-lg text-body-lg text-secondary">We combine technical expertise with strategic vision to transform your digital presence into a high-performance engine. As your reliable strategic partner, we are committed to building long-term value through engineering excellence and consistent delivery. Our focus is on creating sustainable growth frameworks that evolve with your business needs.</p>
+</div>
+</div>
+<!-- Right Column: Metrics followed by Systems -->
+<div class="space-y-8 lg:pl-margin-desktop border-t lg:border-t-0 lg:border-l border-outline-variant pt-margin-tablet lg:pt-0 lg:pl-16">
+<!-- Metrics Grid -->
+<div class="grid grid-cols-2 gap-8">
+<div class="space-y-1">
+<div class="font-headline-lg text-headline-lg text-primary">35+</div>
+<div class="font-label-caps text-label-caps text-secondary">HAPPY CLIENTS</div>
+</div>
+<div class="space-y-1">
+<div class="font-headline-lg text-headline-lg text-primary">180%</div>
+<div class="font-label-caps text-label-caps text-secondary">AVG ROI</div>
+</div>
+<div class="space-y-1">
+<div class="font-headline-lg text-headline-lg text-primary">400+</div>
+<div class="font-label-caps text-label-caps text-secondary">SOLUTIONS BUILT</div>
+</div>
+<div class="space-y-1">
+<div class="font-headline-lg text-headline-lg text-primary">6,000+</div>
+<div class="font-label-caps text-label-caps text-secondary">HOURS SAVED</div>
+</div>
+</div>
+<!-- Compact Core Systems Grid -->
+<div class="pt-8 border-t border-outline-variant/30">
+<div class="grid grid-cols-2 gap-y-4 gap-x-2">
+<div class="flex gap-2 items-center">
+<span class="material-symbols-outlined text-primary text-xl">receipt_long</span>
+<h3 class="font-bold text-deep-navy text-sm">Invoicing</h3>
+</div>
+<div class="flex gap-2 items-center">
+<span class="material-symbols-outlined text-primary text-xl">groups</span>
+<h3 class="font-bold text-deep-navy text-sm">CRM</h3>
+</div>
+<div class="flex gap-2 items-center">
+<span class="material-symbols-outlined text-primary text-xl">search</span>
+<h3 class="font-bold text-deep-navy text-sm">SEO</h3>
+</div>
+<div class="flex gap-2 items-center">
+<span class="material-symbols-outlined text-primary text-xl">web</span>
+<h3 class="font-bold text-deep-navy text-sm">Custom Websites</h3>
+</div>
+<div class="flex gap-2 items-center">
+<span class="material-symbols-outlined text-primary text-xl">insights</span>
+<h3 class="font-bold text-deep-navy text-sm">Strategic Marketing</h3>
+</div>
+<div class="flex gap-2 items-center">
+<span class="material-symbols-outlined text-primary text-xl">hub</span>
+<h3 class="font-bold text-deep-navy text-sm">Inbound Lead Mgmt</h3>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</section>
+<script>
+        // Hover interactions for the core system cards
+        const cards = document.querySelectorAll('.group');
+        cards.forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                const iconBox = card.querySelector('div:first-child > div');
+                iconBox.classList.add('scale-110');
+            });
+            card.addEventListener('mouseleave', () => {
+                const iconBox = card.querySelector('div:first-child > div');
+                iconBox.classList.remove('scale-110');
+            });
+        });
+    </script>
+</body></html>

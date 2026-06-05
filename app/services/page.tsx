@@ -9,22 +9,14 @@ export default function ServicesPage() {
                   <div className="container">
                       <div className="content-wrap text-center">
                           <div className="title text-display-2 effectFade fadeRotateX">
-                              <span className="title1 fw-semibold text-gradient-1">Build Smarter with</span>
+                              <span className="title1 fw-semibold text-gradient-1">Build smarter with</span>
                               <br />
                               <div className="title2 d-flex gap-20 justify-content-center flex-wrap">
-                                  <span className="fw-semibold text-gradient-1">Full-Stack AI</span>
-                                  <div className="title-icon">
-                                      <div className="box"></div>
-                                      <div className="title-icon-wrap">
-                                          <img src="/assets/images/item/item-13.svg" alt="" className="img-1 img-transform-3" />
-                                          <img src="/assets/images/item/item-14.svg" alt="" className="img-2 img-transform-3" />
-                                          <img src="/assets/images/item/item-15.svg" alt="" className="img-3 img-transform-3" />
-                                      </div>
-                                  </div>
+                                  <span className="fw-semibold text-gradient-1">full-stack delivery</span>
                               </div>
                           </div>
                           <p className="text effectFade fadeUp">
-                              Unlock growth with our full-stack AI services, delivering smart, efficient solutions from <br /> strategy to deployment for innovative business success.
+                              Unlock growth with our full-stack services, delivering smart, efficient solutions from <br /> strategy to deployment for trades businesses across Canada.
                           </p>
                       </div>
                   </div>
@@ -36,16 +28,16 @@ export default function ServicesPage() {
                       <div className="top">
                           <div className="heading-section center mb-48">
                               <div className="heading-sub fw-semibold effectFade fadeUp">Services</div>
-                              <div className="heading-title text-gradient-3 effectFade fadeRotateX">End-to-End AI Services</div>
+                              <div className="heading-title text-gradient-3 effectFade fadeRotateX">End-to-End Services</div>
                           </div>
-                          <p className="text text-center effectFade fadeUp">We turn ambiguous AI ideas into production features your users trust—combining strategy, <br /> design, engineering, and rigorous evaluation.</p>
+                          <p className="text text-center effectFade fadeUp">We turn ambiguous ideas into production features your customers trust—combining strategy, <br /> design, engineering, and rigorous evaluation.</p>
                       </div>
                       <div className="accordion-faq_list gap-32" id="accordion-services">
                           <div className="accordion-faq_item style-1 effectFade fadeRotateX" role="presentation">
                               <div className="accordion-action" data-bs-target="#faq-1" role="button"
                                   data-bs-toggle="collapse" aria-controls="faq-1" aria-expanded="true">
                                   <div className="accordion-title">
-                                      AI Strategy & Mapping
+                                      Strategy & Mapping
                                       <i className="icon icon-arrow-top-right"></i>
                                   </div>
                               </div>
@@ -55,7 +47,7 @@ export default function ServicesPage() {
                                           <img src="/assets/images/section/service-5.jpg" alt="" />
                                       </div>
                                       <div className="content">
-                                          <div className="text-body-3 text-neutral-300 text">Identify high-ROI use cases and define a realistic, measurable AI roadmap. Our AI Strategy & Mapping process aligns technology with business goals through stakeholder discovery, KPI modeling, and data readiness assessment to ensure sustainable growth and measurable transformation outcomes.</div>
+                                          <div className="text-body-3 text-neutral-300 text">Identify high-ROI use cases and define a realistic, measurable roadmap. Our Strategy & Mapping process aligns technology with business goals through stakeholder discovery, KPI modeling, and data readiness assessment to ensure sustainable growth and measurable transformation outcomes.</div>
                                           <div className="list-tags">
                                               <a href="#" className="tags-item fw-semibold">Stakeholder discovery</a>
                                               <a href="#" className="tags-item fw-semibold">Value model & KPI definition</a>
@@ -70,7 +62,7 @@ export default function ServicesPage() {
                               <div className="accordion-action collapsed" data-bs-target="#faq-2" role="button"
                                   data-bs-toggle="collapse" aria-controls="faq-2" aria-expanded="false">
                                   <div className="accordion-title">
-                                      AI UX & Product Design
+                                      UX & Product Design
                                       <i className="icon icon-arrow-top-right"></i>
                                   </div>
                               </div>
@@ -80,7 +72,7 @@ export default function ServicesPage() {
                                           <img src="/assets/images/section/service-6.jpg" alt="" />
                                       </div>
                                       <div className="content">
-                                          <div className="text-body-3 text-neutral-300 text">Human-centered flows, prompts, and interfaces that build trust and adoption. We design intuitive AI experiences focused on transparency, usability, and engagement—helping users understand, trust, and confidently interact with intelligent systems that seamlessly integrate into their workflows for lasting impact and satisfaction.</div>
+                                          <div className="text-body-3 text-neutral-300 text">Human-centered flows and interfaces that build trust and adoption. We design intuitive product experiences focused on transparency, usability, and engagement—helping users understand, trust, and confidently interact with systems that seamlessly integrate into their workflows for lasting impact and satisfaction.</div>
                                           <div className="list-tags">
                                               <a href="#" className="tags-item fw-semibold">Prototype flows</a>
                                               <a href="#" className="tags-item fw-semibold">Prompt  UX patterns</a>
@@ -130,7 +122,7 @@ export default function ServicesPage() {
                                           <img src="/assets/images/section/service-8.jpg" alt="" />
                                       </div>
                                       <div className="content">
-                                          <div className="text-body-3 text-neutral-300 text">Reliable data flows from ingestion to features, built for scale and cost control. Our robust data engineering ensures clean, consistent, and efficient pipelines—enabling seamless integration, real-time analytics, and optimized performance that power scalable AI systems and sustainable business growth.</div>
+                                          <div className="text-body-3 text-neutral-300 text">Reliable data flows from ingestion to features, built for scale and cost control. Our robust data engineering ensures clean, consistent, and efficient pipelines—enabling seamless integration, real-time analytics, and optimized performance that power scalable systems and sustainable business growth.</div>
                                           <div className="list-tags">
                                               <a href="#" className="tags-item fw-semibold">Data cleaning & chunking</a>
                                               <a href="#" className="tags-item fw-semibold">Hybrid search</a>
@@ -244,52 +236,52 @@ export default function ServicesPage() {
                                   <div className="accordion-asked-item effectFade fadeRotateX">
                                       <div className="accordion-asked-title" id="asked1">
                                           <button className="accordion-button text-body-1 fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="true" aria-controls="collapse1">
-                                              What’s the typical timeline from idea to v1?
+                                              Do you integrate with the tools I use?
                                               <span className="right-icon"></span>
                                           </button>
                                       </div>
                                       <div id="collapse1" role="region" className="accordion-collapse collapse show" aria-labelledby="asked1" data-bs-parent="#accordion-asked">
                                           <div className="accordion-body">
-                                              A clear problem statement, success metrics, access to sample data, and a stakeholder who can make decisions. We’ll run a kickoff workshop to align scope.
+                                              Yes. We build around your existing stack — CRMs, ERPs, spreadsheets, databases, communication tools, and industry-specific software. We avoid forcing tool changes unless there is a clear reason to upgrade.
                                           </div>
                                       </div>
                                   </div>
                                   <div className="accordion-asked-item effectFade fadeRotateX" data-delay="0.1">
                                       <div className="accordion-asked-title" id="asked2">
                                           <button className="accordion-button text-body-1 fw-semibold collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
-                                              What do we need to start?
+                                              Why not just use an off-the-shelf tool instead?
                                               <span className="right-icon"></span>
                                           </button>
                                       </div>
                                       <div id="collapse2" role="region" className="accordion-collapse collapse" aria-labelledby="asked2" data-bs-parent="#accordion-asked">
                                           <div className="accordion-body">
-                                              A clear problem statement, success metrics, access to sample data, and a stakeholder who can make decisions. We’ll run a kickoff workshop to align scope.
+                                              Generic tools solve generic problems. If your workflows, data, or approval chains have any specificity to your business, a custom solution will outperform a template every time — and it won&apos;t force you to change how you operate to fit someone else&apos;s product.
                                           </div>
                                       </div>
                                   </div>
                                   <div className="accordion-asked-item effectFade fadeRotateX" data-delay="0.2">
                                       <div className="accordion-asked-title" id="asked3">
                                           <button className="accordion-button text-body-1 fw-semibold collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
-                                              Which models/stack do you use?
+                                              What happens if the solution doesn&apos;t perform as expected?
                                               <span className="right-icon"></span>
                                           </button>
                                       </div>
                                       <div id="collapse3" role="region" className="accordion-collapse collapse" aria-labelledby="asked3" data-bs-parent="#accordion-asked">
                                           <div className="accordion-body">
-                                              A clear problem statement, success metrics, access to sample data, and a stakeholder who can make decisions. We’ll run a kickoff workshop to align scope.
+                                              We define success criteria upfront, test thoroughly before handover, and include a post-launch support window. If something isn&apos;t hitting targets, we diagnose and fix it. Custom systems do need tuning as real-world data comes in, and that&apos;s part of the work we do.
                                           </div>
                                       </div>
                                   </div>
                                   <div className="accordion-asked-item effectFade fadeRotateX" data-delay="0.3">
                                       <div className="accordion-asked-title" id="asked4">
                                           <button className="accordion-button text-body-1 fw-semibold collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
-                                              Are model/API costs included in pricing?
+                                              Do you offer ongoing support after a project is delivered?
                                               <span className="right-icon"></span>
                                           </button>
                                       </div>
                                       <div id="collapse4" role="region" className="accordion-collapse collapse" aria-labelledby="asked4" data-bs-parent="#accordion-asked">
                                           <div className="accordion-body">
-                                              A clear problem statement, success metrics, access to sample data, and a stakeholder who can make decisions. We’ll run a kickoff workshop to align scope.
+                                              Yes. Most clients choose a retainer for monitoring, updates, and iterative improvements after launch. We can also do a clean handover with full documentation if you prefer to maintain the system in-house. Both options are available.
                                           </div>
                                       </div>
                                   </div>
@@ -312,7 +304,7 @@ export default function ServicesPage() {
                                       <div className="heading-section mb-48">
                                           <div className="heading-sub fw-semibold effectFade fadeUp">Contact</div>
                                           <div className="heading-title text-gradient-3 effectFade fadeRotateX">
-                                              Let’s Build <br /> Intelligent Things
+                                              Ready to stand out? <br /> Let’s talk
                                           </div>
                                       </div>
                                       <div>

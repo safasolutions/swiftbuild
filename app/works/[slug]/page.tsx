@@ -5,13 +5,13 @@ const PROJECTS = [
     slug: 'support-copilot',
     title1: 'Support Copilot',
     title2: 'for SaaS',
-    heroText: 'Deployed an AI copilot that drafts replies and pulls account context, reducing first-response time by 38% and significantly improving customer satisfaction scores.',
+    heroText: 'Deployed an smart copilot that drafts replies and pulls account context, reducing first-response time by 38% and significantly improving customer satisfaction scores.',
     heroImage: '/assets/images/section/featured-works-1.jpg',
-    details: `Support Copilot for SaaS is an AI-powered assistant designed to help support teams respond to customer queries faster and more accurately. It automatically retrieves account context, surfaces relevant knowledge-base articles, and drafts suggested replies — enabling agents to focus on empathy and complex problem-solving rather than repetitive lookups. Leveraging large language models and retrieval-augmented generation (RAG), the copilot integrates directly with existing ticketing systems and CRMs, ensuring every agent has full context before responding.
+    details: `Support Copilot for SaaS is an smart assistant designed to help support teams respond to customer queries faster and more accurately. It automatically retrieves account context, surfaces relevant knowledge-base articles, and drafts suggested replies — enabling agents to focus on empathy and complex problem-solving rather than repetitive lookups. Leveraging large language models and retrieval-augmented generation (RAG), the copilot integrates directly with existing ticketing systems and CRMs, ensuring every agent has full context before responding.
 
 Key features include real-time account context surfacing, tone-matched reply drafting, escalation detection, and a feedback loop that continuously improves suggestion quality. The system also provides analytics on deflection rates, agent override patterns, and customer satisfaction trends.
 
-By combining AI-generated drafts with human review, the copilot maintains brand voice and accuracy while dramatically reducing handle times. Teams reported a 38% decrease in first-response time and measurable improvements in CSAT scores within the first quarter of deployment.`,
+By combining generated drafts with human review, the copilot maintains brand voice and accuracy while dramatically reducing handle times. Teams reported a 38% decrease in first-response time and measurable improvements in CSAT scores within the first quarter of deployment.`,
     research: `The project began with a deep-dive into the support team's workflow — mapping ticket categories, escalation triggers, and the most common knowledge-base queries. We found that agents spent 40–50% of their time on repetitive lookups and copy-paste responses, leaving limited bandwidth for genuinely complex issues.
 
 We evaluated multiple RAG architectures before settling on a hybrid dense-sparse retrieval approach that balanced precision and recall across the client's heterogeneous knowledge base. Prompt engineering iterations focused on tone consistency and reducing hallucinated account details — a critical safety requirement for customer-facing outputs.
@@ -20,7 +20,7 @@ Shadow-mode testing ran for three weeks before live deployment, allowing us to m
     results: `Deploying Support Copilot for SaaS delivered measurable gains within weeks. First-response time dropped by 38%, agent-handle time fell by 22%, and the rate of escalations requiring senior review decreased by 15%. Draft acceptance rates stabilised at 71% after the second iteration of prompt tuning, indicating strong alignment with agent preferences.
 
 Customer satisfaction scores improved by 9 points (NPS) over the first quarter. Support leadership highlighted the reduction in onboarding time for new agents — with the copilot surfacing context and suggested replies, new hires reached full productivity in roughly half the previous timeline. The system continues to improve through weekly fine-tuning cycles driven by agent feedback.`,
-    deliverables: ['AI strategy', 'AI UX flows', 'LLM agent', 'RAG'],
+    deliverables: ['Strategy', 'UX flows', 'LLM agent', 'RAG'],
     industry: ['SaaS'],
     nextSlug: 'underwriting-risk-copilot',
     nextTitle1: 'Underwriting',
@@ -37,12 +37,12 @@ Customer satisfaction scores improved by 9 points (NPS) over the first quarter. 
     title2: 'Risk Copilot',
     heroText: 'Built a triage assistant that summarizes insurance claims and flags risk signals, cutting manual underwriter review time by 42% and accelerating policy decisions.',
     heroImage: '/assets/images/section/featured-works-2.jpg',
-    details: `Underwriting Risk Copilot is an AI triage system built for a mid-size insurance carrier to accelerate the review of incoming claims and new-business applications. The copilot ingests unstructured documents — PDFs, medical records, financial statements — and produces structured summaries highlighting risk signals, missing data, and recommended next steps. Underwriters see the most critical information first, reducing time spent reading raw documents.
+    details: `Underwriting Risk Copilot is an triage system built for a mid-size insurance carrier to accelerate the review of incoming claims and new-business applications. The copilot ingests unstructured documents — PDFs, medical records, financial statements — and produces structured summaries highlighting risk signals, missing data, and recommended next steps. Underwriters see the most critical information first, reducing time spent reading raw documents.
 
 The system integrates with the carrier's existing policy administration platform, pulling historical loss data to contextualize each application. A confidence-scoring layer flags low-certainty extractions for human review, ensuring accuracy on high-stakes decisions without sacrificing speed.
 
 Key capabilities include multi-document summarization, risk-factor extraction, missing-data detection, and a natural-language Q&A interface allowing underwriters to drill into any claim detail without leaving their workflow.`,
-    research: `Initial discovery revealed that underwriters spent an average of 2.4 hours per complex application simply reading and organizing documents. We mapped the full review workflow across three product lines — personal lines, commercial lines, and specialty risks — to identify where AI could add the most leverage.
+    research: `Initial discovery revealed that underwriters spent an average of 2.4 hours per complex application simply reading and organizing documents. We mapped the full review workflow across three product lines — personal lines, commercial lines, and specialty risks — to identify where automation could add the most leverage.
 
 Data sensitivity was a primary constraint: all processing had to remain on-premises. We designed a hybrid architecture using a fine-tuned open-weight model for extraction and a proprietary classifier for risk scoring, ensuring no PHI or financially sensitive data left the carrier's environment.
 
@@ -65,9 +65,9 @@ Senior underwriters reported higher job satisfaction, spending more time on nuan
     slug: 'clinical-note-summarizer',
     title1: 'Clinical Note',
     title2: 'Summarizer',
-    heroText: 'Deployed a clinic-lobby AI assistant that answers pre-visit patient questions, reducing front-desk call volume by 28% and freeing clinical staff for higher-value interactions.',
+    heroText: 'Deployed a clinic-lobby smart assistant that answers pre-visit patient questions, reducing front-desk call volume by 28% and freeing clinical staff for higher-value interactions.',
     heroImage: '/assets/images/section/featured-works-3.jpg',
-    details: `Clinical Note Summarizer is a HIPAA-compliant AI assistant designed for outpatient clinic environments. Deployed on lobby kiosks and a patient-facing web portal, it answers common pre-visit questions — appointment preparation, medication instructions, insurance verification, and clinic directions — without requiring front-desk staff intervention.
+    details: `Clinical Note Summarizer is a HIPAA-compliant smart assistant designed for outpatient clinic environments. Deployed on lobby kiosks and a patient-facing web portal, it answers common pre-visit questions — appointment preparation, medication instructions, insurance verification, and clinic directions — without requiring front-desk staff intervention.
 
 The system is built on a PHI-safe RAG architecture that retrieves information solely from the clinic's approved knowledge base, ensuring no patient data is used in model responses. All interactions are logged for compliance review, and the system escalates to a human agent for any query outside its confidence threshold.
 
@@ -76,7 +76,7 @@ Key features include natural-language question answering, appointment reminder c
 
 HIPAA alignment required a privacy-by-design approach: the RAG pipeline retrieves only from curated, de-identified content, and conversation logs are stored in the clinic's own HIPAA-compliant infrastructure. We conducted a formal risk assessment and threat-modelling exercise before finalising the architecture.
 
-Beta testing ran across two clinic locations for eight weeks, with front-desk staff reviewing escalated conversations daily to identify knowledge gaps and retrain the retrieval model. Patient satisfaction surveys showed high comfort with the AI interface across age groups.`,
+Beta testing ran across two clinic locations for eight weeks, with front-desk staff reviewing escalated conversations daily to identify knowledge gaps and retrain the retrieval model. Patient satisfaction surveys showed high comfort with the automated interface across age groups.`,
     results: `Front-desk call volume related to pre-visit questions dropped by 28% within the first six weeks of deployment. Staff time freed from repetitive calls was reallocated to more complex patient needs and administrative tasks, with no increase in headcount. Patient no-show rates declined by 6% as automated reminders and preparation checklists improved appointment readiness.
 
 Escalation rates dropped from 34% in the first week to 11% by week eight as the knowledge base was refined. Clinic managers reported measurable improvements in front-desk staff wellbeing, citing reduced interruption frequency as a key factor. The system is now being extended to post-visit follow-up and prescription refill status queries.`,
@@ -97,12 +97,12 @@ Escalation rates dropped from 34% in the first week to 11% by week eight as the 
     title2: 'Engine',
     heroText: 'Launched a shopping copilot that interprets product attributes, boosting add-to-cart rates by 12% and enhancing the overall customer experience.',
     heroImage: '/assets/images/section/featured-works-4.jpg',
-    details: `Catalog Intelligence Engine is an AI-powered platform designed to optimize product catalog management for e-commerce and retail businesses. It automates product classification, attribute extraction, enrichment, and consistency checks, reducing manual effort and improving customer experience. Leveraging natural language processing, computer vision, and machine learning, the engine identifies product categories, extracts key attributes (e.g., size, color, material), and detects anomalies or missing information. It integrates with existing catalog management systems, PIM platforms, and marketplaces to ensure seamless updates and synchronization across channels.
+    details: `Catalog Intelligence Engine is an smart platform designed to optimize product catalog management for e-commerce and retail businesses. It automates product classification, attribute extraction, enrichment, and consistency checks, reducing manual effort and improving customer experience. Leveraging natural language processing, computer vision, and machine learning, the engine identifies product categories, extracts key attributes (e.g., size, color, material), and detects anomalies or missing information. It integrates with existing catalog management systems, PIM platforms, and marketplaces to ensure seamless updates and synchronization across channels.
 
 Key features include automatic product tagging, duplicate detection, attribute standardization, and real-time catalog analytics.
 
 By continuously learning from historical data and market trends, the system improves accuracy and efficiency over time. The solution enables teams to manage large and complex catalogs, reduce errors, and accelerate time-to-market for new products. With enhanced catalog quality, businesses can deliver better search, filtering, and recommendation experiences, ultimately boosting conversion and customer satisfaction. Overall, Catalog Intelligence Engine transforms catalog management into a smarter, faster, and more reliable process, empowering teams to scale operations while maintaining high-quality product data.`,
-    research: `Catalog Intelligence Engine is an AI-powered platform designed to optimize product catalog management for e-commerce and retail businesses. It automates product classification, attribute extraction, enrichment, and consistency checks, reducing manual effort and improving customer experience. Leveraging natural language processing, computer vision, and machine learning, the engine identifies product categories, extracts key attributes (e.g., size, color, material), and detects anomalies or missing information. It integrates with existing catalog management systems, PIM platforms, and marketplaces to ensure seamless updates and synchronization across channels.
+    research: `Catalog Intelligence Engine is an smart platform designed to optimize product catalog management for e-commerce and retail businesses. It automates product classification, attribute extraction, enrichment, and consistency checks, reducing manual effort and improving customer experience. Leveraging natural language processing, computer vision, and machine learning, the engine identifies product categories, extracts key attributes (e.g., size, color, material), and detects anomalies or missing information. It integrates with existing catalog management systems, PIM platforms, and marketplaces to ensure seamless updates and synchronization across channels.
 
 Key features include automatic product tagging, duplicate detection, attribute standardization, and real-time catalog analytics.
 
@@ -115,7 +115,7 @@ efficiency over time. The solution enables teams to manage large and complex cat
     nextTitle2: 'for SaaS',
     nextImage: '/assets/images/section/featured-works-1.jpg',
     nextDesc: 'Draft replies and pulls account context; reduced first-response time by 38%.',
-    nextDeliverables: 'AI strategy, AI UX flows, LLM agent, RAG',
+    nextDeliverables: 'Strategy, UX flows, LLM agent, RAG',
     nextIndustry: 'SaaS',
     nextDot: [true, false, false, false],
   },
@@ -136,14 +136,6 @@ export default function WorksSlugPage({ params }: { params: { slug: string } }) 
               <br />
               <div className="title2 d-flex gap-20 justify-content-center flex-wrap">
                 <span className="fw-semibold text-gradient-1">{project.title2}</span>
-                <div className="title-icon">
-                  <div className="box"></div>
-                  <div className="title-icon-wrap">
-                    <img src="/assets/images/item/item-13.svg" alt="" className="img-1 img-transform-3" />
-                    <img src="/assets/images/item/item-14.svg" alt="" className="img-2 img-transform-3" />
-                    <img src="/assets/images/item/item-15.svg" alt="" className="img-3 img-transform-3" />
-                  </div>
-                </div>
               </div>
             </div>
             <p className="text effectFade fadeUp">{project.heroText}</p>
