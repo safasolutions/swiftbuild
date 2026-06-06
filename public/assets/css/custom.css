@@ -79,7 +79,7 @@
   .timeline-item {
     width: 50%;
     padding-left: 0;
-    margin-bottom: 64px;
+    margin-bottom: 24px;
   }
   
   /* Left float cards */
@@ -413,8 +413,53 @@
    -------------------------------------------------------------------------- */
 .section-hero .tf-btn,
 .contact-form-card .tf-btn,
-.contact-form-panel .tf-btn {
+.contact-form-panel .tf-btn,
+.section-tools .tf-btn,
+.section-about-us .tf-btn,
+.tf-header .tf-btn {
   border-radius: 12px;
   padding: 16px 36px;
 }
+
+/* Style service details span tags to look identical to links but without pointer */
+.list-tags span {
+  display: flex;
+  align-items: center;
+  padding: 7px 15px;
+  border-radius: 99px;
+  color: var(--neutral-300);
+  background: var(--neutral-700);
+  border: 1px solid var(--neutral-600);
+  font-size: 14px;
+}
+
+/* Reduce whitespace after header in v1 hero banners (about, contact, niche, etc.) */
+.section-hero.v1 .content-wrap {
+  padding: 140px 0 40px !important;
+}
+
+/* Reduce whitespace between sections across the website */
+.flat-spacing {
+  padding-top: 60px !important;
+  padding-bottom: 60px !important;
+}
+
+/* Ensure brand-colored buttons keep their orange on hover
+   instead of being overridden by the base .tf-btn gradient */
+.tf-btn[style*="brand"]:hover,
+.section-hero .tf-btn:hover,
+.section-tools .tf-btn:hover,
+.section-about-us .tf-btn:hover,
+.tf-header .tf-btn:hover {
+  background: var(--brand) !important;
+  filter: brightness(1.08);
+  box-shadow: 0 4px 20px rgba(253, 58, 37, 0.35);
+}
+
+/* Override base template negative margin on about section heading
+   which caused the heading to overlap the mission/location cards */
+.section-about-us .heading-section {
+  margin-bottom: 24px !important;
+}
+
 

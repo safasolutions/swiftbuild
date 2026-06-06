@@ -1,11 +1,15 @@
-// @ts-nocheck
-'use client'
-
+import type { Metadata } from 'next'
 import WorkspaceTimeline from '@/components/sections/WorkspaceTimeline'
 import UnifiedOfferings from '@/components/sections/UnifiedOfferings'
 import SelectedWorkSection from '@/components/SelectedWorkSection'
-import ContactForm from '@/components/ContactForm'
-import Logo from '@/components/ui/Logo'
+import ServicesSection from '@/components/sections/ServicesSection'
+import FaqSection from '@/components/sections/FaqSection'
+import ContactSection from '@/components/sections/ContactSection'
+
+export const metadata: Metadata = {
+  title: 'SwiftBuild - Web Design & Automation for Canadian Trades',
+  description: 'Get more roofing, HVAC, and cleaning jobs. We build high-converting websites, manage local SEO, and automate operations for trades contractors across Canada.',
+}
 
 export default function HomePage() {
   return (
@@ -114,106 +118,7 @@ export default function HomePage() {
                   </div>
                   {/* /section-who-we-are */}
                   {/* section-services */}
-                  <div id="services" className="section-services flat-spacing">
-                      <div className="container">
-                          <div className="row justify-content-between">
-                              <div className="col-xxl-4 col-lg-6">
-                                  <div className="d-flex flex-column justify-content-between h-100">
-                                      <div className="col-left">
-                                          <div className="heading-section mb-48">
-                                              <div className="heading-sub fw-semibold effectFade fadeUp">Services</div>
-                                              <div className="heading-title text-gradient-3 effectFade fadeRotateX">What we do</div>
-                                          </div>
-                                          <p className="effectFade fadeUp">Web design, local SEO, and workflow automation — built specifically for trades businesses across Canada.</p>
-                                      </div>
-                                  </div>
-                              </div>
-                              <div className="col-xxl-6 col-lg-6">
-                                  <div className="accordion-faq_list" id="accordion-services">
-                                      <div className="accordion-faq_item effectFade fadeUp" role="presentation">
-                                          <div className="accordion-action services-image-btn active-img" data-img="/assets/images/section/service-1.png" data-bs-target="#faq-1" role="button"
-                                              data-bs-toggle="collapse" aria-controls="faq-1" aria-expanded="true">
-                                              <div className="accordion-title">
-                                                  Website Design <br /> & Development
-                                                  <div className="text-body-1 num">(01)</div>
-                                              </div>
-                                          </div>
-                                          <div id="faq-1" className="collapse show" data-bs-parent="#accordion-services">
-                                              <div className="accordion-content">
-                                                  <div className="text-body-3 text-neutral-300 text">A fast, professional website that turns visitors into booked jobs. Built mobile-first, optimised for Google, and designed to convert — not just look good.</div>
-                                                  <div className="list-tags">
-                                                      <a href="#" className="tags-item fw-semibold">Mobile-first & fast</a>
-                                                      <a href="#" className="tags-item fw-semibold">Booking integrations</a>
-                                                      <a href="#" className="tags-item fw-semibold">Google Search Console setup</a>
-                                                  </div>
-                                              </div>
-                                          </div>
-                                      </div>
-                                      <div className="accordion-faq_item effectFade fadeUp" role="presentation">
-                                          <div className="accordion-action services-image-btn collapsed" data-img="/assets/images/section/service-2.png" data-bs-target="#faq-2" role="button"
-                                              data-bs-toggle="collapse" aria-controls="faq-2" aria-expanded="false">
-                                              <div className="accordion-title">
-                                                  Local SEO & <br /> Search Visibility
-                                                  <div className="text-body-1 num">(02)</div>
-                                              </div>
-                                          </div>
-                                          <div id="faq-2" className="collapse" data-bs-parent="#accordion-services">
-                                              <div className="accordion-content">
-                                                  <div className="text-body-3 text-neutral-300 text">Get found when homeowners search 'roofer near me' or 'HVAC company in Mississauga.' We build and manage the local search presence that gets you there.</div>
-                                                  <div className="list-tags">
-                                                      <a href="#" className="tags-item fw-semibold">Google Business Profile</a>
-                                                      <a href="#" className="tags-item fw-semibold">Local keyword targeting</a>
-                                                      <a href="#" className="tags-item fw-semibold">Review strategy</a>
-                                                  </div>
-                                              </div>
-                                          </div>
-                                      </div>
-                                      <div className="accordion-faq_item effectFade fadeUp" role="presentation">
-                                          <div className="accordion-action services-image-btn collapsed" data-img="/assets/images/section/service-3.png" data-bs-target="#faq-3" role="button"
-                                              data-bs-toggle="collapse" aria-controls="faq-3" aria-expanded="false">
-                                              <div className="accordion-title">
-                                                  Workflow & Task <br /> Automation
-                                                  <div className="text-body-1 num">(03)</div>
-                                              </div>
-                                          </div>
-                                          <div id="faq-3" className="collapse" data-bs-parent="#accordion-services">
-                                              <div className="accordion-content">
-                                                  <div className="text-body-3 text-neutral-300 text">Stop doing the same things twice. We automate your quote follow-ups, booking confirmations, review requests, and scheduling — set up once, runs forever.</div>
-                                                  <div className="list-tags">
-                                                      <a href="#" className="tags-item fw-semibold">n8n & Zapier</a>
-                                                      <a href="#" className="tags-item fw-semibold">CRM integrations</a>
-                                                      <a href="#" className="tags-item fw-semibold">Custom workflows</a>
-                                                  </div>
-                                              </div>
-                                          </div>
-                                      </div>
-                                      <div className="accordion-faq_item effectFade fadeUp" role="presentation">
-                                          <div className="accordion-action services-image-btn collapsed" data-img="/assets/images/section/service-4.png" data-bs-target="#faq-4" role="button"
-                                              data-bs-toggle="collapse" aria-controls="faq-4" aria-expanded="false">
-                                              <div className="accordion-title">
-                                                  Voice Agent <br /> & Booking
-                                                  <div className="text-body-1 num">(04)</div>
-                                              </div>
-                                          </div>
-                                          <div id="faq-4" className="collapse" data-bs-parent="#accordion-services">
-                                              <div className="accordion-content">
-                                                  <div className="text-body-3 text-neutral-300 text">Coming soon — a smart voice system that answers your calls 24/7, qualifies leads, and books appointments while you're on the job. Join the early access waitlist.</div>
-                                                  <div className="list-tags">
-                                                      <a href="#" className="tags-item fw-semibold">Early access open</a>
-                                                      <a href="#" className="tags-item fw-semibold">Canadian pilot running</a>
-                                                      <a href="#" className="tags-item fw-semibold">Join the waitlist</a>
-                                                  </div>
-                                              </div>
-                                          </div>
-                                      </div>
-                                  </div>
-                              </div>
-                              <div className="services-image effectFade fadeUp">
-                                  <img src="/assets/images/section/service-1.png" alt="" />
-                              </div>
-                          </div>
-                      </div>
-                  </div>
+                  <ServicesSection />
                   {/* /section-services */}
                   {/* section-featured-works */}
                   <SelectedWorkSection noPaddingTop />
@@ -405,153 +310,11 @@ export default function HomePage() {
               </div>
 
               {/* section-faqs */}
-              <div className="section-faqs flat-spacing pt-0">
-                  <div className="container">
-                      <div className="heading-section center mb-64">
-                          <div className="heading-sub fw-semibold effectFade fadeUp">FAQs</div>
-                          <div className="heading-title text-gradient-3 effectFade fadeRotateX">
-                              Frequently Asked <br />Questions
-                          </div>
-                      </div>
-                      <div className="row justify-content-center">
-                          <div className="col-lg-8">
-                              <div className="accordion-asked" id="accordion-asked">
-                                  <div className="accordion-asked-item effectFade fadeRotateX">
-                                      <div className="accordion-asked-title" id="asked_faq1">
-                                          <button className="accordion-button text-body-1 fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_faq1" aria-expanded="true" aria-controls="collapse_faq1">
-                                              What exactly does SwiftBuild do?
-                                              <span className="right-icon"></span>
-                                          </button>
-                                      </div>
-                                      <div id="collapse_faq1" role="region" className="accordion-collapse collapse show" aria-labelledby="asked_faq1" data-bs-parent="#accordion-asked">
-                                          <div className="accordion-body">
-                                              We build high-performance websites, manage local SEO to get you found by local homeowners, and automate your repetitive daily tasks (like lead follow-ups, CRM entry, and booking notifications) specifically for roofing, HVAC, and service contractors.
-                                          </div>
-                                      </div>
-                                  </div>
-                                  <div className="accordion-asked-item effectFade fadeRotateX" data-delay="0.1">
-                                      <div className="accordion-asked-title" id="asked_faq2">
-                                          <button className="accordion-button text-body-1 fw-semibold collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_faq2" aria-expanded="false" aria-controls="collapse_faq2">
-                                              What businesses are eligible? Who owns the tech stack?
-                                              <span className="right-icon"></span>
-                                          </button>
-                                      </div>
-                                      <div id="collapse_faq2" role="region" className="accordion-collapse collapse" aria-labelledby="asked_faq2" data-bs-parent="#accordion-asked">
-                                          <div className="accordion-body">
-                                              We work with roofing, HVAC, plumbing, electrical, and cleaning businesses across Canada. Once delivered, you own 100% of the website, code, and automations — no proprietary lock-ins or mandatory recurring license fees.
-                                          </div>
-                                      </div>
-                                  </div>
-                                  <div className="accordion-asked-item effectFade fadeRotateX" data-delay="0.2">
-                                      <div className="accordion-asked-title" id="asked_faq3">
-                                          <button className="accordion-button text-body-1 fw-semibold collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_faq3" aria-expanded="false" aria-controls="collapse_faq3">
-                                              How long does the project take?
-                                              <span className="right-icon"></span>
-                                          </button>
-                                      </div>
-                                      <div id="collapse_faq3" role="region" className="accordion-collapse collapse" aria-labelledby="asked_faq3" data-bs-parent="#accordion-asked">
-                                          <div className="accordion-body">
-                                              A standard custom trades website and local SEO setup takes 3 to 4 weeks. Custom workflow automation integrations typically take 2 to 3 weeks depending on the complexity of your current operations.
-                                          </div>
-                                      </div>
-                                  </div>
-                                  <div className="accordion-asked-item effectFade fadeRotateX" data-delay="0.3">
-                                      <div className="accordion-asked-title" id="asked1">
-                                          <button className="accordion-button text-body-1 fw-semibold collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="false" aria-controls="collapse1">
-                                              Do you integrate with the tools I use?
-                                              <span className="right-icon"></span>
-                                          </button>
-                                      </div>
-                                      <div id="collapse1" role="region" className="accordion-collapse collapse" aria-labelledby="asked1" data-bs-parent="#accordion-asked">
-                                          <div className="accordion-body">
-                                              Yes. We build around your existing stack — CRMs, ERPs, spreadsheets, databases, communication tools, and industry-specific software. We avoid forcing tool changes unless there is a clear reason to upgrade.
-                                          </div>
-                                      </div>
-                                  </div>
-                                  <div className="accordion-asked-item effectFade fadeRotateX" data-delay="0.4">
-                                      <div className="accordion-asked-title" id="asked2">
-                                          <button className="accordion-button text-body-1 fw-semibold collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
-                                              Why not just use an off-the-shelf tool instead?
-                                              <span className="right-icon"></span>
-                                          </button>
-                                      </div>
-                                      <div id="collapse2" role="region" className="accordion-collapse collapse" aria-labelledby="asked2" data-bs-parent="#accordion-asked">
-                                          <div className="accordion-body">
-                                              Generic tools solve generic problems. If your workflows, data, or approval chains have any specificity to your business, a custom solution will outperform a template every time — and it won&apos;t force you to change how you operate to fit someone else&apos;s product.
-                                          </div>
-                                      </div>
-                                  </div>
-                                  <div className="accordion-asked-item effectFade fadeRotateX" data-delay="0.5">
-                                      <div className="accordion-asked-title" id="asked3">
-                                          <button className="accordion-button text-body-1 fw-semibold collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
-                                              What happens if the solution doesn&apos;t perform as expected?
-                                              <span className="right-icon"></span>
-                                          </button>
-                                      </div>
-                                      <div id="collapse3" role="region" className="accordion-collapse collapse" aria-labelledby="asked3" data-bs-parent="#accordion-asked">
-                                          <div className="accordion-body">
-                                              We define success criteria upfront, test thoroughly before handover, and include a post-launch support window. If something isn&apos;t hitting targets, we diagnose and fix it. Custom systems do need tuning as real-world data comes in, and that&apos;s part of the work we do.
-                                          </div>
-                                      </div>
-                                  </div>
-                                  <div className="accordion-asked-item effectFade fadeRotateX" data-delay="0.6">
-                                      <div className="accordion-asked-title" id="asked4">
-                                          <button className="accordion-button text-body-1 fw-semibold collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
-                                              Do you offer ongoing support after a project is delivered?
-                                              <span className="right-icon"></span>
-                                          </button>
-                                      </div>
-                                      <div id="collapse4" role="region" className="accordion-collapse collapse" aria-labelledby="asked4" data-bs-parent="#accordion-asked">
-                                          <div className="accordion-body">
-                                              Yes. Most clients choose a retainer for monitoring, updates, and iterative improvements after launch. We can also do a clean handover with full documentation if you prefer to maintain the system in-house. Both options are available.
-                                          </div>
-                                      </div>
-                                  </div>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-              </div>
+              <FaqSection ptZero />
               {/* /section-faqs */}
-              {/* section-contact */}
-              <div id="contact" style={{ paddingTop: 40, paddingBottom: 80, position: 'relative' }}>
-                  <div style={{ position: 'absolute', inset: '0 16px', borderRadius: 40, backgroundImage: 'url(/assets/images/section/hero-1.jpg)', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}></div>
-                  <div className="container" style={{ position: 'relative', zIndex: 1 }}>
-                      <div className="grid-collapse-lg" style={{ display: 'grid', gridTemplateColumns: 'repeat(2, minmax(0, 1fr))', gap: 24, alignItems: 'stretch' }}>
-                          {/* LEFT — Info panel */}
-                          <div className="effectFade fadeUp contact-info-panel" style={{ background: 'transparent', borderRadius: 24, padding: 40, display: 'flex', flexDirection: 'column' }}>
-                              <div className="heading-section mb-24">
-                                  <div className="heading-sub fw-semibold effectFade fadeUp" style={{ alignSelf: 'flex-start' }}>Contact</div>
-                              </div>
-                              <h3 className="fw-semibold mb-16" style={{ fontSize: 32, lineHeight: '40px', letterSpacing: '-0.02em' }}>
-                                  Let&apos;s Make Your <br />Workflows Flow
-                              </h3>
-                              <p className="text-secondary mb-32" style={{ fontSize: 15, lineHeight: '24px' }}>
-                                  Ready to save time and reduce busywork? Get in touch and let&apos;s discuss how we can help automate your business processes.
-                              </p>
-                              <div className="d-flex flex-column gap-24 mb-32">
-                                  <div className="d-flex gap-16 align-items-start">
-                                      <i className="icon icon-clipboard-check-solid text-brand" style={{ fontSize: 18, marginTop: 4 }}></i>
-                                      <div>
-                                          <div className="fw-semibold mb-4">Book a Discovery Call</div>
-                                          <div className="text-secondary" style={{ fontSize: 14, lineHeight: '22px' }}>Schedule a 30-minute call to discuss your needs and explore automation opportunities.</div>
-                                      </div>
-                                  </div>
-                                  <div className="d-flex gap-16 align-items-start">
-                                      <i className="icon icon-envelope-solid text-brand" style={{ fontSize: 18, marginTop: 4 }}></i>
-                                      <div>
-                                          <div className="fw-semibold mb-4">Email Us</div>
-                                          <div className="text-secondary" style={{ fontSize: 14, lineHeight: '22px' }}>Send us a message at <a href="mailto:info@swiftbuild.io" className="fw-semibold" style={{ color: 'var(--brand)' }}>info@swiftbuild.io</a></div>
-                                      </div>
-                                  </div>
-                              </div>
 
-                          </div>
-                          {/* RIGHT — Form */}
-                          <ContactForm variant="homepage" />
-                      </div>
-                  </div>
-              </div>
+              {/* section-contact */}
+              <ContactSection />
               {/* /section-contact */}
     </>
   )

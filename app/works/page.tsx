@@ -1,232 +1,49 @@
 // @ts-nocheck
+import type { Metadata } from 'next'
 import SelectedWorkSection from '@/components/SelectedWorkSection'
+import FaqSection from '@/components/sections/FaqSection'
+import ContactSection from '@/components/sections/ContactSection'
+
+export const metadata: Metadata = {
+  title: 'Our Work - Case Studies & Trades Projects — SwiftBuild',
+  description: 'See how SwiftBuild helps Canadian HVAC, roofing, and cleaning companies get booked and automate operations. Read our latest client success stories.',
+}
 
 export default function WorksPage() {
   return (
     <>
       {/* Hero Banner */}
-              <div className="section-hero v1">
-                  <div className="hero-image">
-                  </div>
-                  <div className="container">
-                      <div className="content-wrap text-center">
-                          <div className="title text-display-2 effectFade fadeZoom">
-                              <span className="title1 fw-semibold text-gradient-1">Explore Our Finest</span>
-                              <br />
-                              <div className="title2 d-flex gap-20 justify-content-center flex-wrap">
-                                  <span className="fw-semibold text-gradient-1">Work</span>
-                              </div>
-                          </div>
-                          <p className="text effectFade fadeUp">
-                              Where innovation meets intelligence. Discover data-driven solutions, smart automation, and <br /> transformative projects shaping the future of businesses worldwide.
-                          </p>
-                          <p className="text effectFade fadeUp">
-                              We've built production systems across industries. Now we're focused on bringing that same execution to trades businesses across Canada — at a price point that makes sense.
-                          </p>
-                      </div>
-                  </div>
+      <div className="section-hero v1">
+        <div className="hero-image"></div>
+        <div className="container">
+          <div className="content-wrap text-center">
+            <div className="title text-display-2 effectFade fadeZoom">
+              <span className="title1 fw-semibold text-gradient-1">Projects That</span>
+              <br />
+              <div className="title2 d-flex gap-20 justify-content-center flex-wrap">
+                <span className="fw-semibold text-gradient-1">Drive Results</span>
               </div>
-              {/* /Hero Banner */}
-              {/* section-featured-works */}
-              <SelectedWorkSection />
-              {/* /section-featured-works */}
-              <div className="box-white">
-                  {/* section-delay */}
-                  <div className="section-delay flat-spacing">
-                      <div className="container">
-                          <div className="heading-section center mb-64">
-                              <div className="heading-sub fw-semibold effectFade fadeUp">Why Delay Hurts</div>
-                              <div className="heading-title text-gradient-3 effectFade fadeRotateX">The longer you wait, the harder <br /> it is to catch up.</div>
-                          </div>
-                          <div className="delay-wrap">
-                              <div className="delay-item">
-                                  <div className="left">
-                                      <h6 className="effectFade fadeUp title fw-semibold mb-12">Manual Operations Slow Progress</h6>
-                                      <h6 className="effectFade fadeUp title fw-semibold">/ 01</h6>
-                                  </div>
-                                  <div className="right">
-                                      <div className="delay-progress mb-12">
-                                          <div className="progress-line" data-progress="80"></div>
-                                          <h4 className="number-progress fw-semibold text-white">80%</h4>
-                                      </div>
-                                      <div className="text text-secondary text-end">/Workload</div>
-                                  </div>
-                              </div>
-                              <div className="delay-item">
-                                  <div className="left">
-                                      <h6 className="effectFade fadeUp title fw-semibold mb-12">Competitors Outpace Innovation</h6>
-                                      <h6 className="effectFade fadeUp title fw-semibold">/ 02</h6>
-                                  </div>
-                                  <div className="right">
-                                      <div className="delay-progress mb-12">
-                                          <div className="progress-line" data-progress="65"></div>
-                                          <h4 className="number-progress fw-semibold text-white">65%</h4>
-                                      </div>
-                                      <div className="text text-secondary text-end">/Growth</div>
-                                  </div>
-                              </div>
-                              <div className="delay-item">
-                                  <div className="left">
-                                      <h6 className="effectFade fadeUp title fw-semibold mb-12">Automation Potential Remains Untapped</h6>
-                                      <h6 className="effectFade fadeUp title fw-semibold">/ 03</h6>
-                                  </div>
-                                  <div className="right">
-                                      <div className="delay-progress mb-12">
-                                          <div className="progress-line" data-progress="70"></div>
-                                          <h4 className="number-progress fw-semibold text-white">70%</h4>
-                                      </div>
-                                      <div className="text text-secondary text-end">/Opportunities</div>
-                                  </div>
-                              </div>
-                              <div className="delay-item">
-                                  <div className="left">
-                                      <h6 className="effectFade fadeUp title fw-semibold mb-12">Repetition Replaces Creativity</h6>
-                                      <h6 className="effectFade fadeUp title fw-semibold">/ 04</h6>
-                                  </div>
-                                  <div className="right">
-                                      <div className="delay-progress mb-12">
-                                          <div className="progress-line" data-progress="49"></div>
-                                          <h4 className="number-progress fw-semibold text-white">49%</h4>
-                                      </div>
-                                      <div className="text text-secondary text-end">/Draining Time</div>
-                                  </div>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-                  {/* /section-delay */}
-              </div>
-              {/* section-faqs */}
-              <div className="section-faqs flat-spacing">
-                  <div className="container">
-                      <div className="heading-section center mb-64">
-                          <div className="heading-sub fw-semibold effectFade fadeUp">FAQs</div>
-                          <div className="heading-title text-gradient-3 effectFade fadeRotateX">
-                              Frequently Asked <br />Questions
-                          </div>
-                      </div>
-                      <div className="row justify-content-center">
-                          <div className="col-lg-8">
-                              <div className="accordion-asked" id="accordion-asked">
-                                  <div className="accordion-asked-item effectFade fadeRotateX">
-                                      <div className="accordion-asked-title" id="asked1">
-                                          <button className="accordion-button text-body-1 fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="true" aria-controls="collapse1">
-                                              Do you integrate with the tools I use?
-                                              <span className="right-icon"></span>
-                                          </button>
-                                      </div>
-                                      <div id="collapse1" role="region" className="accordion-collapse collapse show" aria-labelledby="asked1" data-bs-parent="#accordion-asked">
-                                          <div className="accordion-body">
-                                              Yes. We build around your existing stack — CRMs, ERPs, spreadsheets, databases, communication tools, and industry-specific software. We avoid forcing tool changes unless there is a clear reason to upgrade.
-                                          </div>
-                                      </div>
-                                  </div>
-                                  <div className="accordion-asked-item effectFade fadeRotateX" data-delay="0.1">
-                                      <div className="accordion-asked-title" id="asked2">
-                                          <button className="accordion-button text-body-1 fw-semibold collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
-                                              Why not just use an off-the-shelf tool instead?
-                                              <span className="right-icon"></span>
-                                          </button>
-                                      </div>
-                                      <div id="collapse2" role="region" className="accordion-collapse collapse" aria-labelledby="asked2" data-bs-parent="#accordion-asked">
-                                          <div className="accordion-body">
-                                              Generic tools solve generic problems. If your workflows, data, or approval chains have any specificity to your business, a custom solution will outperform a template every time — and it won&apos;t force you to change how you operate to fit someone else&apos;s product.
-                                          </div>
-                                      </div>
-                                  </div>
-                                  <div className="accordion-asked-item effectFade fadeRotateX" data-delay="0.2">
-                                      <div className="accordion-asked-title" id="asked3">
-                                          <button className="accordion-button text-body-1 fw-semibold collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
-                                              What happens if the solution doesn&apos;t perform as expected?
-                                              <span className="right-icon"></span>
-                                          </button>
-                                      </div>
-                                      <div id="collapse3" role="region" className="accordion-collapse collapse" aria-labelledby="asked3" data-bs-parent="#accordion-asked">
-                                          <div className="accordion-body">
-                                              We define success criteria upfront, test thoroughly before handover, and include a post-launch support window. If something isn&apos;t hitting targets, we diagnose and fix it. Custom systems do need tuning as real-world data comes in, and that&apos;s part of the work we do.
-                                          </div>
-                                      </div>
-                                  </div>
-                                  <div className="accordion-asked-item effectFade fadeRotateX" data-delay="0.3">
-                                      <div className="accordion-asked-title" id="asked4">
-                                          <button className="accordion-button text-body-1 fw-semibold collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
-                                              Do you offer ongoing support after a project is delivered?
-                                              <span className="right-icon"></span>
-                                          </button>
-                                      </div>
-                                      <div id="collapse4" role="region" className="accordion-collapse collapse" aria-labelledby="asked4" data-bs-parent="#accordion-asked">
-                                          <div className="accordion-body">
-                                              Yes. Most clients choose a retainer for monitoring, updates, and iterative improvements after launch. We can also do a clean handover with full documentation if you prefer to maintain the system in-house. Both options are available.
-                                          </div>
-                                      </div>
-                                  </div>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-              {/* /section-faqs */}
-              {/* section-contact */}
-              <div id="contact" className="flat-spacing pt-0">
-                  <div className="section-contact">
-                      <div className="contact-image">
-                          <img src="/assets/images/section/contact-image-bg.jpg" alt="" />
-                      </div>
-                      <div className="container">
-                          <div className="row">
-                              <div className="col-lg-6">
-                                  <div className="col-left">
-                                      <div className="heading-section mb-48">
-                                          <div className="heading-sub fw-semibold effectFade fadeUp">Contact</div>
-                                          <div className="heading-title text-gradient-3 effectFade fadeRotateX">
-                                              Ready to stand out? <br /> Let’s talk
-                                          </div>
-                                      </div>
-                                      <div>
-                                          <div className="contact-item mb-20 effectFade fadeRotateX">
-                                              <i className="icon icon-envelope-solid"></i>
-                                              <div className="content">
-                                                  <div className="title fw-semibold mb-2">E-mail address</div>
-                                                  <div className="text">info@swiftbuild.io</div>
-                                              </div>
-                                          </div>
-                                          <div className="contact-item effectFade fadeRotateX" data-delay="0.1">
-                                              <i className="icon icon-headset-solid"></i>
-                                              <div className="content">
-                                                  <div className="title fw-semibold mb-2">Phone number</div>
-                                                  <div className="text">+1 (778) 751-3157</div>
-                                              </div>
-                                          </div>
-                                      </div>
-                                  </div>
-                              </div>
-                              <div className="col-lg-6">
-                                  <form className="form-contact effectFade fadeUp">
-                                      <h4 className="heading fw-semibold">Fill this form below</h4>
-                                      <fieldset className="mb-21">
-                                          <label className="fw-semibold text-body-3 mb-20">Your Name</label>
-                                          <input className="" type="text" placeholder="Enter your full name" required />
-                                      </fieldset>
-                                      <fieldset className="mb-21">
-                                          <label className="fw-semibold text-body-3 mb-20">Your Phone</label>
-                                          <input className="" type="text" placeholder="Enter the e-mail" required />
-                                      </fieldset>
-                                      <fieldset className="mb-18">
-                                          <label className="fw-semibold text-body-3 mb-0">More About The Project</label>
-                                          <textarea name="text" className=""></textarea>
-                                      </fieldset>
-                                      <div className="attachment d-flex gap-8 align-items-center">
-                                          <i className="icon icon-paperclip-solid fs-24"></i>
-                                          <div className="fw-semibold text-body-3">Add an Attachment</div>
-                                      </div>
-                                      <button type="submit" className="tf-btn w-100">Submit Message</button>
-                                  </form>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-              {/* /section-contact */}
+            </div>
+
+            <p className="text effectFade fadeUp">
+              We've built production systems across industries. Now we're focused on bringing that same execution to trades businesses across Canada — at a price point that makes sense.
+            </p>
+          </div>
+        </div>
+      </div>
+      {/* /Hero Banner */}
+
+      {/* section-featured-works */}
+      <SelectedWorkSection />
+      {/* /section-featured-works */}
+
+      {/* section-faqs */}
+      <FaqSection />
+      {/* /section-faqs */}
+
+      {/* section-contact */}
+      <ContactSection />
+      {/* /section-contact */}
     </>
   )
 }

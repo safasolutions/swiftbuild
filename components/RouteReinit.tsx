@@ -160,31 +160,40 @@ function reinitPage() {
     })
   } catch (_) {}
 
-  // Re-run scrollEffectFade for the new page's DOM elements. ScrollTrigger
-  // instances were killed above; this creates fresh ones with correct positions
-  // (Swiper was already reinitialized synchronously in the block above).
+  // Re-run animations for the new page's DOM elements. ScrollTrigger
+  // instances were killed above; this creates fresh ones with correct positions.
   try {
-    if ((window as any).scrollEffectFade) {
-      // scrollEffectFade now animates in-viewport elements directly (no
-      // ScrollTrigger dependency for above-the-fold content on the new page).
+    if ((window as any).runAnimations) {
+      ;(window as any).runAnimations()
+    } else if ((window as any).scrollEffectFade) {
       ;(window as any).scrollEffectFade()
-
-      setTimeout(() => {
-        if ((window as any).ScrollTrigger) {
-          ;(window as any).ScrollTrigger.refresh()
-        }
-      }, 200)
-
-      // Last-resort fallback: 2 s after route change, force any still-hidden
-      // effectFade element visible.
-      setTimeout(() => {
-        document.querySelectorAll('.effectFade').forEach((el: any) => {
-          el.style.opacity = '1'
-          el.style.visibility = 'visible'
-        })
-      }, 2000)
     }
+
+    setTimeout(() => {
+      if ((window as any).ScrollTrigger) {
+        ;(window as any).ScrollTrigger.refresh()
+      }
+    }, 200)
+
+    // Last-resort fallback: 2 s after route change, force any still-hidden
+    // effectFade element visible.
+    setTimeout(() => {
+      document.querySelectorAll('.effectFade').forEach((el: any) => {
+        el.style.opacity = '1'
+        el.style.visibility = 'visible'
+      })
+    }, 2000)
   } catch (_) {}
+}
+
+function ReinitExecutor() {
+  useEffect(() => {
+    // Wait for DOM to settle then reinit
+    const handle = requestAnimationFrame(() => requestAnimationFrame(reinitPage))
+    return () => cancelAnimationFrame(handle)
+  }, [])
+
+  return null
 }
 
 export default function RouteReinit() {
@@ -192,15 +201,14 @@ export default function RouteReinit() {
   const isFirstRender = useRef(true)
 
   useEffect(() => {
-    // Skip on initial mount — scripts handle first-load init themselves
     if (isFirstRender.current) {
       isFirstRender.current = false
-      return
     }
-    // On route change, wait for DOM to settle then reinit
-    const handle = requestAnimationFrame(() => requestAnimationFrame(reinitPage))
-    return () => cancelAnimationFrame(handle)
-  }, [pathname])
+  }, [])
 
-  return null
+  if (isFirstRender.current) {
+    return null
+  }
+
+  return <ReinitExecutor key={pathname} />
 }

@@ -68,8 +68,8 @@ export default async function NicheHubPage({
               We build AI systems, automations, and websites specifically for {niche.name} businesses across Canada.
             </p>
             <div className="bot-btns effectFade fadeRotateX">
-              <a href="https://cal.com/devxai/ai-snapshot-call" className="tf-btn">
-                Get a Free AI Snapshot →
+              <a href="https://cal.com/swiftbuild/free-strategy-call" className="tf-btn">
+                Get a Free Strategy Call →
               </a>
               <a href="/contact" className="tf-btn-2">
                 Talk to Us
@@ -262,8 +262,8 @@ export default async function NicheHubPage({
               >
                 {niche.inactionCost}
               </p>
-              <a href="https://cal.com/devxai/ai-snapshot-call" className="tf-btn">
-                Book My Free Snapshot Call →
+              <a href="https://cal.com/swiftbuild/free-strategy-call" className="tf-btn">
+                Book My Free Strategy Call →
               </a>
             </div>
           </div>

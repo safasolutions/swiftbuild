@@ -165,8 +165,6 @@
 
         gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
-        ScrollTrigger.getAll().forEach((st) => st.kill());
-
         ScrollTrigger.matchMedia({
             "(min-width: 992px)": () => {
                 const elements = container.querySelectorAll(".element");
@@ -302,9 +300,14 @@
                 // instead — no ScrollTrigger dependency for above-the-fold items.
                 var rect = el.getBoundingClientRect();
                 var inViewport = rect.top < window.innerHeight && rect.bottom > 0;
+                var aboveViewport = rect.top < window.innerHeight && rect.bottom <= 0;
 
                 if (inViewport) {
                     gsap.fromTo(el, fromVars, toVars);
+                } else if (aboveViewport) {
+                    // Elements already scrolled past should be fully visible
+                    let finalVars = { autoAlpha: 1, y: 0, x: 0, scale: 1, rotationX: 0, rotationY: 0, rotation: 0, yPercent: 0 };
+                    gsap.set(el, finalVars);
                 } else {
                     gsap.set(el, fromVars);
                     gsap.to(el, {

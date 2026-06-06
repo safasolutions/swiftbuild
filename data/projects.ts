@@ -20,11 +20,11 @@ export const projects: Project[] = [
     result:
       'The business can now take on significantly more volume without adding administrative overhead. Movers know exactly where to be and what to do each day, customers get a smooth self-serve experience, and management has full visibility into the business at any moment.',
     href: 'https://studentstoragepros.com',
-    cover: '/assets/projects/Student Storage Pros/cover.jpg',
+    cover: '/assets/projects/Student%20Storage%20Pros/cover.jpg',
     images: [
-      '/assets/projects/Student Storage Pros/ss-office-calendar.png',
-      '/assets/projects/Student Storage Pros/ss-products.png',
-      '/assets/projects/Student Storage Pros/ss-orders.png',
+      '/assets/projects/Student%20Storage%20Pros/ss-office-calendar.png',
+      '/assets/projects/Student%20Storage%20Pros/ss-products.png',
+      '/assets/projects/Student%20Storage%20Pros/ss-orders.png',
     ],
   },
   {
@@ -54,12 +54,12 @@ export const projects: Project[] = [
     result:
       'Prospecting and first-touch outreach now run end-to-end automatically. The pipeline sources, qualifies, and contacts leads around the clock, the knowledge bases keep messaging grounded in accurate company and prospect context, and the sales team only enters the conversation once a lead has already been warmed up.',
     href: '#',
-    cover: '/assets/projects/Leads Generation Automation/cover.png',
+    cover: '/assets/projects/Leads%20Generation%20Automation/cover.png',
     images: [
-      '/assets/projects/Leads Generation Automation/scraping.png',
-      '/assets/projects/Leads Generation Automation/leads.png',
-      '/assets/projects/Leads Generation Automation/chatbot.png',
-      '/assets/projects/Leads Generation Automation/knowledge.png',
+      '/assets/projects/Leads%20Generation%20Automation/scraping.png',
+      '/assets/projects/Leads%20Generation%20Automation/leads.png',
+      '/assets/projects/Leads%20Generation%20Automation/chatbot.png',
+      '/assets/projects/Leads%20Generation%20Automation/knowledge.png',
     ],
   },
   {
@@ -72,11 +72,11 @@ export const projects: Project[] = [
     result:
       'Teams went from spending two hours on post-meeting writeups to getting instant, structured summaries with zero manual effort. Follow-up rates increased by 300% for early users, sales reps closed more deals by staying fully present in conversations, and every meeting became a searchable, actionable record rather than a forgotten block on the calendar.',
     href: '#',
-    cover: '/assets/projects/Ayla Smart Summaries/cover.png',
+    cover: '/assets/projects/Ayla%20Smart%20Summaries/cover.png',
     images: [
-      '/assets/projects/Ayla Smart Summaries/how-it-works.png',
-      '/assets/projects/Ayla Smart Summaries/testimonials.png',
-      '/assets/projects/Ayla Smart Summaries/CTA.png',
+      '/assets/projects/Ayla%20Smart%20Summaries/how-it-works.png',
+      '/assets/projects/Ayla%20Smart%20Summaries/testimonials.png',
+      '/assets/projects/Ayla%20Smart%20Summaries/CTA.png',
     ],
   },
   {
@@ -89,10 +89,10 @@ export const projects: Project[] = [
     result:
       'End-to-end invoice capture now requires zero manual data entry: PDFs uploaded to any of the four monitored folders are fully tagged and linked to their accounting transaction within seconds of upload. Auditors get a clickable DocLink on every transaction, eliminating cross-system searches, and bulk back-processing lets the team retroactively cover hundreds of existing invoices in a single job.',
     href: '#',
-    cover: '/assets/projects/Invoice Flow/cover.svg',
+    cover: '/assets/projects/Invoice%20Flow/cover.svg',
     images: [
-      '/assets/projects/Invoice Flow/layer_00_service_bootstrap_workflow.svg',
-      '/assets/projects/Invoice Flow/layer_01_folder_registration_workflow.svg',
+      '/assets/projects/Invoice%20Flow/layer_00_service_bootstrap_workflow.svg',
+      '/assets/projects/Invoice%20Flow/layer_01_folder_registration_workflow.svg',
     ],
   },
   {
@@ -105,11 +105,11 @@ export const projects: Project[] = [
     result:
       'Brands gain a dedicated mobile storefront fed directly by their social content — with drag-and-drop post ordering, bulk status updates handling 100+ posts in under a second, and real-time sync automation that keeps showrooms current without manual effort.',
     href: '#',
-    cover: '/assets/projects/You Social Discovery/cover.png',
+    cover: '/assets/projects/You%20Social%20Discovery/cover.png',
     images: [
-      '/assets/projects/You Social Discovery/playground.png',
-      '/assets/projects/You Social Discovery/showroom.png',
-      '/assets/projects/You Social Discovery/dashboard.png',
+      '/assets/projects/You%20Social%20Discovery/playground.png',
+      '/assets/projects/You%20Social%20Discovery/showroom.png',
+      '/assets/projects/You%20Social%20Discovery/dashboard.png',
     ],
   },
 ]
