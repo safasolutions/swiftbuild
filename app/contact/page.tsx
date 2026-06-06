@@ -1,4 +1,8 @@
 // @ts-nocheck
+'use client'
+
+import ContactForm from '@/components/ContactForm'
+
 export default function ContactPage() {
   return (
     <>
@@ -53,29 +57,8 @@ export default function ContactPage() {
 
                           </div>
                           {/* RIGHT — Form */}
-                          <form className="effectFade fadeUp contact-form-panel" style={{ background: '#ffffff', border: '1px solid #E4E4E7', borderRadius: 24, padding: 40 }}>
-                              <h3 className="fw-semibold mb-24" style={{ fontSize: 24, lineHeight: '32px', letterSpacing: '-0.01em' }}>Send Us a Message</h3>
-                              <div className="grid-collapse-sm" style={{ display: 'grid', gridTemplateColumns: 'repeat(2, minmax(0, 1fr))', gap: 16, marginBottom: 16 }}>
-                                  <fieldset className="m-0">
-                                      <label className="fw-semibold text-body-3 mb-8 d-block">Name</label>
-                                      <input type="text" placeholder="Your name" required style={{ width: '100%', padding: '12px 14px', border: '1px solid #E4E4E7', borderRadius: 8, background: '#ffffff' }} />
-                                  </fieldset>
-                                  <fieldset className="m-0">
-                                      <label className="fw-semibold text-body-3 mb-8 d-block">Email</label>
-                                      <input type="email" placeholder="Your email" required style={{ width: '100%', padding: '12px 14px', border: '1px solid #E4E4E7', borderRadius: 8, background: '#ffffff' }} />
-                                  </fieldset>
-                              </div>
-                              <fieldset className="m-0 mb-16">
-                                  <label className="fw-semibold text-body-3 mb-8 d-block">Company</label>
-                                  <input type="text" placeholder="Your company" style={{ width: '100%', padding: '12px 14px', border: '1px solid #E4E4E7', borderRadius: 8, background: '#ffffff' }} />
-                              </fieldset>
-                              <fieldset className="m-0 mb-20">
-                                  <label className="fw-semibold text-body-3 mb-8 d-block">Message</label>
-                                  <textarea placeholder="Tell us about your automation needs" style={{ width: '100%', padding: '12px 14px', border: '1px solid #E4E4E7', borderRadius: 8, background: '#ffffff', minHeight: 120, resize: 'vertical' }}></textarea>
-                              </fieldset>
-                              <button type="submit" className="tf-btn w-100" style={{ background: 'var(--brand)' }}>Send Message</button>
-                              <div className="text-center text-secondary mt-12" style={{ fontSize: 13 }}>We&apos;ll get back to you within 1-2 business days.</div>
-                          </form>
+                          {/* RIGHT — Form */}
+                          <ContactForm variant="page" />
                       </div>
                   </div>
               </div>

@@ -4,6 +4,7 @@
 import WorkspaceTimeline from '@/components/sections/WorkspaceTimeline'
 import UnifiedOfferings from '@/components/sections/UnifiedOfferings'
 import SelectedWorkSection from '@/components/SelectedWorkSection'
+import ContactForm from '@/components/ContactForm'
 import Logo from '@/components/ui/Logo'
 
 export default function HomePage() {
@@ -290,51 +291,9 @@ export default function HomePage() {
                       </div>
                   </div>
                   {/* /section-statistic */}
-                  {/* section-awards */}
-                  <div className="section-awards flat-spacing">
-                      <div className="container">
-                          <div className="heading-section center mb-48">
-                              <div className="heading-sub fw-semibold style-1 mb-0 effectFade fadeUp">Awards</div>
-                          </div>
-                          <div className="d-grid gap-16">
-                              <div className="awards-item effectFade fadeUp">
-                                  <div className="image">
-                                      <img src="/assets/images/partner/partner-7.svg" alt="" />
-                                  </div>
-                                  <div className="title text-body-1 text-white">Innovation Award</div>
-                                  <div className="text text-body-1 text-white">Underwriting Risk Copilot (Fintech)</div>
-                                  <div className="year text-body-1 text-neutral-400">/ 2025</div>
-                              </div>
-                              <div className="awards-item effectFade fadeUp" data-delay="0.1">
-                                  <div className="image">
-                                      <img src="/assets/images/partner/partner-8.svg" alt="" />
-                                  </div>
-                                  <div className="title text-body-1 text-white">Best Product Design</div>
-                                  <div className="text text-body-1 text-white">Support Copilot (SaaS)</div>
-                                  <div className="year text-body-1 text-neutral-400">/ 2025</div>
-                              </div>
-                              <div className="awards-item effectFade fadeUp" data-delay="0.2">
-                                  <div className="image">
-                                      <img src="/assets/images/partner/partner-9.svg" alt="" />
-                                  </div>
-                                  <div className="title text-body-1 text-white">Data Excellence</div>
-                                  <div className="text text-body-1 text-white">Clinical Note Summarizer (Healthcare)</div>
-                                  <div className="year text-body-1 text-neutral-400">/ 2024</div>
-                              </div>
-                              <div className="awards-item effectFade fadeUp" data-delay="0.3">
-                                  <div className="image">
-                                      <img src="/assets/images/partner/partner-10.svg" alt="" />
-                                  </div>
-                                  <div className="title text-body-1 text-white">Innovation Award</div>
-                                  <div className="text text-body-1 text-white">Underwriting Risk Copilot (Fintech)</div>
-                                  <div className="year text-body-1 text-neutral-400">/ 2024</div>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-                  {/* /section-awards */}
+
                   {/* section-testimonials */}
-                  <div className="section-testimonials flat-spacing pt-0">
+                  <div className="section-testimonials flat-spacing">
                       <div className="container">
                           <div className="row justify-content-between">
                               <div className="col-lg-5">
@@ -589,29 +548,7 @@ export default function HomePage() {
 
                           </div>
                           {/* RIGHT — Form */}
-                          <form className="contact-form-card effectFade fadeUp">
-                              <h3 className="fw-semibold mb-24" style={{ fontSize: 24, lineHeight: '32px', letterSpacing: '-0.01em' }}>Send Us a Message</h3>
-                              <div className="grid-collapse-sm" style={{ display: 'grid', gridTemplateColumns: 'repeat(2, minmax(0, 1fr))', gap: 16, marginBottom: 16 }}>
-                                  <fieldset className="m-0">
-                                      <label className="contact-form-label">Name</label>
-                                      <input type="text" placeholder="Your name" required className="contact-form-input" />
-                                  </fieldset>
-                                  <fieldset className="m-0">
-                                      <label className="contact-form-label">Email</label>
-                                      <input type="email" placeholder="Your email" required className="contact-form-input" />
-                                  </fieldset>
-                              </div>
-                              <fieldset className="m-0 mb-16">
-                                  <label className="contact-form-label">Company</label>
-                                  <input type="text" placeholder="Your company" className="contact-form-input" />
-                              </fieldset>
-                              <fieldset className="m-0 mb-20">
-                                  <label className="contact-form-label">Message</label>
-                                  <textarea placeholder="Tell us about your automation needs" className="contact-form-input contact-form-textarea"></textarea>
-                              </fieldset>
-                              <button type="submit" className="tf-btn w-100" style={{ background: 'var(--brand)' }}>Send Message</button>
-                              <div className="text-center text-secondary mt-12" style={{ fontSize: 13 }}>We&apos;ll get back to you within 1-2 business days.</div>
-                          </form>
+                          <ContactForm variant="homepage" />
                       </div>
                   </div>
               </div>

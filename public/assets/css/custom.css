@@ -405,3 +405,16 @@
     padding-right: 24px;
   }
 }
+
+/* --------------------------------------------------------------------------
+   5. Button Shape Alignment
+   Match hero CTA and contact form submit to the offerings CTA shape
+   (rounded rectangle instead of pill)
+   -------------------------------------------------------------------------- */
+.section-hero .tf-btn,
+.contact-form-card .tf-btn,
+.contact-form-panel .tf-btn {
+  border-radius: 12px;
+  padding: 16px 36px;
+}
+
