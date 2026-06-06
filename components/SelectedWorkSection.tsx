@@ -1,19 +1,19 @@
 'use client'
 
-import { useState, useEffect, type CSSProperties } from 'react'
+import { useState, useEffect, type CSSProperties, type ReactNode } from 'react'
 import { projects, Project } from '@/data/projects'
 
 interface Props {
   noPaddingTop?: boolean
 }
 
+const SNAPSHOT_URL = 'https://cal.com/swiftbuild/free-strategy-call'
+
 export default function SelectedWorkSection({ noPaddingTop = false }: Props) {
   const [selected, setSelected] = useState<Project | null>(null)
-  const [imgIdx, setImgIdx] = useState(0)
 
   const open = (project: Project) => {
     setSelected(project)
-    setImgIdx(0)
     document.body.style.overflow = 'hidden'
   }
 
@@ -29,15 +29,6 @@ export default function SelectedWorkSection({ noPaddingTop = false }: Props) {
     window.addEventListener('keydown', onKey)
     return () => window.removeEventListener('keydown', onKey)
   }, [])
-
-  const images: string[] = selected?.images?.length
-    ? selected.images
-    : selected?.cover
-    ? [selected.cover]
-    : []
-
-  const prev = () => setImgIdx(i => (i - 1 + images.length) % images.length)
-  const next = () => setImgIdx(i => (i + 1) % images.length)
 
   const sectionClass = `section-featured-works flat-spacing${noPaddingTop ? ' pt-0' : ''}`
 
@@ -93,10 +84,23 @@ export default function SelectedWorkSection({ noPaddingTop = false }: Props) {
                     >
                       {project.summary}
                     </p>
-                    <div style={{ display: 'flex', alignItems: 'center', gap: '6px', marginTop: 'auto', paddingTop: '20px' }}>
-                      <span className="fw-semibold text-body-3">View case study</span>
-                      <i className="icon icon-arrow-top-right" style={{ color: 'var(--brand)', fontSize: '14px' }} />
-                    </div>
+                    {project.outcome && (
+                      <div
+                        className="fw-semibold"
+                        style={{
+                          marginTop: 'auto',
+                          paddingTop: '14px',
+                          fontSize: '13px',
+                          color: 'var(--brand)',
+                          display: 'flex',
+                          alignItems: 'center',
+                          gap: '6px',
+                        }}
+                      >
+                        <i className="icon icon-arrow-top-right" style={{ fontSize: '11px' }} />
+                        {project.outcome}
+                      </div>
+                    )}
                   </div>
                 </div>
               </div>
@@ -135,6 +139,7 @@ export default function SelectedWorkSection({ noPaddingTop = false }: Props) {
             {/* Close */}
             <button
               onClick={close}
+              aria-label="Close case study"
               style={{
                 position: 'absolute',
                 top: '16px',
@@ -151,137 +156,193 @@ export default function SelectedWorkSection({ noPaddingTop = false }: Props) {
                 alignItems: 'center',
                 justifyContent: 'center',
                 zIndex: 10,
+                transition: 'background 0.2s',
               }}
+              onMouseEnter={e => { e.currentTarget.style.background = 'var(--brand)' }}
+              onMouseLeave={e => { e.currentTarget.style.background = 'rgba(0,0,0,0.55)' }}
             >
               <i className="icon icon-times-solid" />
             </button>
 
-            {/* Image slider */}
-            {images.length > 0 && (
-              <div style={{ position: 'relative', overflow: 'hidden', lineHeight: 0 }}>
-                <div
-                  style={{
-                    display: 'flex',
-                    transform: `translateX(-${imgIdx * 100}%)`,
-                    transition: 'transform 0.45s cubic-bezier(0.4, 0, 0.2, 1)',
-                  }}
-                >
-                  {images.map((src, i) => (
-                    <img
-                      key={src}
-                      src={src}
-                      alt={`${selected.name} ${i + 1}`}
-                      style={{
-                        width: '100%',
-                        flexShrink: 0,
-                        maxHeight: '480px',
-                        objectFit: 'cover',
-                        display: 'block',
-                      }}
-                    />
-                  ))}
-                </div>
-
-                {images.length > 1 && (
-                  <>
-                    <button
-                      onClick={e => { e.stopPropagation(); prev() }}
-                      style={{ ...navBtn, left: '16px' }}
-                      aria-label="Previous image"
-                    >
-                      <i className="icon icon-angle-left-solid" />
-                    </button>
-                    <button
-                      onClick={e => { e.stopPropagation(); next() }}
-                      style={{ ...navBtn, right: '16px' }}
-                      aria-label="Next image"
-                    >
-                      <i className="icon icon-angle-right-solid" />
-                    </button>
-                    <div
-                      style={{
-                        position: 'absolute',
-                        bottom: '16px',
-                        left: '50%',
-                        transform: 'translateX(-50%)',
-                        display: 'flex',
-                        gap: '8px',
-                        zIndex: 2,
-                      }}
-                    >
-                      {images.map((_, i) => (
-                        <button
-                          key={i}
-                          onClick={e => { e.stopPropagation(); setImgIdx(i) }}
-                          aria-label={`Go to image ${i + 1}`}
-                          style={{
-                            width: '10px',
-                            height: '10px',
-                            borderRadius: '50%',
-                            padding: 0,
-                            border: 'none',
-                            background: i === imgIdx ? 'var(--brand)' : 'rgba(255,255,255,0.5)',
-                            cursor: 'pointer',
-                            transition: 'background 0.2s',
-                          }}
-                        />
-                      ))}
-                    </div>
-                  </>
-                )}
+            {/* Cover — diagonal cut, animated */}
+            {selected.cover && (
+              <div className="case-cover">
+                <img src={selected.cover} alt={selected.name} />
               </div>
             )}
 
             {/* Content */}
             <div style={{ padding: '40px 48px 56px' }}>
-              <h3 className="fw-semibold" style={{ marginBottom: '8px' }}>{selected.name}</h3>
-              <p className="text-body-1" style={{ color: 'var(--secondary)', marginBottom: '40px' }}>
+              {/* Header: client + one-line outcome */}
+              <div
+                className="fw-semibold"
+                style={{
+                  color: 'var(--brand)',
+                  textTransform: 'uppercase',
+                  letterSpacing: '0.12em',
+                  fontSize: '12px',
+                  marginBottom: '12px',
+                }}
+              >
+                Case Study
+              </div>
+              <h3 className="fw-semibold" style={{ marginBottom: '10px', color: 'var(--primary)' }}>
+                {selected.name}
+              </h3>
+              {selected.outcome && (
+                <p
+                  className="fw-semibold"
+                  style={{ fontSize: '20px', lineHeight: 1.4, marginBottom: '6px', color: 'var(--primary)' }}
+                >
+                  <span style={{ color: 'var(--brand)' }}>—</span> {selected.outcome}
+                </p>
+              )}
+              <p className="text-body-1" style={{ color: 'var(--secondary)', marginBottom: '44px' }}>
                 {selected.summary}
               </p>
 
-              {[
-                { label: 'The Problem', content: selected.problem },
-                { label: 'What We Did', content: selected.solution },
-                { label: 'The Result', content: selected.result },
-              ].map(({ label, content }, i, arr) => (
+              {/* The situation */}
+              <div style={sectionWrap}>
+                <SectionHeading>The Situation</SectionHeading>
+                <p style={bodyText}>{selected.situation}</p>
+              </div>
+
+              {/* What we built — alternating image left/right */}
+              <div style={sectionWrap}>
+                <SectionHeading>What We Built</SectionHeading>
+                {selected.built.map((item, i) => (
+                  <div
+                    key={item.title}
+                    style={{ marginBottom: i < selected.built.length - 1 ? '52px' : 0 }}
+                  >
+                    <div
+                      className="fw-semibold"
+                      style={{ color: 'var(--brand)', fontSize: '14px', letterSpacing: '0.08em', marginBottom: '6px' }}
+                    >
+                      {String(i + 1).padStart(2, '0')}
+                    </div>
+                    <h6 className="fw-semibold" style={{ color: 'var(--primary)', marginBottom: '8px' }}>
+                      {item.title}
+                    </h6>
+                    <p style={{ ...bodyText, marginBottom: item.image ? '20px' : 0 }}>{item.description}</p>
+                    {item.image && (
+                      <div className="case-shot">
+                        <div className="case-shot-bar" aria-hidden="true">
+                          <span /><span /><span />
+                        </div>
+                        <img
+                          src={item.image}
+                          alt={`${selected.name} — ${item.title}`}
+                          loading="lazy"
+                        />
+                      </div>
+                    )}
+                  </div>
+                ))}
+              </div>
+
+              {/* The results — black panel, red highlights */}
+              <div style={sectionWrap}>
+                <SectionHeading>The Results</SectionHeading>
                 <div
-                  key={label}
                   style={{
-                    paddingBottom: i < arr.length - 1 ? '32px' : 0,
-                    marginBottom: i < arr.length - 1 ? '32px' : '40px',
-                    borderBottom: i < arr.length - 1
-                      ? '1px solid var(--neutral-200)'
-                      : 'none',
+                    background: 'var(--primary)',
+                    borderRadius: '24px',
+                    padding: '16px 36px',
                   }}
                 >
-                  <div
-                    className="fw-semibold text-body-3"
+                  {selected.metrics.map((m, i) => (
+                    <div
+                      key={m.label}
+                      style={{
+                        display: 'flex',
+                        flexWrap: 'wrap',
+                        alignItems: 'baseline',
+                        gap: '8px 24px',
+                        padding: '20px 0',
+                        borderBottom: i < selected.metrics.length - 1 ? '1px solid rgba(255,255,255,0.12)' : 'none',
+                      }}
+                    >
+                      <div className="fw-semibold" style={{ color: '#fff', minWidth: '180px', flex: '1 1 180px', lineHeight: 1.5 }}>
+                        {m.label}
+                      </div>
+                      <div style={{ flex: '2 1 300px', color: 'rgba(255,255,255,0.6)', lineHeight: 1.7 }}>
+                        {m.before}
+                        {' '}
+                        <span style={{ color: 'var(--brand)' }}>→</span>
+                        {' '}
+                        <span className="fw-semibold" style={{ color: 'var(--brand)' }}>{m.after}</span>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+                {selected.metricsNote && (
+                  <p className="text-body-3" style={{ color: 'var(--secondary)', marginTop: '14px', marginBottom: 0, fontStyle: 'italic' }}>
+                    {selected.metricsNote}
+                  </p>
+                )}
+              </div>
+
+              {/* Stack & timeline */}
+              <div style={sectionWrap}>
+                <SectionHeading>Stack &amp; Timeline</SectionHeading>
+                <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px', marginBottom: '16px' }}>
+                  {selected.stack.map(tool => (
+                    <span
+                      key={tool}
+                      className="text-body-3 fw-semibold"
+                      style={{
+                        padding: '7px 16px',
+                        borderRadius: '999px',
+                        background: 'var(--primary)',
+                        color: '#fff',
+                      }}
+                    >
+                      {tool}
+                    </span>
+                  ))}
+                </div>
+                <p style={{ ...bodyText, marginBottom: 0 }}>{selected.timeline}</p>
+              </div>
+
+              {/* Client quote */}
+              {selected.quote && (
+                <div style={sectionWrap}>
+                  <blockquote
                     style={{
-                      color: 'var(--secondary)',
-                      textTransform: 'uppercase',
-                      letterSpacing: '0.08em',
-                      marginBottom: '10px',
+                      borderLeft: '3px solid var(--brand)',
+                      paddingLeft: '20px',
+                      margin: 0,
                     }}
                   >
-                    {label}
-                  </div>
-                  <p style={{ color: 'var(--primary)', lineHeight: '1.75', marginBottom: 0 }}>
-                    {content}
-                  </p>
+                    <p style={{ ...bodyText, fontStyle: 'italic', marginBottom: '8px' }}>
+                      “{selected.quote.text}”
+                    </p>
+                    <div className="text-body-3 fw-semibold" style={{ color: 'var(--secondary)' }}>
+                      — {selected.quote.author}
+                    </div>
+                  </blockquote>
                 </div>
-              ))}
+              )}
 
-              {selected.href !== '#' && (
-                <a
-                  href={selected.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="tf-btn-2"
-                >
-                  View project
+              {/* CTA */}
+              <div style={{ display: 'flex', flexWrap: 'wrap', gap: '16px', alignItems: 'center' }}>
+                <a href={SNAPSHOT_URL} className="tf-btn">
+                  Book your free Snapshot
                   <i className="icon icon-arrow-top-right" style={{ fontSize: '18px' }} />
                 </a>
-              )}
+                {selected.href !== '#' && (
+                  <a
+                    href={selected.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="tf-btn-2"
+                  >
+                    View live project
+                    <i className="icon icon-arrow-top-right" style={{ fontSize: '18px' }} />
+                  </a>
+                )}
+              </div>
             </div>
           </div>
         </div>
@@ -290,21 +351,34 @@ export default function SelectedWorkSection({ noPaddingTop = false }: Props) {
   )
 }
 
-const navBtn: CSSProperties = {
-  position: 'absolute',
-  top: '50%',
-  transform: 'translateY(-50%)',
-  width: '44px',
-  height: '44px',
-  borderRadius: '50%',
-  border: 'none',
-  background: 'rgba(0,0,0,0.4)',
-  backdropFilter: 'blur(8px)',
-  color: '#fff',
-  fontSize: '16px',
-  cursor: 'pointer',
-  display: 'flex',
-  alignItems: 'center',
-  justifyContent: 'center',
-  zIndex: 2,
+/** Red-accented section heading: short brand bar + uppercase label */
+function SectionHeading({ children }: { children: ReactNode }) {
+  return (
+    <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '20px' }}>
+      <span style={{ width: '28px', height: '3px', background: 'var(--brand)', borderRadius: '2px', flexShrink: 0 }} />
+      <span
+        className="fw-semibold"
+        style={{
+          color: 'var(--primary)',
+          textTransform: 'uppercase',
+          letterSpacing: '0.1em',
+          fontSize: '14px',
+        }}
+      >
+        {children}
+      </span>
+    </div>
+  )
+}
+
+const sectionWrap: CSSProperties = {
+  paddingBottom: '44px',
+  marginBottom: '44px',
+  borderBottom: '1px solid var(--neutral-200)',
+}
+
+const bodyText: CSSProperties = {
+  color: 'var(--primary)',
+  lineHeight: '1.75',
+  marginBottom: 0,
 }

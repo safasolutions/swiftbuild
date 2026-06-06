@@ -2,6 +2,7 @@
 'use client'
 
 import WorkspaceTimeline from '@/components/sections/WorkspaceTimeline'
+import PricingSection from '@/components/sections/PricingSection'
 import UnifiedOfferings from '@/components/sections/UnifiedOfferings'
 import SelectedWorkSection from '@/components/SelectedWorkSection'
 import ContactForm from '@/components/ContactForm'
@@ -36,6 +37,9 @@ export default function HomePage() {
                               >
                                   Book Your Automation Audit
                               </a>
+                          </div>
+                          <div className="effectFade fadeUp fw-semibold" style={{ marginTop: 16, fontSize: 13, color: 'var(--secondary)' }}>
+                              Trusted by 35+ trades businesses across Canada &middot; Fixed-price quotes &middot; You own everything we build
                           </div>
                       </div>
                   </div>
@@ -110,6 +114,34 @@ export default function HomePage() {
                                   </div>
                               </div>
                           </div>
+                          {/* problems band */}
+                          <div className="problems-band effectFade fadeUp no-div">
+                              <div className="problems-band-label fw-semibold">The Problems We Solve</div>
+                              <div className="problems-row">
+                                  <div className="problems-band-item">
+                                      <div className="problem-icon"><i className="icon icon-tty-solid"></i></div>
+                                      <div>
+                                          <div className="problem-title fw-semibold">Missed calls</div>
+                                          <div className="problem-desc">Every missed call after 6pm is a job someone else booked.</div>
+                                      </div>
+                                  </div>
+                                  <div className="problems-band-item">
+                                      <div className="problem-icon"><i className="icon icon-envelope-solid"></i></div>
+                                      <div>
+                                          <div className="problem-title fw-semibold">Cold quotes</div>
+                                          <div className="problem-desc">Estimates sit in inboxes while the guy who called back first wins.</div>
+                                      </div>
+                                  </div>
+                                  <div className="problems-band-item">
+                                      <div className="problem-icon"><i className="icon icon-clock-solid"></i></div>
+                                      <div>
+                                          <div className="problem-title fw-semibold">Manual chaos</div>
+                                          <div className="problem-desc">Scheduling in your head, dispatch over text, invoices at midnight.</div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                          {/* /problems band */}
                       </div>
                   </div>
                   {/* /section-who-we-are */}
@@ -124,7 +156,7 @@ export default function HomePage() {
                                               <div className="heading-sub fw-semibold effectFade fadeUp">Services</div>
                                               <div className="heading-title text-gradient-3 effectFade fadeRotateX">What we do</div>
                                           </div>
-                                          <p className="effectFade fadeUp">Web design, local SEO, and workflow automation — built specifically for trades businesses across Canada.</p>
+                                          <p className="effectFade fadeUp">AI audits, automations, lead systems, websites, and AI agents — built specifically for trades businesses across Canada.</p>
                                       </div>
                                   </div>
                               </div>
@@ -134,17 +166,17 @@ export default function HomePage() {
                                           <div className="accordion-action services-image-btn active-img" data-img="/assets/images/section/service-1.png" data-bs-target="#faq-1" role="button"
                                               data-bs-toggle="collapse" aria-controls="faq-1" aria-expanded="true">
                                               <div className="accordion-title">
-                                                  Website Design <br /> & Development
+                                                  AI Audit
                                                   <div className="text-body-1 num">(01)</div>
                                               </div>
                                           </div>
                                           <div id="faq-1" className="collapse show" data-bs-parent="#accordion-services">
                                               <div className="accordion-content">
-                                                  <div className="text-body-3 text-neutral-300 text">A fast, professional website that turns visitors into booked jobs. Built mobile-first, optimised for Google, and designed to convert — not just look good.</div>
+                                                  <div className="text-body-3 text-neutral-300 text">A structured review of how your business actually runs — calls, scheduling, follow-up. You get a plain-English report showing exactly where you&apos;re losing time and money, plus a 90-day roadmap to fix it.</div>
                                                   <div className="list-tags">
-                                                      <a href="#" className="tags-item fw-semibold">Mobile-first & fast</a>
-                                                      <a href="#" className="tags-item fw-semibold">Booking integrations</a>
-                                                      <a href="#" className="tags-item fw-semibold">Google Search Console setup</a>
+                                                      <a href="/services/ai-audit" className="tags-item fw-semibold">60-minute discovery call</a>
+                                                      <a href="/services/ai-audit" className="tags-item fw-semibold">Full workflow analysis</a>
+                                                      <a href="/services/ai-audit" className="tags-item fw-semibold">90-day roadmap</a>
                                                   </div>
                                               </div>
                                           </div>
@@ -153,17 +185,17 @@ export default function HomePage() {
                                           <div className="accordion-action services-image-btn collapsed" data-img="/assets/images/section/service-2.png" data-bs-target="#faq-2" role="button"
                                               data-bs-toggle="collapse" aria-controls="faq-2" aria-expanded="false">
                                               <div className="accordion-title">
-                                                  Local SEO & <br /> Search Visibility
+                                                  AI Automations <br /> & Workflows
                                                   <div className="text-body-1 num">(02)</div>
                                               </div>
                                           </div>
                                           <div id="faq-2" className="collapse" data-bs-parent="#accordion-services">
                                               <div className="accordion-content">
-                                                  <div className="text-body-3 text-neutral-300 text">Get found when homeowners search 'roofer near me' or 'HVAC company in Mississauga.' We build and manage the local search presence that gets you there.</div>
+                                                  <div className="text-body-3 text-neutral-300 text">Quote follow-ups, review requests, job updates, invoice reminders — set up once, runs forever. We build the workflows that connect your tools and eliminate manual steps.</div>
                                                   <div className="list-tags">
-                                                      <a href="#" className="tags-item fw-semibold">Google Business Profile</a>
-                                                      <a href="#" className="tags-item fw-semibold">Local keyword targeting</a>
-                                                      <a href="#" className="tags-item fw-semibold">Review strategy</a>
+                                                      <a href="/services/ai-automations" className="tags-item fw-semibold">n8n & Zapier</a>
+                                                      <a href="/services/ai-automations" className="tags-item fw-semibold">CRM integrations</a>
+                                                      <a href="/services/ai-automations" className="tags-item fw-semibold">Runs without staff</a>
                                                   </div>
                                               </div>
                                           </div>
@@ -172,17 +204,17 @@ export default function HomePage() {
                                           <div className="accordion-action services-image-btn collapsed" data-img="/assets/images/section/service-3.png" data-bs-target="#faq-3" role="button"
                                               data-bs-toggle="collapse" aria-controls="faq-3" aria-expanded="false">
                                               <div className="accordion-title">
-                                                  Workflow & Task <br /> Automation
+                                                  AI Lead & <br /> Appointment Systems
                                                   <div className="text-body-1 num">(03)</div>
                                               </div>
                                           </div>
                                           <div id="faq-3" className="collapse" data-bs-parent="#accordion-services">
                                               <div className="accordion-content">
-                                                  <div className="text-body-3 text-neutral-300 text">Stop doing the same things twice. We automate your quote follow-ups, booking confirmations, review requests, and scheduling — set up once, runs forever.</div>
+                                                  <div className="text-body-3 text-neutral-300 text">From first contact to booked job without a human in the loop. Website, Google, or missed call — the system responds instantly, qualifies the lead, and books the appointment.</div>
                                                   <div className="list-tags">
-                                                      <a href="#" className="tags-item fw-semibold">n8n & Zapier</a>
-                                                      <a href="#" className="tags-item fw-semibold">CRM integrations</a>
-                                                      <a href="#" className="tags-item fw-semibold">Custom workflows</a>
+                                                      <a href="/services/lead-systems" className="tags-item fw-semibold">Missed-call text-back</a>
+                                                      <a href="/services/lead-systems" className="tags-item fw-semibold">Instant response</a>
+                                                      <a href="/services/lead-systems" className="tags-item fw-semibold">Automated booking</a>
                                                   </div>
                                               </div>
                                           </div>
@@ -191,17 +223,36 @@ export default function HomePage() {
                                           <div className="accordion-action services-image-btn collapsed" data-img="/assets/images/section/service-4.png" data-bs-target="#faq-4" role="button"
                                               data-bs-toggle="collapse" aria-controls="faq-4" aria-expanded="false">
                                               <div className="accordion-title">
-                                                  Voice Agent <br /> & Booking
+                                                  Website Development <br /> + SEO
                                                   <div className="text-body-1 num">(04)</div>
                                               </div>
                                           </div>
                                           <div id="faq-4" className="collapse" data-bs-parent="#accordion-services">
                                               <div className="accordion-content">
-                                                  <div className="text-body-3 text-neutral-300 text">Coming soon — a smart voice system that answers your calls 24/7, qualifies leads, and books appointments while you're on the job. Join the early access waitlist.</div>
+                                                  <div className="text-body-3 text-neutral-300 text">A website built to rank in local search and convert visitors into calls. Mobile-first, fast, and designed around how customers actually find and choose a trades company.</div>
                                                   <div className="list-tags">
-                                                      <a href="#" className="tags-item fw-semibold">Early access open</a>
-                                                      <a href="#" className="tags-item fw-semibold">Canadian pilot running</a>
-                                                      <a href="#" className="tags-item fw-semibold">Join the waitlist</a>
+                                                      <a href="/services/website-seo" className="tags-item fw-semibold">Mobile-first & fast</a>
+                                                      <a href="/services/website-seo" className="tags-item fw-semibold">Local SEO</a>
+                                                      <a href="/services/website-seo" className="tags-item fw-semibold">Built to convert</a>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                      </div>
+                                      <div className="accordion-faq_item effectFade fadeUp" role="presentation">
+                                          <div className="accordion-action services-image-btn collapsed" data-img="/assets/images/section/service-5.jpg" data-bs-target="#faq-5" role="button"
+                                              data-bs-toggle="collapse" aria-controls="faq-5" aria-expanded="false">
+                                              <div className="accordion-title">
+                                                  AI Agents
+                                                  <div className="text-body-1 num">(05)</div>
+                                              </div>
+                                          </div>
+                                          <div id="faq-5" className="collapse" data-bs-parent="#accordion-services">
+                                              <div className="accordion-content">
+                                                  <div className="text-body-3 text-neutral-300 text">Custom AI agents that answer questions, qualify leads, and handle real business tasks around the clock — escalating to your team only when a human is actually needed.</div>
+                                                  <div className="list-tags">
+                                                      <a href="/services/ai-agents" className="tags-item fw-semibold">24/7 availability</a>
+                                                      <a href="/services/ai-agents" className="tags-item fw-semibold">After-hours coverage</a>
+                                                      <a href="/services/ai-agents" className="tags-item fw-semibold">Human escalation</a>
                                                   </div>
                                               </div>
                                           </div>
@@ -215,15 +266,15 @@ export default function HomePage() {
                       </div>
                   </div>
                   {/* /section-services */}
-                  {/* section-featured-works */}
-                  <SelectedWorkSection noPaddingTop />
-                  {/* /section-featured-works */}
                   {/* section-process */}
                   <WorkspaceTimeline />
                   {/* /section-process */}
                   {/* section-features */}
                   <UnifiedOfferings />
                   {/* /section-features */}
+                  {/* section-featured-works */}
+                  <SelectedWorkSection noPaddingTop />
+                  {/* /section-featured-works */}
               </div>
         
               <div className="box-black">
@@ -238,8 +289,8 @@ export default function HomePage() {
                           <div className="row justify-content-between">
                               <div className="col-md-6">
                                   <div className="heading-section mb-48">
-                                      <div className="heading-sub fw-semibold style-1 effectFade fadeUp">Statistic</div>
-                                      <div className="heading-title text-white effectFade fadeRotateX">Human-centered <br /> automation, built for <br /> production</div>
+                                      <div className="heading-sub fw-semibold style-1 effectFade fadeUp">Results</div>
+                                      <div className="heading-title text-white effectFade fadeRotateX">Real systems, <br /> measured results — <br /> from the work above</div>
                                   </div>
                               </div>
                               <div className="col-md-6">
@@ -263,24 +314,24 @@ export default function HomePage() {
                                           </div>
                                           <div className="swiper-wrapper effectFade fadeUp">
                                               <div className="swiper-slide">
-                                                  <div className="title fw-semibold text-body-1">OUR GROWTH</div>
+                                                  <div className="title fw-semibold text-body-1">FOLLOW-UP RATE INCREASE &middot; AYLA CASE STUDY</div>
                                                   <div className="statistic-number">
-                                                      <span className="number text-white fw-semibold">230</span>
-                                                      <span className="prefix text-brand">K</span>
-                                                  </div>
-                                              </div>
-                                              <div className="swiper-slide">
-                                                  <div className="title fw-semibold text-body-1">UPTIME FOR KEY FLOWS</div>
-                                                  <div className="statistic-number">
-                                                      <span className="number text-white fw-semibold">95</span>
+                                                      <span className="number text-white fw-semibold">300</span>
                                                       <span className="prefix text-brand">%</span>
                                                   </div>
                                               </div>
                                               <div className="swiper-slide">
-                                                  <div className="title fw-semibold text-body-1">ON TIME DELIVERY</div>
+                                                  <div className="title fw-semibold text-body-1">TYPICAL SITE LAUNCH &middot; CLIENT WEBSITES</div>
                                                   <div className="statistic-number">
-                                                      <span className="number text-white fw-semibold">99</span>
-                                                      <span className="prefix text-brand">%</span>
+                                                      <span className="number text-white fw-semibold">2&ndash;4</span>
+                                                      <span className="prefix text-brand">wks</span>
+                                                  </div>
+                                              </div>
+                                              <div className="swiper-slide">
+                                                  <div className="title fw-semibold text-body-1">MANUAL INVOICE ENTRY &middot; INVOICE FLOW</div>
+                                                  <div className="statistic-number">
+                                                      <span className="number text-white fw-semibold">0</span>
+                                                      <span className="prefix text-brand">hrs</span>
                                                   </div>
                                               </div>
                                           </div>
@@ -403,6 +454,10 @@ export default function HomePage() {
                   </div>
                   {/* /section-testimonials */}
               </div>
+
+              {/* section-pricing */}
+              <PricingSection />
+              {/* /section-pricing */}
 
               {/* section-faqs */}
               <div className="section-faqs flat-spacing pt-0">

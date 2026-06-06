@@ -215,6 +215,8 @@
             });
         }
 
+        if (!$('#pricingSwitch').length) return;
+
         $('#pricingSwitch').on('change', function() {
             updatePrices(this.checked);
         });

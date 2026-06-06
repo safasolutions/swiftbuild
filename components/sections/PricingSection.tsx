@@ -2,84 +2,120 @@ export default function PricingSection() {
   return (
     <div id="pricing" className="section-pricing flat-spacing">
       <div className="container">
-        <div className="heading-section mb-80">
-          <div className="heading-sub fw-semibold effectFade fadeUp">Pricing Plans</div>
-          <div className="heading-title text-gradient-3 gap-8 d-grid effectFade fadeRotateX">
-            <span>From pilot to enterprise</span>
-            <span>clear scope, transparent costs</span>
-            <div className="d-flex align-items-center gap-24 flex-wrap">
-              <input type="checkbox" id="pricingSwitch" className="tf-switch-check" defaultChecked={true} />
-              annually.
-            </div>
+        <div className="heading-section center mb-64">
+          <div className="heading-sub fw-semibold effectFade fadeUp">Pricing</div>
+          <div className="heading-title text-gradient-3 effectFade fadeRotateX">
+            Clear Scope. <br />Transparent Costs.
           </div>
+          <p className="effectFade fadeUp text-secondary" style={{ marginTop: 16, maxWidth: 560, marginLeft: 'auto', marginRight: 'auto', fontSize: 15, lineHeight: '24px' }}>
+            Every project starts with a fixed quote — no hourly surprises. These are starting points; your exact price depends on scope.
+          </p>
         </div>
         <div className="row">
-          <div className="col-lg-6 lg-mb-24">
-            <div className="pricing-item h-100 effectFade fadeRotateX">
+          {/* Get Found */}
+          <div className="col-lg-4 lg-mb-24">
+            <div className="pricing-item h-100 d-flex flex-column effectFade fadeUp no-div">
               <div className="top d-flex gap-12 align-items-center">
                 <div className="d-flex gap-8 align-items-center">
-                  <i className="icon icon-user-friends-solid fs-24"></i>
-                  <div className="fw-semibold text">Starter Plan</div>
+                  <i className="icon icon-search-solid fs-24"></i>
+                  <div className="fw-semibold text">Get Found</div>
                 </div>
                 <div className="line"></div>
-                <div className="fw-semibold text-secondary">For startups</div>
+                <div className="fw-semibold text-secondary">Be visible</div>
               </div>
               <div className="heading">
-                <div className="d-flex gap-14 align-items-end">
-                  <div className="price-number fw-bold" data-month="1000" data-year="9900">$9,900</div>
-                  <h6 className="price-per">/ year</h6>
+                <div>
+                  <div className="fw-semibold text-secondary" style={{ fontSize: 14, marginBottom: 4 }}>From</div>
+                  <div className="price-number fw-bold" style={{ fontSize: 40, lineHeight: '48px' }}>$2,500</div>
+                  <h6 className="price-per" style={{ marginTop: 8 }}>live in 3&ndash;4 weeks</h6>
                 </div>
-                <a href="/contact" className="tf-btn">Get Started</a>
               </div>
               <div className="line"></div>
-              <div className="content">
-                <div>
-                  <div className="title fw-semibold mb-4">What&apos;s included</div>
+              <div className="content" style={{ flexDirection: 'column', flexGrow: 1 }}>
+                <div style={{ width: '100%' }}>
                   <div className="text fw-semibold">
-                    Prove value in two weeks with a clickable UX, tech spike, and a clear go/no-go roadmap.
+                    For businesses homeowners can&apos;t find online. A professional website plus the local search presence that puts you in front of people searching right now.
                   </div>
                 </div>
-                <ul className="list-text type-check">
-                  <li><i className="icon icon-check-solid"></i>Discovery workshop</li>
-                  <li><i className="icon icon-check-solid"></i>Opportunity brief</li>
-                  <li><i className="icon icon-check-solid"></i>Clickable UX</li>
-                  <li><i className="icon icon-check-solid"></i>1 data source &amp; 1 integration</li>
+                <ul className="list-text type-check" style={{ width: '100%' }}>
+                  <li><i className="icon icon-check-solid"></i>Custom mobile-first website</li>
+                  <li><i className="icon icon-check-solid"></i>Local SEO setup</li>
+                  <li><i className="icon icon-check-solid"></i>Google Business Profile</li>
+                  <li><i className="icon icon-check-solid"></i>Review strategy</li>
                 </ul>
               </div>
+              <a href="https://cal.com/swiftbuild/free-strategy-call" className="tf-btn" style={{ marginTop: 32, justifyContent: 'center' }}>Get Started</a>
             </div>
           </div>
-          <div className="col-lg-6">
-            <div className="pricing-item h-100 style-black effectFade fadeRotateX" data-delay="0.1">
+          {/* Never Miss a Job */}
+          <div className="col-lg-4 lg-mb-24">
+            <div className="pricing-item h-100 d-flex flex-column style-black effectFade fadeUp no-div" data-delay="0.1">
+              <div className="pricing-badge fw-semibold">Most Popular</div>
               <div className="top d-flex gap-12 align-items-center">
                 <div className="d-flex gap-8 align-items-center">
-                  <i className="icon icon-building fs-24"></i>
-                  <div className="fw-semibold text">Enterprise Plan</div>
+                  <i className="icon icon-bolt-solid fs-24"></i>
+                  <div className="fw-semibold text">Never Miss a Job</div>
                 </div>
                 <div className="line"></div>
-                <div className="fw-semibold text-neutral-400">For organisations</div>
+                <div className="fw-semibold text-neutral-400">Respond instantly</div>
               </div>
               <div className="heading">
-                <div className="d-flex gap-14 align-items-end">
-                  <div className="price-number fw-bold" data-month="1700" data-year="19900">$19,900</div>
-                  <h6 className="price-per">/ year</h6>
+                <div>
+                  <div className="fw-semibold text-neutral-400" style={{ fontSize: 14, marginBottom: 4 }}>From</div>
+                  <div className="price-number fw-bold" style={{ fontSize: 40, lineHeight: '48px' }}>$3,500</div>
+                  <h6 className="price-per" style={{ marginTop: 8 }}>live in 2&ndash;3 weeks</h6>
                 </div>
-                <a href="/contact" className="tf-btn">Get Started</a>
               </div>
               <div className="line"></div>
-              <div className="content">
-                <div>
-                  <div className="title fw-semibold mb-4">What&apos;s included</div>
+              <div className="content" style={{ flexDirection: 'column', flexGrow: 1 }}>
+                <div style={{ width: '100%' }}>
                   <div className="text fw-semibold">
-                    Compliance-ready delivery for complex orgs—multi-env releases, canaries, and change management.
+                    Every missed call is a job your competitor booked. Respond to every lead automatically &mdash; even when you&apos;re on the tools.
                   </div>
                 </div>
-                <ul className="list-text type-check">
-                  <li><i className="icon icon-check-solid"></i>Everything in Starter</li>
-                  <li><i className="icon icon-check-solid"></i>CI/CD, tracing, alerts, guardrails</li>
-                  <li><i className="icon icon-check-solid"></i>Full eval dashboard</li>
-                  <li><i className="icon icon-check-solid"></i>3 data source &amp; 3 integration</li>
+                <ul className="list-text type-check" style={{ width: '100%' }}>
+                  <li><i className="icon icon-check-solid"></i>Missed-call text-back</li>
+                  <li><i className="icon icon-check-solid"></i>Lead capture &amp; routing</li>
+                  <li><i className="icon icon-check-solid"></i>Quote &amp; review follow-ups</li>
+                  <li><i className="icon icon-check-solid"></i>Online booking</li>
                 </ul>
               </div>
+              <a href="https://cal.com/swiftbuild/free-strategy-call" className="tf-btn" style={{ marginTop: 32, justifyContent: 'center', background: 'var(--brand)' }}>Get Started</a>
+            </div>
+          </div>
+          {/* Autopilot */}
+          <div className="col-lg-4">
+            <div className="pricing-item h-100 d-flex flex-column effectFade fadeUp no-div" data-delay="0.2">
+              <div className="top d-flex gap-12 align-items-center">
+                <div className="d-flex gap-8 align-items-center">
+                  <i className="icon icon-robot-solid fs-24"></i>
+                  <div className="fw-semibold text">Autopilot</div>
+                </div>
+                <div className="line"></div>
+                <div className="fw-semibold text-secondary">Hands-off</div>
+              </div>
+              <div className="heading">
+                <div>
+                  <div className="fw-semibold text-secondary" style={{ fontSize: 14, marginBottom: 4 }}>Custom</div>
+                  <div className="price-number fw-bold" style={{ fontSize: 40, lineHeight: '48px' }}>Let&apos;s Talk</div>
+                  <h6 className="price-per" style={{ marginTop: 8 }}>starts with the Snapshot</h6>
+                </div>
+              </div>
+              <div className="line"></div>
+              <div className="content" style={{ flexDirection: 'column', flexGrow: 1 }}>
+                <div style={{ width: '100%' }}>
+                  <div className="text fw-semibold">
+                    For businesses ready to take admin off their plate completely. We map your operations end to end, then automate them.
+                  </div>
+                </div>
+                <ul className="list-text type-check" style={{ width: '100%' }}>
+                  <li><i className="icon icon-check-solid"></i>Full workflow automation</li>
+                  <li><i className="icon icon-check-solid"></i>CRM integration</li>
+                  <li><i className="icon icon-check-solid"></i>AI after-hours agent</li>
+                  <li><i className="icon icon-check-solid"></i>Ongoing optimisation</li>
+                </ul>
+              </div>
+              <a href="https://cal.com/swiftbuild/free-strategy-call" className="tf-btn" style={{ marginTop: 32, justifyContent: 'center' }}>Start with the Snapshot</a>
             </div>
           </div>
         </div>
