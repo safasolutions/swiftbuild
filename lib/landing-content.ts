@@ -536,7 +536,7 @@ export const services: ServiceData[] = [
     ctaOfferDesc:
       "We'll audit your current website, check your mobile load speed, analyze your booking flows, and show you exactly where you're losing customers. No pitch, no obligation.",
     ctaOfferBadges: ['Speed check', 'Conversion review', 'Free report'],
-    ctaButtonText: 'Book My Free Audit Call →',
+    ctaButtonText: 'Book My Free Audit Call',
     nicheCallouts: {
       hvac: "When a homeowner needs AC or furnace service, they search Google first. We make sure you show up at the top of local listings.",
       roofing: "Storm damage searches are highly local. We get your business ranked so homeowners call you first.",
@@ -619,7 +619,7 @@ export const services: ServiceData[] = [
     ctaOfferDesc:
       "We will scan your service area and generate a heat map showing exactly where your business ranks in Google Maps compared to competitors. 100% free.",
     ctaOfferBadges: ['Ranking heat map', 'Competitor score', 'Visibility report'],
-    ctaButtonText: 'Book My Free Ranking Scan →',
+    ctaButtonText: 'Book My Free Ranking Scan',
     nicheCallouts: {
       hvac: "Homeowners needing AC repair search on Google Maps. We rank you so you're the first pin they click.",
       roofing: "Storm damage search is highly local. We get your business ranked in local search to capture emergency repair calls.",
@@ -702,7 +702,7 @@ export const services: ServiceData[] = [
     ctaOfferDesc:
       "A 30-minute workflow breakdown where we analyze your daily admin tasks and outline exactly which processes can be automated. No sales pitch, just practical advice.",
     ctaOfferBadges: ['30 minutes', 'Workflow mapping', 'Actionable advice'],
-    ctaButtonText: 'Book My Free Consultation Call →',
+    ctaButtonText: 'Book My Free Consultation Call',
     nicheCallouts: {
       hvac: "Quote follow-ups, review requests, appointment reminders — all automated in your CRM. We build the integrations so your team saves hours.",
       roofing: "Storm lead follow-ups, estimate reminders, subcontractor coordination — hours of manual work. We build the automations that handle it for you.",
@@ -785,7 +785,7 @@ export const services: ServiceData[] = [
     ctaOfferDesc:
       "Leave your number and we'll have our AI agent call you immediately to demonstrate exactly how it handles booking a service job. No pitch, just a test call.",
     ctaOfferBadges: ['Instant test call', 'CRM booking demo', 'Voice quality check'],
-    ctaButtonText: 'Schedule My Voice Demo Call →',
+    ctaButtonText: 'Schedule My Voice Demo Call',
     nicheCallouts: {
       hvac: "Your customers call at all hours. We build the AI agent that answers after-hours inquiries, qualifies the job, and books the appointment — so no lead goes unanswered.",
       roofing: "Storm-season lead volume is unpredictable. We build the AI agent that handles first contact, qualifies the lead, and starts the booking process — without overwhelming your team.",

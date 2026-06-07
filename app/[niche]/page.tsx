@@ -311,7 +311,7 @@ export default async function NicheHubPage({
                           </div>
                           <div className="list-tags">
                             <a href={`/${niche.slug}/${service.slug}`} className="tags-item fw-semibold">
-                              Learn more →
+                              Learn more
                             </a>
                           </div>
                         </div>
@@ -399,7 +399,7 @@ export default async function NicheHubPage({
                 {niche.inactionCost}
               </p>
               <a href={CAL_LINK} className="tf-btn" style={{ background: 'var(--brand)' }}>
-                Book a Free Strategy Call →
+                Book a Free Strategy Call
               </a>
             </div>
           </div>
