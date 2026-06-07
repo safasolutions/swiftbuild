@@ -14,6 +14,12 @@ export interface NicheData {
   name: string
   descriptor: string
   heroLines: string[]
+  heroSubline: string
+  seoTitle: string
+  seoDescription: string
+  provides: { icon: string; label: string }[]
+  servicesIntro: string
+  serviceTitles: Record<ServiceSlug, string>
   painPoints: PainPoint[]
   context: string
   tools: string[]
@@ -48,7 +54,29 @@ export const niches: NicheData[] = [
     slug: 'hvac',
     name: 'HVAC',
     descriptor: 'Heating, cooling, and field service',
-    heroLines: ['Missed calls.', 'No follow-up.', 'Manual chaos.'],
+    heroLines: ['Always on.', 'Always booked.'],
+    heroSubline:
+      'We build AI systems, automations, and websites specifically for HVAC businesses across Canada.',
+    seoTitle: 'HVAC AI Solutions — SwiftBuild',
+    seoDescription:
+      "SwiftBuild builds AI systems, automations, websites, and lead systems specifically for HVAC businesses across Canada. Find out what's right for your operation.",
+    provides: [
+      { icon: 'icon-bolt-solid', label: 'Custom Websites' },
+      { icon: 'icon-search-solid', label: 'Local SEO' },
+      { icon: 'icon-user-check-solid', label: 'Lead & Booking Automation' },
+      { icon: 'icon-envelope-solid', label: 'Automated Follow-ups' },
+      { icon: 'icon-robot-solid', label: 'After-hours AI Agents' },
+      { icon: 'icon-plug-solid', label: 'CRM & Tool Integrations' },
+    ],
+    servicesIntro:
+      'Five systems that keep HVAC crews booked — from the website that wins local search to the agent that answers when your techs are on a call.',
+    serviceTitles: {
+      'ai-audit': 'HVAC Workflow Audit',
+      'ai-automations': 'Quote Follow-up Automation',
+      'lead-systems': 'Missed-Call Lead & Booking System',
+      'website-seo': 'HVAC Website + Local SEO',
+      'ai-agents': 'After-hours AI Agent',
+    },
     painPoints: [
       {
         title: 'After-hours calls going to voicemail, never followed up',
@@ -125,35 +153,57 @@ export const niches: NicheData[] = [
     slug: 'roofing',
     name: 'Roofing',
     descriptor: 'Residential and commercial roofing',
-    heroLines: ['Storm leads going cold.', 'No follow-up system.', 'Quotes left on the table.'],
+    heroLines: ['More roofs.', 'Less chasing.'],
+    heroSubline:
+      'Websites, local SEO, and lead automation built for roofing companies across Canada — so storm-season leads turn into signed jobs, not cold estimates.',
+    seoTitle: 'Roofing Websites, SEO & Lead Automation in Canada | SwiftBuild',
+    seoDescription:
+      'SwiftBuild builds websites, local SEO, lead automation, and AI systems for roofing companies across Canada — capture storm-season leads, follow up on every estimate, and keep your crew booked.',
+    provides: [
+      { icon: 'icon-bolt-solid', label: 'Custom Roofing Websites' },
+      { icon: 'icon-search-solid', label: 'Local SEO & Google Maps' },
+      { icon: 'icon-user-check-solid', label: 'Lead Capture & Booking' },
+      { icon: 'icon-envelope-solid', label: 'Estimate Follow-up Systems' },
+      { icon: 'icon-robot-solid', label: 'After-hours AI Agents' },
+      { icon: 'icon-plug-solid', label: 'CRM & Tool Integrations' },
+    ],
+    servicesIntro:
+      'Five systems that plug the leaks in your pipeline — from the website that wins the storm search to the agent that answers while your crew is on a roof.',
+    serviceTitles: {
+      'ai-audit': 'Roofing Pipeline Audit',
+      'ai-automations': 'Estimate Follow-up Automation',
+      'lead-systems': 'Storm Lead & Booking System',
+      'website-seo': 'Roofing Website + Local SEO',
+      'ai-agents': 'After-hours AI Agent',
+    },
     painPoints: [
       {
-        title: 'Storm season lead floods with no system to handle volume',
+        title: 'Storm-season lead floods',
         detail: "When a hailstorm hits, every roofer in town is chasing the same leads. The one with a system captures them. The rest lose them.",
       },
       {
-        title: 'Long quote-to-close cycle with zero follow-up automation',
+        title: 'Estimates with zero follow-up',
         detail: "You sent that estimate two weeks ago. No one followed up. Now they're signed with someone else.",
       },
       {
-        title: 'No process to re-engage old estimates that went cold',
+        title: 'Cold quotes never re-engaged',
         detail: "You have months of quoted jobs sitting in your system that were never worked. That's revenue you've already done the work to find.",
       },
       {
-        title: 'Subcontractor coordination done entirely through phone calls',
+        title: 'Sub coordination over phone calls',
         detail: "Coordinating subs through texts and calls means things get missed, schedules slip, and jobs go sideways.",
       },
       {
-        title: 'Insurance claim jobs with no documentation or follow-up workflow',
+        title: 'Insurance jobs with no workflow',
         detail: "Insurance jobs take longer and need more touchpoints. Without a system, they become the jobs that bleed money.",
       },
       {
-        title: 'Referrals never systematically asked for or tracked',
+        title: 'Referrals never asked for',
         detail: "You have happy customers who would send you five more clients. They just never got asked, and you don't have a system to do it.",
       },
     ],
     context:
-      "Roofing businesses live and die by their pipeline. After a storm, every roofer in the area is chasing the same leads — and the one who responds first and follows up consistently wins. Yet most roofing operations still handle that entire pipeline through phone calls, spreadsheets, and personal follow-up. The business that automates that pipeline captures a disproportionate share of the market.",
+      "Roofing businesses live and die by their pipeline. After a storm, every roofer in the area is chasing the same leads — and the one who responds first and follows up consistently wins. SwiftBuild gives roofing companies across Canada the system to be that roofer: a website that ranks in local search, instant lead response and booking, automated estimate follow-up, and AI agents that cover the calls your crew can't. You focus on the roof. The pipeline runs itself.",
     tools: ['JobNimbus', 'AccuLynx', 'CompanyCam', 'EagleView', 'Hover', 'Roofr'],
     whoFor: {
       good: [
@@ -181,20 +231,32 @@ export const niches: NicheData[] = [
     ],
     hubFaqs: [
       {
-        q: "What's the best starting point for a roofing company?",
-        a: "For most roofing companies, the AI Audit or AI Lead System makes the most sense first. If you're losing leads or have a slow quote-to-close cycle, the lead system has an immediate impact. If you're not sure where the biggest gaps are, start with the audit.",
+        q: 'What services does SwiftBuild offer roofing companies?',
+        a: "We build custom roofing websites with local SEO, lead capture and booking automation, automated estimate follow-up, after-hours AI agents, and workflow audits. Everything is designed around how roofing businesses across Canada actually operate — and it all integrates with the tools you already use.",
       },
       {
-        q: 'Can you handle the volume during storm season?',
+        q: 'How does pricing work?',
+        a: "Every project starts with a fixed-price quote — no hourly billing, no surprises. Website and local SEO packages start at $2,500; lead systems and automations are scoped to your operation. You'll know the full cost before we build anything.",
+      },
+      {
+        q: 'How long until my roofing website is live?',
+        a: "A custom roofing website with local SEO typically takes 3 to 4 weeks from kickoff to launch. Lead systems and workflow automations usually take 2 to 3 weeks. We work in fixed scopes, so you get a clear timeline before the project starts.",
+      },
+      {
+        q: 'Can your systems handle storm-season lead volume?',
         a: "That's exactly what the lead and appointment systems are built for. Automated response, lead qualification, and booking mean your team isn't overwhelmed when 50 leads come in over a weekend.",
       },
       {
-        q: 'Do you work with AccuLynx or JobNimbus?',
-        a: "Yes. We integrate with both, along with CompanyCam and other roofing-specific tools. We build systems that work with your existing stack.",
+        q: 'Do you integrate with JobNimbus, AccuLynx, or my current tools?',
+        a: "Yes. We integrate with JobNimbus, AccuLynx, CompanyCam, EagleView, Hover, Roofr, and most roofing and field-service platforms. We build systems that work with your existing stack — not around it.",
       },
       {
-        q: 'How quickly can a new website start generating calls?',
-        a: "Local SEO takes 60–90 days to show meaningful movement. But a well-built site with an optimized Google Business Profile can start generating calls within the first few weeks — especially if your current site is underperforming.",
+        q: 'Do you work with roofing companies anywhere in Canada?',
+        a: "Yes. We work with roofing businesses across Canada — every project is delivered remotely, and our local SEO work is built around Canadian regional search, so your company shows up where your customers are actually looking.",
+      },
+      {
+        q: 'Who owns the website and automations after delivery?',
+        a: "You do. Once delivered, you own 100% of the website, code, and automations. No lock-in, no platform dependency — if we ever part ways, everything keeps running and it's all yours.",
       },
     ],
   },
@@ -202,7 +264,29 @@ export const niches: NicheData[] = [
     slug: 'plumbing',
     name: 'Plumbing',
     descriptor: 'Residential and commercial plumbing',
-    heroLines: ['Emergency calls missed.', 'Customers not coming back.', 'Dispatch going sideways.'],
+    heroLines: ['Calls answered.', 'Jobs booked.'],
+    heroSubline:
+      'We build AI systems, automations, and websites specifically for Plumbing businesses across Canada.',
+    seoTitle: 'Plumbing AI Solutions — SwiftBuild',
+    seoDescription:
+      "SwiftBuild builds AI systems, automations, websites, and lead systems specifically for Plumbing businesses across Canada. Find out what's right for your operation.",
+    provides: [
+      { icon: 'icon-bolt-solid', label: 'Custom Websites' },
+      { icon: 'icon-search-solid', label: 'Local SEO' },
+      { icon: 'icon-user-check-solid', label: 'Lead & Booking Automation' },
+      { icon: 'icon-envelope-solid', label: 'Automated Follow-ups' },
+      { icon: 'icon-robot-solid', label: 'After-hours AI Agents' },
+      { icon: 'icon-plug-solid', label: 'CRM & Tool Integrations' },
+    ],
+    servicesIntro:
+      'Five systems that keep the calls coming and the schedule full — from instant emergency response to bringing past customers back.',
+    serviceTitles: {
+      'ai-audit': 'Plumbing Operations Audit',
+      'ai-automations': 'Re-engagement & Invoice Automation',
+      'lead-systems': 'Emergency Call & Booking System',
+      'website-seo': 'Plumbing Website + Local SEO',
+      'ai-agents': 'After-hours AI Agent',
+    },
     painPoints: [
       {
         title: 'Emergency calls going unanswered after hours',
@@ -279,7 +363,29 @@ export const niches: NicheData[] = [
     slug: 'cleaning',
     name: 'Cleaning Services',
     descriptor: 'Residential and commercial cleaning',
-    heroLines: ['Clients leaving with no win-back.', 'Bookings managed manually.', 'Reviews never collected.'],
+    heroLines: ['Booked solid.', 'Clients kept.'],
+    heroSubline:
+      'We build AI systems, automations, and websites specifically for Cleaning Services businesses across Canada.',
+    seoTitle: 'Cleaning Services AI Solutions — SwiftBuild',
+    seoDescription:
+      "SwiftBuild builds AI systems, automations, websites, and lead systems specifically for Cleaning Services businesses across Canada. Find out what's right for your operation.",
+    provides: [
+      { icon: 'icon-bolt-solid', label: 'Custom Websites' },
+      { icon: 'icon-search-solid', label: 'Local SEO' },
+      { icon: 'icon-user-check-solid', label: 'Lead & Booking Automation' },
+      { icon: 'icon-envelope-solid', label: 'Automated Follow-ups' },
+      { icon: 'icon-robot-solid', label: 'After-hours AI Agents' },
+      { icon: 'icon-plug-solid', label: 'CRM & Tool Integrations' },
+    ],
+    servicesIntro:
+      'Five systems that keep recurring clients on the schedule — from automated bookings and reviews to win-backs that stop churn.',
+    serviceTitles: {
+      'ai-audit': 'Cleaning Operations Audit',
+      'ai-automations': 'Retention & Review Automation',
+      'lead-systems': 'Booking & Lead System',
+      'website-seo': 'Cleaning Website + Local SEO',
+      'ai-agents': 'Client Onboarding AI Agent',
+    },
     painPoints: [
       {
         title: 'Recurring booking management done manually',

@@ -23,7 +23,8 @@
       "PowerShell(npx playwright screenshot --viewport-size=\"1440,900\" --full-page http://localhost:3000 \"$env:TEMP\\\\swiftbuild-home.png\" 2>&1 | Select-Object -First 5)",
       "PowerShell(node \"$env:TEMP\\\\swiftbuild-shots.js\")",
       "PowerShell(npx tsc --noEmit 2>$null; echo \"exit: $LASTEXITCODE\")",
-      "PowerShell($html = \\(Invoke-WebRequest -Uri http://localhost:3000 -UseBasicParsing\\).Content; 'guarantee remnants: ' + $html.IndexOf\\('guarantee'\\); 'pricing: ' + $html.IndexOf\\('section-pricing'\\); 'faqs: ' + $html.IndexOf\\('section-faqs'\\))"
+      "PowerShell($html = \\(Invoke-WebRequest -Uri http://localhost:3000 -UseBasicParsing\\).Content; 'guarantee remnants: ' + $html.IndexOf\\('guarantee'\\); 'pricing: ' + $html.IndexOf\\('section-pricing'\\); 'faqs: ' + $html.IndexOf\\('section-faqs'\\))",
+      "PowerShell(npx skills@latest add mattpocock/skills)"
     ]
   }
 }

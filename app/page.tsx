@@ -269,12 +269,12 @@ export default function HomePage() {
                   {/* section-process */}
                   <WorkspaceTimeline />
                   {/* /section-process */}
-                  {/* section-features */}
-                  <UnifiedOfferings />
-                  {/* /section-features */}
                   {/* section-featured-works */}
                   <SelectedWorkSection noPaddingTop />
                   {/* /section-featured-works */}
+                  {/* section-features */}
+                  <UnifiedOfferings />
+                  {/* /section-features */}
               </div>
         
               <div className="box-black">
