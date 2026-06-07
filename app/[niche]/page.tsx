@@ -118,8 +118,8 @@ export default async function NicheHubPage({
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
 
       {/* Hero */}
-      <div className="section-hero">
-        <div className="hero-image" style={{ opacity: 0.7 }} />
+      <div className="section-hero v1">
+        <div className="hero-image" />
         <div className="container">
           <div className="content-wrap text-center">
             <div className="sub fw-semibold effectFade fadeUp">
@@ -138,15 +138,9 @@ export default async function NicheHubPage({
               {niche.heroSubline}
             </p>
             <div className="bot-btns effectFade fadeRotateX">
-              <a href={CAL_LINK} className="tf-btn" style={{ background: 'var(--brand)' }}>
-                Book a Free Strategy Call
+              <a href="/contact" className="tf-btn" style={{ background: 'var(--brand)', borderRadius: '12px' }}>
+                Get a Free Quote
               </a>
-              <a href="/contact" className="tf-btn-2">
-                Talk to Us
-              </a>
-            </div>
-            <div className="effectFade fadeUp fw-semibold" style={{ marginTop: 16, fontSize: 13, color: 'var(--secondary)' }}>
-              Trusted by 35+ trades businesses across Canada &middot; Fixed-price quotes &middot; You own everything we build
             </div>
           </div>
         </div>

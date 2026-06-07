@@ -35,6 +35,7 @@ export interface ServiceData {
   name: string
   descriptor: string
   whatItIs: string
+  problem: string
   heroSubline: string
   deliverables: Deliverable[]
   process: ProcessStep[]
@@ -463,6 +464,8 @@ export const services: ServiceData[] = [
     descriptor: 'A fast, professional website designed to turn visitors into booked jobs.',
     whatItIs:
       "Most contractor websites are just digital business cards — they look okay, but they don't bring in jobs. We build custom trades websites from scratch. No templates, no slow page builders. Every page is hand-coded to load instantly on mobile, optimized to rank at the top of Google search results, and integrated with booking tools like Jobber, Housecall Pro, or ServiceTitan so customers can book immediately.",
+    problem:
+      "Without a fast, professional website, you're invisible to the homeowners searching for you right now. They can't find you, can't vet you, can't book you — so the job goes to the competitor who shows up first.",
     heroSubline: 'missing out on booked jobs — and builds a custom, high-speed website that converts',
     deliverables: [
       { title: 'Custom sitemap & structure', desc: 'Designed for trades to lead homeowners directly to calling or booking a job.' },
@@ -547,6 +550,8 @@ export const services: ServiceData[] = [
     descriptor: 'A local search presence that gets you found when homeowners search locally.',
     whatItIs:
       "Local SEO isn't about ranking globally; it's about being visible where your customers are looking. We manage your Google Business Profile, target local keywords, build local citations, and execute a review generation strategy to rank your business in the Google Maps Local 3-Pack — where the majority of service calls originate.",
+    problem:
+      "If you're not in Google's Local 3-Pack, you don't exist for most local searches. Over half of service calls start there — and every day you're outside it, those calls go to the three competitors who aren't.",
     heroSubline: 'missing out on local search traffic — and builds a presence that ranks at the top',
     deliverables: [
       { title: 'Google Business Profile audit', desc: 'Complete optimization of your GBP including category selection, descriptions, and photo tagging.' },
@@ -628,6 +633,8 @@ export const services: ServiceData[] = [
     descriptor: 'Stop doing the same things twice. Automate quote follow-ups, confirmations, and scheduling.',
     whatItIs:
       "Workflow Automation isn't about replacing your crew — it's about eliminating the daily manual tasks that eat your time. Quote follow-ups, review requests, booking confirmations, dispatch updates, invoice reminders, onboarding sequences — these should all run automatically. We build the secure connections between your tools (CRM, Calendly, email, text) so they sync and run on autopilot.",
+    problem:
+      "Every estimate that isn't followed up, every confirmation typed by hand, every invoice chased manually — that's hours of admin every week, and jobs quietly leaking out of your pipeline.",
     heroSubline: 'losing hours to manual admin work — and builds the systems that eliminate it',
     deliverables: [
       { title: 'Admin workflow analysis', desc: 'We map out your manual steps to target where your team is wasting time.' },
@@ -709,6 +716,8 @@ export const services: ServiceData[] = [
     descriptor: 'An AI system that answers calls 24/7, qualifies leads, and books appointments.',
     whatItIs:
       "A voice agent is a smart, interactive AI system trained specifically on your trades business. Answering calls instantly 24/7, it goes beyond simple messaging. It handles customer FAQs, qualifies call urgency, syncs with your CRM calendar, and schedules jobs directly. Never miss an emergency lead again.",
+    problem:
+      "Roughly half of trades calls come after hours or while you're on the tools. Every call that hits voicemail is a customer dialing the next number on the list — and they don't call back.",
     heroSubline: 'missing calls after hours — and deploys an AI voice system that answers, qualifies, and books',
     deliverables: [
       { title: 'Conversation mapping', desc: "We map out what questions the agent will answer, how it qualifies leads, and when it escalates to a human." },
