@@ -90,7 +90,12 @@ export const projects: Project[] = [
     stack: ['Custom web platform', 'Online payments', 'Ops dashboard', 'Dispatch calendar', 'Multi-campus CRM'],
     timeline: '≈8 weeks from audit to live handover, following our 4-step process.',
     href: 'https://studentstoragepros.com',
-    cover: '/assets/projects/Student Storage Pros/cover.jpg',
+    cover: '/assets/projects/Student%20Storage%20Pros/cover.jpg',
+    images: [
+      '/assets/projects/Student%20Storage%20Pros/ss-office-calendar.png',
+      '/assets/projects/Student%20Storage%20Pros/ss-products.png',
+      '/assets/projects/Student%20Storage%20Pros/ss-orders.png',
+    ],
   },
   {
     name: 'DevXAI',
@@ -194,7 +199,13 @@ export const projects: Project[] = [
     stack: ['n8n', 'Web scraping & data cleaning', 'AI chatbot (LLM qualification)', 'Structured knowledge bases'],
     timeline: '≈3 weeks from audit to a fully running pipeline.',
     href: '#',
-    cover: '/assets/projects/Leads Generation Automation/cover.png',
+    cover: '/assets/projects/Leads%20Generation%20Automation/cover.png',
+    images: [
+      '/assets/projects/Leads%20Generation%20Automation/scraping.png',
+      '/assets/projects/Leads%20Generation%20Automation/leads.png',
+      '/assets/projects/Leads%20Generation%20Automation/chatbot.png',
+      '/assets/projects/Leads%20Generation%20Automation/knowledge.png',
+    ],
   },
   {
     name: 'Ayla Smart Summaries',
@@ -243,7 +254,12 @@ export const projects: Project[] = [
     stack: ['Zoom / Teams / Meet integrations', 'Real-time speech processing', 'Speaker identification', 'AI summarisation'],
     timeline: '≈6 weeks from audit to live product, following our 4-step process.',
     href: '#',
-    cover: '/assets/projects/Ayla Smart Summaries/cover.png',
+    cover: '/assets/projects/Ayla%20Smart%20Summaries/cover.png',
+    images: [
+      '/assets/projects/Ayla%20Smart%20Summaries/how-it-works.png',
+      '/assets/projects/Ayla%20Smart%20Summaries/testimonials.png',
+      '/assets/projects/Ayla%20Smart%20Summaries/CTA.png',
+    ],
   },
   {
     name: 'Invoice Flow',
@@ -287,7 +303,11 @@ export const projects: Project[] = [
     stack: ['Node.js / Express', 'Box AI structured extraction', 'Box webhooks & metadata', 'Banana Accounting+ extension'],
     timeline: '≈3 weeks from audit to all four monitored folders running live.',
     href: '#',
-    cover: '/assets/projects/Invoice Flow/cover.svg',
+    cover: '/assets/projects/Invoice%20Flow/cover.svg',
+    images: [
+      '/assets/projects/Invoice%20Flow/layer_00_service_bootstrap_workflow.svg',
+      '/assets/projects/Invoice%20Flow/layer_01_folder_registration_workflow.svg',
+    ],
   },
   {
     name: 'You Social Discovery',
@@ -335,6 +355,11 @@ export const projects: Project[] = [
     stack: ['Next.js dashboard', 'EmbedSocial API', 'Mobile app', 'Publishing workflow engine'],
     timeline: '≈6 weeks from audit to live handover, following our 4-step process.',
     href: '#',
-    cover: '/assets/projects/You Social Discovery/cover.png',
+    cover: '/assets/projects/You%20Social%20Discovery/cover.png',
+    images: [
+      '/assets/projects/You%20Social%20Discovery/playground.png',
+      '/assets/projects/You%20Social%20Discovery/showroom.png',
+      '/assets/projects/You%20Social%20Discovery/dashboard.png',
+    ],
   },
 ]

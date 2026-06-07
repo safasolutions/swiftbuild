@@ -5,7 +5,6 @@ import Header from '@/components/layout/Header'
 import Footer from '@/components/layout/Footer'
 import MobileMenu from '@/components/layout/MobileMenu'
 import ScrollTop from '@/components/ui/ScrollTop'
-import SettingsColor from '@/components/ui/SettingsColor'
 import RouteReinit from '@/components/RouteReinit'
 import ScriptSequencer from '@/components/ScriptSequencer'
 
@@ -37,10 +36,10 @@ export default function RootLayout({
         <link rel="stylesheet" href="/assets/css/styles.css" />
         {/* Custom additions */}
         <link rel="stylesheet" href="/assets/css/custom.css" />
-        {/* jQuery — must load synchronously before everything else */}
-        <Script src="/assets/js/jquery.min.js" strategy="beforeInteractive" />
       </head>
       <body>
+        {/* jQuery — must load synchronously before everything else */}
+        <Script src="/assets/js/jquery.min.js" strategy="beforeInteractive" />
         <ScrollTop />
         <main id="wrapper">
           <Header />
@@ -48,7 +47,6 @@ export default function RootLayout({
           <Footer />
         </main>
         <MobileMenu />
-        <SettingsColor />
         <RouteReinit />
         <ScriptSequencer />
       </body>
