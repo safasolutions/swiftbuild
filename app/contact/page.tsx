@@ -16,6 +16,9 @@ export default function ContactPage() {
                 </div>
                 <div className="container">
                     <div className="content-wrap text-center">
+                        <div className="sub fw-semibold effectFade fadeUp">
+                            Let&apos;s Scale Your Operations
+                        </div>
                         <div className="title text-display-2 effectFade fadeRotateX">
                             <span className="title1 fw-semibold text-gradient-1">Ready to stand out?</span>
                             <br />

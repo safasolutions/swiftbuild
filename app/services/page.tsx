@@ -18,6 +18,9 @@ export default function ServicesPage() {
                 </div>
                 <div className="container">
                     <div className="content-wrap text-center">
+                        <div className="sub fw-semibold effectFade fadeUp">
+                            What We Build for Trades
+                        </div>
                         <div className="title text-display-2 effectFade fadeRotateX">
                             <span className="title1 fw-semibold text-gradient-1">Build smarter with</span>
                             <br />

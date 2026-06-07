@@ -1,4 +1,4 @@
-﻿/* ==========================================================================
+/* ==========================================================================
    SwiftBuild Custom Additions
    ========================================================================== */
 
@@ -426,6 +426,7 @@
 .contact-form-panel .tf-btn,
 .section-tools .tf-btn,
 .section-about-us .tf-btn,
+.box-black .tf-btn,
 .tf-header .tf-btn {
   border-radius: 12px;
   padding: 16px 36px;
@@ -460,13 +461,12 @@
 .section-hero .tf-btn:hover,
 .section-tools .tf-btn:hover,
 .section-about-us .tf-btn:hover,
+.box-black .tf-btn:hover,
 .tf-header .tf-btn:hover {
   background: var(--brand) !important;
   filter: brightness(1.08);
   box-shadow: 0 4px 20px rgba(253, 58, 37, 0.35);
-}
-
-/* Override base template negative margin on about section heading
+}/* Override base template negative margin on about section heading
    which caused the heading to overlap the mission/location cards */
 .section-about-us .heading-section {
   margin-bottom: 24px !important;

@@ -17,6 +17,9 @@ export default function WorksPage() {
         <div className="hero-image"></div>
         <div className="container">
           <div className="content-wrap text-center">
+            <div className="sub fw-semibold effectFade fadeUp">
+              Real Systems · Measured Results
+            </div>
             <div className="title text-display-2 effectFade fadeZoom">
               <span className="title1 fw-semibold text-gradient-1">Projects That</span>
               <br />

@@ -1,6 +1,5 @@
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
-import { Fragment } from 'react'
 import {
   SERVICE_SLUGS,
   NICHE_SLUGS,
@@ -11,6 +10,9 @@ import type { ServiceSlug } from '@/lib/landing-content'
 import FaqItem from '@/components/FaqItem'
 
 export const dynamicParams = false
+
+const SITE_URL = 'https://swiftbuild.io'
+const TIER_ICONS = ['icon-clipboard-check-solid', 'icon-bolt-solid', 'icon-robot-solid']
 
 export function generateStaticParams() {
   return SERVICE_SLUGS.map(service => ({ service }))
@@ -27,6 +29,7 @@ export async function generateMetadata({
   return {
     title: `${service.name} for Trades Businesses — SwiftBuild`,
     description: `${service.descriptor}. SwiftBuild builds ${service.name} systems for HVAC, roofing, plumbing, and cleaning businesses across Canada.`,
+    alternates: { canonical: `${SITE_URL}/services/${service.slug}` },
   }
 }
 
@@ -60,41 +63,88 @@ export default async function ServiceHubPage({
           <div className="content-wrap text-center">
             <div className="sub fw-semibold effectFade fadeUp">
               <span className="dot" />
-              {service.descriptor}
+              SwiftBuild Trades Solutions
             </div>
             <div className="title text-display-2 effectFade fadeRotateX">
               <span className="fw-semibold text-gradient-1">{service.name}</span>
-              <br />
-              <span className="fw-semibold text-gradient-1">for Trades</span>
             </div>
-            <p className="text effectFade fadeUp">
-              Find out exactly where your business is {service.heroSubline}.
+            <p className="text effectFade fadeUp" style={{ maxWidth: 640, marginLeft: 'auto', marginRight: 'auto' }}>
+              {service.descriptor}
             </p>
             <div className="bot-btns effectFade fadeRotateX">
-              <a href={calUrl} className="tf-btn">
+              <a href={calUrl} className="tf-btn" style={{ background: 'var(--brand)' }}>
                 {service.ctaButtonText}
-              </a>
-              <a href="/services" className="tf-btn-2">
-                All Services
               </a>
             </div>
           </div>
         </div>
       </div>
 
-      {/* What It Is + Process */}
       <div className="box-white">
+        {/* The Problem */}
+        <div className="flat-spacing" style={{ paddingBottom: 0 }}>
+          <div className="container">
+            <div className="row justify-content-center">
+              <div className="col-lg-10">
+                <div
+                  className="effectFade fadeUp"
+                  style={{
+                    background: 'var(--neutral-100)',
+                    borderRadius: 24,
+                    padding: '32px 40px',
+                    borderLeft: '4px solid var(--brand)',
+                  }}
+                >
+                  <div
+                    className="fw-semibold text-body-3"
+                    style={{ textTransform: 'uppercase', letterSpacing: '0.08em', color: 'var(--brand)', marginBottom: 10 }}
+                  >
+                    The Problem We Solve
+                  </div>
+                  <p className="fw-semibold" style={{ marginBottom: 0, fontSize: 18, lineHeight: '28px' }}>
+                    {service.problem}
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* What It Is + Process */}
         <div className="flat-spacing">
           <div className="container">
             <div className="row align-items-start">
               <div className="col-lg-5 lg-mb-24">
                 <div className="heading-section mb-48">
-                  <div className="heading-sub fw-semibold effectFade fadeUp">What It Is</div>
+                  <div className="heading-sub fw-semibold effectFade fadeUp">The Service</div>
                   <div className="heading-title text-gradient-3 effectFade fadeRotateX">
-                    In Plain Language
+                    What It Is
                   </div>
                 </div>
-                <p className="effectFade fadeUp">{service.whatItIs}</p>
+                <p className="effectFade fadeUp text-secondary" style={{ fontSize: 16, lineHeight: '27px' }}>
+                  {service.whatItIs}
+                </p>
+                
+                <div
+                  className="effectFade fadeUp"
+                  style={{
+                    marginTop: 32,
+                    padding: '24px 28px',
+                    borderRadius: '20px',
+                    background: 'var(--neutral-100)',
+                    borderLeft: '4px solid var(--brand)',
+                  }}
+                >
+                  <div
+                    className="fw-semibold text-body-3"
+                    style={{ textTransform: 'uppercase', letterSpacing: '0.08em', color: 'var(--brand)', marginBottom: 8 }}
+                  >
+                    The Outcome
+                  </div>
+                  <p className="fw-semibold" style={{ marginBottom: 0, fontSize: 15, lineHeight: '24px' }}>
+                    {service.outcome}
+                  </p>
+                </div>
               </div>
               <div className="col-lg-7">
                 <div className="row" style={{ rowGap: '20px' }}>
@@ -107,6 +157,7 @@ export default async function ServiceHubPage({
                           padding: '32px',
                           boxShadow:
                             '0px -8px 0px 0px #EAEAEA inset, 0px 4px 0px 0px #FFFFFF99 inset',
+                          height: '100%',
                         }}
                       >
                         <div
@@ -136,39 +187,114 @@ export default async function ServiceHubPage({
           </div>
         </div>
 
-        {/* Niches Grid */}
+        {/* Deliverables */}
         <div className="flat-spacing pt-0">
           <div className="container">
             <div className="heading-section center mb-64">
-              <div className="heading-sub fw-semibold effectFade fadeUp">Trades We Serve</div>
+              <div className="heading-sub fw-semibold effectFade fadeUp">Deliverables</div>
               <div className="heading-title text-gradient-3 effectFade fadeRotateX">
-                {service.name}
-                <br />
-                Across Every Trade
+                What You Actually Get
               </div>
             </div>
             <div className="row" style={{ rowGap: '24px' }}>
-              {niches.map(niche => (
-                <div key={niche.slug} className="col-md-6 d-flex">
-                  <div style={lightCard} className="effectFade fadeUp">
+              {service.deliverables.map((d, i) => (
+                <div key={i} className="col-md-6 d-flex">
+                  <div
+                    className="effectFade fadeUp"
+                    style={{
+                      background: 'var(--neutral-50)',
+                      border: '1px solid var(--neutral-200)',
+                      borderRadius: '24px',
+                      padding: '24px',
+                      width: '100%',
+                      display: 'flex',
+                      gap: '16px',
+                      alignItems: 'start',
+                    }}
+                  >
                     <div
-                      className="heading-sub fw-semibold"
-                      style={{ marginBottom: '16px' }}
+                      style={{
+                        width: '36px',
+                        height: '36px',
+                        borderRadius: '10px',
+                        background: 'var(--white)',
+                        border: '1px solid var(--neutral-200)',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        flexShrink: 0,
+                      }}
                     >
-                      {niche.name}
+                      <i className="icon icon-check-solid" style={{ color: 'var(--brand)', fontSize: '13px' }} />
                     </div>
-                    <p
-                      className="text-body-3"
-                      style={{ color: 'var(--secondary)', marginBottom: '24px', flexGrow: 1 }}
-                    >
-                      {service.nicheCallouts[niche.slug]}
-                    </p>
+                    <div>
+                      <div className="fw-semibold" style={{ marginBottom: '4px', fontSize: '16px' }}>
+                        {d.title}
+                      </div>
+                      <div className="text-body-3 text-secondary" style={{ lineHeight: '1.6' }}>{d.desc}</div>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* Pricing */}
+        <div className="section-pricing flat-spacing pt-0">
+          <div className="container">
+            <div className="heading-section center mb-64">
+              <div className="heading-sub fw-semibold effectFade fadeUp">Pricing</div>
+              <div className="heading-title text-gradient-3 effectFade fadeRotateX">
+                Clear Scope. <br />Transparent Costs.
+              </div>
+              <p
+                className="effectFade fadeUp text-secondary"
+                style={{ marginTop: 16, maxWidth: 560, marginLeft: 'auto', marginRight: 'auto', fontSize: 15, lineHeight: '24px' }}
+              >
+                Every project starts with a fixed quote — no hourly surprises. Pick the scope that fits your operation.
+              </p>
+            </div>
+            <div className="row">
+              {service.packages.map((pkg, i) => (
+                <div key={i} className={`col-lg-4${i < 2 ? ' lg-mb-24' : ''}`}>
+                  <div
+                    className={`pricing-item h-100 d-flex flex-column effectFade fadeUp no-div${pkg.featured ? ' style-black' : ''}`}
+                    data-delay={i ? `0.${i}` : undefined}
+                  >
+                    {pkg.featured && <div className="pricing-badge fw-semibold">Most Popular</div>}
+                    <div className="top d-flex gap-12 align-items-center">
+                      <div className="d-flex gap-8 align-items-center">
+                        <i className={`icon ${TIER_ICONS[i % TIER_ICONS.length]} fs-24`} />
+                        <div className="fw-semibold text">{pkg.label}</div>
+                      </div>
+                      <div className="line" />
+                      <div className={`fw-semibold ${pkg.featured ? 'text-neutral-400' : 'text-secondary'}`}>
+                        Tier {pkg.tier}
+                      </div>
+                    </div>
+                    <div className="heading">
+                      <div>
+                        <div className="price-number fw-bold" style={{ fontSize: 28, lineHeight: '36px' }}>
+                          {pkg.name}
+                        </div>
+                        <h6 className="price-per" style={{ marginTop: 8 }}>fixed-price quote</h6>
+                      </div>
+                    </div>
+                    <div className="line" />
+                    <div className="content" style={{ flexDirection: 'column', flexGrow: 1 }}>
+                      <ul className="list-text type-check" style={{ width: '100%' }}>
+                        {pkg.includes.map((item, j) => (
+                          <li key={j}><i className="icon icon-check-solid" />{item}</li>
+                        ))}
+                      </ul>
+                    </div>
                     <a
-                      href={`/${niche.slug}/${service.slug}`}
-                      className="d-flex align-items-center gap-8 fw-semibold text-body-3"
+                      href="/contact"
+                      className="tf-btn"
+                      style={{ marginTop: 32, justifyContent: 'center', ...(pkg.featured ? { background: 'var(--brand)' } : {}) }}
                     >
-                      {service.name} for {niche.name}{' '}
-                      <i className="icon icon-arrow-top-right" style={{ color: 'var(--brand)' }} />
+                      Get Started
                     </a>
                   </div>
                 </div>
@@ -176,59 +302,7 @@ export default async function ServiceHubPage({
             </div>
           </div>
         </div>
-      </div>
 
-      {/* Deliverables */}
-      <div className="flat-spacing">
-        <div className="container">
-          <div className="heading-section mb-64">
-            <div className="heading-sub fw-semibold effectFade fadeUp">Deliverables</div>
-            <div className="heading-title text-gradient-3 effectFade fadeRotateX">
-              What You Actually Get
-            </div>
-          </div>
-          <div className="row" style={{ rowGap: '24px' }}>
-            {service.deliverables.map((d, i) => (
-              <div key={i} className="col-md-6">
-                <div className="d-flex gap-16 align-items-start effectFade fadeUp">
-                  <i
-                    className="icon icon-check-solid"
-                    style={{ color: 'var(--brand)', fontSize: '18px', marginTop: '4px', flexShrink: 0 }}
-                  />
-                  <div>
-                    <div className="fw-semibold" style={{ marginBottom: '4px' }}>
-                      {d.title}
-                    </div>
-                    <div className="text-body-3 text-secondary">{d.desc}</div>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          <div
-            className="effectFade fadeUp"
-            style={{
-              marginTop: '40px',
-              padding: '32px 40px',
-              borderRadius: '24px',
-              border: '1px solid var(--neutral-200)',
-            }}
-          >
-            <div
-              className="fw-semibold text-body-3"
-              style={{
-                textTransform: 'uppercase',
-                letterSpacing: '0.08em',
-                color: 'var(--secondary)',
-                marginBottom: '10px',
-              }}
-            >
-              The Outcome
-            </div>
-            <p style={{ marginBottom: 0 }}>{service.outcome}</p>
-          </div>
-        </div>
       </div>
 
       {/* CTA Offer */}
@@ -272,7 +346,7 @@ export default async function ServiceHubPage({
                       </span>
                     ))}
                   </div>
-                  <a href={calUrl} className="tf-btn">
+                  <a href={calUrl} className="tf-btn" style={{ background: 'var(--brand)' }}>
                     {service.ctaButtonText}
                   </a>
                 </div>
@@ -288,7 +362,7 @@ export default async function ServiceHubPage({
           <div className="heading-section center mb-64">
             <div className="heading-sub fw-semibold effectFade fadeUp">FAQs</div>
             <div className="heading-title text-gradient-3 effectFade fadeRotateX">
-              Common Questions
+              Questions, Answered
             </div>
           </div>
           <div className="row justify-content-center">

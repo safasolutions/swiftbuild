@@ -15,6 +15,9 @@ export default function AboutPage() {
         <div className="hero-image"></div>
         <div className="container">
           <div className="content-wrap text-center">
+            <div className="sub fw-semibold effectFade fadeUp">
+              Why We Build for Contractors
+            </div>
             <div className="title text-display-2 effectFade fadeRotateX">
               <span className="title1 fw-semibold text-gradient-1">We Build Websites</span>
               <br />

@@ -48,6 +48,15 @@ export default function ServicesSection() {
                       <span className="tags-item fw-semibold">Booking integrations</span>
                       <span className="tags-item fw-semibold">Google Search Console setup</span>
                     </div>
+                    <div style={{ marginTop: '20px' }}>
+                      <a
+                        href="/services/website-design"
+                        className="fw-semibold text-body-3 d-inline-flex align-items-center gap-8"
+                        style={{ color: 'var(--brand)' }}
+                      >
+                        Learn more about Website Design <i className="icon icon-arrow-top-right" />
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -77,6 +86,15 @@ export default function ServicesSection() {
                       <span className="tags-item fw-semibold">Google Business Profile</span>
                       <span className="tags-item fw-semibold">Local keyword targeting</span>
                       <span className="tags-item fw-semibold">Review strategy</span>
+                    </div>
+                    <div style={{ marginTop: '20px' }}>
+                      <a
+                        href="/services/local-seo"
+                        className="fw-semibold text-body-3 d-inline-flex align-items-center gap-8"
+                        style={{ color: 'var(--brand)' }}
+                      >
+                        Learn more about Local SEO <i className="icon icon-arrow-top-right" />
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -108,6 +126,15 @@ export default function ServicesSection() {
                       <span className="tags-item fw-semibold">CRM integrations</span>
                       <span className="tags-item fw-semibold">Custom workflows</span>
                     </div>
+                    <div style={{ marginTop: '20px' }}>
+                      <a
+                        href="/services/workflow-automation"
+                        className="fw-semibold text-body-3 d-inline-flex align-items-center gap-8"
+                        style={{ color: 'var(--brand)' }}
+                      >
+                        Learn more about Workflow Automation <i className="icon icon-arrow-top-right" />
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -137,6 +164,15 @@ export default function ServicesSection() {
                       <span className="tags-item fw-semibold">Early access open</span>
                       <span className="tags-item fw-semibold">Canadian pilot running</span>
                       <span className="tags-item fw-semibold">Join the waitlist</span>
+                    </div>
+                    <div style={{ marginTop: '20px' }}>
+                      <a
+                        href="/services/voice-agent"
+                        className="fw-semibold text-body-3 d-inline-flex align-items-center gap-8"
+                        style={{ color: 'var(--brand)' }}
+                      >
+                        Learn more about Voice Agents <i className="icon icon-arrow-top-right" />
+                      </a>
                     </div>
                   </div>
                 </div>
