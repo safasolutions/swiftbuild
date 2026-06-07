@@ -471,3 +471,111 @@
 .section-about-us .heading-section {
   margin-bottom: 24px !important;
 }
+
+/* --------------------------------------------------------------------------
+   Problems band (used on home "Who We Are" and trades pages)
+   -------------------------------------------------------------------------- */
+.problems-band {
+  margin: 48px auto 0;
+  max-width: 1000px;
+  background-color: var(--neutral-100);
+  border-radius: 24px;
+  padding: 28px 36px;
+  box-shadow: 0px 7.77px 16px 0px rgba(0, 0, 0, 0.0588235294), 0px 3px 3px 0px rgba(0, 0, 0, 0.1019607843), 0px -8px 0px 0px rgba(0, 0, 0, 0.0509803922) inset, 0px 4px 0px 0px rgba(255, 255, 255, 0.6) inset;
+}
+
+.problems-band-label {
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--secondary);
+  text-align: center;
+  margin-bottom: 22px;
+}
+
+.problems-row {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.problems-band-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 0 28px;
+}
+
+.problems-band-item:first-child {
+  padding-left: 0;
+}
+
+.problems-band-item:last-child {
+  padding-right: 0;
+}
+
+.problems-band-item + .problems-band-item {
+  border-left: 1px solid var(--neutral-300);
+}
+
+.problem-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 46px;
+  border-radius: 12px;
+  background: rgba(253, 58, 37, 0.08);
+  color: var(--brand);
+  font-size: 20px;
+  flex-shrink: 0;
+  transition: all 0.3s ease;
+}
+
+.problems-band-item:hover .problem-icon {
+  background: var(--brand);
+  color: var(--white);
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(253, 58, 37, 0.35);
+}
+
+.problem-title {
+  font-size: 15px;
+  margin-bottom: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .problem-icon,
+  .problems-band-item:hover .problem-icon {
+    transition: none;
+    transform: none;
+  }
+}
+
+.problem-desc {
+  font-size: 13px;
+  line-height: 20px;
+  color: var(--secondary);
+}
+
+@media (max-width: 767px) {
+  .problems-band {
+    padding: 24px;
+    border-radius: 20px;
+  }
+  .problems-row {
+    grid-template-columns: 1fr;
+  }
+  .problems-band-item {
+    padding: 20px 0;
+  }
+  .problems-band-item:first-child {
+    padding-top: 0;
+  }
+  .problems-band-item:last-child {
+    padding-bottom: 0;
+  }
+  .problems-band-item + .problems-band-item {
+    border-left: none;
+    border-top: 1px solid var(--neutral-300);
+  }
+}
