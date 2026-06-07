@@ -33,6 +33,7 @@ export interface Project {
   quote?: { text: string; author: string }
   href: string
   cover?: string
+  images?: string[]
 }
 
 export const projects: Project[] = [
