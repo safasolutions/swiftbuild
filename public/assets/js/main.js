@@ -240,6 +240,10 @@
                 setTimeout(() => {
                   $('.services-image').find('img').attr('src', newImg).css('opacity', 1);
                 }, 200);
+            } else {
+                // Clicking the already-active item closes it — hide the image
+                $(this).removeClass('active-img');
+                $('.services-image').find('img').css('opacity', 0);
             }
         });
     };
