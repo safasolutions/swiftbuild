@@ -213,11 +213,11 @@ export default function WorksSlugPage({ params }: { params: { slug: string } }) 
         </div>
       </div>
       {/* /section-work-single */}
+      {/* box-black (testimonials) — commented out
       <div className="box-black">
         <div className="light-box"></div>
         <img className="light-top" src="/assets/images/item/light-top.png" alt="" />
         <img className="light-bot" src="/assets/images/item/light-bot.png" alt="" />
-        {/* section-testimonials */}
         <div className="section-testimonials flat-spacing">
           <div className="container">
             <div className="heading-section center mb-64">
@@ -258,7 +258,7 @@ export default function WorksSlugPage({ params }: { params: { slug: string } }) 
                             <i className="icon icon-star-solid"></i>
                           </div>
                           <div className="text-body-1 text-white desc">
-                            SSO/SAML and RBAC landed smoothly. Latency stayed &lt;300 ms on p95—huge win for our agents.
+                            SSO/SAML and RBAC landed smoothly. Latency stayed below 300ms on p95 — huge win for our agents.
                           </div>
                           <div className="cite mb-0">
                             <img className="line-left" src="/assets/images/item/line-1.png" alt="" />
@@ -308,8 +308,8 @@ export default function WorksSlugPage({ params }: { params: { slug: string } }) 
             </div>
           </div>
         </div>
-        {/* /section-testimonials */}
       </div>
+      */}
       {/* Next Project */}
       <div className="section-featured-works flat-spacing">
         <div className="container">

@@ -84,7 +84,7 @@ export default function Header() {
             </li>
           </ul>
         </div>
-        <a href="https://cal.com/swiftbuild/free-strategy-call" className="tf-btn d-none d-lg-inline-flex" style={{ whiteSpace: 'nowrap', flexShrink: 0, background: 'var(--brand)' }}>
+        <a href="https://cal.com/swiftbuild/free-strategy-call" className="tf-btn d-none d-lg-inline-flex" style={{ whiteSpace: 'nowrap', flexShrink: 0, background: 'var(--brand)', borderRadius: '999px' }}>
           Book a Call
         </a>
         <a href="#" className="tf-btn open-mb-menu mobile-menu d-lg-none d-flex">
