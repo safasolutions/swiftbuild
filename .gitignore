@@ -40,3 +40,13 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# AI agent tooling (local only — not part of the app)
+/.agents/
+/.claude/
+/.github/copilot/
+skills-lock.json
+
+# throwaway debug scripts & screenshots
+/pw-*.cjs
+/pw-*.png
