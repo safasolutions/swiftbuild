@@ -241,7 +241,7 @@ export default function SelectedWorkSection({ noPaddingTop = false }: Props) {
                 ))}
               </div>
 
-              {/* The results — black panel, red highlights */}
+              {/* The Results — commented out
               <div style={sectionWrap}>
                 <SectionHeading>The Results</SectionHeading>
                 <div
@@ -282,6 +282,7 @@ export default function SelectedWorkSection({ noPaddingTop = false }: Props) {
                   </p>
                 )}
               </div>
+              */}
 
               {/* Stack & timeline */}
               <div style={sectionWrap}>
