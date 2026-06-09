@@ -121,8 +121,9 @@ efficiency over time. The solution enables teams to manage large and complex cat
   },
 ]
 
-export default function WorksSlugPage({ params }: { params: { slug: string } }) {
-  const project = PROJECTS.find((p) => p.slug === params.slug) ?? PROJECTS[3]
+export default async function WorksSlugPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params
+  const project = PROJECTS.find((p) => p.slug === slug) ?? PROJECTS[3]
 
   return (
     <>

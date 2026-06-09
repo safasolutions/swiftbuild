@@ -5,6 +5,7 @@ export default function ContactSection() {
   return (
     <div id="contact" style={{ paddingTop: 40, paddingBottom: 80, position: 'relative' }}>
       <div
+        className="contact-bg"
         style={{
           position: 'absolute',
           inset: '0 16px',
@@ -15,7 +16,7 @@ export default function ContactSection() {
           backgroundSize: 'cover',
         }}
       />
-      <div className="container" style={{ position: 'relative', zIndex: 1 }}>
+      <div className="container contact-container" style={{ position: 'relative', zIndex: 1 }}>
         <div
           className="grid-collapse-lg"
           style={{

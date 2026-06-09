@@ -17,9 +17,14 @@ export default function UnifiedOfferings() {
           <div className="row g-40 align-items-stretch">
             {/* Left Column: Core Systems */}
             <div className="col-lg-6">
-              <h3 className="offerings-column-title">Core Systems</h3>
-              <p className="offerings-column-sub">For every trades business. Proven, ready to deploy.</p>
-              
+              <div className="offerings-column-head">
+                <h3 className="offerings-column-title">Core Systems</h3>
+                <p className="offerings-column-sub">For every trades business. Proven, ready to deploy.</p>
+                <p className="offerings-column-lead">
+                  Ready-to-deploy automation that captures every lead, fills your schedule, and gets you paid faster.
+                </p>
+              </div>
+
               <div className="offering-list">
                 <div className="offering-item">
                   <div className="offering-icon">
@@ -59,15 +64,16 @@ export default function UnifiedOfferings() {
             </div>
 
             {/* Right Column: Custom Solutions */}
-            <div className="col-lg-5 ms-auto d-flex flex-column justify-content-between">
-              <div>
+            <div className="col-lg-5 ms-auto">
+              <div className="offerings-column-head">
                 <h3 className="offerings-column-title">Custom Solutions</h3>
                 <p className="offerings-column-sub">For your company. Built to spec.</p>
-                <p className="text-secondary mb-24" style={{ fontSize: '14px', lineHeight: '22px' }}>
+                <p className="offerings-column-lead">
                   Tailored workflow automation designed specifically for your field service systems and scale.
                 </p>
+              </div>
 
-                <div className="offering-list">
+              <div className="offering-list">
                   <div className="offering-item">
                     <div className="offering-icon">
                       <i className="icon icon-book-solid"></i>
@@ -98,7 +104,6 @@ export default function UnifiedOfferings() {
                     </div>
                   </div>
                 </div>
-              </div>
             </div>
           </div>
 

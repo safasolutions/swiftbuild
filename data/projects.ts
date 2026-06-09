@@ -25,6 +25,8 @@ export interface Project {
   metrics: Metric[]
   /** Honest framing for the metrics (timeframe, private figures, ranges) */
   metricsNote?: string
+  /** Narrative outcome paragraph — what changed for the client, grounded in the metrics */
+  results: string
   /** Tools integrated */
   stack: string[]
   /** How long it took — ties back to the 4-step process */
@@ -88,6 +90,8 @@ export const projects: Project[] = [
     ],
     metricsNote:
       'Exact volume figures are private — outcomes reflect the first full storage season on the new platform.',
+    results:
+      'Across its first full storage season on the new platform, Student Storage Pros moved its entire order flow off the phone and out of spreadsheets — students now quote, book, and pay online in minutes without the office touching the order. Dispatch shifted from manual phone-tag to a live operations calendar covering every crew on every campus, giving the team real-time visibility it never had before. Most decisively, the company took on new campuses without adding a single office hire: growth that used to mean more headcount now runs on the same lean team.',
     stack: ['Custom web platform', 'Online payments', 'Ops dashboard', 'Dispatch calendar', 'Multi-campus CRM'],
     timeline: '≈8 weeks from audit to live handover, following our 4-step process.',
     href: 'https://studentstoragepros.com',
@@ -142,6 +146,8 @@ export const projects: Project[] = [
       },
     ],
     metricsNote: 'Delivery window applies to every client site shipped on the platform.',
+    results:
+      'The productised model collapsed months of agency back-and-forth into client sites that ship in 2–4 weeks at a fixed, known price — a delivery window that holds for every site launched on the platform. Quote follow-ups, booking confirmations, and review requests that used to eat hours of admin each week now fire automatically around the clock, so no lead goes quiet because someone forgot to reply. And trades businesses that were effectively invisible online began surfacing for the local "near me" searches their customers actually type.',
     stack: ['Mobile-first website build', 'Local SEO (Google Maps)', 'n8n & Zapier automations', 'Online booking'],
     timeline: '2–4 weeks per client site — the build phase of our 4-step process.',
     href: '#',
@@ -197,6 +203,8 @@ export const projects: Project[] = [
       },
     ],
     metricsNote: 'The sales team now only enters the conversation once a lead has already been warmed up.',
+    results:
+      'Prospect research that used to consume the first hours of every morning now runs unattended before the team logs in, and first-touch outreach went from generic blasts to AI-qualified, personalised messages grounded in both the lead and company knowledge bases. The pipeline now covers discovery, qualification, and first contact 24/7 with no step skipped — and the sales team only enters the conversation once a lead has already replied warm, spending their time closing instead of prospecting.',
     stack: ['n8n', 'Web scraping & data cleaning', 'AI chatbot (LLM qualification)', 'Structured knowledge bases'],
     timeline: '≈3 weeks from audit to a fully running pipeline.',
     href: '#',
@@ -252,6 +260,8 @@ export const projects: Project[] = [
       },
     ],
     metricsNote: 'Follow-up figure reported by early-access teams during the pilot.',
+    results:
+      'Early-access teams stopped writing post-meeting notes entirely — the roughly two hours per meeting that used to go into writeups now collapses to an instant, zero-effort summary delivered seconds after the call ends. Those pilot teams reported a 300% jump in follow-up rate, with action items arriving assigned and in writing while the meeting is still fresh. Scattered, unsearchable notes gave way to a structured, searchable archive, turning "what did we agree last week?" into a ten-second lookup.',
     stack: ['Zoom / Teams / Meet integrations', 'Real-time speech processing', 'Speaker identification', 'AI summarisation'],
     timeline: '≈6 weeks from audit to live product, following our 4-step process.',
     href: '#',
@@ -301,6 +311,8 @@ export const projects: Project[] = [
     ],
     metricsNote:
       'Bulk back-processing retroactively covered hundreds of existing invoices in a single job.',
+    results:
+      'Invoice data that was keyed twice by hand — once into Box metadata, once into the accounting software — is now extracted and stamped onto each file automatically within seconds of upload, eliminating manual entry across every monitored cost center. Every matched transaction carries a one-click DocLink straight to its source document, so auditors no longer hunt across two systems with a reference number. A single bulk job retroactively back-processed hundreds of existing invoices the same way, bringing the whole archive up to the new standard at once.',
     stack: ['Node.js / Express', 'Box AI structured extraction', 'Box webhooks & metadata', 'Banana Accounting+ extension'],
     timeline: '≈3 weeks from audit to all four monitored folders running live.',
     href: '#',
@@ -353,6 +365,8 @@ export const projects: Project[] = [
         after: 'Real-time sync, zero effort',
       },
     ],
+    results:
+      'Instagram content that used to live and die on the platform now flows automatically into branded showrooms inside a dedicated mobile app, kept current by real-time sync with zero manual reposting. The curation dashboard lets the team reorder and bulk-update 100+ posts in under a second through a controlled draft → review → published workflow — turning a season’s worth of curation from a manual slog into minutes of work, with nothing reaching customers without sign-off.',
     stack: ['Next.js dashboard', 'EmbedSocial API', 'Mobile app', 'Publishing workflow engine'],
     timeline: '≈6 weeks from audit to live handover, following our 4-step process.',
     href: '#',
