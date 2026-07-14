@@ -3,6 +3,17 @@ import { google } from 'googleapis'
 
 export const dynamic = 'force-dynamic'
 
+function escHtml(s: string): string {
+  return s
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+}
+
+const VALID_SOURCES = ['popup', 'contact'] as const
+type ValidSource = typeof VALID_SOURCES[number]
+
 function createTransporter() {
   return nodemailer.createTransport({
     host: process.env.SMTP_HOST || 'smtp.gmail.com',
@@ -54,6 +65,10 @@ export async function POST(request: Request) {
       source?: string
     }
 
+    const resolvedSource: ValidSource = VALID_SOURCES.includes(source as ValidSource)
+      ? (source as ValidSource)
+      : 'contact'
+
     if (!name?.trim() || !email?.trim()) {
       return Response.json(
         { error: 'Name and email are required.' },
@@ -61,7 +76,7 @@ export async function POST(request: Request) {
       )
     }
 
-    if (source !== 'popup' && !message?.trim()) {
+    if (resolvedSource !== 'popup' && !message?.trim()) {
       return Response.json(
         { error: 'Message is required.' },
         { status: 400 },
@@ -79,9 +94,9 @@ export async function POST(request: Request) {
       from: `"SwiftBuild Contact" <${process.env.SMTP_USER}>`,
       to: recipient,
       replyTo: email,
-      subject: `New ${source || 'contact'} submission from ${name}`,
+      subject: `New ${resolvedSource.replace(/[\r\n]/g, '')} submission from ${name.replace(/[\r\n]/g, '')}`,
       text: [
-        `Source: ${source || '—'}`,
+        `Source: ${resolvedSource}`,
         `Name: ${name}`,
         `Email: ${email}`,
         `Phone: ${phone || '—'}`,
@@ -92,24 +107,24 @@ export async function POST(request: Request) {
         message || '—',
       ].join('\n'),
       html: `
-        <h2>New Submission — ${source || 'contact'}</h2>
+        <h2>New Submission — ${escHtml(resolvedSource)}</h2>
         <table style="border-collapse:collapse;font-family:sans-serif;">
-          <tr><td style="padding:8px;font-weight:600;">Source</td><td style="padding:8px;">${source || '—'}</td></tr>
-          <tr><td style="padding:8px;font-weight:600;">Name</td><td style="padding:8px;">${name}</td></tr>
-          <tr><td style="padding:8px;font-weight:600;">Email</td><td style="padding:8px;"><a href="mailto:${email}">${email}</a></td></tr>
-          <tr><td style="padding:8px;font-weight:600;">Phone</td><td style="padding:8px;">${phone || '—'}</td></tr>
-          <tr><td style="padding:8px;font-weight:600;">Trade</td><td style="padding:8px;">${trade || '—'}</td></tr>
-          <tr><td style="padding:8px;font-weight:600;">Company</td><td style="padding:8px;">${company || '—'}</td></tr>
+          <tr><td style="padding:8px;font-weight:600;">Source</td><td style="padding:8px;">${escHtml(resolvedSource)}</td></tr>
+          <tr><td style="padding:8px;font-weight:600;">Name</td><td style="padding:8px;">${escHtml(name)}</td></tr>
+          <tr><td style="padding:8px;font-weight:600;">Email</td><td style="padding:8px;"><a href="mailto:${escHtml(email)}">${escHtml(email)}</a></td></tr>
+          <tr><td style="padding:8px;font-weight:600;">Phone</td><td style="padding:8px;">${escHtml(phone || '—')}</td></tr>
+          <tr><td style="padding:8px;font-weight:600;">Trade</td><td style="padding:8px;">${escHtml(trade || '—')}</td></tr>
+          <tr><td style="padding:8px;font-weight:600;">Company</td><td style="padding:8px;">${escHtml(company || '—')}</td></tr>
         </table>
         <h3 style="margin-top:24px;">Message</h3>
-        <p style="white-space:pre-wrap;">${message || '—'}</p>
+        <p style="white-space:pre-wrap;">${escHtml(message || '—')}</p>
       `,
     })
 
     try {
       await appendToGoogleSheet([
         new Date().toISOString(),
-        source || '',
+        resolvedSource,
         name,
         email,
         phone || '',
