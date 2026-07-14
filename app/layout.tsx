@@ -7,6 +7,8 @@ import MobileMenu from '@/components/layout/MobileMenu'
 import ScrollTop from '@/components/ui/ScrollTop'
 import RouteReinit from '@/components/RouteReinit'
 import ScriptSequencer from '@/components/ScriptSequencer'
+import LeadCapturePopup from '@/components/LeadCapturePopup'
+import StickyMobileBar from '@/components/ui/StickyMobileBar'
 
 export const metadata: Metadata = {
   title: 'SwiftBuild - Digital Agency for Trades',
@@ -46,6 +48,8 @@ export default function RootLayout({
           {children}
           <Footer />
         </main>
+        <LeadCapturePopup />
+        <StickyMobileBar />
         <MobileMenu />
         <RouteReinit />
         <ScriptSequencer />
