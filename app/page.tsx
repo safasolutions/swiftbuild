@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import AuditCtaButton from '@/components/ui/AuditCtaButton'
 import WorkspaceTimeline from '@/components/sections/WorkspaceTimeline'
 import PricingSection from '@/components/sections/PricingSection'
 import UnifiedOfferings from '@/components/sections/UnifiedOfferings'
@@ -68,7 +69,7 @@ export default function HomePage() {
                                     Your <span className="text-brand">Strategic Partner</span> <br />for Digital Growth
                                 </h2>
                                 <p className="effectFade fadeUp mb-0 text-secondary" style={{ maxWidth: 520, fontSize: 15, lineHeight: '24px' }}>
-                                    We combine technical expertise with strategic vision to transform your digital presence into a high-performance engine. As your reliable strategic partner, we are committed to building long-term value through engineering excellence and consistent delivery.
+                                    We build websites, SEO, and automations that book jobs, collect payments, and get you off the phone — so you can focus on the work that pays.
                                 </p>
                             </div>
                             {/* RIGHT */}
@@ -128,6 +129,7 @@ export default function HomePage() {
                                     <div>
                                         <div className="problem-title fw-semibold">Missed calls</div>
                                         <div className="problem-desc">Every missed call after 6pm is a job someone else booked.</div>
+                                        <div className="fw-semibold" style={{ fontSize: 13, marginTop: 6, color: 'var(--brand)' }}>We route after-hours inquiries to automated follow-up so no lead falls through.</div>
                                     </div>
                                 </div>
                                 <div className="problems-band-item">
@@ -135,6 +137,7 @@ export default function HomePage() {
                                     <div>
                                         <div className="problem-title fw-semibold">Cold quotes</div>
                                         <div className="problem-desc">Estimates sit in inboxes while the guy who called back first wins.</div>
+                                        <div className="fw-semibold" style={{ fontSize: 13, marginTop: 6, color: 'var(--brand)' }}>We trigger automatic quote follow-ups so you&apos;re always first to respond.</div>
                                     </div>
                                 </div>
                                 <div className="problems-band-item">
@@ -142,6 +145,7 @@ export default function HomePage() {
                                     <div>
                                         <div className="problem-title fw-semibold">Manual chaos</div>
                                         <div className="problem-desc">Scheduling in your head, dispatch over text, invoices at midnight.</div>
+                                        <div className="fw-semibold" style={{ fontSize: 13, marginTop: 6, color: 'var(--brand)' }}>We connect your calendar, dispatch, and invoicing into one automated flow.</div>
                                     </div>
                                 </div>
                             </div>
@@ -150,6 +154,19 @@ export default function HomePage() {
                     </div>
                 </div>
                 {/* /section-who-we-are */}
+
+                {/* mid-page CTA 1 */}
+                <div className="container effectFade fadeUp" style={{ paddingTop: 48, paddingBottom: 0, textAlign: 'center' }}>
+                    <p className="fw-semibold mb-4" style={{ fontSize: 18, letterSpacing: '-0.01em' }}>
+                        Every missed call is a job someone else booked.
+                    </p>
+                    <p className="text-secondary mb-20" style={{ fontSize: 15 }}>
+                        We fix that — automated follow-up, 24/7.
+                    </p>
+                    <AuditCtaButton />
+                </div>
+                {/* /mid-page CTA 1 */}
+
                 {/* section-services */}
                 <ServicesSection />
                 {/* /section-services */}
@@ -165,6 +182,17 @@ export default function HomePage() {
                 {/* section-testimonials */}
                 <TestimonialsSection />
                 {/* /section-testimonials */}
+
+                {/* mid-page CTA 2 */}
+                <div className="effectFade fadeUp" style={{ paddingTop: 48, paddingBottom: 16, textAlign: 'center' }}>
+                    <div className="container">
+                        <p className="fw-semibold mb-20" style={{ fontSize: 22, letterSpacing: '-0.01em' }}>
+                            Ready to stay booked?
+                        </p>
+                        <AuditCtaButton />
+                    </div>
+                </div>
+                {/* /mid-page CTA 2 */}
             </div>
 
             {/* section-statistic — commented out
