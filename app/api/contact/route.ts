@@ -3,15 +3,11 @@ import { google } from 'googleapis'
 
 export const dynamic = 'force-dynamic'
 
-// ---------------------------------------------------------------------------
-// Helpers
-// ---------------------------------------------------------------------------
-
 function createTransporter() {
   return nodemailer.createTransport({
     host: process.env.SMTP_HOST || 'smtp.gmail.com',
     port: Number(process.env.SMTP_PORT) || 587,
-    secure: false, // true for 465, false for other ports
+    secure: false,
     auth: {
       user: process.env.SMTP_USER,
       pass: process.env.SMTP_PASS,
@@ -30,8 +26,8 @@ async function appendToGoogleSheet(row: string[]) {
   }
 
   const auth = new google.auth.JWT({
-    email: email,
-    key: key,
+    email,
+    key,
     scopes: ['https://www.googleapis.com/auth/spreadsheets'],
   })
 
@@ -39,80 +35,89 @@ async function appendToGoogleSheet(row: string[]) {
 
   await sheets.spreadsheets.values.append({
     spreadsheetId: sheetId,
-    range: 'Sheet1!A:E', // Columns: Timestamp | Name | Email | Company | Message
+    range: 'Sheet1!A:H',
     valueInputOption: 'USER_ENTERED',
     requestBody: { values: [row] },
   })
 }
 
-// ---------------------------------------------------------------------------
-// POST /api/contact
-// ---------------------------------------------------------------------------
-
 export async function POST(request: Request) {
   try {
     const body = await request.json()
-    const { name, email, company, message } = body as {
+    const { name, email, company, message, phone, trade, source } = body as {
       name?: string
       email?: string
       company?: string
       message?: string
+      phone?: string
+      trade?: string
+      source?: string
     }
 
-    // Validate required fields
-    if (!name?.trim() || !email?.trim() || !message?.trim()) {
+    if (!name?.trim() || !email?.trim()) {
       return Response.json(
-        { error: 'Name, email, and message are required.' },
+        { error: 'Name and email are required.' },
         { status: 400 },
       )
     }
 
-    // Basic email format check
+    if (source !== 'popup' && !message?.trim()) {
+      return Response.json(
+        { error: 'Message is required.' },
+        { status: 400 },
+      )
+    }
+
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
       return Response.json({ error: 'Invalid email address.' }, { status: 400 })
     }
 
     const recipient = process.env.CONTACT_EMAIL || 'info@swiftbuild.io'
-
-    // ---- Send email via Nodemailer ----
     const transporter = createTransporter()
 
     await transporter.sendMail({
       from: `"SwiftBuild Contact" <${process.env.SMTP_USER}>`,
       to: recipient,
       replyTo: email,
-      subject: `New contact form submission from ${name}`,
+      subject: `New ${source || 'contact'} submission from ${name}`,
       text: [
+        `Source: ${source || '—'}`,
         `Name: ${name}`,
         `Email: ${email}`,
+        `Phone: ${phone || '—'}`,
+        `Trade: ${trade || '—'}`,
         `Company: ${company || '—'}`,
         '',
         `Message:`,
-        message,
+        message || '—',
       ].join('\n'),
       html: `
-        <h2>New Contact Form Submission</h2>
+        <h2>New Submission — ${source || 'contact'}</h2>
         <table style="border-collapse:collapse;font-family:sans-serif;">
+          <tr><td style="padding:8px;font-weight:600;">Source</td><td style="padding:8px;">${source || '—'}</td></tr>
           <tr><td style="padding:8px;font-weight:600;">Name</td><td style="padding:8px;">${name}</td></tr>
           <tr><td style="padding:8px;font-weight:600;">Email</td><td style="padding:8px;"><a href="mailto:${email}">${email}</a></td></tr>
+          <tr><td style="padding:8px;font-weight:600;">Phone</td><td style="padding:8px;">${phone || '—'}</td></tr>
+          <tr><td style="padding:8px;font-weight:600;">Trade</td><td style="padding:8px;">${trade || '—'}</td></tr>
           <tr><td style="padding:8px;font-weight:600;">Company</td><td style="padding:8px;">${company || '—'}</td></tr>
         </table>
         <h3 style="margin-top:24px;">Message</h3>
-        <p style="white-space:pre-wrap;">${message}</p>
+        <p style="white-space:pre-wrap;">${message || '—'}</p>
       `,
     })
 
-    // ---- Append to Google Sheet ----
     try {
       await appendToGoogleSheet([
         new Date().toISOString(),
+        source || '',
         name,
         email,
+        phone || '',
+        trade || '',
         company || '',
-        message,
+        message || '',
       ])
     } catch (sheetErr) {
-      // Log but don't fail the request — email already sent
       console.error('[Google Sheets] Failed to append row:', sheetErr)
     }
 
