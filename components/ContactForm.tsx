@@ -24,8 +24,10 @@ export default function ContactForm({ variant = 'homepage' }: ContactFormProps) 
     const data = {
       name: (form.elements.namedItem('name') as HTMLInputElement).value,
       email: (form.elements.namedItem('email') as HTMLInputElement).value,
+      phone: (form.elements.namedItem('phone') as HTMLInputElement).value,
       company: (form.elements.namedItem('company') as HTMLInputElement).value,
       message: (form.elements.namedItem('message') as HTMLTextAreaElement).value,
+      source: 'contact',
     }
 
     try {
@@ -101,15 +103,34 @@ export default function ContactForm({ variant = 'homepage' }: ContactFormProps) 
         </fieldset>
       </div>
 
-      <fieldset className="m-0 mb-16">
-        <label className="contact-form-label">Company</label>
-        <input
-          type="text"
-          name="company"
-          placeholder="Your company"
-          className="contact-form-input"
-        />
-      </fieldset>
+      <div
+        className="grid-collapse-sm"
+        style={{
+          display: 'grid',
+          gridTemplateColumns: 'repeat(2, minmax(0, 1fr))',
+          gap: 16,
+          marginBottom: 16,
+        }}
+      >
+        <fieldset className="m-0">
+          <label className="contact-form-label">Phone</label>
+          <input
+            type="tel"
+            name="phone"
+            placeholder="Your phone number"
+            className="contact-form-input"
+          />
+        </fieldset>
+        <fieldset className="m-0">
+          <label className="contact-form-label">Company</label>
+          <input
+            type="text"
+            name="company"
+            placeholder="Your company"
+            className="contact-form-input"
+          />
+        </fieldset>
+      </div>
 
       <fieldset className="m-0 mb-20">
         <label className="contact-form-label">Message</label>
