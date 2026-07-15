@@ -73,15 +73,7 @@ export default function SelectedWorkSection({ noPaddingTop = false }: Props) {
                     )}
                   </div>
                   <div style={{ padding: '24px 32px 28px', display: 'flex', flexDirection: 'column', flexGrow: 1 }}>
-                    <h5
-                      className="fw-semibold"
-                      style={{
-                        marginBottom: '8px',
-                        overflow: 'hidden',
-                        textOverflow: 'ellipsis',
-                        whiteSpace: 'nowrap',
-                      }}
-                    >
+                    <h5 className="fw-semibold" style={{ marginBottom: '8px' }}>
                       {project.name}
                     </h5>
                     <p
@@ -299,15 +291,17 @@ export default function SelectedWorkSection({ noPaddingTop = false }: Props) {
               */}
 
               {/* Results */}
-              <div style={sectionWrap}>
-                <SectionHeading>Results</SectionHeading>
-                <p style={{ ...bodyText, marginBottom: selected.metricsNote ? '14px' : 0 }}>{selected.results}</p>
-                {selected.metricsNote && (
-                  <p className="text-body-3" style={{ color: 'var(--secondary)', margin: 0, fontStyle: 'italic' }}>
-                    {selected.metricsNote}
-                  </p>
-                )}
-              </div>
+              {selected.results && (
+                <div style={sectionWrap}>
+                  <SectionHeading>Results</SectionHeading>
+                  <p style={{ ...bodyText, marginBottom: selected.metricsNote ? '14px' : 0 }}>{selected.results}</p>
+                  {selected.metricsNote && (
+                    <p className="text-body-3" style={{ color: 'var(--secondary)', margin: 0, fontStyle: 'italic' }}>
+                      {selected.metricsNote}
+                    </p>
+                  )}
+                </div>
+              )}
 
               {/* Stack & timeline */}
               <div style={sectionWrap}>

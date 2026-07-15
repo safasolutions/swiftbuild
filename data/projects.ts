@@ -21,12 +21,12 @@ export interface Project {
   situation: string
   /** The actual systems built — one screenshot each */
   built: BuildItem[]
-  /** 3 before → after metrics */
-  metrics: Metric[]
+  /** 3 before → after metrics — omit when the client hasn't shared figures */
+  metrics?: Metric[]
   /** Honest framing for the metrics (timeframe, private figures, ranges) */
   metricsNote?: string
   /** Narrative outcome paragraph — what changed for the client, grounded in the metrics */
-  results: string
+  results?: string
   /** Tools integrated */
   stack: string[]
   /** How long it took — ties back to the 4-step process */
@@ -376,5 +376,210 @@ export const projects: Project[] = [
       '/assets/projects/You%20Social%20Discovery/showroom.png',
       '/assets/projects/You%20Social%20Discovery/dashboard.png',
     ],
+  },
+  {
+    name: 'Ark Renewable Energy Inc.',
+    summary: 'End-to-end sales, operations & CRM buildout for a solar installer',
+    outcome: 'One system from first quote to final install, fully managed',
+    situation:
+      "Ark Renewable Energy runs long, document-heavy solar projects — every install moves through quoting, a site survey, permitting, and staged payments before a panel ever goes on a roof. That entire journey lived across phone calls, email threads, and disconnected spreadsheets, with compliance paperwork scattered wherever it last landed. Each new hire and each new project added more manual handoffs, and nothing tied the sales conversation to the survey, the permit, the invoice, or the customer at the other end of it.",
+    built: [
+      {
+        title: 'Sales process & digital contract workflow',
+        description:
+          'We designed the full sales pipeline from first enquiry to signed agreement, with digital contracts generated and sent in-flow. A rep moves a deal through defined stages and the contract populates from deal data instead of being rebuilt by hand — so the quote a customer approves and the contract they sign are the same record, not two documents that drifted apart.',
+        image: '/assets/projects/Ark Renewable Energy/sales-contract.png',
+      },
+      {
+        title: 'Welcome call & structured site survey pipeline',
+        description:
+          'A standardised welcome call protocol gives every new customer the same clear first experience, then feeds directly into a structured site survey pipeline. Surveyors capture the roof, the electrical, and the site details against a fixed checklist, so the office receives complete, consistent information every time — instead of chasing a surveyor for the one measurement nobody wrote down.',
+        image: '/assets/projects/Ark Renewable Energy/site-survey.png',
+      },
+      {
+        title: 'Self-serve video tutorial library',
+        description:
+          'A customer-facing video tutorial library answers the questions that used to tie up the phone — how the system works, what to expect on install day, how to read the app. Customers self-serve at their own pace, and the team fields far fewer repeat calls about the same handful of things.',
+        image: '/assets/projects/Ark Renewable Energy/video-library.png',
+      },
+      {
+        title: 'Permit & compliance document handling',
+        description:
+          'Permits and compliance documents move through a dedicated system that tracks each file to its project and its status — submitted, approved, outstanding. The paperwork that used to sit in an inbox until someone remembered it now has a home and a state, and nobody discovers a missing permit the week of install.',
+        image: '/assets/projects/Ark Renewable Energy/permits.png',
+      },
+      {
+        title: 'Milestone invoicing & material tracking',
+        description:
+          "Invoicing is tied to project milestones, so a payment request fires when a stage is actually reached instead of when someone finds time to raise it. Alongside it, a material and inventory tracking system keeps what's ordered, allocated, and installed visible against each job — so procurement isn't guessing and a crew doesn't arrive to missing panels.",
+        image: '/assets/projects/Ark Renewable Energy/invoicing.png',
+      },
+      {
+        title: 'Recruiting & onboarding pipeline',
+        description:
+          'A structured recruiting and onboarding pipeline moves candidates from application through to a trained team member on a defined track, with the steps and documents standardised. Growth stopped meaning someone rebuilds the onboarding from memory for every new hire.',
+        image: '/assets/projects/Ark Renewable Energy/recruiting.png',
+      },
+    ],
+    metrics: [],
+    stack: [
+      'Full CRM buildout & management',
+      'Digital contract workflows',
+      'Site survey pipeline',
+      'Document & compliance tracking',
+      'Milestone invoicing',
+      'Inventory tracking',
+      'Recruiting & onboarding',
+      'Video tutorial library',
+    ],
+    timeline: '≈10–12 weeks from audit to live handover, following our 4-step process.',
+    href: '#',
+    cover: '/assets/projects/Ark Renewable Energy/cover.png',
+  },
+  {
+    name: 'Newton Pest Control',
+    summary: 'Lead-to-invoice operations system for a pest control company',
+    outcome: 'Every lead routed, every job dispatched, every invoice triggered',
+    situation:
+      'Newton Pest Control was handling inbound leads however they arrived — a call here, a form there — with no consistent way to qualify them or decide who took the job. Scheduling and dispatch ran on memory and text messages, service records lived wherever the technician left them, and invoices went out whenever someone got to them after the work was done. Nothing connected the lead that came in to the job that got done to the invoice that should have followed.',
+    built: [
+      {
+        title: 'Inbound lead handling & routing',
+        description:
+          'Every inbound lead now lands in one place, gets qualified against a consistent set of questions, and routes automatically to the right person. The lead that used to sit in a shared inbox until someone noticed it now has an owner within moments of arriving.',
+        image: '/assets/projects/Newton Pest Control/lead-routing.png',
+      },
+      {
+        title: 'Job planning, scheduling & dispatch',
+        description:
+          'Jobs are planned, scheduled, and dispatched from a single view of the day, so each technician knows where to be and what the job involves before they leave. The office sees the whole schedule at a glance instead of reconstructing it from a chain of texts.',
+        image: '/assets/projects/Newton Pest Control/scheduling-dispatch.png',
+      },
+      {
+        title: 'Compliance & service record management',
+        description:
+          "Service records and compliance documentation are captured in a structured system tied to each job and customer — what was treated, when, with what, and by whom. When a record is needed for a customer or an inspection, it's found in seconds rather than pieced together after the fact.",
+        image: '/assets/projects/Newton Pest Control/service-records.png',
+      },
+      {
+        title: 'Job-triggered invoicing',
+        description:
+          "Completing a job triggers the invoice automatically, built from the job's own details. Billing stopped being an end-of-day chore that slipped through the cracks and became something that simply happens when the work is done.",
+        image: '/assets/projects/Newton Pest Control/invoicing.png',
+      },
+    ],
+    metrics: [],
+    stack: [
+      'Lead capture & routing',
+      'Scheduling & dispatch',
+      'Service record management',
+      'Job-triggered invoicing',
+      'CRM',
+    ],
+    timeline: '≈4–5 weeks from audit to live handover, following our 4-step process.',
+    href: '#',
+    cover: '/assets/projects/Newton Pest Control/cover.png',
+  },
+  {
+    name: 'Alfred AI',
+    summary: 'Custom invoicing & client account systems for an AI SaaS company',
+    outcome: 'Milestone billing and client operations, built to internal spec',
+    situation:
+      'Alfred AI needed operational systems that matched how the business actually ran — not an off-the-shelf tool that would force the team to work around its assumptions. Milestone-based billing and client account management were being handled manually, and the internal processes that made the company distinct had no software built around them.',
+    built: [
+      {
+        title: 'Milestone invoicing & client account management',
+        description:
+          'We built milestone-based invoicing tied to client accounts, so billing fires against defined project stages and every client’s status, history, and outstanding items sit in one place. Raising an invoice stopped being a manual reconstruction of where a project stood and became a reflection of where it already was.',
+        image: '/assets/projects/Alfred AI/milestone-invoicing.png',
+      },
+      {
+        title: 'Custom operational systems to internal spec',
+        description:
+          "Beyond billing, we engineered operational systems to the company's own internal specifications — built around Alfred AI's actual workflows rather than bending those workflows to fit a generic product. The result is software that works the way the team already thinks, instead of a tool the team has to accommodate.",
+        image: '/assets/projects/Alfred AI/custom-systems.png',
+      },
+    ],
+    metrics: [],
+    stack: ['Milestone invoicing', 'Client account management', 'Custom operational systems'],
+    timeline: '≈2–3 weeks from audit to live handover.',
+    href: '#',
+    cover: '/assets/projects/Alfred AI/cover.png',
+  },
+  {
+    name: 'Real Estate Operations',
+    summary: 'Lead pipeline & transaction document system for a property investment operation',
+    outcome: 'Every lead qualified, every document in one place',
+    situation:
+      'A property and investment operation was capturing leads across scattered channels with no consistent way to qualify them or track where each one stood. Transaction documents — the paperwork every deal generates — lived across folders, inboxes, and drives, so finding the right version of the right document meant a search every time.',
+    built: [
+      {
+        title: 'Lead capture, qualification & pipeline management',
+        description:
+          'Leads are captured into one pipeline, qualified against a consistent standard, and moved through clearly defined stages. Instead of guessing which prospects were worth attention, the team works a pipeline that shows exactly where every lead stands and what happens next.',
+        image: '/assets/projects/Real Estate Operations/lead-pipeline.png',
+      },
+      {
+        title: 'Centralised information & document architecture',
+        description:
+          "Deal information and transaction documents live in one organised architecture — structured so the right document is where you'd expect it, tied to the right deal. The search-every-time routine gave way to a single source everyone trusts.",
+        image: '/assets/projects/Real Estate Operations/document-architecture.png',
+      },
+    ],
+    metrics: [],
+    stack: ['Lead capture & qualification', 'Pipeline management', 'Document architecture', 'CRM'],
+    timeline: '≈3 weeks from audit to live handover.',
+    href: '#',
+    cover: '/assets/projects/Real Estate Operations/cover.png',
+  },
+  {
+    name: 'MAG Roofing Inc.',
+    summary: 'Sales, SOP & CRM infrastructure for a roofing contractor',
+    outcome: 'From first quote to signed contract, standardised and searchable',
+    situation:
+      "MAG Roofing was running sales, scheduling, and operations without a system holding them together. Quotes and contracts were rebuilt by hand each time, the know-how for how things should be done lived in people's heads rather than on paper, and information was scattered across whatever tool was closest. Scheduling and customer history depended on who remembered what.",
+    built: [
+      {
+        title: 'Sales process & digital contract workflow',
+        description:
+          'We built the sales pipeline from first quote to signed contract, with digital contracts generated in-flow from deal data. The document a customer signs now comes straight from the deal record, so quoting and contracting stopped being two separate acts of manual rebuilding.',
+        image: '/assets/projects/MAG Roofing/sales-contract.png',
+      },
+      {
+        title: 'SOPs & training documentation',
+        description:
+          "Internal processes were captured as clear SOPs and training documentation, turning knowledge that lived in a few people's heads into a standard the whole team can follow. Onboarding a new team member stopped meaning shadowing someone until it sticks.",
+        image: '/assets/projects/MAG Roofing/sops-training.png',
+      },
+      {
+        title: 'Operational information architecture',
+        description:
+          'Company and job information was organised into one operational architecture, so the details a job needs sit where the team expects them instead of scattered across tools. Finding the right information became a lookup, not a hunt.',
+        image: '/assets/projects/MAG Roofing/information-architecture.png',
+      },
+      {
+        title: 'Scheduling system',
+        description:
+          'Jobs are scheduled in a system that shows the operation at a glance, so the office plans the week from one view rather than reconstructing it from memory and messages.',
+        image: '/assets/projects/MAG Roofing/scheduling.png',
+      },
+      {
+        title: 'CRM implementation & management',
+        description:
+          'All of it runs on a CRM we implemented and continue to manage — customers, deals, jobs, and history in one place. The team works from a single record of the business instead of stitching the picture together from separate tools.',
+        image: '/assets/projects/MAG Roofing/crm.png',
+      },
+    ],
+    metrics: [],
+    stack: [
+      'CRM implementation & management',
+      'Digital contract workflows',
+      'SOP & training documentation',
+      'Operational information architecture',
+      'Scheduling',
+    ],
+    timeline: '≈5–6 weeks from audit to live handover, following our 4-step process.',
+    href: '#',
+    cover: '/assets/projects/MAG Roofing/cover.png',
   },
 ]
