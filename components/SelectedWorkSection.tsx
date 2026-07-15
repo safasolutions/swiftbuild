@@ -55,20 +55,25 @@ export default function SelectedWorkSection({ noPaddingTop = false }: Props) {
                     {project.cover && (
                       <img src={project.cover} alt={project.name} />
                     )}
-                    <span className="view-project h6">
-                      View Project <i className="icon icon-arrow-top-right" />
-                    </span>
+                    {project.href && project.href !== '#' ? (
+                      <a
+                        href={project.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="view-project h6"
+                        onClick={e => e.stopPropagation()}
+                        aria-label={`View ${project.name} live site`}
+                      >
+                        View Project <i className="icon icon-arrow-top-right" />
+                      </a>
+                    ) : (
+                      <span className="view-project h6">
+                        View Project <i className="icon icon-arrow-top-right" />
+                      </span>
+                    )}
                   </div>
                   <div style={{ padding: '24px 32px 28px', display: 'flex', flexDirection: 'column', flexGrow: 1 }}>
-                    <h5
-                      className="fw-semibold"
-                      style={{
-                        marginBottom: '8px',
-                        overflow: 'hidden',
-                        textOverflow: 'ellipsis',
-                        whiteSpace: 'nowrap',
-                      }}
-                    >
+                    <h5 className="fw-semibold" style={{ marginBottom: '8px' }}>
                       {project.name}
                     </h5>
                     <p
@@ -125,6 +130,7 @@ export default function SelectedWorkSection({ noPaddingTop = false }: Props) {
           onClick={close}
         >
           <div
+            className="case-modal"
             style={{
               background: 'var(--neutral-50)',
               borderRadius: '40px',
@@ -172,7 +178,7 @@ export default function SelectedWorkSection({ noPaddingTop = false }: Props) {
             )}
 
             {/* Content */}
-            <div style={{ padding: '40px 48px 56px' }}>
+            <div className="case-modal-body" style={{ padding: '40px 48px 56px' }}>
               {/* Header: client + one-line outcome */}
               <div
                 className="fw-semibold"
@@ -283,6 +289,19 @@ export default function SelectedWorkSection({ noPaddingTop = false }: Props) {
                 )}
               </div>
               */}
+
+              {/* Results */}
+              {selected.results && (
+                <div style={sectionWrap}>
+                  <SectionHeading>Results</SectionHeading>
+                  <p style={{ ...bodyText, marginBottom: selected.metricsNote ? '14px' : 0 }}>{selected.results}</p>
+                  {selected.metricsNote && (
+                    <p className="text-body-3" style={{ color: 'var(--secondary)', margin: 0, fontStyle: 'italic' }}>
+                      {selected.metricsNote}
+                    </p>
+                  )}
+                </div>
+              )}
 
               {/* Stack & timeline */}
               <div style={sectionWrap}>

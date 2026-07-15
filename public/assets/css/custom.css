@@ -197,6 +197,26 @@
   margin-bottom: 0;
 }
 
+/* On phones the single-column timeline gets squeezed: the 54px left inset plus
+   32px card padding leaves the content cramped, and the header's space-between
+   row pushes the duration badge hard against the title. Tighten the padding and
+   stack the header so the title and badge sit on their own lines. */
+@media (max-width: 575px) {
+  .timeline-item {
+    padding-left: 40px;
+  }
+
+  .timeline-card {
+    padding: 20px;
+  }
+
+  .timeline-card-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+}
+
 /* --------------------------------------------------------------------------
    2. Unified Offerings Card Styles (Single Card Console)
    -------------------------------------------------------------------------- */
@@ -236,6 +256,21 @@
   font-size: 14px;
   color: var(--neutral-400);
   margin-bottom: 32px;
+}
+
+/* Intro line under each column heading. Parallel structure across both
+   columns; min-height on the head keeps the two icon lists row-aligned on
+   desktop regardless of how each intro wraps (columns are unequal width). */
+.offerings-column-lead {
+  font-size: 14px;
+  line-height: 22px;
+  color: var(--neutral-400);
+  margin-bottom: 24px;
+}
+@media (min-width: 992px) {
+  .offerings-column-head {
+    min-height: 156px;
+  }
 }
 
 .offering-list {
@@ -395,6 +430,33 @@
   }
 }
 
+/* Contact section: the rounded background is inset 16px from the section edge,
+   but .container only has 12px side padding — so the content box was ~4px wider
+   than the background and the white form card poked out of the rounded box.
+   Pad the content past the 16px background inset so the panels sit comfortably
+   inside the rounded box at every breakpoint. */
+.contact-container {
+  padding-left: 28px !important;
+  padding-right: 28px !important;
+}
+@media (max-width: 575px) {
+  .contact-container {
+    padding-left: 24px !important;
+    padding-right: 24px !important;
+  }
+}
+
+/* Once the contact layout stacks (≤991px) the form becomes the last element, but
+   the backdrop spans the section's full padding box — including the 80px bottom
+   padding — so the rounded box poked out below the form. Pull the backdrop's
+   bottom edge up by that bottom padding so it meets the form's bottom.
+   (Ties to ContactSection's inline paddingBottom: 80.) */
+@media (max-width: 991px) {
+  .contact-bg {
+    bottom: 80px !important;
+  }
+}
+
 /* Mobile menu: right-align the Services/Trades accordion toggles.
    The .item wrapper is display:flex (row) from the template, which left-aligns
    the toggle button and ignores its text-align. Stack and align right instead. */
@@ -430,6 +492,20 @@
 .tf-header .tf-btn {
   border-radius: 12px;
   padding: 16px 36px;
+}
+
+/* The mobile hamburger also carries .tf-btn, so the rule above turns it into a
+   fat 12px-radius rectangle that breaks out of the 999px pill navbar. Restore the
+   circular 40x40 icon button so it nests inside the pill's 8px inner padding. */
+.tf-header .mobile-menu.open-mb-menu {
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
 }
 
 /* Style service details span tags to look identical to links but without pointer */
@@ -577,5 +653,87 @@
   .problems-band-item + .problems-band-item {
     border-left: none;
     border-top: 1px solid var(--neutral-300);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Case study modal — cover reveal animation + "What We Built" screenshots
+   (restored: these were dropped from custom.css in a later edit)
+   -------------------------------------------------------------------------- */
+/* ---------- Case study modal cover ---------- */
+.case-cover {
+  line-height: 0;
+  overflow: hidden;
+}
+.case-cover img {
+  width: 100%;
+  max-height: 440px;
+  object-fit: cover;
+  display: block;
+  animation: caseCoverReveal 0.9s cubic-bezier(0.4, 0, 0.2, 1) both;
+}
+@keyframes caseCoverReveal {
+  from { opacity: 0; transform: scale(1.05); }
+  to { opacity: 1; transform: scale(1); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .case-cover img {
+    animation: none;
+  }
+}
+/* On phones the modal's fixed 48px side padding and 40px radius leave the
+   content (incl. the Results paragraph) cramped, and the cover image eats too
+   much of the viewport. Tighten all three at the small breakpoint. */
+@media (max-width: 575px) {
+  .case-modal {
+    border-radius: 24px !important;
+  }
+  .case-modal-body {
+    padding: 28px 22px 36px !important;
+  }
+  .case-cover img {
+    max-height: 220px;
+  }
+}
+/* ---------- Case study "What We Built" screenshots ---------- */
+/* Browser-chrome frame: black bar + red accent dot, soft shadow, hover lift */
+.case-shot {
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid var(--neutral-200);
+  background: #fff;
+  box-shadow: 0 24px 48px -24px rgba(9, 9, 11, 0.28);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.case-shot:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 32px 56px -22px rgba(9, 9, 11, 0.36);
+}
+.case-shot-bar {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 11px 16px;
+  background: var(--primary);
+}
+.case-shot-bar span {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.22);
+}
+.case-shot-bar span:first-child {
+  background: var(--brand);
+}
+.case-shot img {
+  width: 100%;
+  max-width: 100%;
+  display: block;
+}
+@media (prefers-reduced-motion: reduce) {
+  .case-shot,
+  .case-shot:hover {
+    transition: none;
+    transform: none;
   }
 }
