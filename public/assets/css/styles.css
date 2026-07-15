@@ -9821,7 +9821,7 @@ footer .footer-bottom > * {
   padding: 14px 18px !important;
   border: 1.5px solid var(--neutral-200) !important;
   border-radius: 12px !important;
-  background: #ffffff !important;
+  background-color: #ffffff !important;
   color: var(--primary) !important;
   font-size: 14px !important;
   font-weight: 500 !important;
@@ -9839,7 +9839,24 @@ footer .footer-bottom > * {
 .contact-form-input:focus {
   border-color: var(--brand) !important;
   box-shadow: 0 0 0 4px rgba(253, 58, 37, 0.12) !important;
-  background: #ffffff !important;
+  background-color: #ffffff !important;
+}
+
+select.contact-form-input {
+  -webkit-appearance: none !important;
+  -moz-appearance: none !important;
+  appearance: none !important;
+  box-sizing: border-box !important;
+  padding-right: 44px !important;
+  cursor: pointer !important;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%236b7280' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E") !important;
+  background-repeat: no-repeat !important;
+  background-position: right 16px center !important;
+  background-size: 16px 16px !important;
+}
+select.contact-form-input option {
+  background-color: #ffffff !important;
+  color: var(--primary) !important;
 }
 
 .contact-form-textarea {
