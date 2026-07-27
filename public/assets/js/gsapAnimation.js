@@ -247,7 +247,15 @@
                 let toVars = { autoAlpha: 1, duration: 1, ease: "power3.out" };
                 let wrapper = null;
                 let startPush = "top 95%";
-                let delay = el.dataset.delay ? parseFloat(el.dataset.delay) : 0;
+                // `data-delay` is overloaded: here it is a GSAP stagger delay in
+                // seconds, but on a Swiper container it is Swiper's autoplay
+                // interval in milliseconds. The testimonials carousel carries
+                // data-delay="4000", which scheduled its fade 4000 s out — it
+                // only ever appeared because the old blanket reveal forced it
+                // visible. Authored stagger delays are all well under a second,
+                // so treat anything larger as not ours.
+                let rawDelay = parseFloat(el.dataset.delay);
+                let delay = rawDelay >= 0 && rawDelay <= 5 ? rawDelay : 0;
                 toVars.delay = delay;
 
                 if (el.classList.contains("fadeUp") && !el.classList.contains("no-div") && !el.parentNode.classList.contains("overflow-hidden")) {
@@ -276,9 +284,17 @@
                     fromVars.rotationX = 45;
                     fromVars.yPercent = 100;
                     fromVars.transformOrigin = "top center -50";
+                    // The wrapper below is only ever created for .fadeUp, so a
+                    // .fadeRotateX element never had a parent to hang
+                    // perspective off — the 45deg rotation rendered as a flat
+                    // vertical squash instead of a tilt. Setting the
+                    // perspective on the element itself is the equivalent and
+                    // needs no extra DOM node.
+                    fromVars.transformPerspective = 400;
                     toVars.rotationX = 0;
                     toVars.yPercent = 0;
                     toVars.transformOrigin = "top center -50";
+                    toVars.transformPerspective = 400;
                     toVars.duration = 1;
                     toVars.ease = "power3.out";
                     if (wrapper) {
@@ -302,12 +318,27 @@
                 var inViewport = rect.top < window.innerHeight && rect.bottom > 0;
                 var aboveViewport = rect.top < window.innerHeight && rect.bottom <= 0;
 
+                // Marks this element as owned by GSAP. The last-resort reveal
+                // in ScriptSequencer/RouteReinit skips anything marked, so it
+                // can no longer force an element visible while its start
+                // transform is still applied.
+                el.dataset.fadeInit = "1";
+
+                // styles.css sets a permanent `will-change: transform, opacity`
+                // on every .effectFade, which keeps ~60 compositor layers alive
+                // for the whole session. Release each one once its tween ends.
+                var releaseLayer = function () {
+                    el.style.willChange = "auto";
+                };
+                toVars.onComplete = releaseLayer;
+
                 if (inViewport) {
                     gsap.fromTo(el, fromVars, toVars);
                 } else if (aboveViewport) {
                     // Elements already scrolled past should be fully visible
                     let finalVars = { autoAlpha: 1, y: 0, x: 0, scale: 1, rotationX: 0, rotationY: 0, rotation: 0, yPercent: 0 };
                     gsap.set(el, finalVars);
+                    releaseLayer();
                 } else {
                     gsap.set(el, fromVars);
                     gsap.to(el, {
@@ -395,14 +426,20 @@
                     $mouseEl.css({ left: currentX + "px", top: currentY + "px" });
                 }
 
-                $container.on("mouseenter", function () {
+                // runAnimations() re-runs on every route change, so these
+                // handlers stacked up and each navigation added another
+                // requestAnimationFrame follow loop to the same element.
+                // Namespaced so the previous set can be cleared first.
+                $container.off(".tfMouse");
+
+                $container.on("mouseenter.tfMouse", function () {
                     $mouseEl.addClass("hover");
                     if ($mouseEl.hasClass("mode-2")) {
                         $mouseEl.css({ opacity: 1 });
                     }
                 });
 
-                $container.on("mousemove", function (e) {
+                $container.on("mousemove.tfMouse", function (e) {
                     const rect = this.getBoundingClientRect();
                     targetX = e.clientX - rect.left;
                     targetY = e.clientY - rect.top;
@@ -415,7 +452,7 @@
                     if (!animationFrame) animate();
                 });
 
-                $container.on("mouseleave", function () {
+                $container.on("mouseleave.tfMouse", function () {
                     $mouseEl.removeClass("hover");
                     if ($mouseEl.hasClass("mode-2")) {
                         $mouseEl.css({ opacity: 0 });

@@ -19,7 +19,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en-US">
+    <html lang="en-CA">
       <head>
         <link rel="shortcut icon" href="/assets/images/logo/icon-light.svg" />
         <link rel="apple-touch-icon-precomposed" href="/assets/images/logo/icon-light.svg" />

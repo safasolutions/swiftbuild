@@ -22,15 +22,24 @@
         var $borderProgress = $(".border-progress");
         var $footer = $(".tf-footer");
 
-        $(window).on("scroll", function () {
+        // This ran on every single scroll event and read $(document).height()
+        // and $footer.offset() each time, forcing a synchronous layout per
+        // event and stuttering the GSAP scroll animations. Coalesce into at
+        // most one measurement per frame.
+        var ticking = false;
+
+        var updateGoTop = function () {
+            ticking = false;
+
             var scrollTop = $(window).scrollTop();
-            var docHeight = $(document).height() - $(window).height();
-            var scrollPercent = (scrollTop / docHeight) * 100;
+            var winHeight = $(window).height();
+            var docHeight = $(document).height() - winHeight;
+            var scrollPercent = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
             var progressAngle = (scrollPercent / 100) * 360;
 
             $borderProgress.css("--progress-angle", progressAngle + "deg");
 
-            var windowBottom = scrollTop + $(window).height();
+            var windowBottom = scrollTop + winHeight;
             var hasFooter = $footer.length > 0;
             var footerOffset = hasFooter ? $footer.offset().top : Infinity;
 
@@ -38,6 +47,13 @@
                 $goTop.addClass("show");
             } else {
                 $goTop.removeClass("show");
+            }
+        };
+
+        $(window).on("scroll", function () {
+            if (!ticking) {
+                ticking = true;
+                requestAnimationFrame(updateGoTop);
             }
         });
 
@@ -84,6 +100,9 @@
     -------------------------------------------------------------------------*/
     var cursorTrail = () => {
         const canvas = document.getElementById("trail");
+        // Without this guard a missing canvas throws and aborts the whole
+        // DOM-ready chain below it (goTop, menu, pricing switch, ...).
+        if (!canvas) return;
         const ctx = canvas.getContext("2d");
         let w = window.innerWidth,
             h = window.innerHeight;
@@ -115,6 +134,15 @@
         });
 
         function draw() {
+            // The trail canvas ships hidden and is only revealed by the #cursor
+            // toggle. Clearing and repainting a full-viewport canvas every
+            // frame while it is display:none stole frame budget from the GSAP
+            // scroll animations for no visible benefit.
+            if (canvas.style.display === "none") {
+                requestAnimationFrame(draw);
+                return;
+            }
+
             ctx.clearRect(0, 0, w, h);
 
             if (points.length > 1) {
@@ -202,15 +230,15 @@
     /* switchprice
     -------------------------------------------------------------------------*/
     var switchPrice = () => {
-        function formatUSD(n) {
-            return '$' + Number(n).toLocaleString('en-US');
+        function formatPrice(n) {
+            return '$' + Number(n).toLocaleString('en-CA');
         }
 
         function updatePrices(isYearly) {
             $('.price-number').each(function() {
             const $p = $(this);
             const val = isYearly ? $p.data('year') : $p.data('month');
-            $p.text(formatUSD(val));
+            $p.text(formatPrice(val));
             $p.next('.price-per').text(isYearly ? '/ year' : '/ month');
             });
         }
