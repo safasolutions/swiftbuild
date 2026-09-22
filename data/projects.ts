@@ -582,4 +582,54 @@ export const projects: Project[] = [
     href: '#',
     cover: '/assets/projects/MAG Roofing/cover.png',
   },
+  {
+    name: 'Done Right Roofing',
+    summary: 'Lead-generating website & estimate funnel for a Lower Mainland roofer',
+    outcome: 'Every visitor one click from a quote, in every city they serve',
+    situation:
+      "Done Right Roofing serves homeowners across Vancouver and the Lower Mainland — from Surrey and Burnaby out to Abbotsford and Chilliwack. The work and the reputation were there, but the website wasn't earning its keep: it didn't turn visitors into estimate requests, didn't show up for the individual cities the crew actually drives to, and gave homeowners no easy way to say what they needed. Every quote still started with a phone call and a round of back-and-forth before anyone knew whether the job was a repair, a replacement, or a cleaning.",
+    built: [
+      {
+        title: 'Conversion-first website',
+        description:
+          'The homepage leads with what a homeowner needs to trust a roofer — 100+ roofs installed, a 25+ year warranty, a 5.0 Google rating, and the full list of cities served — followed by a clear path to an estimate. Every page carries a "Free Estimate" button in the header, so the next step is never more than one click away.',
+        image: '/assets/projects/Done Right Roofing/cover.png',
+      },
+      {
+        title: 'Five-step instant estimate funnel',
+        description:
+          "Instead of a generic contact form, homeowners answer five quick questions — starting with whether they need a replacement, a repair, a new installation, or a cleaning — with a progress bar showing how close they are. Each request reaches the team already qualified, and the homeowner is promised a custom quote by email within 24 hours. The first phone call becomes a conversation about the job, not an interview to work out what the job is.",
+        image: '/assets/projects/Done Right Roofing/estimate.png',
+      },
+      {
+        title: 'Timed quote prompt',
+        description:
+          "Visitors who are reading but haven't acted yet get a short, polite prompt for a free quote — no obligation, no hidden fees, a response within 24 hours — with a one-click way to dismiss it. It catches the homeowner who was interested but about to leave, without getting in the way of the ones still browsing.",
+        image: '/assets/projects/Done Right Roofing/quote-popup.png',
+      },
+      {
+        title: 'Service & city landing pages',
+        description:
+          "Each service and each of the nine cities in the service area has its own page, written for the homes and the weather in that area — Surrey's mix of new builds and older neighbourhoods, its rain and occasional heavy snow. A homeowner searching for a roofer in their own city lands on a page that speaks to them directly, with a quote button waiting at the bottom.",
+        image: '/assets/projects/Done Right Roofing/locations.png',
+      },
+      {
+        title: 'Roofing tips & insights blog',
+        description:
+          'A blog answers the questions homeowners search for before they ever call — storm damage, the best materials for a rainy climate, signs a roof needs replacing. Each article builds trust and search visibility, and points readers back to the estimate funnel when they are ready.',
+        image: '/assets/projects/Done Right Roofing/blog.png',
+      },
+    ],
+    metrics: [],
+    stack: [
+      'Custom website',
+      'Multi-step estimate funnel',
+      'Lead capture & qualification',
+      'Local SEO landing pages',
+      'Blog & content',
+    ],
+    timeline: '≈3–4 weeks from audit to launch, following our 4-step process.',
+    href: 'https://donerightroofingservices.com',
+    cover: '/assets/projects/Done Right Roofing/cover.png',
+  },
 ]
