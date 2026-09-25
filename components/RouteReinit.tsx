@@ -147,11 +147,11 @@ function reinitPage() {
         }
       })
       // pricing toggle
-      const formatUSD = (n: number) => '$' + Number(n).toLocaleString('en-US')
+      const formatPrice = (n: number) => '$' + Number(n).toLocaleString('en-CA')
       const updatePrices = (isYearly: boolean) => {
         $('.price-number').each(function (this: any) {
           const $p = $(this)
-          $p.text(formatUSD(isYearly ? $p.data('year') : $p.data('month')))
+          $p.text(formatPrice(isYearly ? $p.data('year') : $p.data('month')))
           $p.next('.price-per').text(isYearly ? '/ year' : '/ month')
         })
       }
@@ -175,12 +175,15 @@ function reinitPage() {
       }
     }, 200)
 
-    // Last-resort fallback: 2 s after route change, force any still-hidden
-    // effectFade element visible.
+    // Last-resort fallback: 2 s after route change, reveal only the effectFade
+    // elements GSAP never initialised. Sweeping all of them forced below-the-
+    // fold content visible while its start transform was still applied, which
+    // left rows staggered and headings squashed.
     setTimeout(() => {
-      document.querySelectorAll('.effectFade').forEach((el: any) => {
+      document.querySelectorAll('.effectFade:not([data-fade-init])').forEach((el: any) => {
         el.style.opacity = '1'
         el.style.visibility = 'visible'
+        el.style.transform = 'none'
       })
     }, 2000)
   } catch (_) {}

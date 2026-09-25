@@ -21,14 +21,27 @@ const SCRIPTS = [
   '/assets/js/main.js',
 ]
 
-function loadScript(src: string): Promise<void> {
+// Appending every tag in one go with `async = false` lets the browser fetch all
+// of them in parallel while still executing them in DOM order. Awaiting each
+// script one at a time cost a full round-trip per file, which left the page's
+// .effectFade elements sitting at opacity 0 for seconds before GSAP existed.
+function loadScriptsInOrder(srcs: string[]): Promise<void> {
   return new Promise((resolve) => {
-    if (document.querySelector(`script[src="${src}"]`)) { resolve(); return }
-    const s = document.createElement('script')
-    s.src = src
-    s.onload = () => resolve()
-    s.onerror = () => resolve()
-    document.body.appendChild(s)
+    let remaining = srcs.length
+    if (remaining === 0) { resolve(); return }
+    const done = () => { if (--remaining === 0) resolve() }
+
+    const frag = document.createDocumentFragment()
+    for (const src of srcs) {
+      if (document.querySelector(`script[src="${src}"]`)) { done(); continue }
+      const s = document.createElement('script')
+      s.src = src
+      s.async = false // preserves execution order across the parallel fetches
+      s.onload = done
+      s.onerror = done
+      frag.appendChild(s)
+    }
+    document.body.appendChild(frag)
   })
 }
 
@@ -40,7 +53,7 @@ export default function ScriptSequencer() {
     ;(window as any).__scriptsLoaded = true
 
     ;(async () => {
-      for (const src of SCRIPTS) await loadScript(src)
+      await loadScriptsInOrder(SCRIPTS)
 
       // Fire the jQuery load event so carousel.js initialises Swiper.
       if ((window as any).jQuery) {
@@ -63,12 +76,21 @@ export default function ScriptSequencer() {
         }
       }, 200)
 
-      // Absolute last resort: 3 s after load, force any still-hidden
-      // effectFade element visible (covers complete GSAP failure).
+      // Absolute last resort: 3 s after load, reveal effectFade elements that
+      // GSAP never picked up (covers complete GSAP failure).
+      //
+      // Only elements *without* data-fade-init are touched. Previously this
+      // swept every .effectFade, which forced below-the-fold elements to
+      // opacity 1 while leaving GSAP's start transform (translateY(50px),
+      // rotationX(45deg)) applied — that is what made grid rows sit staggered
+      // and headings look squashed until their scroll trigger fired.
+      // The transform is cleared too, since a never-initialised element may
+      // still be carrying one.
       setTimeout(() => {
-        document.querySelectorAll('.effectFade').forEach((el: any) => {
+        document.querySelectorAll('.effectFade:not([data-fade-init])').forEach((el: any) => {
           el.style.opacity = '1'
           el.style.visibility = 'visible'
+          el.style.transform = 'none'
         })
       }, 3000)
     })()
